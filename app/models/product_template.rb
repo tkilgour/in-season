@@ -1,0 +1,2 @@
+class ProductTemplate < ApplicationRecord
+end
