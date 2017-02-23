@@ -3,13 +3,15 @@
 one:
   farm_id: 1
   name: MyString
-  image: MyString
-  harvest_date: 2017-02-22
+  image: MyText
+  description: MyText
+  harvest_date: 2017-02-23
   availability: false
 
 two:
   farm_id: 1
   name: MyString
-  image: MyString
-  harvest_date: 2017-02-22
+  image: MyText
+  description: MyText
+  harvest_date: 2017-02-23
   availability: false

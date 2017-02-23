@@ -1,7 +1,6 @@
 class Farm < ApplicationRecord
-  has_many :products
+  has_many :crops
 
   validates :name, presence: true
-  validates :farmers, presence: true
-  
+  validates :farmer, presence: true
 end

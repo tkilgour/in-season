@@ -1,4 +1,4 @@
-class Product < ApplicationRecord
+class Crop < ApplicationRecord
   belongs_to :farm
 
   validates :farm, presence: true
