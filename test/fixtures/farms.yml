@@ -2,10 +2,12 @@
 
 one:
   name: MyString
-  farmers: MyString
-  photo: MyString
+  farmer: MyString
+  profile_image: MyText
+  banner_image: MyText
 
 two:
   name: MyString
-  farmers: MyString
-  photo: MyString
+  farmer: MyString
+  profile_image: MyText
+  banner_image: MyText

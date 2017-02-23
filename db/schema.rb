@@ -10,27 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170222215116) do
+ActiveRecord::Schema.define(version: 20170223183241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "farms", force: :cascade do |t|
-    t.string   "name"
-    t.string   "farmers"
-    t.string   "photo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "products", force: :cascade do |t|
+  create_table "crops", force: :cascade do |t|
     t.integer  "farm_id"
     t.string   "name"
     t.string   "image"
+    t.text     "description"
     t.date     "harvest_date"
     t.boolean  "availability"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "farms", force: :cascade do |t|
+    t.string   "name"
+    t.string   "farmer"
+    t.string   "profile_image"
+    t.string   "banner_image"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "stock_crops", force: :cascade do |t|
+    t.string   "name"
+    t.string   "en_wikipedia_url"
+    t.integer  "growstuff_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
 end

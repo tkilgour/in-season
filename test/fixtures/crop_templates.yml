@@ -2,8 +2,10 @@
 
 one:
   name: MyString
-  image: MyString
+  en_wikipedia_url: MyText
+  growstuff_id: 1
 
 two:
   name: MyString
-  image: MyString
+  en_wikipedia_url: MyText
+  growstuff_id: 1
