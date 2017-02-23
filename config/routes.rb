@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   resources :farms, only: [:show, :index]
 
-  resources :products, only: [:show]
+  resources :crops, only: [:show]
 end
