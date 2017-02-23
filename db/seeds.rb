@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Seeding Data ..."
+
+def open_asset(file_name)
+  File.open(Rails.root.join('db', 'seed_assets', file_name))
+end
+
+unless Rails.env.development?
+  puts "Development seeds only (for now)!"
+  exit 0
+end
