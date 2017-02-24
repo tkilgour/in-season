@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20170223183241) do
     t.integer  "growstuff_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "image_url"
   end
 
 end
