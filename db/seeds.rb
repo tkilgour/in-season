@@ -35,7 +35,7 @@ Farm.create!({
     {
       id: 20,
       name: "basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Basil",
       created_at: "2013-03-19T01:30:25.222Z",
       updated_at: "2015-01-16T11:39:40.511Z",
       slug: "basil",
@@ -131,7 +131,7 @@ Farm.create!({
     {
       id: 231,
       name: "zucchini",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Zucchini",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Zucchini",
       created_at: "2013-03-19T01:30:30.284Z",
       updated_at: "2015-01-16T11:39:57.315Z",
       slug: "zucchini",
@@ -211,7 +211,7 @@ Farm.create!({
     {
       id: 24,
       name: "bell pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Bell_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Bell_pepper",
       created_at: "2013-03-19T01:30:25.298Z",
       updated_at: "2014-01-02T10:39:55.810Z",
       slug: "bell-pepper",
@@ -291,7 +291,7 @@ Farm.create!({
     {
       id: 180,
       name: "rosemary",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Rosemary",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Rosemary",
       created_at: "2013-03-19T01:30:28.897Z",
       updated_at: "2015-01-16T11:39:38.909Z",
       slug: "rosemary",
@@ -307,7 +307,7 @@ Farm.create!({
     {
       id: 214,
       name: "thyme",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Thymus_%28plant%29",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Thymus_%28plant%29",
       created_at: "2013-03-19T01:30:29.989Z",
       updated_at: "2015-01-16T11:39:39.779Z",
       slug: "thyme",
@@ -403,7 +403,7 @@ Farm.create!({
     {
       id: 187,
       name: "sage",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Salvia_officinalis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Salvia_officinalis",
       created_at: "2013-03-19T01:30:29.114Z",
       updated_at: "2015-01-16T11:39:38.870Z",
       slug: "sage",
@@ -435,7 +435,7 @@ Farm.create!({
     {
       id: 131,
       name: "mint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mentha",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mentha",
       created_at: "2013-03-19T01:30:27.448Z",
       updated_at: "2015-01-16T11:39:40.062Z",
       slug: "mint",
@@ -451,7 +451,7 @@ Farm.create!({
     {
       id: 142,
       name: "oregano",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Oregano",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Oregano",
       created_at: "2013-03-19T01:30:27.656Z",
       updated_at: "2015-01-16T11:39:39.425Z",
       slug: "oregano",
@@ -531,7 +531,7 @@ Farm.create!({
     {
       id: 397,
       name: "cherry tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Cherry_tomato",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Cherry_tomato",
       created_at: "2014-11-19T06:11:19.187Z",
       updated_at: "2014-11-19T06:11:19.193Z",
       slug: "cherry-tomato",
@@ -595,7 +595,7 @@ Farm.create!({
     {
       id: 240,
       name: "blueberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Blueberry",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Blueberry",
       created_at: "2013-03-22T06:05:20.834Z",
       updated_at: "2013-08-22T01:23:31.272Z",
       slug: "blueberry",
@@ -611,7 +611,7 @@ Farm.create!({
     {
       id: 105,
       name: "lavender",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Lavandula",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Lavandula",
       created_at: "2013-03-19T01:30:26.950Z",
       updated_at: "2015-01-16T11:39:40.775Z",
       slug: "lavender",
@@ -659,7 +659,7 @@ Farm.create!({
     {
       id: 166,
       name: "pumpkin",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Pumpkin",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Pumpkin",
       created_at: "2013-03-19T01:30:28.537Z",
       updated_at: "2015-01-16T11:39:56.969Z",
       slug: "pumpkin",
@@ -707,7 +707,7 @@ Farm.create!({
     {
       id: 244,
       name: "chard",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Chard",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Chard",
       created_at: "2013-04-01T03:57:16.561Z",
       updated_at: "2013-08-22T01:23:31.327Z",
       slug: "chard",
@@ -739,7 +739,7 @@ Farm.create!({
     {
       id: 260,
       name: "snow pea",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Snow_pea",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Snow_pea",
       created_at: "2013-04-17T11:25:26.284Z",
       updated_at: "2013-08-22T01:23:31.671Z",
       slug: "snow-pea",
@@ -755,7 +755,7 @@ Farm.create!({
     {
       id: 236,
       name: "bok choy",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Bok_choy",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Bok_choy",
       created_at: "2013-03-22T05:58:31.006Z",
       updated_at: "2013-08-22T01:23:31.194Z",
       slug: "bok-choy",
@@ -771,7 +771,7 @@ Farm.create!({
     {
       id: 306,
       name: "Capsicum",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Capsicum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Capsicum",
       created_at: "2014-01-02T10:39:55.361Z",
       updated_at: "2014-01-02T10:39:55.361Z",
       slug: "capsicum",
@@ -803,7 +803,7 @@ Farm.create!({
     {
       id: 41,
       name: "cayenne pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Cayenne_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Cayenne_pepper",
       created_at: "2013-03-19T01:30:25.660Z",
       updated_at: "2014-01-02T10:39:55.897Z",
       slug: "cayenne-pepper",
@@ -819,7 +819,7 @@ Farm.create!({
     {
       id: 198,
       name: "spearmint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Spearmint",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Spearmint",
       created_at: "2013-03-19T01:30:29.548Z",
       updated_at: "2015-01-16T11:39:40.462Z",
       slug: "spearmint",
@@ -899,7 +899,7 @@ Farm.create!({
     {
       id: 108,
       name: "lemon balm",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Melissa_officinalis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Melissa_officinalis",
       created_at: "2013-03-19T01:30:27.032Z",
       updated_at: "2015-01-16T11:39:40.497Z",
       slug: "lemon-balm",
@@ -931,7 +931,7 @@ Farm.create!({
     {
       id: 251,
       name: "squash",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Squash_(plant)",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Squash_(plant)",
       created_at: "2013-04-01T04:34:02.763Z",
       updated_at: "2015-01-16T11:39:55.669Z",
       slug: "squash",
@@ -979,7 +979,7 @@ Farm.create!({
     {
       id: 153,
       name: "peppermint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Peppermint",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Peppermint",
       created_at: "2013-03-19T01:30:28.243Z",
       updated_at: "2015-01-16T11:39:40.324Z",
       slug: "peppermint",
@@ -1011,7 +1011,7 @@ Farm.create!({
     {
       id: 370,
       name: "romaine lettuce",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Romaine_lettuce",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Romaine_lettuce",
       created_at: "2014-05-30T16:22:21.764Z",
       updated_at: "2014-05-30T16:22:44.008Z",
       slug: "romaine-lettuce",
@@ -1059,7 +1059,7 @@ Farm.create!({
     {
       id: 39,
       name: "catnip",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Nepeta_cataria",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Nepeta_cataria",
       created_at: "2013-03-19T01:30:25.618Z",
       updated_at: "2015-01-16T11:39:38.937Z",
       slug: "catnip",
@@ -1123,7 +1123,7 @@ Farm.create!({
     {
       id: 307,
       name: "Capsicum annuum",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Capsicum_annuum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Capsicum_annuum",
       created_at: "2014-01-02T10:39:55.536Z",
       updated_at: "2014-01-02T10:39:55.543Z",
       slug: "capsicum-annuum",
@@ -1187,7 +1187,7 @@ Farm.create!({
     {
       id: 126,
       name: "marjoram",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Marjoram",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Marjoram",
       created_at: "2013-03-19T01:30:27.372Z",
       updated_at: "2015-01-16T11:39:39.502Z",
       slug: "marjoram",
@@ -1235,7 +1235,7 @@ Farm.create!({
     {
       id: 265,
       name: "butternut squash",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Butternut_squash",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Butternut_squash",
       created_at: "2013-07-24T14:23:45.033Z",
       updated_at: "2015-01-16T11:39:56.699Z",
       slug: "butternut-squash",
@@ -1267,7 +1267,7 @@ Farm.create!({
     {
       id: 520,
       name: "Genovese basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Genovese_basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Genovese_basil",
       created_at: "2015-03-04T22:19:29.962Z",
       updated_at: "2015-03-04T22:19:29.962Z",
       slug: "genovese-basil",
@@ -1315,7 +1315,7 @@ Farm.create!({
     {
       id: 413,
       name: "Roma tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Roma_tomato",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Roma_tomato",
       created_at: "2014-11-19T06:11:20.040Z",
       updated_at: "2014-11-19T06:11:20.047Z",
       slug: "roma-tomato",
@@ -1331,7 +1331,7 @@ Farm.create!({
     {
       id: 373,
       name: "snap pea",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Snap_pea",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Snap_pea",
       created_at: "2014-05-30T16:31:35.505Z",
       updated_at: "2014-09-03T05:58:50.499Z",
       slug: "snap-pea",
@@ -1459,7 +1459,7 @@ Farm.create!({
     {
       id: 254,
       name: "aloe vera",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Aloe_vera",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Aloe_vera",
       created_at: "2013-04-17T11:18:03.722Z",
       updated_at: "2013-08-22T01:23:31.572Z",
       slug: "aloe-vera",
@@ -1555,7 +1555,7 @@ Farm.create!({
     {
       id: 447,
       name: "lemon thyme",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Thymus_citriodorus",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Thymus_citriodorus",
       created_at: "2015-01-16T11:39:39.924Z",
       updated_at: "2015-01-16T11:39:39.930Z",
       slug: "lemon-thyme",
@@ -1571,7 +1571,7 @@ Farm.create!({
     {
       id: 234,
       name: "mulberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Morus_%28plant%29",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Morus_%28plant%29",
       created_at: "2013-03-22T05:55:30.583Z",
       updated_at: "2013-08-22T01:23:31.154Z",
       slug: "mulberry",
@@ -1603,7 +1603,7 @@ Farm.create!({
     {
       id: 528,
       name: "Alpine strawberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Fragaria_vesca",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Fragaria_vesca",
       created_at: "2015-03-04T22:46:34.982Z",
       updated_at: "2015-03-04T22:46:34.982Z",
       slug: "alpine-strawberry",
@@ -1667,7 +1667,7 @@ Farm.create!({
     {
       id: 329,
       name: "jalapeño pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Jalape%C3%B1o",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Jalape%C3%B1o",
       created_at: "2014-01-02T10:39:56.344Z",
       updated_at: "2014-01-02T10:39:56.351Z",
       slug: "jalapeno-pepper",
@@ -1779,7 +1779,7 @@ Farm.create!({
     {
       id: 295,
       name: "scallion",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Scallion",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Scallion",
       created_at: "2013-09-09T02:33:32.889Z",
       updated_at: "2013-09-09T02:33:32.889Z",
       slug: "scallion",
@@ -1811,7 +1811,7 @@ Farm.create!({
     {
       id: 315,
       name: "bird's eye chili",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Bird%27s_eye_chili",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Bird%27s_eye_chili",
       created_at: "2014-01-02T10:39:55.831Z",
       updated_at: "2014-01-02T10:39:55.840Z",
       slug: "bird-s-eye-chili",
@@ -1843,7 +1843,7 @@ Farm.create!({
     {
       id: 444,
       name: "common thyme",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Thymus_vulgaris",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Thymus_vulgaris",
       created_at: "2015-01-16T11:39:39.821Z",
       updated_at: "2015-01-16T11:39:39.829Z",
       slug: "common-thyme",
@@ -1859,7 +1859,7 @@ Farm.create!({
     {
       id: 238,
       name: "loquat",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Loquat",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Loquat",
       created_at: "2013-03-22T06:00:09.319Z",
       updated_at: "2013-08-22T01:23:31.246Z",
       slug: "loquat",
@@ -1971,7 +1971,7 @@ Farm.create!({
     {
       id: 266,
       name: "spaghetti squash",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Spaghetti_squash",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Spaghetti_squash",
       created_at: "2013-07-24T14:24:24.235Z",
       updated_at: "2015-01-16T11:39:57.218Z",
       slug: "spaghetti-squash",
@@ -1987,7 +1987,7 @@ Farm.create!({
     {
       id: 515,
       name: "yellow summer squash",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Yellow_summer_squash",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Yellow_summer_squash",
       created_at: "2015-01-16T11:39:57.167Z",
       updated_at: "2015-01-16T11:39:57.175Z",
       slug: "yellow-summer-squash",
@@ -2019,7 +2019,7 @@ Farm.create!({
     {
       id: 267,
       name: "acorn squash",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Acorn_squash",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Acorn_squash",
       created_at: "2013-07-24T14:24:48.931Z",
       updated_at: "2015-01-16T11:39:56.838Z",
       slug: "acorn-squash",
@@ -2179,7 +2179,7 @@ Farm.create!({
     {
       id: 285,
       name: "goji",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Goji",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Goji",
       created_at: "2013-08-26T05:26:10.113Z",
       updated_at: "2013-08-27T00:27:09.537Z",
       slug: "goji",
@@ -2227,7 +2227,7 @@ Farm.create!({
     {
       id: 257,
       name: "Meyer lemon",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Meyer_lemon",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Meyer_lemon",
       created_at: "2013-04-17T11:22:02.007Z",
       updated_at: "2013-08-22T01:23:31.619Z",
       slug: "meyer-lemon",
@@ -2243,7 +2243,7 @@ Farm.create!({
     {
       id: 292,
       name: "midgen berry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Austromyrtus_dulcis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Austromyrtus_dulcis",
       created_at: "2013-09-09T02:30:34.436Z",
       updated_at: "2013-09-09T02:30:34.436Z",
       slug: "midgen-berry",
@@ -2259,7 +2259,7 @@ Farm.create!({
     {
       id: 290,
       name: "nectarine",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Peach",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Peach",
       created_at: "2013-09-09T02:25:28.780Z",
       updated_at: "2013-09-09T02:25:28.780Z",
       slug: "nectarine",
@@ -2291,7 +2291,7 @@ Farm.create!({
     {
       id: 378,
       name: "pineapple sage",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Salvia_elegans",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Salvia_elegans",
       created_at: "2014-09-13T14:52:46.726Z",
       updated_at: "2015-01-16T11:39:38.644Z",
       slug: "pineapple-sage",
@@ -2371,7 +2371,7 @@ Farm.create!({
     {
       id: 385,
       name: "Amish paste tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amish_Paste",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amish_Paste",
       created_at: "2014-11-19T06:11:18.586Z",
       updated_at: "2014-11-19T06:11:18.593Z",
       slug: "amish-paste-tomato",
@@ -2387,7 +2387,7 @@ Farm.create!({
     {
       id: 11,
       name: "apple mint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mentha_suaveolens",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mentha_suaveolens",
       created_at: "2013-03-19T01:30:25.043Z",
       updated_at: "2015-01-16T11:39:40.483Z",
       slug: "apple-mint",
@@ -2499,7 +2499,7 @@ Farm.create!({
     {
       id: 261,
       name: "cucamelon",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Melothria_scabra",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Melothria_scabra",
       created_at: "2013-04-17T11:26:37.698Z",
       updated_at: "2013-08-22T01:23:31.684Z",
       slug: "cucamelon",
@@ -2563,7 +2563,7 @@ Farm.create!({
     {
       id: 328,
       name: "Italian sweet pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Italian_sweet_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Italian_sweet_pepper",
       created_at: "2014-01-02T10:39:56.302Z",
       updated_at: "2014-01-02T10:39:56.319Z",
       slug: "italian-sweet-pepper",
@@ -2707,7 +2707,7 @@ Farm.create!({
     {
       id: 414,
       name: "San Marzano tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/San_Marzano_tomato",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/San_Marzano_tomato",
       created_at: "2014-11-19T06:11:20.082Z",
       updated_at: "2014-11-19T06:11:20.088Z",
       slug: "san-marzano-tomato",
@@ -2723,7 +2723,7 @@ Farm.create!({
     {
       id: 434,
       name: "shiso",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Shiso",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Shiso",
       created_at: "2015-01-16T11:39:39.202Z",
       updated_at: "2015-01-16T11:39:39.212Z",
       slug: "shiso",
@@ -2771,7 +2771,7 @@ Farm.create!({
     {
       id: 460,
       name: "Thai basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Thai_basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Thai_basil",
       created_at: "2015-01-16T11:39:40.529Z",
       updated_at: "2015-01-16T11:39:40.537Z",
       slug: "thai-basil",
@@ -2787,7 +2787,7 @@ Farm.create!({
     {
       id: 419,
       name: "tigerella tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Tigerella",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Tigerella",
       created_at: "2014-11-19T06:11:20.380Z",
       updated_at: "2014-11-19T06:11:20.395Z",
       slug: "tigerella-tomato",
@@ -2803,7 +2803,7 @@ Farm.create!({
     {
       id: 296,
       name: "Welsh onion",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Allium_fistulosum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Allium_fistulosum",
       created_at: "2013-09-09T02:35:56.947Z",
       updated_at: "2014-09-03T05:58:49.724Z",
       slug: "welsh-onion",
@@ -2883,7 +2883,7 @@ Farm.create!({
     {
       id: 346,
       name: "ají dulce pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Aj%C3%AD_dulce",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Aj%C3%AD_dulce",
       created_at: "2014-01-02T10:39:56.917Z",
       updated_at: "2014-01-02T10:39:56.922Z",
       slug: "aji-dulce-pepper",
@@ -2899,7 +2899,7 @@ Farm.create!({
     {
       id: 313,
       name: "Anaheim pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Anaheim_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Anaheim_pepper",
       created_at: "2014-01-02T10:39:55.746Z",
       updated_at: "2014-09-03T05:58:49.893Z",
       slug: "anaheim-pepper",
@@ -2931,7 +2931,7 @@ Farm.create!({
     {
       id: 340,
       name: "bishop's crown pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Bishop%27s_Crown",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Bishop%27s_Crown",
       created_at: "2014-01-02T10:39:56.734Z",
       updated_at: "2014-01-02T10:39:56.739Z",
       slug: "bishop-s-crown-pepper",
@@ -2979,7 +2979,7 @@ Farm.create!({
     {
       id: 273,
       name: "cantaloupe",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Cantaloupe",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Cantaloupe",
       created_at: "2013-08-26T05:05:01.054Z",
       updated_at: "2013-08-27T00:27:09.481Z",
       slug: "cantaloupe",
@@ -3011,7 +3011,7 @@ Farm.create!({
     {
       id: 316,
       name: "cascabel chili",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Cascabel_chili",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Cascabel_chili",
       created_at: "2014-01-02T10:39:55.868Z",
       updated_at: "2014-09-03T05:58:49.920Z",
       slug: "cascabel-chili",
@@ -3171,7 +3171,7 @@ Farm.create!({
     {
       id: 380,
       name: "elephant garlic",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Elephant_garlic",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Elephant_garlic",
       created_at: "2014-09-19T01:18:34.231Z",
       updated_at: "2014-09-19T01:18:34.231Z",
       slug: "elephant-garlic",
@@ -3187,7 +3187,7 @@ Farm.create!({
     {
       id: 467,
       name: "English lavender",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Lavandula_angustifolia",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Lavandula_angustifolia",
       created_at: "2015-01-16T11:39:40.800Z",
       updated_at: "2015-01-16T11:39:40.807Z",
       slug: "english-lavender",
@@ -3203,7 +3203,7 @@ Farm.create!({
     {
       id: 468,
       name: "French lavender",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Lavandula_stoechas",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Lavandula_stoechas",
       created_at: "2015-01-16T11:39:40.858Z",
       updated_at: "2015-01-16T11:39:40.864Z",
       slug: "french-lavender",
@@ -3235,7 +3235,7 @@ Farm.create!({
     {
       id: 465,
       name: "lemon basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Lemon_basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Lemon_basil",
       created_at: "2015-01-16T11:39:40.691Z",
       updated_at: "2015-01-16T11:39:40.697Z",
       slug: "lemon-basil",
@@ -3283,7 +3283,7 @@ Farm.create!({
     {
       id: 287,
       name: "lupin",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Lupin",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Lupin",
       created_at: "2013-08-26T05:28:30.223Z",
       updated_at: "2013-08-27T00:27:09.548Z",
       slug: "lupin",
@@ -3315,7 +3315,7 @@ Farm.create!({
     {
       id: 552,
       name: "New Jersey blueberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Vaccinium_caesariense",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Vaccinium_caesariense",
       created_at: "2015-04-07T15:51:10.790Z",
       updated_at: "2015-04-07T15:51:10.790Z",
       slug: "new-jersey-blueberry",
@@ -3331,7 +3331,7 @@ Farm.create!({
     {
       id: 553,
       name: "northern highbush blueberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Vaccinium_corymbosum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Vaccinium_corymbosum",
       created_at: "2015-04-07T15:52:02.228Z",
       updated_at: "2015-04-07T15:52:02.228Z",
       slug: "northern-highbush-blueberry",
@@ -3363,7 +3363,7 @@ Farm.create!({
     {
       id: 514,
       name: "pattypan squash",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Pattypan_squash",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Pattypan_squash",
       created_at: "2015-01-16T11:39:57.012Z",
       updated_at: "2015-01-16T11:41:58.994Z",
       slug: "pattypan-squash",
@@ -3379,7 +3379,7 @@ Farm.create!({
     {
       id: 291,
       name: "perilla",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Perilla_frutescens",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Perilla_frutescens",
       created_at: "2013-09-09T02:26:32.720Z",
       updated_at: "2015-01-16T11:39:39.180Z",
       slug: "perilla",
@@ -3459,7 +3459,7 @@ Farm.create!({
     {
       id: 293,
       name: "redcurrant",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Redcurrant",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Redcurrant",
       created_at: "2013-09-09T02:31:25.898Z",
       updated_at: "2013-09-09T02:31:25.898Z",
       slug: "redcurrant",
@@ -3555,7 +3555,7 @@ Farm.create!({
     {
       id: 424,
       name: "salvia",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Salvia",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Salvia",
       created_at: "2015-01-16T11:39:38.485Z",
       updated_at: "2015-01-16T11:39:38.485Z",
       slug: "salvia",
@@ -3603,7 +3603,7 @@ Farm.create!({
     {
       id: 204,
       name: "summer savory",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Summer_savory",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Summer_savory",
       created_at: "2013-03-19T01:30:29.741Z",
       updated_at: "2015-01-16T11:39:39.257Z",
       slug: "summer-savory",
@@ -3619,7 +3619,7 @@ Farm.create!({
     {
       id: 417,
       name: "super sweet 100 tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Super_Sweet_100",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Super_Sweet_100",
       created_at: "2014-11-19T06:11:20.238Z",
       updated_at: "2014-11-19T06:11:20.258Z",
       slug: "super-sweet-100-tomato",
@@ -3635,7 +3635,7 @@ Farm.create!({
     {
       id: 544,
       name: "sweet pepino",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Solanum_muricatum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Solanum_muricatum",
       created_at: "2015-03-04T23:16:49.440Z",
       updated_at: "2015-03-04T23:16:49.440Z",
       slug: "sweet-pepino",
@@ -3651,7 +3651,7 @@ Farm.create!({
     {
       id: 420,
       name: "tomaccio tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Tomaccio_(tomato)",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Tomaccio_(tomato)",
       created_at: "2014-11-19T06:11:20.437Z",
       updated_at: "2014-11-19T06:11:20.445Z",
       slug: "tomaccio-tomato",
@@ -3667,7 +3667,7 @@ Farm.create!({
     {
       id: 239,
       name: "Vietnamese mint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Persicaria_odorata",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Persicaria_odorata",
       created_at: "2013-03-22T06:01:47.744Z",
       updated_at: "2013-08-22T01:23:31.261Z",
       slug: "vietnamese-mint",
@@ -3683,7 +3683,7 @@ Farm.create!({
     {
       id: 226,
       name: "winter savory",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Winter_savory",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Winter_savory",
       created_at: "2013-03-19T01:30:30.191Z",
       updated_at: "2015-01-16T11:39:39.240Z",
       slug: "winter-savory",
@@ -3731,7 +3731,7 @@ Farm.create!({
     {
       id: 529,
       name: "Amelanchier",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier",
       created_at: "2015-03-04T22:50:49.011Z",
       updated_at: "2015-03-04T22:50:49.011Z",
       slug: "amelanchier",
@@ -3747,7 +3747,7 @@ Farm.create!({
     {
       id: 436,
       name: "anise hyssop",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Agastache_foeniculum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Agastache_foeniculum",
       created_at: "2015-01-16T11:39:39.305Z",
       updated_at: "2015-01-16T11:39:39.305Z",
       slug: "anise-hyssop",
@@ -3763,7 +3763,7 @@ Farm.create!({
     {
       id: 271,
       name: "bamboo",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Bamboo",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Bamboo",
       created_at: "2013-08-26T01:36:39.572Z",
       updated_at: "2013-08-27T00:27:09.456Z",
       slug: "bamboo",
@@ -3779,7 +3779,7 @@ Farm.create!({
     {
       id: 314,
       name: "banana pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Banana_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Banana_pepper",
       created_at: "2014-01-02T10:39:55.779Z",
       updated_at: "2014-09-03T05:58:49.906Z",
       slug: "banana-pepper",
@@ -3795,7 +3795,7 @@ Farm.create!({
     {
       id: 519,
       name: "Brazilian cherry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Eugenia_uniflora",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Eugenia_uniflora",
       created_at: "2015-01-16T11:50:18.906Z",
       updated_at: "2015-01-16T11:50:18.906Z",
       slug: "brazilian-cherry",
@@ -3811,7 +3811,7 @@ Farm.create!({
     {
       id: 534,
       name: "Canadian serviceberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier_canadensis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier_canadensis",
       created_at: "2015-03-04T22:59:10.203Z",
       updated_at: "2015-03-04T22:59:10.203Z",
       slug: "canadian-serviceberry",
@@ -3875,7 +3875,7 @@ Farm.create!({
     {
       id: 318,
       name: "chiltepin pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Capsicum_annuum_var._glabriusculum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Capsicum_annuum_var._glabriusculum",
       created_at: "2014-01-02T10:39:55.951Z",
       updated_at: "2014-09-03T05:58:49.941Z",
       slug: "chiltepin-pepper",
@@ -3907,7 +3907,7 @@ Farm.create!({
     {
       id: 462,
       name: "cinnamon basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Cinnamon_basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Cinnamon_basil",
       created_at: "2015-01-16T11:39:40.589Z",
       updated_at: "2015-01-16T11:39:40.594Z",
       slug: "cinnamon-basil",
@@ -3939,7 +3939,7 @@ Farm.create!({
     {
       id: 449,
       name: "creeping thyme",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Thymus_praecox",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Thymus_praecox",
       created_at: "2015-01-16T11:39:39.998Z",
       updated_at: "2015-01-16T11:39:40.005Z",
       slug: "creeping-thyme",
@@ -3987,7 +3987,7 @@ Farm.create!({
     {
       id: 463,
       name: "dark opal basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Dark_opal_basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Dark_opal_basil",
       created_at: "2015-01-16T11:39:40.632Z",
       updated_at: "2015-01-16T11:39:40.638Z",
       slug: "dark-opal-basil",
@@ -4003,7 +4003,7 @@ Farm.create!({
     {
       id: 555,
       name: "Elliott's blueberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Vaccinium_elliottii",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Vaccinium_elliottii",
       created_at: "2015-04-07T15:53:16.920Z",
       updated_at: "2015-04-07T15:53:16.920Z",
       slug: "elliott-s-blueberry",
@@ -4067,7 +4067,7 @@ Farm.create!({
     {
       id: 324,
       name: "Fresno pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Fresno_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Fresno_pepper",
       created_at: "2014-01-02T10:39:56.134Z",
       updated_at: "2014-09-03T05:58:50.002Z",
       slug: "fresno-pepper",
@@ -4099,7 +4099,7 @@ Farm.create!({
     {
       id: 367,
       name: "golden kiwifruit",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Actinidia_chinensis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Actinidia_chinensis",
       created_at: "2014-05-30T16:17:34.461Z",
       updated_at: "2014-09-03T05:58:50.441Z",
       slug: "golden-kiwifruit",
@@ -4147,7 +4147,7 @@ Farm.create!({
     {
       id: 402,
       name: "grape tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Grape_tomato",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Grape_tomato",
       created_at: "2014-11-19T06:11:19.384Z",
       updated_at: "2014-11-19T06:11:19.391Z",
       slug: "grape-tomato",
@@ -4163,7 +4163,7 @@ Farm.create!({
     {
       id: 368,
       name: "hardy kiwifruit",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Actinidia_arguta",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Actinidia_arguta",
       created_at: "2014-05-30T16:18:13.647Z",
       updated_at: "2014-09-03T05:58:50.454Z",
       slug: "hardy-kiwifruit",
@@ -4179,7 +4179,7 @@ Farm.create!({
     {
       id: 369,
       name: "hazelnut",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Hazelnut",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Hazelnut",
       created_at: "2014-05-30T16:19:28.921Z",
       updated_at: "2014-09-03T05:58:50.466Z",
       slug: "hazelnut",
@@ -4195,7 +4195,7 @@ Farm.create!({
     {
       id: 466,
       name: "holy basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Holy_basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Holy_basil",
       created_at: "2015-01-16T11:39:40.740Z",
       updated_at: "2015-01-16T11:39:40.740Z",
       slug: "holy-basil",
@@ -4211,7 +4211,7 @@ Farm.create!({
     {
       id: 546,
       name: "Honeyberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Lonicera_caerulea",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Lonicera_caerulea",
       created_at: "2015-03-23T01:45:24.986Z",
       updated_at: "2015-03-23T01:45:24.986Z",
       slug: "honeyberry",
@@ -4227,7 +4227,7 @@ Farm.create!({
     {
       id: 275,
       name: "honeydew melon",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Honeydew_%28melon%29",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Honeydew_%28melon%29",
       created_at: "2013-08-26T05:11:26.187Z",
       updated_at: "2013-08-27T00:27:09.490Z",
       slug: "honeydew-melon",
@@ -4243,7 +4243,7 @@ Farm.create!({
     {
       id: 253,
       name: "hops",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Hops",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Hops",
       created_at: "2013-04-17T11:16:16.914Z",
       updated_at: "2013-08-22T01:23:31.557Z",
       slug: "hops",
@@ -4259,7 +4259,7 @@ Farm.create!({
     {
       id: 327,
       name: "Hungarian wax pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Hungarian_wax_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Hungarian_wax_pepper",
       created_at: "2014-01-02T10:39:56.262Z",
       updated_at: "2014-09-03T05:58:50.037Z",
       slug: "hungarian-wax-pepper",
@@ -4307,7 +4307,7 @@ Farm.create!({
     {
       id: 365,
       name: "kiwifruit",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Kiwifruit",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Kiwifruit",
       created_at: "2014-05-30T16:13:42.193Z",
       updated_at: "2014-09-03T05:58:50.419Z",
       slug: "kiwifruit",
@@ -4371,7 +4371,7 @@ Farm.create!({
     {
       id: 548,
       name: "lowbush blueberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Vaccinium_angustifolium",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Vaccinium_angustifolium",
       created_at: "2015-04-07T15:42:28.679Z",
       updated_at: "2015-04-07T15:42:28.679Z",
       slug: "lowbush-blueberry",
@@ -4419,7 +4419,7 @@ Farm.create!({
     {
       id: 522,
       name: "mammoth basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mammoth_basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mammoth_basil",
       created_at: "2015-03-04T22:23:49.000Z",
       updated_at: "2015-03-04T22:23:49.000Z",
       slug: "mammoth-basil",
@@ -4467,7 +4467,7 @@ Farm.create!({
     {
       id: 410,
       name: "mortgage lifter tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mortgage_Lifter",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mortgage_Lifter",
       created_at: "2014-11-19T06:11:19.855Z",
       updated_at: "2014-11-19T06:11:19.862Z",
       slug: "mortgage-lifter-tomato",
@@ -4483,7 +4483,7 @@ Farm.create!({
     {
       id: 411,
       name: "Mr. Stripey tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mr._Stripey",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mr._Stripey",
       created_at: "2014-11-19T06:11:19.897Z",
       updated_at: "2014-11-19T06:11:19.913Z",
       slug: "mr-stripey-tomato",
@@ -4531,7 +4531,7 @@ Farm.create!({
     {
       id: 551,
       name: "Northern blueberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Vaccinium_boreale",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Vaccinium_boreale",
       created_at: "2015-04-07T15:50:19.002Z",
       updated_at: "2015-04-07T15:50:19.002Z",
       slug: "northern-blueberry",
@@ -4547,7 +4547,7 @@ Farm.create!({
     {
       id: 377,
       name: "oak",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Oak",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Oak",
       created_at: "2014-09-13T14:51:53.874Z",
       updated_at: "2014-09-13T14:51:53.874Z",
       slug: "oak",
@@ -4563,7 +4563,7 @@ Farm.create!({
     {
       id: 289,
       name: "Okinawan spinach",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Gynura_bicolor",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Gynura_bicolor",
       created_at: "2013-09-03T22:08:20.676Z",
       updated_at: "2013-09-09T20:23:54.015Z",
       slug: "okinawan-spinach",
@@ -4595,7 +4595,7 @@ Farm.create!({
     {
       id: 527,
       name: "osmin purple basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Osmin_purple_basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Osmin_purple_basil",
       created_at: "2015-03-04T22:28:52.548Z",
       updated_at: "2015-03-04T22:28:52.548Z",
       slug: "osmin-purple-basil",
@@ -4611,7 +4611,7 @@ Farm.create!({
     {
       id: 317,
       name: "pasilla pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Pasilla",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Pasilla",
       created_at: "2014-01-02T10:39:55.923Z",
       updated_at: "2014-09-03T05:58:49.931Z",
       slug: "pasilla-pepper",
@@ -4659,7 +4659,7 @@ Farm.create!({
     {
       id: 412,
       name: "pear tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Pear_tomato",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Pear_tomato",
       created_at: "2014-11-19T06:11:19.989Z",
       updated_at: "2014-11-19T06:11:20.002Z",
       slug: "pear-tomato",
@@ -4675,7 +4675,7 @@ Farm.create!({
     {
       id: 334,
       name: "peperoncini pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Peperoncini",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Peperoncini",
       created_at: "2014-01-02T10:39:56.555Z",
       updated_at: "2014-09-03T05:58:50.089Z",
       slug: "peperoncini-pepper",
@@ -4755,7 +4755,7 @@ Farm.create!({
     {
       id: 337,
       name: "poblano pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Poblano",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Poblano",
       created_at: "2014-01-02T10:39:56.643Z",
       updated_at: "2014-09-03T05:58:50.125Z",
       slug: "poblano-pepper",
@@ -4803,7 +4803,7 @@ Farm.create!({
     {
       id: 511,
       name: "red kuri squash",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Red_kuri_squash",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Red_kuri_squash",
       created_at: "2015-01-16T11:39:56.574Z",
       updated_at: "2015-01-16T11:39:56.587Z",
       slug: "red-kuri-squash",
@@ -4819,7 +4819,7 @@ Farm.create!({
     {
       id: 464,
       name: "red rubin basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Red_rubin_basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Red_rubin_basil",
       created_at: "2015-01-16T11:39:40.661Z",
       updated_at: "2015-01-16T11:39:40.669Z",
       slug: "red-rubin-basil",
@@ -4835,7 +4835,7 @@ Farm.create!({
     {
       id: 255,
       name: "rose geranium",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Pelargonium_graveolens",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Pelargonium_graveolens",
       created_at: "2013-04-17T11:19:42.535Z",
       updated_at: "2013-08-22T01:23:31.582Z",
       slug: "rose-geranium",
@@ -4899,7 +4899,7 @@ Farm.create!({
     {
       id: 354,
       name: "Scotch bonnet pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Scotch_bonnet_%28pepper%29",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Scotch_bonnet_%28pepper%29",
       created_at: "2014-01-02T10:39:57.149Z",
       updated_at: "2014-09-03T05:58:50.283Z",
       slug: "scotch-bonnet-pepper",
@@ -4915,7 +4915,7 @@ Farm.create!({
     {
       id: 305,
       name: "shiitake",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Shiitake",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Shiitake",
       created_at: "2013-12-31T10:42:06.123Z",
       updated_at: "2014-09-03T05:58:49.820Z",
       slug: "shiitake",
@@ -4931,7 +4931,7 @@ Farm.create!({
     {
       id: 330,
       name: "shishito pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Shishito",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Shishito",
       created_at: "2014-01-02T10:39:56.379Z",
       updated_at: "2014-09-03T05:58:50.048Z",
       slug: "shishito-pepper",
@@ -4963,7 +4963,7 @@ Farm.create!({
     {
       id: 416,
       name: "stupice tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Super_Sweet_100",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Super_Sweet_100",
       created_at: "2014-11-19T06:11:20.190Z",
       updated_at: "2014-11-19T06:11:20.198Z",
       slug: "stupice-tomato",
@@ -5075,7 +5075,7 @@ Farm.create!({
     {
       id: 425,
       name: "white sage",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Salvia_apiana",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Salvia_apiana",
       created_at: "2015-01-16T11:39:38.558Z",
       updated_at: "2015-01-16T11:39:38.565Z",
       slug: "white-sage",
@@ -5107,7 +5107,7 @@ Farm.create!({
     {
       id: 280,
       name: "winged bean",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Winged_bean",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Winged_bean",
       created_at: "2013-08-26T05:19:24.862Z",
       updated_at: "2013-08-27T00:27:09.513Z",
       slug: "winged-bean",
@@ -5123,7 +5123,7 @@ Farm.create!({
     {
       id: 258,
       name: "wood sorrel",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Oxalis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Oxalis",
       created_at: "2013-04-17T11:23:05.261Z",
       updated_at: "2013-08-22T01:23:31.634Z",
       slug: "wood-sorrel",
@@ -5155,7 +5155,7 @@ Farm.create!({
     {
       id: 513,
       name: "yellow crookneck squash",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Yellow_crookneck_squash",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Yellow_crookneck_squash",
       created_at: "2015-01-16T11:39:56.916Z",
       updated_at: "2015-01-16T11:39:56.924Z",
       slug: "yellow-crookneck-squash",
@@ -5187,7 +5187,7 @@ Farm.create!({
     {
       id: 345,
       name: "adjuma pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Adjuma",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Adjuma",
       created_at: "2014-01-02T10:39:56.885Z",
       updated_at: "2014-09-03T05:58:50.197Z",
       slug: "adjuma-pepper",
@@ -5235,7 +5235,7 @@ Farm.create!({
     {
       id: 550,
       name: "Alaska blueberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Vaccinium_ovalifolium",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Vaccinium_ovalifolium",
       created_at: "2015-04-07T15:49:15.291Z",
       updated_at: "2015-04-07T15:49:15.291Z",
       slug: "alaska-blueberry",
@@ -5251,7 +5251,7 @@ Farm.create!({
     {
       id: 312,
       name: "Aleppo pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Aleppo_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Aleppo_pepper",
       created_at: "2014-01-02T10:39:55.671Z",
       updated_at: "2014-09-03T05:58:49.882Z",
       slug: "aleppo-pepper",
@@ -5283,7 +5283,7 @@ Farm.create!({
     {
       id: 438,
       name: "Amanum oregano",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Origanum_amanum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Origanum_amanum",
       created_at: "2015-01-16T11:39:39.465Z",
       updated_at: "2015-01-16T11:39:39.472Z",
       slug: "amanum-oregano",
@@ -5299,7 +5299,7 @@ Farm.create!({
     {
       id: 454,
       name: "American wild mint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mentha_canadensis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mentha_canadensis",
       created_at: "2015-01-16T11:39:40.238Z",
       updated_at: "2015-01-16T11:39:40.245Z",
       slug: "american-wild-mint",
@@ -5331,7 +5331,7 @@ Farm.create!({
     {
       id: 565,
       name: "aromatic ginger",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Kaempferia_galanga",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Kaempferia_galanga",
       created_at: "2015-04-10T15:20:46.923Z",
       updated_at: "2015-04-10T15:20:46.923Z",
       slug: "aromatic-ginger",
@@ -5363,7 +5363,7 @@ Farm.create!({
     {
       id: 452,
       name: "Asian mint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mentha_asiatica",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mentha_asiatica",
       created_at: "2015-01-16T11:39:40.178Z",
       updated_at: "2015-01-16T11:39:40.185Z",
       slug: "asian-mint",
@@ -5379,7 +5379,7 @@ Farm.create!({
     {
       id: 386,
       name: "Aunt Ruby's German green tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Aunt_Ruby%27s_German_Green",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Aunt_Ruby%27s_German_Green",
       created_at: "2014-11-19T06:11:18.627Z",
       updated_at: "2014-11-19T06:11:18.634Z",
       slug: "aunt-ruby-s-german-green-tomato",
@@ -5395,7 +5395,7 @@ Farm.create!({
     {
       id: 453,
       name: "Australian mint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mentha_australis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mentha_australis",
       created_at: "2015-01-16T11:39:40.210Z",
       updated_at: "2015-01-16T11:39:40.216Z",
       slug: "australian-mint",
@@ -5427,7 +5427,7 @@ Farm.create!({
     {
       id: 428,
       name: "baby sage",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Salvia_microphylla",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Salvia_microphylla",
       created_at: "2015-01-16T11:39:38.745Z",
       updated_at: "2015-01-16T11:39:38.752Z",
       slug: "baby-sage",
@@ -5459,7 +5459,7 @@ Farm.create!({
     {
       id: 431,
       name: "basil beebalm",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Monarda_clinopodioides",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Monarda_clinopodioides",
       created_at: "2015-01-16T11:39:39.058Z",
       updated_at: "2015-01-16T11:39:39.065Z",
       slug: "basil-beebalm",
@@ -5475,7 +5475,7 @@ Farm.create!({
     {
       id: 429,
       name: "beebalm",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Monarda",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Monarda",
       created_at: "2015-01-16T11:39:38.976Z",
       updated_at: "2015-01-16T11:39:38.976Z",
       slug: "beebalm",
@@ -5491,7 +5491,7 @@ Farm.create!({
     {
       id: 455,
       name: "bergamot mint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mentha_citrata",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mentha_citrata",
       created_at: "2015-01-16T11:39:40.266Z",
       updated_at: "2015-01-16T11:39:40.272Z",
       slug: "bergamot-mint",
@@ -5507,7 +5507,7 @@ Farm.create!({
     {
       id: 353,
       name: "bhut jolokia pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Bhut_Jolokia",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Bhut_Jolokia",
       created_at: "2014-01-02T10:39:57.121Z",
       updated_at: "2014-09-03T05:58:50.272Z",
       slug: "bhut-jolokia-pepper",
@@ -5539,7 +5539,7 @@ Farm.create!({
     {
       id: 241,
       name: "bilberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Vaccinium_myrtillus",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Vaccinium_myrtillus",
       created_at: "2013-03-22T06:06:54.045Z",
       updated_at: "2013-08-22T01:23:31.282Z",
       slug: "bilberry",
@@ -5587,7 +5587,7 @@ Farm.create!({
     {
       id: 371,
       name: "black-eyed pea",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Black-eyed_pea",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Black-eyed_pea",
       created_at: "2014-05-30T16:24:53.493Z",
       updated_at: "2014-09-03T05:58:50.476Z",
       slug: "black-eyed-pea",
@@ -5603,7 +5603,7 @@ Farm.create!({
     {
       id: 351,
       name: "black habanero pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Habanero",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Habanero",
       created_at: "2014-01-02T10:39:57.064Z",
       updated_at: "2014-09-03T05:58:50.250Z",
       slug: "black-habanero-pepper",
@@ -5731,7 +5731,7 @@ Farm.create!({
     {
       id: 343,
       name: "Brazilian starfish",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Capsicum_baccatum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Capsicum_baccatum",
       created_at: "2014-01-02T10:39:56.828Z",
       updated_at: "2014-09-03T05:58:50.173Z",
       slug: "brazilian-starfish",
@@ -5779,7 +5779,7 @@ Farm.create!({
     {
       id: 286,
       name: "burdock",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Arctium_lappa",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Arctium_lappa",
       created_at: "2013-08-26T05:27:30.943Z",
       updated_at: "2013-08-27T00:27:09.542Z",
       slug: "burdock",
@@ -5811,7 +5811,7 @@ Farm.create!({
     {
       id: 355,
       name: "cachucha pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Scotch_bonnet_%28pepper%29",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Scotch_bonnet_%28pepper%29",
       created_at: "2014-01-02T10:39:57.179Z",
       updated_at: "2014-09-03T05:58:50.293Z",
       slug: "cachucha-pepper",
@@ -5827,7 +5827,7 @@ Farm.create!({
     {
       id: 442,
       name: "calamint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Calamint",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Calamint",
       created_at: "2015-01-16T11:39:39.726Z",
       updated_at: "2015-01-16T11:39:39.726Z",
       slug: "calamint",
@@ -5859,7 +5859,7 @@ Farm.create!({
     {
       id: 446,
       name: "cantueso",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Thymus_moroderi",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Thymus_moroderi",
       created_at: "2015-01-16T11:39:39.894Z",
       updated_at: "2015-01-16T11:39:39.900Z",
       slug: "cantueso",
@@ -5891,7 +5891,7 @@ Farm.create!({
     {
       id: 308,
       name: "Capsicum baccatum",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Capsicum_baccatum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Capsicum_baccatum",
       created_at: "2014-01-02T10:39:55.567Z",
       updated_at: "2014-09-03T05:58:49.831Z",
       slug: "capsicum-baccatum",
@@ -5907,7 +5907,7 @@ Farm.create!({
     {
       id: 309,
       name: "Capsicum chinense",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Capsicum_chinense",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Capsicum_chinense",
       created_at: "2014-01-02T10:39:55.592Z",
       updated_at: "2014-09-03T05:58:49.843Z",
       slug: "capsicum-chinense",
@@ -5923,7 +5923,7 @@ Farm.create!({
     {
       id: 311,
       name: "Capsicum frutescens",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Capsicum_frutescens",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Capsicum_frutescens",
       created_at: "2014-01-02T10:39:55.644Z",
       updated_at: "2014-09-03T05:58:49.867Z",
       slug: "capsicum-frutescens",
@@ -5939,7 +5939,7 @@ Farm.create!({
     {
       id: 445,
       name: "caraway thyme",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Thymus_herba-barona",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Thymus_herba-barona",
       created_at: "2015-01-16T11:39:39.863Z",
       updated_at: "2015-01-16T11:39:39.869Z",
       slug: "caraway-thyme",
@@ -5971,7 +5971,7 @@ Farm.create!({
     {
       id: 395,
       name: "celebrity tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Celebrity_(tomato)",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Celebrity_(tomato)",
       created_at: "2014-11-19T06:11:19.095Z",
       updated_at: "2014-11-19T06:11:19.103Z",
       slug: "celebrity-tomato",
@@ -5987,7 +5987,7 @@ Farm.create!({
     {
       id: 374,
       name: "celtuce",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Celtuce",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Celtuce",
       created_at: "2014-09-10T01:39:29.232Z",
       updated_at: "2014-09-10T01:39:29.232Z",
       slug: "celtuce",
@@ -6003,7 +6003,7 @@ Farm.create!({
     {
       id: 427,
       name: "chia",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Salvia_hispanica",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Salvia_hispanica",
       created_at: "2015-01-16T11:39:38.712Z",
       updated_at: "2015-01-16T11:39:38.718Z",
       slug: "chia",
@@ -6019,7 +6019,7 @@ Farm.create!({
     {
       id: 321,
       name: "chile de árbol pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Chile_de_%C3%A1rbol",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Chile_de_%C3%A1rbol",
       created_at: "2014-01-02T10:39:56.040Z",
       updated_at: "2014-01-02T10:39:56.046Z",
       slug: "chile-de-arbol-pepper",
@@ -6035,7 +6035,7 @@ Farm.create!({
     {
       id: 566,
       name: "Chinese ginger",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Boesenbergia_rotunda",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Boesenbergia_rotunda",
       created_at: "2015-04-10T15:21:57.703Z",
       updated_at: "2015-04-10T15:21:57.703Z",
       slug: "chinese-ginger",
@@ -6051,7 +6051,7 @@ Farm.create!({
     {
       id: 541,
       name: "Chinese serviceberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier_sinica",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier_sinica",
       created_at: "2015-03-04T23:11:31.689Z",
       updated_at: "2015-03-04T23:11:31.689Z",
       slug: "chinese-serviceberry",
@@ -6067,7 +6067,7 @@ Farm.create!({
     {
       id: 319,
       name: "Chungyang red pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Chungyang_Red_Pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Chungyang_Red_Pepper",
       created_at: "2014-01-02T10:39:55.977Z",
       updated_at: "2014-09-03T05:58:49.951Z",
       slug: "chungyang-red-pepper",
@@ -6115,7 +6115,7 @@ Farm.create!({
     {
       id: 558,
       name: "common blueberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Vaccinium_myrtilloides",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Vaccinium_myrtilloides",
       created_at: "2015-04-07T15:54:29.136Z",
       updated_at: "2015-04-07T15:54:29.136Z",
       slug: "common-blueberry",
@@ -6131,7 +6131,7 @@ Farm.create!({
     {
       id: 304,
       name: "common mushroom",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Agaricus_bisporus",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Agaricus_bisporus",
       created_at: "2013-12-31T10:41:21.545Z",
       updated_at: "2014-09-03T05:58:49.809Z",
       slug: "common-mushroom",
@@ -6147,7 +6147,7 @@ Farm.create!({
     {
       id: 458,
       name: "Corsican mint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mentha_requienii",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mentha_requienii",
       created_at: "2015-01-16T11:39:40.399Z",
       updated_at: "2015-01-16T11:39:40.405Z",
       slug: "corsican-mint",
@@ -6163,7 +6163,7 @@ Farm.create!({
     {
       id: 372,
       name: "cowpea",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Cowpea",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Cowpea",
       created_at: "2014-05-30T16:26:08.867Z",
       updated_at: "2014-09-03T05:58:50.488Z",
       slug: "cowpea",
@@ -6195,7 +6195,7 @@ Farm.create!({
     {
       id: 439,
       name: "Cretan oregano",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Origanum_onites",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Origanum_onites",
       created_at: "2015-01-16T11:39:39.547Z",
       updated_at: "2015-01-16T11:39:39.554Z",
       slug: "cretan-oregano",
@@ -6211,7 +6211,7 @@ Farm.create!({
     {
       id: 432,
       name: "crimson beebalm",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Monarda_didyma",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Monarda_didyma",
       created_at: "2015-01-16T11:39:39.088Z",
       updated_at: "2015-01-16T11:39:39.095Z",
       slug: "crimson-beebalm",
@@ -6227,7 +6227,7 @@ Farm.create!({
     {
       id: 320,
       name: "cubanelle pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Cubanelle",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Cubanelle",
       created_at: "2014-01-02T10:39:56.011Z",
       updated_at: "2014-09-03T05:58:49.967Z",
       slug: "cubanelle-pepper",
@@ -6243,7 +6243,7 @@ Farm.create!({
     {
       id: 507,
       name: "Cucurbita maxima",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Cucurbita_maxima",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Cucurbita_maxima",
       created_at: "2015-01-16T11:39:56.160Z",
       updated_at: "2015-01-16T11:39:56.168Z",
       slug: "cucurbita-maxima",
@@ -6259,7 +6259,7 @@ Farm.create!({
     {
       id: 508,
       name: "Cucurbita moschata",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Cucurbita_moschata",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Cucurbita_moschata",
       created_at: "2015-01-16T11:39:56.198Z",
       updated_at: "2015-01-16T11:39:56.206Z",
       slug: "cucurbita-moschata",
@@ -6275,7 +6275,7 @@ Farm.create!({
     {
       id: 509,
       name: "Cucurbita pepo",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Cucurbita_pepo",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Cucurbita_pepo",
       created_at: "2015-01-16T11:39:56.249Z",
       updated_at: "2015-01-16T11:39:56.261Z",
       slug: "cucurbita-pepo",
@@ -6339,7 +6339,7 @@ Farm.create!({
     {
       id: 347,
       name: "datil pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Datil_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Datil_pepper",
       created_at: "2014-01-02T10:39:56.943Z",
       updated_at: "2014-09-03T05:58:50.209Z",
       slug: "datil-pepper",
@@ -6355,7 +6355,7 @@ Farm.create!({
     {
       id: 516,
       name: "delicata squash",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Delicata_squash",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Delicata_squash",
       created_at: "2015-01-16T11:39:57.355Z",
       updated_at: "2015-01-17T00:03:16.385Z",
       slug: "delicata-squash",
@@ -6371,7 +6371,7 @@ Farm.create!({
     {
       id: 571,
       name: "Delicata squash",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Delicata_squash",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Delicata_squash",
       created_at: "2015-07-08T16:37:16.807Z",
       updated_at: "2015-07-08T16:37:16.849Z",
       slug: "delicata-squash-eff46b41-0afa-433e-af15-643b45cb6402",
@@ -6419,7 +6419,7 @@ Farm.create!({
     {
       id: 532,
       name: "downy serviceberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier_arborea",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier_arborea",
       created_at: "2015-03-04T22:55:06.911Z",
       updated_at: "2015-03-04T22:55:06.911Z",
       slug: "downy-serviceberry",
@@ -6435,7 +6435,7 @@ Farm.create!({
     {
       id: 322,
       name: "dundicut",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Dundicut",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Dundicut",
       created_at: "2014-01-02T10:39:56.068Z",
       updated_at: "2014-09-03T05:58:49.981Z",
       slug: "dundicut",
@@ -6499,7 +6499,7 @@ Farm.create!({
     {
       id: 545,
       name: "enoki mushroom",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Enokitake",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Enokitake",
       created_at: "2015-03-04T23:24:47.938Z",
       updated_at: "2015-03-04T23:24:47.938Z",
       slug: "enoki-mushroom",
@@ -6531,7 +6531,7 @@ Farm.create!({
     {
       id: 554,
       name: "evergreen blueberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Vaccinium_darrowii",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Vaccinium_darrowii",
       created_at: "2015-04-07T15:52:30.525Z",
       updated_at: "2015-04-07T15:52:30.525Z",
       slug: "evergreen-blueberry",
@@ -6547,7 +6547,7 @@ Farm.create!({
     {
       id: 323,
       name: "facing heaven pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Facing_heaven_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Facing_heaven_pepper",
       created_at: "2014-01-02T10:39:56.098Z",
       updated_at: "2014-09-03T05:58:49.992Z",
       slug: "facing-heaven-pepper",
@@ -6563,7 +6563,7 @@ Farm.create!({
     {
       id: 348,
       name: "fatalii pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Fatalii",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Fatalii",
       created_at: "2014-01-02T10:39:56.970Z",
       updated_at: "2014-09-03T05:58:50.219Z",
       slug: "fatalii-pepper",
@@ -6595,7 +6595,7 @@ Farm.create!({
     {
       id: 524,
       name: "fino verde basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Fino_verde_basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Fino_verde_basil",
       created_at: "2015-03-04T22:25:24.624Z",
       updated_at: "2015-03-04T22:25:24.624Z",
       slug: "fino-verde-basil",
@@ -6675,7 +6675,7 @@ Farm.create!({
     {
       id: 366,
       name: "fuzzy kiwifruit",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Actinidia_deliciosa",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Actinidia_deliciosa",
       created_at: "2014-05-30T16:15:47.428Z",
       updated_at: "2014-09-03T05:58:50.430Z",
       slug: "fuzzy-kiwifruit",
@@ -6691,7 +6691,7 @@ Farm.create!({
     {
       id: 562,
       name: "galangal",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Galangal",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Galangal",
       created_at: "2015-04-10T15:18:29.449Z",
       updated_at: "2015-04-10T15:18:29.449Z",
       slug: "galangal",
@@ -6707,7 +6707,7 @@ Farm.create!({
     {
       id: 459,
       name: "garden mint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mentha_sachalinensis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mentha_sachalinensis",
       created_at: "2015-01-16T11:39:40.431Z",
       updated_at: "2015-01-16T11:39:40.437Z",
       slug: "garden-mint",
@@ -6739,7 +6739,7 @@ Farm.create!({
     {
       id: 517,
       name: "gem squash",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Gem_squash",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Gem_squash",
       created_at: "2015-01-16T11:39:57.442Z",
       updated_at: "2015-01-16T11:39:57.457Z",
       slug: "gem-squash",
@@ -6755,7 +6755,7 @@ Farm.create!({
     {
       id: 364,
       name: "Good King Henry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Blitum_bonus-henricus",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Blitum_bonus-henricus",
       created_at: "2014-05-30T16:12:32.037Z",
       updated_at: "2014-09-03T05:58:50.408Z",
       slug: "good-king-henry",
@@ -6771,7 +6771,7 @@ Farm.create!({
     {
       id: 561,
       name: "grains of paradise",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Aframomum_melegueta",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Aframomum_melegueta",
       created_at: "2015-04-09T19:54:11.512Z",
       updated_at: "2015-04-09T19:54:11.512Z",
       slug: "grains-of-paradise",
@@ -6787,7 +6787,7 @@ Farm.create!({
     {
       id: 563,
       name: "greater galangal",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Alpinia_galanga",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Alpinia_galanga",
       created_at: "2015-04-10T15:19:24.105Z",
       updated_at: "2015-04-10T15:19:24.105Z",
       slug: "greater-galangal",
@@ -6803,7 +6803,7 @@ Farm.create!({
     {
       id: 426,
       name: "Greek sage",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Salvia_fruticosa",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Salvia_fruticosa",
       created_at: "2015-01-16T11:39:38.674Z",
       updated_at: "2015-01-16T11:39:38.681Z",
       slug: "greek-sage",
@@ -6867,7 +6867,7 @@ Farm.create!({
     {
       id: 325,
       name: "guajillo pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Guajillo_chili",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Guajillo_chili",
       created_at: "2014-01-02T10:39:56.173Z",
       updated_at: "2014-09-03T05:58:50.013Z",
       slug: "guajillo-pepper",
@@ -6899,7 +6899,7 @@ Farm.create!({
     {
       id: 326,
       name: "Guntur Sannam chili",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Guntur_Sannam",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Guntur_Sannam",
       created_at: "2014-01-02T10:39:56.224Z",
       updated_at: "2014-09-03T05:58:50.026Z",
       slug: "guntur-sannam-chili",
@@ -6915,7 +6915,7 @@ Farm.create!({
     {
       id: 350,
       name: "habanero pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Habanero",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Habanero",
       created_at: "2014-01-02T10:39:57.027Z",
       updated_at: "2014-09-03T05:58:50.240Z",
       slug: "habanero-pepper",
@@ -6931,7 +6931,7 @@ Farm.create!({
     {
       id: 358,
       name: "Hainan yellow lantern",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Hainan_Yellow_Lantern_Chili",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Hainan_Yellow_Lantern_Chili",
       created_at: "2014-01-02T10:39:57.264Z",
       updated_at: "2014-09-03T05:58:50.329Z",
       slug: "hainan-yellow-lantern",
@@ -6947,7 +6947,7 @@ Farm.create!({
     {
       id: 556,
       name: "hairy blueberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Vaccinium_hirsutum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Vaccinium_hirsutum",
       created_at: "2015-04-07T15:53:40.288Z",
       updated_at: "2015-04-07T15:53:40.288Z",
       slug: "hairy-blueberry",
@@ -6963,7 +6963,7 @@ Farm.create!({
     {
       id: 404,
       name: "Hanover tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Hanover_tomato",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Hanover_tomato",
       created_at: "2014-11-19T06:11:19.487Z",
       updated_at: "2014-11-19T06:11:19.497Z",
       slug: "hanover-tomato",
@@ -6995,7 +6995,7 @@ Farm.create!({
     {
       id: 405,
       name: "hillbilly tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Hillbilly_(tomato)",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Hillbilly_(tomato)",
       created_at: "2014-11-19T06:11:19.533Z",
       updated_at: "2014-11-19T06:11:19.541Z",
       slug: "hillbilly-tomato",
@@ -7011,7 +7011,7 @@ Farm.create!({
     {
       id: 559,
       name: "hillside blueberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Vaccinium_pallidum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Vaccinium_pallidum",
       created_at: "2015-04-07T15:55:22.542Z",
       updated_at: "2015-04-07T15:55:22.542Z",
       slug: "hillside-blueberry",
@@ -7027,7 +7027,7 @@ Farm.create!({
     {
       id: 448,
       name: "Hungarian thyme",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Thymus_pannonicus",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Thymus_pannonicus",
       created_at: "2015-01-16T11:39:39.965Z",
       updated_at: "2015-01-16T11:39:39.971Z",
       slug: "hungarian-thyme",
@@ -7043,7 +7043,7 @@ Farm.create!({
     {
       id: 469,
       name: "hyssop",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Hyssop",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Hyssop",
       created_at: "2015-01-16T11:39:40.925Z",
       updated_at: "2015-01-16T11:39:40.925Z",
       slug: "hyssop",
@@ -7075,7 +7075,7 @@ Farm.create!({
     {
       id: 379,
       name: "ice-cream bean",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Inga_edulis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Inga_edulis",
       created_at: "2014-09-13T14:53:07.832Z",
       updated_at: "2014-09-13T14:53:07.832Z",
       slug: "ice-cream-bean",
@@ -7091,7 +7091,7 @@ Farm.create!({
     {
       id: 283,
       name: "ice plant",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Carpobrotus_edulis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Carpobrotus_edulis",
       created_at: "2013-08-26T05:23:24.077Z",
       updated_at: "2013-08-27T00:27:09.527Z",
       slug: "ice-plant",
@@ -7107,7 +7107,7 @@ Farm.create!({
     {
       id: 536,
       name: "inland serviceberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier_interior",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier_interior",
       created_at: "2015-03-04T23:09:07.277Z",
       updated_at: "2015-03-04T23:09:07.277Z",
       slug: "inland-serviceberry",
@@ -7139,7 +7139,7 @@ Farm.create!({
     {
       id: 505,
       name: "Japanese pie pumpkin",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Cucurbita_argyrosperma",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Cucurbita_argyrosperma",
       created_at: "2015-01-16T11:39:55.927Z",
       updated_at: "2015-01-16T11:39:55.937Z",
       slug: "japanese-pie-pumpkin",
@@ -7171,7 +7171,7 @@ Farm.create!({
     {
       id: 406,
       name: "jubilee tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Jubilee_(tomato)",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Jubilee_(tomato)",
       created_at: "2014-11-19T06:11:19.593Z",
       updated_at: "2014-11-19T06:11:19.626Z",
       slug: "jubilee-tomato",
@@ -7203,7 +7203,7 @@ Farm.create!({
     {
       id: 268,
       name: "kabocha",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Kabocha",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Kabocha",
       created_at: "2013-07-24T14:26:05.573Z",
       updated_at: "2015-01-16T11:39:56.314Z",
       slug: "kabocha",
@@ -7251,7 +7251,7 @@ Farm.create!({
     {
       id: 363,
       name: "kambuzi",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Kambuzi",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Kambuzi",
       created_at: "2014-01-02T10:39:57.467Z",
       updated_at: "2014-09-03T05:58:50.397Z",
       slug: "kambuzi",
@@ -7283,7 +7283,7 @@ Farm.create!({
     {
       id: 437,
       name: "Korean mint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Agastache_rugosa",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Agastache_rugosa",
       created_at: "2015-01-16T11:39:39.357Z",
       updated_at: "2015-01-16T11:39:39.357Z",
       slug: "korean-mint",
@@ -7315,7 +7315,7 @@ Farm.create!({
     {
       id: 259,
       name: "land cress",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Barbarea_verna",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Barbarea_verna",
       created_at: "2013-04-17T11:24:48.018Z",
       updated_at: "2013-08-22T01:23:31.653Z",
       slug: "land-cress",
@@ -7331,7 +7331,7 @@ Farm.create!({
     {
       id: 430,
       name: "lemon beebalm",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Monarda_citriodora",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Monarda_citriodora",
       created_at: "2015-01-16T11:39:39.007Z",
       updated_at: "2015-01-16T11:39:39.013Z",
       slug: "lemon-beebalm",
@@ -7363,7 +7363,7 @@ Farm.create!({
     {
       id: 341,
       name: "lemon drop pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Lemon_drop_%28pepper%29",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Lemon_drop_%28pepper%29",
       created_at: "2014-01-02T10:39:56.759Z",
       updated_at: "2014-09-03T05:58:50.153Z",
       slug: "lemon-drop-pepper",
@@ -7395,7 +7395,7 @@ Farm.create!({
     {
       id: 443,
       name: "lesser calamint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Calamintha_nepeta",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Calamintha_nepeta",
       created_at: "2015-01-16T11:39:39.752Z",
       updated_at: "2015-01-16T11:39:39.758Z",
       slug: "lesser-calamint",
@@ -7411,7 +7411,7 @@ Farm.create!({
     {
       id: 564,
       name: "lesser galangal",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Alpinia_officinarum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Alpinia_officinarum",
       created_at: "2015-04-10T15:19:56.782Z",
       updated_at: "2015-04-10T15:19:56.782Z",
       slug: "lesser-galangal",
@@ -7427,7 +7427,7 @@ Farm.create!({
     {
       id: 521,
       name: "lettuce leaf basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Lettuce_leaf_basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Lettuce_leaf_basil",
       created_at: "2015-03-04T22:23:17.978Z",
       updated_at: "2015-03-04T22:23:17.978Z",
       slug: "lettuce-leaf-basil",
@@ -7443,7 +7443,7 @@ Farm.create!({
     {
       id: 407,
       name: "lillian's yellow tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Lillian%27s_Yellow_(tomato)",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Lillian%27s_Yellow_(tomato)",
       created_at: "2014-11-19T06:11:19.680Z",
       updated_at: "2014-11-19T06:11:19.693Z",
       slug: "lillian-s-yellow-tomato",
@@ -7491,7 +7491,7 @@ Farm.create!({
     {
       id: 531,
       name: "lovely shadbush",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier_amabilis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier_amabilis",
       created_at: "2015-03-04T22:54:29.180Z",
       updated_at: "2015-03-04T22:54:29.180Z",
       slug: "lovely-shadbush",
@@ -7507,7 +7507,7 @@ Farm.create!({
     {
       id: 535,
       name: "low shadbush",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier_humilis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier_humilis",
       created_at: "2015-03-04T23:07:09.113Z",
       updated_at: "2015-03-04T23:07:09.113Z",
       slug: "low-shadbush",
@@ -7539,7 +7539,7 @@ Farm.create!({
     {
       id: 349,
       name: "Madame Jeanette pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Madame_Jeanette",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Madame_Jeanette",
       created_at: "2014-01-02T10:39:56.998Z",
       updated_at: "2014-09-03T05:58:50.230Z",
       slug: "madame-jeanette-pepper",
@@ -7555,7 +7555,7 @@ Farm.create!({
     {
       id: 526,
       name: "magical Michael basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Magical_Michael",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Magical_Michael",
       created_at: "2015-03-04T22:28:12.730Z",
       updated_at: "2015-03-04T22:28:12.730Z",
       slug: "magical-michael-basil",
@@ -7571,7 +7571,7 @@ Farm.create!({
     {
       id: 361,
       name: "malagueta pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Malagueta_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Malagueta_pepper",
       created_at: "2014-01-02T10:39:57.348Z",
       updated_at: "2014-09-03T05:58:50.374Z",
       slug: "malagueta-pepper",
@@ -7619,7 +7619,7 @@ Farm.create!({
     {
       id: 408,
       name: "marglobe tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Marglobe",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Marglobe",
       created_at: "2014-11-19T06:11:19.756Z",
       updated_at: "2014-11-19T06:11:19.765Z",
       slug: "marglobe-tomato",
@@ -7667,7 +7667,7 @@ Farm.create!({
     {
       id: 409,
       name: "Matt's wild cherry tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Matt%27s_Wild_Cherry",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Matt%27s_Wild_Cherry",
       created_at: "2014-11-19T06:11:19.807Z",
       updated_at: "2014-11-19T06:11:19.815Z",
       slug: "matt-s-wild-cherry-tomato",
@@ -7715,7 +7715,7 @@ Farm.create!({
     {
       id: 331,
       name: "medusa pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Medusa_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Medusa_pepper",
       created_at: "2014-01-02T10:39:56.415Z",
       updated_at: "2014-09-03T05:58:50.057Z",
       slug: "medusa-pepper",
@@ -7747,7 +7747,7 @@ Farm.create!({
     {
       id: 276,
       name: "milkweed",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Asclepias",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Asclepias",
       created_at: "2013-08-26T05:13:54.206Z",
       updated_at: "2013-08-27T00:27:09.495Z",
       slug: "milkweed",
@@ -7779,7 +7779,7 @@ Farm.create!({
     {
       id: 279,
       name: "moringa",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Moringa",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Moringa",
       created_at: "2013-08-26T05:18:05.443Z",
       updated_at: "2013-08-27T00:27:09.509Z",
       slug: "moringa",
@@ -7795,7 +7795,7 @@ Farm.create!({
     {
       id: 533,
       name: "mountain serviceberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier_bartramiana",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier_bartramiana",
       created_at: "2015-03-04T22:56:08.103Z",
       updated_at: "2015-03-04T22:56:08.103Z",
       slug: "mountain-serviceberry",
@@ -7811,7 +7811,7 @@ Farm.create!({
     {
       id: 332,
       name: "mulato pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mulato_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mulato_pepper",
       created_at: "2014-01-02T10:39:56.443Z",
       updated_at: "2014-09-03T05:58:50.067Z",
       slug: "mulato-pepper",
@@ -7827,7 +7827,7 @@ Farm.create!({
     {
       id: 284,
       name: "murnong",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Microseris_lanceolata",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Microseris_lanceolata",
       created_at: "2013-08-26T05:25:16.640Z",
       updated_at: "2013-08-27T00:27:09.532Z",
       slug: "murnong",
@@ -7843,7 +7843,7 @@ Farm.create!({
     {
       id: 303,
       name: "mushroom",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Edible_mushroom",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Edible_mushroom",
       created_at: "2013-12-31T10:39:26.471Z",
       updated_at: "2014-09-03T05:58:49.797Z",
       slug: "mushroom",
@@ -7859,7 +7859,7 @@ Farm.create!({
     {
       id: 274,
       name: "muskmelon",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Muskmelon",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Muskmelon",
       created_at: "2013-08-26T05:06:06.793Z",
       updated_at: "2013-08-27T00:27:09.486Z",
       slug: "muskmelon",
@@ -7891,7 +7891,7 @@ Farm.create!({
     {
       id: 538,
       name: "Nantucket serviceberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier_nantucketensis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier_nantucketensis",
       created_at: "2015-03-04T23:10:07.994Z",
       updated_at: "2015-03-04T23:10:07.994Z",
       slug: "nantucket-serviceberry",
@@ -7923,7 +7923,7 @@ Farm.create!({
     {
       id: 298,
       name: "naranjilla",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Solanum_quitoense",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Solanum_quitoense",
       created_at: "2013-10-01T02:06:07.356Z",
       updated_at: "2014-09-03T05:58:49.744Z",
       slug: "naranjilla",
@@ -7939,7 +7939,7 @@ Farm.create!({
     {
       id: 277,
       name: "native ginger",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Alpinia_caerulea",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Alpinia_caerulea",
       created_at: "2013-08-26T05:15:05.721Z",
       updated_at: "2013-08-27T00:27:09.499Z",
       slug: "native-ginger",
@@ -7971,7 +7971,7 @@ Farm.create!({
     {
       id: 523,
       name: "nufar basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Nufar_basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Nufar_basil",
       created_at: "2015-03-04T22:24:25.426Z",
       updated_at: "2015-03-04T22:24:25.426Z",
       slug: "nufar-basil",
@@ -8019,7 +8019,7 @@ Farm.create!({
     {
       id: 297,
       name: "pandan",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Pandanus_amaryllifolius",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Pandanus_amaryllifolius",
       created_at: "2013-10-01T02:03:21.008Z",
       updated_at: "2014-09-03T05:58:49.733Z",
       slug: "pandan",
@@ -8035,7 +8035,7 @@ Farm.create!({
     {
       id: 381,
       name: "papaya",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Papaya",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Papaya",
       created_at: "2014-10-08T17:55:24.500Z",
       updated_at: "2014-10-08T17:55:24.500Z",
       slug: "papaya",
@@ -8051,7 +8051,7 @@ Farm.create!({
     {
       id: 570,
       name: "pattypan squash ",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Pattypan_squash",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Pattypan_squash",
       created_at: "2015-07-08T16:37:15.385Z",
       updated_at: "2015-07-08T16:37:15.567Z",
       slug: "pattypan-squash-504acaeb-1265-4a55-9827-962a43471b9e",
@@ -8067,7 +8067,7 @@ Farm.create!({
     {
       id: 382,
       name: "pawpaw",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Asimina_triloba",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Asimina_triloba",
       created_at: "2014-10-08T17:56:03.348Z",
       updated_at: "2014-10-08T17:56:03.348Z",
       slug: "pawpaw",
@@ -8099,7 +8099,7 @@ Farm.create!({
     {
       id: 457,
       name: "pennyroyal",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mentha_pulegium",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mentha_pulegium",
       created_at: "2015-01-16T11:39:40.347Z",
       updated_at: "2015-01-16T11:39:40.354Z",
       slug: "pennyroyal",
@@ -8115,7 +8115,7 @@ Farm.create!({
     {
       id: 342,
       name: "peppadew pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Peppadew",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Peppadew",
       created_at: "2014-01-02T10:39:56.794Z",
       updated_at: "2014-09-03T05:58:50.163Z",
       slug: "peppadew-pepper",
@@ -8131,7 +8131,7 @@ Farm.create!({
     {
       id: 335,
       name: "pequin pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Pequin_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Pequin_pepper",
       created_at: "2014-01-02T10:39:56.587Z",
       updated_at: "2014-09-03T05:58:50.100Z",
       slug: "pequin-pepper",
@@ -8147,7 +8147,7 @@ Farm.create!({
     {
       id: 333,
       name: "peter pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Peter_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Peter_pepper",
       created_at: "2014-01-02T10:39:56.528Z",
       updated_at: "2014-09-03T05:58:50.077Z",
       slug: "peter-pepper",
@@ -8179,7 +8179,7 @@ Farm.create!({
     {
       id: 336,
       name: "pimento pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Pimiento",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Pimiento",
       created_at: "2014-01-02T10:39:56.612Z",
       updated_at: "2014-09-03T05:58:50.114Z",
       slug: "pimento-pepper",
@@ -8195,7 +8195,7 @@ Farm.create!({
     {
       id: 359,
       name: "piri-piri pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Piri_piri",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Piri_piri",
       created_at: "2014-01-02T10:39:57.293Z",
       updated_at: "2014-09-03T05:58:50.342Z",
       slug: "piri-piri-pepper",
@@ -8273,22 +8273,6 @@ Farm.create!({
       rejection_notes: nil
     },
     {
-      id: 596,
-      name: "pūhā",
-      en_wikipedia_url: "https://en.wikipedia.org/wiki/Pūhā",
-      created_at: "2016-09-13T21:36:49.874Z",
-      updated_at: "2016-09-14T13:37:12.376Z",
-      slug: "puha",
-      parent_id: 70,
-      plantings_count: 0,
-      creator_id: 44,
-      requester_id: 15,
-      approval_status: "approved",
-      reason_for_rejection: "",
-      request_notes: "",
-      rejection_notes: ""
-    },
-    {
       id: 493,
       name: "purple amaranth",
       en_wikipedia_url: "https://en.wikipedia.org/wiki/Amaranthus_blitum",
@@ -8307,7 +8291,7 @@ Farm.create!({
     {
       id: 525,
       name: "purple ruffles basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Purple_ruffles_basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Purple_ruffles_basil",
       created_at: "2015-03-04T22:26:44.743Z",
       updated_at: "2015-03-04T22:26:44.743Z",
       slug: "purple-ruffles-basil",
@@ -8339,7 +8323,7 @@ Farm.create!({
     {
       id: 549,
       name: "rabbiteye blueberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Vaccinium_virgatum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Vaccinium_virgatum",
       created_at: "2015-04-07T15:47:41.319Z",
       updated_at: "2015-04-07T15:47:41.319Z",
       slug: "rabbiteye-blueberry",
@@ -8403,7 +8387,7 @@ Farm.create!({
     {
       id: 352,
       name: "red savino pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Red_Savina_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Red_Savina_pepper",
       created_at: "2014-01-02T10:39:57.092Z",
       updated_at: "2014-09-03T05:58:50.261Z",
       slug: "red-savino-pepper",
@@ -8435,7 +8419,7 @@ Farm.create!({
     {
       id: 540,
       name: "red-twigged shadbush",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier_sanguinea",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier_sanguinea",
       created_at: "2015-03-04T23:10:57.952Z",
       updated_at: "2015-03-04T23:10:57.952Z",
       slug: "red-twigged-shadbush",
@@ -8483,7 +8467,7 @@ Farm.create!({
     {
       id: 310,
       name: "rocoto",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Capsicum_pubescens",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Capsicum_pubescens",
       created_at: "2014-01-02T10:39:55.616Z",
       updated_at: "2014-09-03T05:58:49.857Z",
       slug: "rocoto",
@@ -8499,7 +8483,7 @@ Farm.create!({
     {
       id: 440,
       name: "round-leafed oregano",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Origanum_rotundifolium",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Origanum_rotundifolium",
       created_at: "2015-01-16T11:39:39.621Z",
       updated_at: "2015-01-16T11:39:39.627Z",
       slug: "round-leafed-oregano",
@@ -8515,7 +8499,7 @@ Farm.create!({
     {
       id: 281,
       name: "ruby saltbush",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Enchylaena_tomentosa",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Enchylaena_tomentosa",
       created_at: "2013-08-26T05:20:47.000Z",
       updated_at: "2013-08-27T00:27:09.517Z",
       slug: "ruby-saltbush",
@@ -8547,7 +8531,7 @@ Farm.create!({
     {
       id: 338,
       name: "Santa Fe Grande pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Santa_Fe_Grande_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Santa_Fe_Grande_pepper",
       created_at: "2014-01-02T10:39:56.672Z",
       updated_at: "2014-09-03T05:58:50.135Z",
       slug: "santa-fe-grande-pepper",
@@ -8563,7 +8547,7 @@ Farm.create!({
     {
       id: 415,
       name: "Santorini tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Santorini_(tomato)",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Santorini_(tomato)",
       created_at: "2014-11-19T06:11:20.123Z",
       updated_at: "2014-11-19T06:11:20.141Z",
       slug: "santorini-tomato",
@@ -8579,7 +8563,7 @@ Farm.create!({
     {
       id: 530,
       name: "saskatoon",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier_alnifolia",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier_alnifolia",
       created_at: "2015-03-04T22:52:16.102Z",
       updated_at: "2015-03-04T22:52:16.102Z",
       slug: "saskatoon",
@@ -8595,7 +8579,7 @@ Farm.create!({
     {
       id: 339,
       name: "serrano pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Serrano_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Serrano_pepper",
       created_at: "2014-01-02T10:39:56.701Z",
       updated_at: "2014-09-03T05:58:50.144Z",
       slug: "serrano-pepper",
@@ -8627,7 +8611,7 @@ Farm.create!({
     {
       id: 506,
       name: "seven year melon",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Cucurbita_ficifolia",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Cucurbita_ficifolia",
       created_at: "2015-01-16T11:39:56.027Z",
       updated_at: "2015-01-16T11:39:56.040Z",
       slug: "seven-year-melon",
@@ -8643,7 +8627,7 @@ Farm.create!({
     {
       id: 557,
       name: "shiny blueberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Vaccinium_myrsinites",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Vaccinium_myrsinites",
       created_at: "2015-04-07T15:54:03.821Z",
       updated_at: "2015-04-07T15:54:03.821Z",
       slug: "shiny-blueberry",
@@ -8659,7 +8643,7 @@ Farm.create!({
     {
       id: 362,
       name: "siling labuyo pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Siling_labuyo",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Siling_labuyo",
       created_at: "2014-01-02T10:39:57.380Z",
       updated_at: "2014-09-03T05:58:50.386Z",
       slug: "siling-labuyo-pepper",
@@ -8691,7 +8675,7 @@ Farm.create!({
     {
       id: 560,
       name: "small black blueberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Vaccinium_tenellum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Vaccinium_tenellum",
       created_at: "2015-04-07T15:56:16.488Z",
       updated_at: "2015-04-07T15:56:16.488Z",
       slug: "small-black-blueberry",
@@ -8723,7 +8707,7 @@ Farm.create!({
     {
       id: 537,
       name: "smooth shadbush",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier_laevis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier_laevis",
       created_at: "2015-03-04T23:09:41.565Z",
       updated_at: "2015-03-04T23:09:41.565Z",
       slug: "smooth-shadbush",
@@ -8739,7 +8723,7 @@ Farm.create!({
     {
       id: 539,
       name: "snowy mespilus",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier_ovalis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier_ovalis",
       created_at: "2015-03-04T23:10:35.959Z",
       updated_at: "2015-03-04T23:10:35.959Z",
       slug: "snowy-mespilus",
@@ -8771,7 +8755,7 @@ Farm.create!({
     {
       id: 461,
       name: "spicy globe basil",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Spicy_globe_basil",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Spicy_globe_basil",
       created_at: "2015-01-16T11:39:40.560Z",
       updated_at: "2015-01-16T11:39:40.566Z",
       slug: "spicy-globe-basil",
@@ -8819,7 +8803,7 @@ Farm.create!({
     {
       id: 200,
       name: "star anise",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Illicium_verum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Illicium_verum",
       created_at: "2013-03-19T01:30:29.650Z",
       updated_at: "2015-01-16T11:39:51.270Z",
       slug: "star-anise",
@@ -8867,7 +8851,7 @@ Farm.create!({
     {
       id: 360,
       name: "Tabasco pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Tabasco_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Tabasco_pepper",
       created_at: "2014-01-02T10:39:57.321Z",
       updated_at: "2014-09-03T05:58:50.358Z",
       slug: "tabasco-pepper",
@@ -8947,7 +8931,7 @@ Farm.create!({
     {
       id: 542,
       name: "thicket shadbush",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier_spicata",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier_spicata",
       created_at: "2015-03-04T23:12:43.539Z",
       updated_at: "2015-03-04T23:12:43.539Z",
       slug: "thicket-shadbush",
@@ -8963,7 +8947,7 @@ Farm.create!({
     {
       id: 418,
       name: "three sisters tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Three_Sisters_(tomato)",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Three_Sisters_(tomato)",
       created_at: "2014-11-19T06:11:20.300Z",
       updated_at: "2014-11-19T06:11:20.322Z",
       slug: "three-sisters-tomato",
@@ -8995,7 +8979,7 @@ Farm.create!({
     {
       id: 421,
       name: "tomberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Tomberry",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Tomberry",
       created_at: "2014-11-19T06:11:20.482Z",
       updated_at: "2014-11-19T06:11:20.490Z",
       slug: "tomberry",
@@ -9011,7 +8995,7 @@ Farm.create!({
     {
       id: 422,
       name: "traveller tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Traveller_(tomato)",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Traveller_(tomato)",
       created_at: "2014-11-19T06:11:20.527Z",
       updated_at: "2014-11-19T06:11:20.535Z",
       slug: "traveller-tomato",
@@ -9043,7 +9027,7 @@ Farm.create!({
     {
       id: 357,
       name: "Trinidad Moruga scorpion pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Trinidad_Moruga_Scorpion",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Trinidad_Moruga_Scorpion",
       created_at: "2014-01-02T10:39:57.236Z",
       updated_at: "2014-09-03T05:58:50.315Z",
       slug: "trinidad-moruga-scorpion-pepper",
@@ -9059,7 +9043,7 @@ Farm.create!({
     {
       id: 356,
       name: "Trinidad scorpion butch T pepper",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Trinidad_Scorpion_Butch_T_pepper",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Trinidad_Scorpion_Butch_T_pepper",
       created_at: "2014-01-02T10:39:57.207Z",
       updated_at: "2014-09-03T05:58:50.305Z",
       slug: "trinidad-scorpion-butch-t-pepper",
@@ -9073,25 +9057,9 @@ Farm.create!({
       rejection_notes: nil
     },
     {
-      id: 512,
-      name: "tromboncino",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Tromboncino_(squash)",
-      created_at: "2015-01-16T11:39:56.765Z",
-      updated_at: "2015-01-16T11:39:56.779Z",
-      slug: "tromboncino",
-      parent_id: 508,
-      plantings_count: 0,
-      creator_id: 438,
-      requester_id: nil,
-      approval_status: "approved",
-      reason_for_rejection: nil,
-      request_notes: nil,
-      rejection_notes: nil
-    },
-    {
       id: 510,
       name: "turban squash",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Turban_squash",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Turban_squash",
       created_at: "2015-01-16T11:39:56.471Z",
       updated_at: "2015-01-16T11:39:56.482Z",
       slug: "turban-squash",
@@ -9123,7 +9091,7 @@ Farm.create!({
     {
       id: 543,
       name: "Utah serviceberry",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Amelanchier_utahensis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Amelanchier_utahensis",
       created_at: "2015-03-04T23:13:42.098Z",
       updated_at: "2015-03-04T23:13:42.098Z",
       slug: "utah-serviceberry",
@@ -9203,7 +9171,7 @@ Farm.create!({
     {
       id: 450,
       name: "water mint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mentha_aquatica",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mentha_aquatica",
       created_at: "2015-01-16T11:39:40.086Z",
       updated_at: "2015-01-16T11:39:40.094Z",
       slug: "water-mint",
@@ -9219,7 +9187,7 @@ Farm.create!({
     {
       id: 282,
       name: "wattle",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Acacia",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Acacia",
       created_at: "2013-08-26T05:21:56.585Z",
       updated_at: "2013-08-27T00:27:09.522Z",
       slug: "wattle",
@@ -9235,7 +9203,7 @@ Farm.create!({
     {
       id: 294,
       name: "white currant",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/White_currant",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/White_currant",
       created_at: "2013-09-09T02:32:48.582Z",
       updated_at: "2014-09-03T05:58:49.704Z",
       slug: "white-currant",
@@ -9251,7 +9219,7 @@ Farm.create!({
     {
       id: 423,
       name: "white queen tomato",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/White_Queen_tomato",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/White_Queen_tomato",
       created_at: "2014-11-19T06:11:20.583Z",
       updated_at: "2014-11-19T06:11:20.598Z",
       slug: "white-queen-tomato",
@@ -9267,7 +9235,7 @@ Farm.create!({
     {
       id: 344,
       name: "wild baccatum",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Capsicum_baccatum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Capsicum_baccatum",
       created_at: "2014-01-02T10:39:56.857Z",
       updated_at: "2014-09-03T05:58:50.187Z",
       slug: "wild-baccatum",
@@ -9283,7 +9251,7 @@ Farm.create!({
     {
       id: 433,
       name: "wild bergamot",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Monarda_fistulosa",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Monarda_fistulosa",
       created_at: "2015-01-16T11:39:39.148Z",
       updated_at: "2015-01-16T11:39:39.154Z",
       slug: "wild-bergamot",
@@ -9299,7 +9267,7 @@ Farm.create!({
     {
       id: 278,
       name: "wild ginger",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Asarum_caudatum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Asarum_caudatum",
       created_at: "2013-08-26T05:16:18.481Z",
       updated_at: "2013-08-27T00:27:09.505Z",
       slug: "wild-ginger",
@@ -9315,7 +9283,7 @@ Farm.create!({
     {
       id: 451,
       name: "wild mint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mentha_arvensis",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mentha_arvensis",
       created_at: "2015-01-16T11:39:40.117Z",
       updated_at: "2015-01-16T11:39:40.124Z",
       slug: "wild-mint",
@@ -9331,7 +9299,7 @@ Farm.create!({
     {
       id: 256,
       name: "winter melon",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Winter_melon",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Winter_melon",
       created_at: "2013-04-17T11:20:48.805Z",
       updated_at: "2013-08-22T01:23:31.599Z",
       slug: "winter-melon",
@@ -9347,7 +9315,7 @@ Farm.create!({
     {
       id: 456,
       name: "wrinkled-leaf mint",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Mentha_crispata",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Mentha_crispata",
       created_at: "2015-01-16T11:39:40.293Z",
       updated_at: "2015-01-16T11:39:40.299Z",
       slug: "wrinkled-leaf-mint",
@@ -9379,7 +9347,7 @@ Farm.create!({
     {
       id: 435,
       name: "yerba buena",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Micromeria_douglasii",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Micromeria_douglasii",
       created_at: "2015-01-16T11:39:39.278Z",
       updated_at: "2015-01-16T11:39:39.278Z",
       slug: "yerba-buena",
@@ -9395,7 +9363,7 @@ Farm.create!({
     {
       id: 441,
       name: "za'atar",
-      en_wikipedia_url: "http://en.wikipedia.org/wiki/Origanum_syriacum",
+      en_wikipedia_url: "https://en.wikipedia.org/wiki/Origanum_syriacum",
       created_at: "2015-01-16T11:39:39.652Z",
       updated_at: "2015-01-16T11:39:39.658Z",
       slug: "za-atar",
@@ -9409,10 +9377,24 @@ Farm.create!({
       rejection_notes: nil
     }
   ]
+
+  def scrape_wikipedia_images(wikipedia_link)
+    links_arr = []
+    Nokogiri::HTML(open(wikipedia_link)).css("a.image img").each {|link| links_arr << link['src']}
+    links_arr.keep_if do |link|
+      link_segment = link.slice(link.rindex('/') + 1 .. -1).downcase
+      link.downcase.include?(link_segment && '.jpg')
+    end
+    image_url = "https:#{links_arr[0]}"
+    image_url
+  end
+
+
   crops.each do |crop|
     StockCrop.create!({
       name: crop[:name],
       en_wikipedia_url: crop[:en_wikipedia_url],
-      growstuff_id: crop[:id]
+      growstuff_id: crop[:id],
+      image_url: scrape_wikipedia_images(crop[:en_wikipedia_url])
       })
     end
