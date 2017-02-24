@@ -1,4 +1,6 @@
 class CropsController < ApplicationController
+  before_filter: :convert_date
+
   def index
     @farm = Farm.find params[:farm_id]
     @crops = Crop.where(farm_id: params[:farm_id])
@@ -22,6 +24,8 @@ class CropsController < ApplicationController
     redirect_to farm_crops_path
   end
 
+  autocomplete :stock_crops, :name
+
   private
 
   def crop_params
@@ -33,5 +37,9 @@ class CropsController < ApplicationController
       :harvest_date,
       :availability
     )
+  end
+
+  def convert_date
+    params[:harvest_date] = Date.strptime(params[:harvest_date], '%d/%m/%Y')
   end
 end
