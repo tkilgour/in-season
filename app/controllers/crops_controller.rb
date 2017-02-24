@@ -1,24 +1,30 @@
 class CropsController < ApplicationController
+
   def index
-    @crops = Farm.find(param[:farm_id]).crops
+    @farm = Farm.find params[:farm_id]
+    @crops = Crop.where(farm_id: params[:farm_id])
+    @new_crop = Crop.new
   end
 
   def create
-    @crop = Crop.new(crop_params)
+    before_filter :convert_date
+    @crop = Crop.create!(crop_params)
   end
 
   def show
-    @crops = Crop.find(param[:id])
+    @crops = Crop.find(params[:id])
   end
 
   def update
   end
 
   def destroy
-    @crop = Crop.find(param[:id])
+    @crop = Crop.find(params[:id])
     @crop.destroy
     redirect_to farm_crops_path
   end
+
+  autocomplete :stock_crops, :name
 
   private
 
@@ -31,5 +37,9 @@ class CropsController < ApplicationController
       :harvest_date,
       :availability
     )
+  end
+
+  def convert_date
+    params[:harvest_date] = Date.strptime(params[:harvest_date], '%d/%m/%Y')
   end
 end
