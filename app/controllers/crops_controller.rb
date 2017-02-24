@@ -1,5 +1,4 @@
 class CropsController < ApplicationController
-  before_filter: :convert_date
 
   def index
     @farm = Farm.find params[:farm_id]
@@ -8,6 +7,7 @@ class CropsController < ApplicationController
   end
 
   def create
+    before_filter :convert_date
     @crop = Crop.create!(crop_params)
   end
 

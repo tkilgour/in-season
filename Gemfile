@@ -28,6 +28,8 @@ gem 'jquery-rails'
 
 gem 'jquery-ui-rails'
 
+gem 'rails-jquery-autocomplete'
+
 gem 'bootstrap-datepicker-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
