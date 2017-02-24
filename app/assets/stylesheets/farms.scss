@@ -9,7 +9,6 @@ body {
 .container {
   width: 100%;
   margin: 0;
-  display: flex;
 }
 
 .card {
@@ -240,7 +239,7 @@ body {
     position: relative;
     padding: 4px 8px 10px;
     height: 50px;
-    background-color: #e8e1da;
+    background-color: #575204;
     padding-bottom: 62px;
 }
 
@@ -248,7 +247,7 @@ body {
     margin-bottom: 4px;
     font-size: 38px;
     line-height: 1.5;
-    color: #262626;
+    color: whitesmoke;
     vertical-align: 50%;
     margin-left: -70%;
     height: 50px;
@@ -258,7 +257,7 @@ body {
     margin-bottom: 4px;
     font-size: 24px;
     line-height: 1.2;
-    color: #262626;
+    color: whitesmoke;
     vertical-align: 50%;
     margin-right: -75%;
     margin-top: -35px;
@@ -280,12 +279,7 @@ body {
 
 .crops {
   font-color: #7c5f3f;
-  margin-left: 33%;
-  // margin-right: -;
-  justify-content: center;
-}
-#carousel-example-generic.carousel_slide {
-justify-content: center;
+  margin-left: 27.5%;
 }
 
 #carousel-example-generic img {
@@ -296,6 +290,12 @@ justify-content: center;
   border-radius: 3px;
   padding: 2px;
   border-color: #c99a68;
+  background-size: cover;
+}
+
+.panel img {
+  height: 100%;
+  width: 100%;
 }
 
 .btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
