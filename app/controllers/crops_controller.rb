@@ -7,7 +7,8 @@ class CropsController < ApplicationController
   end
 
   def create
-    @crop = Crop.create!(crop_params)
+    @crop = Crop.new(crop_params)
+    @crop.save
   end
 
   def show

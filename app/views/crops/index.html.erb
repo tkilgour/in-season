@@ -35,11 +35,11 @@
 
       <div class='form-group'>
         <img id='crop_img' src='http://placehold.it/200x150/'>
-        <%= f.file_field :image %>
+        <%= f.file_field :image_upload %>
       </div>
 
       <%= f.hidden_field :farm_id, :value => params[:farm_id] %>
-      <%= f.hidden_field :image_url, :value => '' %>
+      <%= f.hidden_field :image, :value => 'hello' %>
 
       <%= f.submit 'Create Crop' %>
     <% end %>
