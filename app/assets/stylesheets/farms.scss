@@ -17,9 +17,6 @@ body {
     background-color: rgba(214, 224, 226, 0.2);
     border-top-width: 0;
     border-bottom-width: 2px;
-    // -webkit-border-radius: 3px;
-    // -moz-border-radius: 3px;
-    // border-radius: 3px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -211,14 +208,12 @@ body {
     height: 300px;
     z-index:6;
     position: relative;
-    // border-radius: 3px;
 }
 
 .card.hovercard .avatar {
     position: relative;
     top: -110px;
     margin-bottom: -180px;
-    // background-color: #d0ddc3;
 }
 
 .card.hovercard .avatar img {
@@ -246,11 +241,11 @@ body {
 
 .card.hovercard .info .title {
     margin-bottom: 4px;
-    font-size: 45px;
+    font-size: 51px;
     color: whitesmoke;
     vertical-align: 50%;
     flex: 0 0 auto;
-    padding-left: 20px;
+    padding-left: 23px;
     line-height: 32px;
     margin-top: 20px;
 }
@@ -259,7 +254,7 @@ body {
     font-size: 20px;
     color: whitesmoke;
     opacity: 0.7;
-    margin-left: -125px;
+    margin-left: -171px;
 }
 
 .card.hovercard .info .names {
@@ -302,20 +297,21 @@ body {
 .crops {
   font-color: #7c5f3f;
   position: relative;
+  text-align: center;
 }
 
 #carousel-example-generic.carousel_slide {
-  width: 480px;
+  width: 700px;
   overflow: hidden;
   overflow-x: scroll;
-  height: 90px;
+  height: 130px;
   white-space: nowrap;
   margin: 0 auto;
 }
 
 #carousel-example-generic img {
-  height: 75px;
-  width: 75px;
+  height: 100px;
+  width: 100px;
   border: solid;
   border-width: 1px;
   border-radius: 3px;
@@ -333,32 +329,90 @@ body {
 .btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
 
 
-@media (max-width: 900px) {
-  .card.hovercard .info .title {
-    font-size: 30px;
-    flex: 0 0 auto;
-    line-height: 2.8;
-    margin-left: -50px;
+@media (max-width: 1000px) {
+  .card.hovercard .cardheader {
+    height: 220px;
   }
-  .card.hovercard .info .title span {
-    font-size: 18px;
-    color: whitesmoke;
-    opacity: 0.7;
-    margin-left: 130px;
-}
-}
-
-@media (max-width: 680px) {
-    .card.hovercard .info .title {
-    font-size: 25px;
-    flex: 0 0 auto;
-    line-height: 3;
-    margin-left: -60px;
+  .card.hovercard .info .title {
+    font-size: 35px;
+    line-height: 23px;
+    margin-left: 0px;
+    padding-top: 31px;
   }
   .card.hovercard .info .title span {
     font-size: 15px;
-    color: whitesmoke;
-    opacity: 0.7;
-    margin-left: 130px;
+    margin-left: -106px;
+  }
+  .card.hovercard .avatar {
+    top: -97px;
+  }
+  .card.hovercard .avatar img {
+    top: 25px;
+    width: 140px;
+    height: 140px;
+    max-width: 140px;
+    max-height: 140px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.5);
+    z-index:6;
+    position: relative;
+  }
+  .card.hovercard .info .badge {
+    height: 70px;
+    width: 70px;
+    margin-top: 41px;
+    margin-right: 5px;
+  }
+
+  .card.hovercard .info .badge img {
+    height: 72px;
+    width: 72px;
+    padding-right: 10px;
+    padding-top: 0;
+    padding-bottom: 10px;
+    margin-top: 1px;
+    margin-left: -3px;
+  }
+  #carousel-example-generic.carousel_slide {
+  width: 500px;
+  }
 }
+
+
+@media (max-width: 680px) {
+  .card.hovercard .cardheader {
+    height: 150px;
+  }
+    .card.hovercard .avatar {
+    top: -75px;
+  }
+  .card.hovercard .avatar img {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+
+  }
+  .card.hovercard .info {
+    height: 155px;
+}
+    .card.hovercard .info .title {
+    font-size: 27px;
+    margin-left: -14px;
+    line-height: 22px;
+    margin-top: 60px;
+  }
+  .card.hovercard .info .title span {
+    font-size: 14px;
+    margin-left: -57px;
+  }
+  .card.hovercard .info .badge {
+    margin-top: 78px;
+    margin-right: -4px;
+  }
+  #carousel-example-generic.carousel_slide {
+  width: 400px;
+  }
 }
