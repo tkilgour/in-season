@@ -1,5 +1,7 @@
 class CropsController < ApplicationController
 
+  before_action :convert_date, only: [:create]
+
   def index
     @farm = Farm.find params[:farm_id]
     @crops = Crop.where(farm_id: params[:farm_id])
@@ -7,7 +9,7 @@ class CropsController < ApplicationController
   end
 
   def create
-    convert_date
+    puts params[:harvest_date]
     @crop = Crop.create!(crop_params)
   end
 

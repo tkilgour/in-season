@@ -3,7 +3,7 @@ $(() => {
     autoclose: true
   });
 
-  // $('#crop_name').bind('railsAutocomplete.select', (event, data) => {
-  //   alert(data.item.id);
-  // });
+  $('#crop_name').bind('railsAutocomplete.select', (event, data) => {
+    $('#crop_img').attr('src', data.item.image_url);
+  });
 });
