@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :crops, except: [:index, :edit, :new] do
     get :autocomplete_stock_crop_name, :on => :collection
   end
+
 end
