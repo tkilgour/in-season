@@ -7,7 +7,7 @@ class CropsController < ApplicationController
   end
 
   def create
-    before_filter :convert_date
+    convert_date
     @crop = Crop.create!(crop_params)
   end
 
@@ -24,7 +24,7 @@ class CropsController < ApplicationController
     redirect_to farm_crops_path
   end
 
-  autocomplete :stock_crop, :name
+  autocomplete :stock_crop, :name, :full => true, :extra_data => [:]
 
   private
 
