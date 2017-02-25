@@ -24,7 +24,7 @@ class CropsController < ApplicationController
     redirect_to farm_crops_path
   end
 
-  autocomplete :stock_crop, :name, :full => true, :extra_data => [:]
+  autocomplete :stock_crop, :name, :full => true, :extra_data => [:image_url]
 
   private
 
