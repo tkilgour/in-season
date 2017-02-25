@@ -1,7 +1,5 @@
 class CropsController < ApplicationController
 
-  before_action :convert_date, only: [:create]
-
   def index
     @farm = Farm.find params[:farm_id]
     @crops = Crop.where(farm_id: params[:farm_id])
@@ -9,7 +7,6 @@ class CropsController < ApplicationController
   end
 
   def create
-    puts params[:harvest_date]
     @crop = Crop.create!(crop_params)
   end
 
@@ -39,9 +36,5 @@ class CropsController < ApplicationController
       :harvest_date,
       :availability
     )
-  end
-
-  def convert_date
-    params[:harvest_date] = Date.strptime(params[:harvest_date], '%d/%m/%Y')
   end
 end
