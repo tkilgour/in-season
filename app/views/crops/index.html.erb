@@ -33,6 +33,11 @@
         <%= f.text_area :description %>
       </div>
 
+      <div class='form-group'>
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      </div>
+
       <%= f.hidden_field :farm_id, :value => params[:farm_id] %>
       <%= f.submit 'Create Crop' %>
     <% end %>
