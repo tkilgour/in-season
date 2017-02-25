@@ -3,6 +3,16 @@
 <h1> WE ARE THE CROP COPS </h1>
 <h2>PUT YOUR HANDS ABOVE YOUR HEAD AND GET DOWN ON THE GROUND</h2>
 
-<a href="/register">Register here</a>
-<br />
-<a href="/login">Login here</a>
+
+
+<% if current_user %>
+  <h1>OMG HEYY, <%= current_user.first_name %> <%= current_user.last_name %>! Missed ya :)</h1>
+    <h1><a href="/logout">Logout</a></h1>
+  <% if current_user.is_farmer == true %>
+    <button>Click here to edit your farm prof and lollicrops</button>
+  <% end %>
+<% else %>
+  <h1><a href="/register">Register here</a></h1>
+  <h1><a href="/login">Login here</a></h1>
+  <br />
+<% end %>
