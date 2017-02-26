@@ -9391,13 +9391,11 @@ crops = [
 
 
   crops.each do |crop|
-    puts crop[:name]
     new_crop = StockCrop.new({
-      name: crop[:name],
+      name: crop[:name].capitalize,
       en_wikipedia_url: crop[:en_wikipedia_url],
       growstuff_id: crop[:id],
       image_url: scrape_wikipedia_images(crop[:en_wikipedia_url])
     })
-
-    new_crop.save! if new_crop
+    new_crop.save!
   end
