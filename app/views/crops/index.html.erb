@@ -40,6 +40,7 @@
 
       <%= f.hidden_field :default_image, :value => 'hello' %>
       <%= f.hidden_field :farm_id, :value => params[:farm_id] %>
+      <%= f.hidden_field :availability, :value => false %>
 
       <%= f.submit 'Create Crop', class: 'btn btn-primary' %>
     <% end %>
