@@ -11,12 +11,12 @@ Farm.destroy_all
 Farm.create!({
   name: 'Zocalo Organics',
   farmer: 'Beth & Seb'
-  })
+})
 
-  StockCrop.destroy_all
+StockCrop.destroy_all
 
-  crops = [
-    {
+crops = [
+  {
       id: 216,
       name: "tomato",
       en_wikipedia_url: "https://en.wikipedia.org/wiki/Tomato",
@@ -9391,10 +9391,11 @@ Farm.create!({
 
 
   crops.each do |crop|
-    StockCrop.create!({
-      name: crop[:name],
+    new_crop = StockCrop.new({
+      name: crop[:name].capitalize,
       en_wikipedia_url: crop[:en_wikipedia_url],
       growstuff_id: crop[:id],
       image_url: scrape_wikipedia_images(crop[:en_wikipedia_url])
-      })
-    end
+    })
+    new_crop.save!
+  end
