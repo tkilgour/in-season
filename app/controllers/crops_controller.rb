@@ -33,9 +33,11 @@ class CropsController < ApplicationController
       :farm_id,
       :name,
       :image,
+      :default_image,
       :description,
       :harvest_date,
       :availability
     )
+
   end
 end

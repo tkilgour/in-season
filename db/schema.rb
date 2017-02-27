@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170225211740) do
+ActiveRecord::Schema.define(version: 20170227173436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,8 +22,9 @@ ActiveRecord::Schema.define(version: 20170225211740) do
     t.text     "description"
     t.date     "harvest_date"
     t.boolean  "availability"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "default_image"
   end
 
   create_table "farms", force: :cascade do |t|

@@ -38,12 +38,10 @@
         <%= f.file_field :image %>
       </div>
 
+      <%= f.hidden_field :default_image, :value => 'hello' %>
       <%= f.hidden_field :farm_id, :value => params[:farm_id] %>
 
       <%= f.submit 'Create Crop', class: 'btn btn-primary' %>
-
-      <%# f.hidden_field :image, :value => 'hello' %>
-
     <% end %>
   </div>
 </div>
