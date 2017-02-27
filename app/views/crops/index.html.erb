@@ -39,9 +39,11 @@
       </div>
 
       <%= f.hidden_field :farm_id, :value => params[:farm_id] %>
+
+      <%= f.submit 'Create Crop', class: 'btn btn-primary' %>
+
       <%# f.hidden_field :image, :value => 'hello' %>
 
-      <%= f.submit 'Create Crop' %>
     <% end %>
   </div>
 </div>
