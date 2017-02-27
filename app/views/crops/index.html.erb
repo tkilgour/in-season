@@ -1,47 +1,72 @@
-<div class='row'>
-  <div class="col-sm-6 col-sm-offset-1">
-    <%= form_for @new_crop do |f| %>
+<div class="container">
+  <div class="row">
 
-      <% if f.object.errors.any? %>
-        <div class="alert alert-danger">
-          <strong>The following errors prevented saving:</strong>
-          <ul>
-            <% f.object.errors.full_messages.each do |error| %>
-              <li><%= error %></li>
-            <% end %>
-          </ul>
+    <div class="card hoverhovercard">
+      <div class="info">
+      <div class="avatar">
+        <img alt="" src="http://cdn.modernfarmer.com/wp-content/uploads/2015/07/Farmer-Lee-Jones_Infront-of-tractor_08222014.jpg">
+      </div>
+        <div class="title">
+          Saunder's Farm
+          <br>
+          <span> Bob and Susan Smith </span>
         </div>
-      <% end %>
 
-      <div class='form-group'>
-        <%= f.label :name %>
-        <%= f.autocomplete_field :name, autocomplete_stock_crop_name_crops_path, 'data-auto-focus' => true %>
       </div>
+    </div>
 
-      <div class='form-group'>
-        <%= f.label :availability %>
-        <%= f.check_box :availability %>
+    <div class='row'>
+
+      <div class="col-sm-12">
+
+    <div class="panel panel-default">
+  <div class="panel-body">
+      <div class="col-sm-7">
+        <%= form_for @new_crop do |f| %>
+
+          <% if f.object.errors.any? %>
+            <div class="alert alert-danger">
+              <strong>The following errors prevented saving:</strong>
+              <ul>
+                <% f.object.errors.full_messages.each do |error| %>
+                  <li><%= error %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class='form-group'>
+            <%= f.label :name %>
+            <%= f.autocomplete_field :name, autocomplete_stock_crop_name_crops_path, 'data-auto-focus' => true, class: 'form-control' %>
+          </div>
+
+          <div class='form-group'>
+            <%= f.label :harvest_date %>
+            <%= f.text_field :harvest_date, class: 'datepicker' %>
+          </div>
+
+          <div class='form-group'>
+            <%= f.label :description %>
+            <%= f.text_area :description, class: 'form-control' %>
+          </div>
+
       </div>
-
-      <div class='form-group'>
-        <%= f.label :harvest_date %>
-        <%= f.text_field :harvest_date, class: 'datepicker' %>
+      <div class="col-sm-3"
+          <div class='form-group'>
+            <img id='crop_img'>
+            <%= f.file_field :image %>
       </div>
+      <div class="col-sm-1">
+          <%= f.hidden_field :default_image, :value => 'hello' %>
+          <%= f.hidden_field :farm_id, :value => params[:farm_id] %>
 
-      <div class='form-group'>
-        <%= f.label :description %>
-        <%= f.text_area :description %>
+          <%= f.submit 'Create Crop', class: 'btn btn-primary btn-lg' %>
+        <% end %>
       </div>
+    </div>
+    </div>
+    </div>
+    </div>
 
-      <div class='form-group'>
-        <img id='crop_img' src=''>
-        <%= f.file_field :image %>
-      </div>
-
-      <%= f.hidden_field :default_image, :value => 'hello' %>
-      <%= f.hidden_field :farm_id, :value => params[:farm_id] %>
-
-      <%= f.submit 'Create Crop', class: 'btn btn-primary' %>
-    <% end %>
   </div>
 </div>
