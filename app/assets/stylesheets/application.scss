@@ -19,3 +19,50 @@
 @import "bootstrap";
 
 @import "farms";
+
+body {
+  // padding-top: 70px;
+}
+a {
+  color: #777;
+}
+
+.container {
+  // height: 65px;
+}
+
+.navbar-header img {
+  display: block;
+  float: left;
+  margin-left: 20px;
+}
+.navbar-brand {
+  display: block;
+  float: left;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+.btn {
+  position: absolute;
+  margin-top: 8px;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.navbar-right {
+  margin-right: 20px;
+}
+
+span.label {
+  font-size: 15px;
+  font-weight: normal !important;
+  font-family: Helvetica!important;
+  line-height: 3.2;
+}
