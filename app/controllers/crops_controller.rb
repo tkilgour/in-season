@@ -5,10 +5,6 @@ class CropsController < ApplicationController
     @crops = Crop.where(farm_id: params[:farm_id])
     @new_crop = Crop.new
 
-    @available_crops = @crops.where(availability: true)
-    @upcoming_crops = @crops.where(harvest_date: Date.today..2.weeks.from_now).where(availability: false)
-    @distant_crops = @crops.where(harvest_date > 2.weeks.from_now).(availability: false)
-    @past_crops = @crops.where(harvest_date < Date.today).where(availability: false)
   end
 
   def create
