@@ -1,3 +1,20 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.ui-autocomplete {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.ui-helper-hidden-accessible {
+  display: none;
+}
+
+body {
+  padding-top: 100px;
+}
+
+#crop_img {
+  width: 200px;
+  height: 200px;
+}
