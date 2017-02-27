@@ -12,7 +12,7 @@ class CropsController < ApplicationController
   end
 
   def show
-    @crops = Crop.find(params[:id])
+    @crop = Crop.find(params[:id])
   end
 
   def update
