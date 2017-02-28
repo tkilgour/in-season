@@ -68,9 +68,7 @@
         <div class="panel panel-success">
           <div class="panel-heading">WHERE ARE WE?</div>
           <div class="panel-body">
-            <div id="map">
-
-            </div>
+            <div id="map"></div>
           </div>
         </div>
       </div>
@@ -79,8 +77,13 @@
   </div>
 </div>
 
-<script>
-   var markers = <%= raw @hash.to_json %>;
-   var farmMap = new window.FarmMap(markers);
-   farmMap.init();
-</script>
+<%= javascript_tag do %>
+  window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>}
+  window.markets = <%= @market_data %>
+<% end %>
+
+<script async defer src="//maps.google.com/maps/api/js?key=AIzaSyC7a1ObkesRP36iQHZSe5q1TFxtiyXaJJI&callback=initMap"></script>
+
+
+
+

@@ -1,38 +1,19 @@
-window.FarmMap = (function() {
-  function FarmMap(markers) {
-    this.markers = markers;
-  }
+function initMap() {
+  var farm = window.farm;
+  var markets = window.markets;
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 6,
+    center: farm
+  });
+  var marker = new google.maps.Marker({
+    position: farm,
+    map: map
+  });
 
-  FarmMap.prototype.init = function() {
-    handler = Gmaps.build('Google');
-    handler.buildMap(
-      {
-        provider: {
-          // disableDefaultUI: true
-          // here you can pass other Google Maps API options here
-        },
-        internal: {
-          id: 'map'
-        }
-      },
-      function() {
-        // markers = handler.addMarkers([
-        //   {
-        //     "lat": 0,
-        //     "lng": 0,
-        //     "picture": {
-        //       "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
-        //       "width":  36,
-        //       "height": 36
-        //     },
-        //     "infowindow": "hello!"
-        //   }
-        // ]);
-        handler.bounds.extendWith(this.markers);
-        handler.fitMapToBounds();
-      }
-    );
-  }
-
-  return FarmMap;
-})();
+  markets.forEach(function(market) {
+    new google.maps.Marker({
+      position: (({lat, lng}) => ({lat, lng}))(market),
+      map: map
+    });
+  });
+}

@@ -7,10 +7,19 @@ class FarmsController < ApplicationController
     @farm = Farm.find(params[:id])
     @crops = @farm.crops
     @markets = @farm.markets
+    @market_data = market_data(@markets)
+  end
 
-    @hash = Gmaps4rails.build_markers(@markets) do |market, marker|
-      marker.lat market.lat
-      marker.lng market.lng
+  def market_data(markets_array)
+    market_data = []
+    markets_array.each do |m|
+      market_data << {
+        name: m.name,
+        address: m.address,
+        lat: m.lat,
+        lng: m.lng
+      }
     end
+    market_data.to_json.html_safe
   end
 end
