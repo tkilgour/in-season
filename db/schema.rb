@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170227173436) do
+ActiveRecord::Schema.define(version: 20170228173301) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,22 @@ ActiveRecord::Schema.define(version: 20170227173436) do
     t.string   "banner_image"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "farms_markets", id: false, force: :cascade do |t|
+    t.integer "farm_id",   null: false
+    t.integer "market_id", null: false
+    t.index ["farm_id", "market_id"], name: "index_farms_markets_on_farm_id_and_market_id", using: :btree
+    t.index ["market_id", "farm_id"], name: "index_farms_markets_on_market_id_and_farm_id", using: :btree
+  end
+
+  create_table "markets", force: :cascade do |t|
+    t.string   "name"
+    t.float    "lat"
+    t.float    "lng"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "address"
   end
 
   create_table "stock_crops", force: :cascade do |t|

@@ -1,4 +1,4 @@
-$(() => {
+$(document).on('turbolinks:load', function() {
   $('#crop_harvest_date').datepicker({
     autoclose: true,
     format: 'dd/mm/yyyy'
