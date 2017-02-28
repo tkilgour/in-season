@@ -345,7 +345,9 @@ body {
   flex: 0 0 auto;
 }
 
-.panel img {
+.col-sm-5 .panel img {
+  // height: 430px;
+  // width: 430px;
   height: 100%;
   width: 100%;
 }
