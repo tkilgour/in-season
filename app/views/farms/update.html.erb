@@ -1,26 +1,22 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-
 <div class="container">
   <div class="row">
 
-    <div class="card hovercard">
-      <div class="cardheader">
+    <div class="card hovercard" style="height=600px">
+      <div class="cardheader" style="height=400px">
 
-<img id="banner_image" class="cardheader" src="/farmers/upload-banner-image.png" />
-
+        <img id="banner_image" class="cardheader" alt="" src=<%=@farm.banner_image%>>
       </div>
       <div class="avatar">
-
-<img src="/farmers/upload-profile-image.png" />
-
+        <img alt="" src=<%=@farm.profile_image%>>
       </div>
       <div class="info">
         <div class="title">
-          FARM NAME
+        <%= best_in_place @farm, :name, type: :textarea, placeholder: "What's the name of your farm?",  activator: "#editprofile", ok_button: 'Save', cancel_button: 'Cancel' %>
           <br>
           <span>
-            farmer names
+          <%= best_in_place @farm, :farmer, type: :textarea, placeholder: "Who are your farmers?",  activator: "#editprofile", ok_button: 'Save', cancel_button: 'Cancel' %>
           </span>
         </div>
         <div class="names">
@@ -54,7 +50,7 @@
     <br>
     <div class="all crops">
       <h4> Want to know all the different crops we harvest throughout the year? </h4>
-      <h4> Head over to my <%= link_to 'Field', "/" %>! </h4>
+      <h4> Head over to my <%= link_to 'Field', "/farms/#{@farm.id}/crops" %>! </h4>
     </div>
     <br>
 
@@ -63,7 +59,11 @@
         <div class="panel panel-success">
           <div class="panel-body">
             <h3>About Us</h3>
-            about the farm
+            <%= best_in_place @farm, :about_farm, :placeholder => 'Tell us about your farm!', :type => :textarea, :activator => "#editprofile", :ok_button => 'Save', :cancel_button => 'Cancel' %>
+            <br />
+            <br />
+            <br />
+            <br />
           </div>
         </div>
       </div>
@@ -76,44 +76,6 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-
-
-<br /><br />
-<div class="row">
-  <div class="col-sm-6 col-sm-offset-1">
-    <br>
-    <br>
-    <br>
-    <%= form_for :farm, url: 'farms#create' do |f| %>
-    <div class="form-group">
-      <h5>Farm Name: </h5>
-      <%= f.text_field :name, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <h5>Farmer Name(s): </h5>
-      <%= f.text_field :farmer, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <h5>About The Farm: </h5>
-      <%= f.text_field :about_farm, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <h5>Farm Address: </h5>
-      <%= f.text_field :address, class: 'form-control' %>
-    </div>
-    <div class='form-group'>
-      <h5>Banner Image: </h5>
-      <%= f.file_field :banner_image, class: 'form-control' %>
-    </div>
-    <div class='form-group'>
-      <h5>Profile Image: </h5>
-      <%= f.file_field :profile_image, class: 'form-control' %>
-    </div>
-    <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.submit "Submit to register your farm!", class: 'btn btn-warning btn-lg' %>
-    <% end %>
+    <button id="editprofile" type="button" class="btn btn-warning btn-block">Edit My Profile</button>
   </div>
 </div>
