@@ -68,7 +68,9 @@
         <div class="panel panel-success">
           <div class="panel-heading">WHERE ARE WE?</div>
           <div class="panel-body">
-            <div id="map"></div>
+            <div id="map">
+
+            </div>
           </div>
         </div>
       </div>
@@ -76,3 +78,9 @@
     <button type="button" class="btn btn-warning btn-block">Edit My Profile</button>
   </div>
 </div>
+
+<script>
+   var markers = <%= raw @hash.to_json %>;
+   var farmMap = new window.FarmMap(markers);
+   farmMap.init();
+</script>
