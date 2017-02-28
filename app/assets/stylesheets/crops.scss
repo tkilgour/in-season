@@ -14,13 +14,31 @@ body {
   padding-top: 50px;
 }
 
+.page-header {
+  padding-left: 18px;
+}
+
+#crop_img_insert {
+
+  margin-left: 50px;
+}
+
 #crop_img {
-  max-width:230px;
-  max-height:95px;
-  width: auto;
-  height: auto;
-  background: url("");
-  background-size: cover;
+  width: 200px;
+  height: 200px;
+}
+
+.panel img {
+  height: 100px;
+  width: 100px;
+  margin: 15px 25px;
+  border-radius: 3px;
+}
+
+.col-sm-8 .col-sm-3 {
+  border: solid 1px lightgrey;
+  border-radius: 5px;
+
 }
 
 .card.hoverhovercard {
