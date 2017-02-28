@@ -206,7 +206,7 @@ body {
 .card.hovercard .cardheader {
     // background: url("http://www.valagro.com/media/filer_public/ef/34/ef34a689-6300-415c-b2c2-6da4b82913aa/farm_slideshow3.jpg");
     // background-size: cover;
-    height: 300px;
+    height: 500px;
     z-index:6;
     position: relative;
     margin: 0;
@@ -244,7 +244,7 @@ body {
 
 .card.hovercard .info .title {
     margin-bottom: 4px;
-    font-size: 51px;
+    font-size: 45px;
     color: whitesmoke;
     vertical-align: 50%;
     flex: 0 0 auto;
@@ -352,6 +352,26 @@ body {
   width: 100%;
 }
 
+.modal-body {
+  height: 250px;
+}
+
+.modal-body .customer button {
+  height: 150px;
+  width: 250px;
+  top: 23px;
+  position: relative;
+  margin-left: 20px;
+}
+
+.modal-body .admin button {
+  height: 150px;
+  width: 250px;
+  margin-left: 52%;
+  position: relative;
+  top: -135px;
+}
+
 // .btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
 
 
@@ -425,7 +445,7 @@ body {
 
 @media (max-width: 680px) {
   .card.hovercard .cardheader {
-    height: 150px;
+    height: 300px;
   }
     .card.hovercard .avatar {
     top: -75px;
@@ -461,4 +481,17 @@ body {
   #carousel-example-generic.carousel_slide {
   width: 400px;
   }
+}
+
+#banner_image {
+display: block;
+max-height: 500px;
+max-width: 1000px;
+overflow: hidden;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 50%;
+background-repeat: no-repeat;
+background-size: cover;
+margin: 0 auto;
 }

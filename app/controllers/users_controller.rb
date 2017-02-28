@@ -1,16 +1,32 @@
 class UsersController < ApplicationController
 
-  def new
+  def new_member
+    user = User.new
   end
 
-  def create
+  def new_farmer
+    user = User.new
+  end
+
+  def create_member
     user = User.new(user_params)
     if user.save
       session[:user_id] = user.id
       byebug
       redirect_to '/'
     else
-      redirect_to '/register'
+      redirect_to '/member_registration'
+    end
+  end
+
+  def create_farmer
+    user = User.new(user_params)
+    if user.save
+      session[:user_id] = user.id
+      byebug
+      redirect_to '/'
+    else
+      redirect_to '/farmer_registration'
     end
   end
 

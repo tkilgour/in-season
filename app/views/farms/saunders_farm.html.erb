@@ -3,21 +3,18 @@
 <div class="container">
   <div class="row">
 
-    <div class="card hovercard" style="height=600px">
-      <div class="cardheader" style="height=400px">
-
-        <img id="banner_image" class="cardheader" alt="" src=<%=@farm.banner_image%>>
+    <div class="card hovercard">
+      <div class="cardheader">
+      <img src="http://www.valagro.com/media/filer_public/ef/34/ef34a689-6300-415c-b2c2-6da4b82913aa/farm_slideshow3.jpg">
       </div>
       <div class="avatar">
-        <img alt="" src=<%=@farm.profile_image%>>
+        <img src="http://cdn.modernfarmer.com/wp-content/uploads/2015/07/Farmer-Lee-Jones_Infront-of-tractor_08222014.jpg">
       </div>
       <div class="info">
         <div class="title">
-          <%= @farm.name %>
+          Saunder's Farm
           <br>
-          <span>
-            <%= @farm.farmer %>
-          </span>
+          <span> Bob and Susan Smith </span>
         </div>
         <div class="names">
         </div>
@@ -50,7 +47,7 @@
     <br>
     <div class="all crops">
       <h4> Want to know all the different crops we harvest throughout the year? </h4>
-      <h4> Head over to my <%= link_to 'Field', "/farms/#{@farm.id}/crops" %>! </h4>
+      <h4> Head over to my <%= link_to 'Field', '/' %>! </h4>
     </div>
     <br>
 
@@ -59,7 +56,11 @@
         <div class="panel panel-success">
           <div class="panel-body">
             <h3>About Us</h3>
-            <%# @farm.about_farm%>
+            There's a lot to say about Ashton Duncan, but if there's anything you should know it's that he's athletic and confident. Of course he's also romantic, incorruptible and open, but they're less prominent and often intertwined with being insulting as well. His athleticism though, this is what he's often adored for. Friends frequently count on this and his enthusiasm especially when they need comforting or support.
+            <br>
+            <br>
+            Nobody's perfect of course and Ashton has plenty of character faults too. His amoral nature and superficial nature aren't exactly fun to deal with and just affect all around negatively.
+            Fortunately his confidence shines brighter on most days.
           </div>
         </div>
       </div>

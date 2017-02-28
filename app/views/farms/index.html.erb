@@ -6,13 +6,48 @@
 
 
 <% if current_user %>
-  <h1>OMG HEYY, <%= current_user.first_name %> <%= current_user.last_name %>! Missed ya :)</h1>
-    <h1><a href="/logout">Logout</a></h1>
-  <% if current_user.is_farmer == true %>
-    <button>Click here to edit your farm prof and lollicrops</button>
-  <% end %>
-<% else %>
-  <h1><a href="/register">Register here</a></h1>
-  <h1><a href="/login">Login here</a></h1>
-  <br />
+<h1>OMG HEYY, <%= current_user.first_name %> <%= current_user.last_name %>! Missed ya :)</h1>
+<h1><a href="/logout">Logout</a></h1>
+<% if current_user.is_farmer == true %>
+<button>Click here to edit your farm prof and lollicrops</button>
 <% end %>
+<% else %>
+<h1><a href="/login">Login here</a></h1>
+<br />
+<% end %>
+
+
+<div class="container">
+  <div class="row">
+    <div>
+      <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal"> Register </button>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title">Who are you registering as?</h3>
+        </div>
+
+        <div class="modal-body">
+          <div class="customer">
+            <a href="/member_registration">
+              <button type="button" class="btn btn-success btn-lg"> <h2><span><i class="glyphicon glyphicon-leaf"></i></span> MEMBER</h2> </button>
+            </a>
+          </div>
+          <div class="admin">
+            <a href="/farmer_registration">
+              <button type="button" class="btn btn-success btn-lg"> <h2><span><i class="glyphicon glyphicon-grain"></i></span> FARMER</h2> </button>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
