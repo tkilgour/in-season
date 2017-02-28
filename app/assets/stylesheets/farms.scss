@@ -350,6 +350,26 @@ body {
   width: 100%;
 }
 
+.modal-body {
+  height: 250px;
+}
+
+.modal-body .customer button {
+  height: 150px;
+  width: 250px;
+  top: 23px;
+  position: relative;
+  margin-left: 20px;
+}
+
+.modal-body .admin button {
+  height: 150px;
+  width: 250px;
+  margin-left: 52%;
+  position: relative;
+  top: -135px;
+}
+
 // .btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
 
 
