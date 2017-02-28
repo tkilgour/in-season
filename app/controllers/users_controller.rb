@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       byebug
       redirect_to '/'
     else
-      redirect_to '/register'
+      redirect_to '/member_registration'
     end
   end
 
@@ -24,9 +24,9 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       byebug
-      redirect_to '/' //CREATE FARM
+      redirect_to '/'
     else
-      redirect_to '/register'
+      redirect_to '/farmer_registration'
     end
   end
 
