@@ -9386,9 +9386,13 @@ def scrape_wikipedia_images(wikipedia_link)
     link.downcase.include?(link_segment && '.jpg')
   end
   image_url = "https:#{links_arr[0]}"
-  image_url
+  if image_url.include?('px')
+    final_image_url = image_url.sub((image_url.slice(image_url.rindex('/')...image_url.index('px'))), '/400')
+  else
+    final_image_url = image_url
+  end
+  final_image_url
 end
-
 
 crops.each do |crop|
   new_crop = StockCrop.new({
