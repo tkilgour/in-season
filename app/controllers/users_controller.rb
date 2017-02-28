@@ -20,11 +20,10 @@ class UsersController < ApplicationController
   end
 
   def create_farmer
-    user = User.new(user_params)
-    if user.save
-      session[:user_id] = user.id
-      byebug
-      redirect_to '/'
+    @user = User.new(user_params)
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to "/#{@user.id}/farm_registration"
     else
       redirect_to '/farmer_registration'
     end
