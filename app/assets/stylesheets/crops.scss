@@ -14,9 +14,30 @@ body {
   padding-top: 50px;
 }
 
+.page-header {
+  padding-left: 18px;
+}
+
+#crop_img_insert {
+
+  margin-left: 50px;
+}
+
 #crop_img {
-  width:230px;
-  height:135px;
+  width: 200px;
+  height: 200px;
+}
+
+.col-sm-8 .panel img {
+  height: 100px;
+  width: 100px;
+  margin: 15px 25px;
+  border-radius: 3px;
+}
+
+.col-sm-8 .col-sm-3 {
+  border: solid 0.5px lightgrey;
+  border-radius: 5px;
 }
 
 .card.hoverhovercard {
