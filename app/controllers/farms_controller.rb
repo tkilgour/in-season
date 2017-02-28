@@ -13,9 +13,6 @@ class FarmsController < ApplicationController
     end
   end
 
-  def update
-  end
-
   def index
     @farms = Farm.all
   end
@@ -23,6 +20,29 @@ class FarmsController < ApplicationController
   def show
     @farm = Farm.find(params[:id])
     @crops = @farm.crops
+  end
+
+  def update
+  end
+  # respond_to? :html, :json
+  def update
+  @farm = Farm.find(params[:id])
+  @farm.update_attributes(params[:farm])
+  respond_with @farm
+  end
+
+  def upload_file
+
+  responds_to_parent do
+    render :update do |page|
+      page.replace_html 'banner_image_upload', :partial => 'banner_image_uploadprofile_image_upload'
+      @farm.profile_image = params[:uploaded_file]
+    end
+    render :update do |page|
+      page.replace_html 'profile_image_upload', :partial => 'profile_image_upload'
+      @farm.profile_image = params[:uploaded_file]
+    end
+  end
   end
 
   private

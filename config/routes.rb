@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root to: 'farms#index'
 
-  resources :farms, only: [:show, :index, :update] do
+  resources :farms, only: [:show, :index, :update, :edit] do
     resources :crops, only: [:index]
   end
 

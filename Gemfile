@@ -25,7 +25,7 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-
+gem 'best_in_place'
 gem 'jquery-ui-rails'
 
 gem 'rails-jquery-autocomplete'
