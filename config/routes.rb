@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: 'farms#index'
 
   resources :farms, only: [:show, :index, :update, :edit] do
+    post :update_avatar
+    post :update_banner
     resources :crops, only: [:index]
   end
 
@@ -22,6 +24,7 @@ Rails.application.routes.draw do
   post '/:user_id/farms' => 'farms#create'
   # put '/:user_id/edit_farm_profile' => 'farms#update'
 
-
+  # put '/farms/:farm_id' => "farms#update_avatar"
+  # put '/farms/:farm_id' => "farms#update_banner"
 
 end

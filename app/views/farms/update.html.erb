@@ -1,81 +1,33 @@
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<h1>Farm Profile</h1>
 
-<div class="container">
-  <div class="row">
+<p>
+  <b>Farm Name:</b>
+  <%= best_in_place @farm, :name, type: :textarea, placeholder: "What is the name of your farm?",  activator: "#edit_farm_name", ok_button: 'Save', cancel_button: 'Cancel' %>
+</p>
 
-    <div class="card hovercard" style="height=600px">
-      <div class="cardheader" style="height=400px">
+<p>
+  <b>Farmer Name(s):</b>
+  <%= best_in_place @farm, :farmer, placeholder: "Who are your farmers?",  activator: "#edit_farmer_name", ok_button: 'Save', cancel_button: 'Cancel' %>
 
-        <img id="banner_image" class="cardheader" alt="" src=<%=@farm.banner_image%>>
-      </div>
-      <div class="avatar">
-        <img alt="" src=<%=@farm.profile_image%>>
-      </div>
-      <div class="info">
-        <div class="title">
-        <%= best_in_place @farm, :name, type: :textarea, placeholder: "What's the name of your farm?",  activator: "#editprofile", ok_button: 'Save', cancel_button: 'Cancel' %>
-          <br>
-          <span>
-          <%= best_in_place @farm, :farmer, type: :textarea, placeholder: "Who are your farmers?",  activator: "#editprofile", ok_button: 'Save', cancel_button: 'Cancel' %>
-          </span>
-        </div>
-        <div class="names">
-        </div>
-        <div class="safety">
-          <img src="http://www.jamacfoods.com/wp-content/uploads/2015/05/food-safety-badge.jpg">
-        </div>
-        <div class="badge">
-          <img src="http://www.kidneycoach.com/wp-content/uploads/2012/12/Optimized-HiRes.jpg">
-        </div>
-      </div>
-    </div>
+<p>
+  <b>About The Farm:</b>
+  <%= best_in_place @farm, :about_farm, type: :textarea, :placeholder => 'Tell us about your farm!', activator: "#edit_about_farm", ok_button: 'Save', cancel_button: 'Cancel' %>
+</p>
 
-    <div class="crops">
-      <h2>What's available now?</h2>
-      <div id="carousel-example-generic" class="carousel_slide" data-ride="carousel">
-        <br>
-        <img src="https://www.starkbros.com/images/dynamic/2848-960x960.jpg">
-        <img src="http://www.well-beingsecrets.com/wp-content/uploads/Cavendish-Bananas.jpg">
-        <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
-        <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
-        <img src="http://www.almanac.com/sites/default/files/images/tomatoplant.jpg">
-        <img src="https://s-media-cache-ak0.pinimg.com/originals/dc/a5/ab/dca5ab2c10391ff2d5b0b49fa93c0eb0.jpg">
-        <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Corn/Truckers_Favorite_Yellow_Corn.jpg">
-        <img src="http://www.well-beingsecrets.com/wp-content/uploads/Cavendish-Bananas.jpg">
-        <img src="https://www.starkbros.com/images/dynamic/2848-960x960.jpg">
-        <img src="http://www.well-beingsecrets.com/wp-content/uploads/Cavendish-Bananas.jpg">
+<p>
+  <b>Farm Address:</b>
+  <%= best_in_place @farm, :address, :placeholder => 'Where is your farm located?', :activator => "#edit_farm_address", ok_button: 'Save', cancel_button: 'Cancel' %>
+</p>
 
-      </div>
-    </div>
-    <br>
-    <div class="all crops">
-      <h4> Want to know all the different crops we harvest throughout the year? </h4>
-      <h4> Head over to my <%= link_to 'Field', "/farms/#{@farm.id}/crops" %>! </h4>
-    </div>
-    <br>
+<p>
+  <b>Banner Image:</b>
+</p>
 
-    <div class="row">
-      <div class="col-sm-5 col-sm-offset-1">
-        <div class="panel panel-success">
-          <div class="panel-body">
-            <h3>About Us</h3>
-            <%= best_in_place @farm, :about_farm, :placeholder => 'Tell us about your farm!', :type => :textarea, :activator => "#editprofile", :ok_button => 'Save', :cancel_button => 'Cancel' %>
-            <br />
-            <br />
-            <br />
-            <br />
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-5 ">
-        <div class="panel panel-success">
-          <div class="panel-heading">WHERE ARE WE?</div>
-          <div class="panel-body">
-            <img src="https://s-media-cache-ak0.pinimg.com/736x/f9/20/95/f9209506ce348e2d19cb9939d673880e.jpg">
-          </div>
-        </div>
-      </div>
-    </div>
-    <button id="editprofile" type="button" class="btn btn-warning btn-block">Edit My Profile</button>
-  </div>
-</div>
+<p>
+  <b>Profile Image:</b>
+</p>
+
+<%= link_to 'Edit Farm Profile', edit_farm_path(@farm) %>
+
+
+<!-- type: :checkbox, collection: %w[No Yes] -->
