@@ -29,63 +29,24 @@ body {
   margin-bottom: 0;
 }
 
-// a {
-//   color: #777;
-// }
-
-// .container {
-  // height: 65px;
-// }
-
 .navbar-header span .glyphicon{
   float: left;
   font-size: 32px;
   margin-top: 8px;
   margin-right: 20px
 }
-// .navbar-brand {
-//   display: block;
-//   float: left;
-// }
-
-// .btn-group {
-//   display: block;
-//   float: left;
-// }
 
 img {
   width: 100px;
   height: 100px;
 }
 
-// .btn {
-//   position: absolute;
-//   margin-top: 8px;
-// }
-
 .row {
   margin-left: 0;
   margin-right: 0;
 }
 
-// .navbar-right {
-//   margin-right: 20px;
-//   display: block;
-//   float: right;
-// }
 
-// span.label {
-//   font-size: 15px;
-//   font-weight: normal !important;
-//   font-family: Helvetica!important;
-//   line-height: 3.2;
-// }
-
-// @media (max-width: 780px) {
-//   .navbar .container {
-//     height: 50px;
-//   }
-// }
 @media (max-width: 1000px) {
   .navbar-header {
     float: none;

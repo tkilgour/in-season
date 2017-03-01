@@ -3,210 +3,96 @@
 
     <div class="card hoverhovercard">
       <div class="info">
-        <div class="avatar">
+        <div class="avatar col-xs-1">
           <img alt="" src="http://cdn.modernfarmer.com/wp-content/uploads/2015/07/Farmer-Lee-Jones_Infront-of-tractor_08222014.jpg">
         </div>
-        <div class="title">
+        <div class="label col-xs-4 col-xs-offset-1">
           Saunder's Farm
           <br>
+        </div>
+        <div class="farmer-names col-lg-5">
           <span> Bob and Susan Smith </span>
         </div>
-
       </div>
-    </div>
 
-    <div class='row'>
-      <div class="col-lg-12">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <div class="page-header">
-              <h1>Add or create a crop for your field!</h1>
-            </div>
-
-            <%= form_for @new_crop do |f| %>
-            <%= f.hidden_field :default_image, :value => 'hello' %>
-            <%= f.hidden_field :farm_id, :value => params[:farm_id] %>
-
-            <div class="col-md-6">
-              <% if f.object.errors.any? %>
-
-              <div class="alert alert-danger">
-                <strong>The following errors prevented saving:</strong>
-                <ul>
-                  <% f.object.errors.full_messages.each do |error| %>
-                  <li><%= error %></li>
-                  <% end %>
-                </ul>
-              </div>
-
-              <% end %>
-
-              <div class='form-group'>
-                <%= f.label :name %>
-                <%= f.autocomplete_field :name, autocomplete_stock_crop_name_crops_path, 'data-auto-focus' => true, class: 'form-control' %>
-              </div>
-
-              <div class='form-group'>
-                <%= f.label :harvest_date %>
-                <%= f.text_field :harvest_date, class: 'datepicker' %>
-              </div>
-
-              <div class='form-group'>
-                <%= f.label :description %>
-                <%= f.text_area :description, class: 'form-control' %>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="row">
-              <div class='col-xs-7 col-sm-5 col-md-6 col-lg-6 col-lg-offset-2' id="crop_img_insert">
-                  <img id='crop_img'>
-                  <%= f.file_field :image %>
-                </div>
-                <div class="col-xs-5 col-sm-7 col-md-6 col-lg-3">
-                  <%= f.submit 'Create Crop', class: 'btn btn-primary btn-lg' %>
-                </div>
-              </div>
-            </div>
-
-            <% end %>
-          </div>
-
-        </div>
-      </div>
     </div>
   </div>
 
+  <div class='row'>
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="page-header">
+            <h1>Add or create a crop for your field!</h1>
+          </div>
 
+          <%= form_for @new_crop do |f| %>
+          <%= f.hidden_field :default_image, :value => 'hello' %>
+          <%= f.hidden_field :farm_id, :value => params[:farm_id] %>
 
+          <div class="col-md-6">
+            <% if f.object.errors.any? %>
 
-  <div class="row">
-    <div class="croplist">
-      <div class="col-sm-12 col-md-10 col-md-offset-1">
-        <div class="panel panel-success">
-          <div class="panel-heading">Available Right This Instant</div>
-          <div class="panel-body">
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <img src="https://www.starkbros.com/images/dynamic/2848-960x960.jpg" class="img-responsive center-block">
-              <p>
-                <b>Apple</b>
-              </p>
-              <p>
-                This is a really crispy apple.
-              </p>
-              <p>
-                Harvest Date: <i>tomorrow</i>.
-              </p>
+            <div class="alert alert-danger">
+              <strong>The following errors prevented saving:</strong>
+              <ul>
+                <% f.object.errors.full_messages.each do |error| %>
+                <li><%= error %></li>
+                <% end %>
+              </ul>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <img src="http://www.well-beingsecrets.com/wp-content/uploads/Cavendish-Bananas.jpg" class="img-responsive center-block">
-              <p>
-                <b>Banana</b>
-              </p>
-              <p>
-                This is a really crispy apple.
-              </p>
-              <p>
-                Harvest Date: <i>tomorrow</i>.
-              </p>
+
+            <% end %>
+
+            <div class='form-group'>
+              <%= f.label :name %>
+              <%= f.autocomplete_field :name, autocomplete_stock_crop_name_crops_path, 'data-auto-focus' => true, class: 'form-control' %>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
-              <p>
-                <b>Peach</b>
-              </p>
-              <p>
-                This is a really crispy apple.
-              </p>
-              <p>
-                Harvest Date: <i>tomorrow</i>.
-              </p>
+
+            <div class='form-group'>
+              <%= f.label :harvest_date %>
+              <%= f.text_field :harvest_date, class: 'datepicker' %>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
-              <p>
-                <b>Jalapeno</b>
-              </p>
-              <p>
-                This is a really crispy apple.
-              </p>
-              <p>
-                Harvest Date: <i>tomorrow</i>.
-              </p>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <img src="http://www.almanac.com/sites/default/files/images/tomatoplant.jpg">
-              <p>
-                name
-              </p>
-              <p>
-                This is a really crispy apple.
-              </p>
-              <p>
-                Harvest Date: tomorrow.
-              </p>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <img src="https://s-media-cache-ak0.pinimg.com/originals/dc/a5/ab/dca5ab2c10391ff2d5b0b49fa93c0eb0.jpg">
-              <p>
-                name
-              </p>
-              <p>
-                This is a really crispy apple.
-              </p>
-              <p>
-                Harvest Date: tomorrow.
-              </p>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Corn/Truckers_Favorite_Yellow_Corn.jpg">
-              <p>
-                name
-              </p>
-              <p>
-                This is a really crispy apple.
-              </p>
-              <p>
-                Harvest Date: tomorrow.
-              </p>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <img src="http://www.well-beingsecrets.com/wp-content/uploads/Cavendish-Bananas.jpg">
-              <p>
-                name
-              </p>
-              <p>
-                This is a really crispy apple.
-              </p>
-              <p>
-                Harvest Date: tomorrow.
-              </p>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <img src="https://www.starkbros.com/images/dynamic/2848-960x960.jpg">
-              <p>
-                name
-              </p>
-              <p>
-                This is a really crispy apple.
-              </p>
-              <p>
-                Harvest Date: tomorrow.
-              </p>
+
+            <div class='form-group'>
+              <%= f.label :description %>
+              <%= f.text_area :description, class: 'form-control' %>
             </div>
           </div>
+
+          <div class="col-md-6">
+            <div class="row">
+              <div class='col-xs-7 col-sm-5 col-md-6 col-lg-6 col-lg-offset-2' id="crop_img_insert">
+                <img id='crop_img'>
+                <%= f.file_field :image %>
+              </div>
+              <div class="col-xs-5 col-sm-7 col-md-6 col-lg-3">
+                <%= f.submit 'Create Crop', class: 'btn btn-primary btn-lg' %>
+              </div>
+            </div>
+          </div>
+
+          <% end %>
         </div>
+
       </div>
     </div>
+  </div>
+</div>
 
+
+
+
+<div class="row">
+  <div class="croplist">
     <div class="col-sm-12 col-md-10 col-md-offset-1">
-      <div class="panel panel-warning">
-        <div class="panel-heading">Meet you guys next week?</div>
+      <div class="panel panel-success">
+        <div class="panel-heading">Available Right This Instant</div>
         <div class="panel-body">
           <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
+            <img src="https://www.starkbros.com/images/dynamic/2848-960x960.jpg" class="img-responsive center-block">
             <p>
-              <b>Peach</b>
+              <b>Apple</b>
             </p>
             <p>
               This is a really crispy apple.
@@ -216,9 +102,9 @@
             </p>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
+            <img src="http://www.well-beingsecrets.com/wp-content/uploads/Cavendish-Bananas.jpg" class="img-responsive center-block">
             <p>
-              <b>Jalapeno</b>
+              <b>Banana</b>
             </p>
             <p>
               This is a really crispy apple.
@@ -227,27 +113,6 @@
               Harvest Date: <i>tomorrow</i>.
             </p>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Corn/Truckers_Favorite_Yellow_Corn.jpg">
-            <p>
-              name
-            </p>
-            <p>
-              This is a really crispy apple.
-            </p>
-            <p>
-              Harvest Date: tomorrow.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-12 col-md-10 col-md-offset-1">
-      <div class="panel panel-warning">
-        <div class="panel-heading">Keep an eye out, we're coming soon. Eventually.</div>
-        <div class="panel-body">
           <div class="col-sm-6 col-md-4 col-lg-3">
             <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
             <p>
@@ -308,41 +173,20 @@
               Harvest Date: tomorrow.
             </p>
           </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-12 col-md-10 col-md-offset-1">
-      <div class="panel panel-default">
-        <div class="panel-heading">You slowpoke! You missed us this year. Better luck next.</div>
-        <div class="panel-body">
           <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
+            <img src="http://www.well-beingsecrets.com/wp-content/uploads/Cavendish-Bananas.jpg">
             <p>
-              <b>Peach</b>
+              name
             </p>
             <p>
               This is a really crispy apple.
             </p>
             <p>
-              Harvest Date: <i>tomorrow</i>.
+              Harvest Date: tomorrow.
             </p>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
-            <p>
-              <b>Jalapeno</b>
-            </p>
-            <p>
-              This is a really crispy apple.
-            </p>
-            <p>
-              Harvest Date: <i>tomorrow</i>.
-            </p>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="http://www.almanac.com/sites/default/files/images/tomatoplant.jpg">
+            <img src="https://www.starkbros.com/images/dynamic/2848-960x960.jpg">
             <p>
               name
             </p>
@@ -356,23 +200,182 @@
         </div>
       </div>
     </div>
-    <div class="products">
-      <p>
-        <strong>Name:</strong>
-        <%# @crop.name %>
-      </p>
+  </div>
 
-      <p>
-        <strong>Description:</strong>
-        <%# @crop.description %>
-      </p>
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="panel panel-warning">
+      <div class="panel-heading">Meet you guys next week?</div>
+      <div class="panel-body">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
+          <p>
+            <b>Peach</b>
+          </p>
+          <p>
+            This is a really crispy apple.
+          </p>
+          <p>
+            Harvest Date: <i>tomorrow</i>.
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
+          <p>
+            <b>Jalapeno</b>
+          </p>
+          <p>
+            This is a really crispy apple.
+          </p>
+          <p>
+            Harvest Date: <i>tomorrow</i>.
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Corn/Truckers_Favorite_Yellow_Corn.jpg">
+          <p>
+            name
+          </p>
+          <p>
+            This is a really crispy apple.
+          </p>
+          <p>
+            Harvest Date: tomorrow.
+          </p>
+        </div>
 
-      <p>
-        <strong>Image:</strong>
-        <%# image_tag @crop.image.thumb.url %>
-      </p>
+      </div>
     </div>
   </div>
+
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="panel panel-warning">
+      <div class="panel-heading">Keep an eye out, we're coming soon. Eventually.</div>
+      <div class="panel-body">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
+          <p>
+            <b>Peach</b>
+          </p>
+          <p>
+            This is a really crispy apple.
+          </p>
+          <p>
+            Harvest Date: <i>tomorrow</i>.
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
+          <p>
+            <b>Jalapeno</b>
+          </p>
+          <p>
+            This is a really crispy apple.
+          </p>
+          <p>
+            Harvest Date: <i>tomorrow</i>.
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="http://www.almanac.com/sites/default/files/images/tomatoplant.jpg">
+          <p>
+            name
+          </p>
+          <p>
+            This is a really crispy apple.
+          </p>
+          <p>
+            Harvest Date: tomorrow.
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="https://s-media-cache-ak0.pinimg.com/originals/dc/a5/ab/dca5ab2c10391ff2d5b0b49fa93c0eb0.jpg">
+          <p>
+            name
+          </p>
+          <p>
+            This is a really crispy apple.
+          </p>
+          <p>
+            Harvest Date: tomorrow.
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Corn/Truckers_Favorite_Yellow_Corn.jpg">
+          <p>
+            name
+          </p>
+          <p>
+            This is a really crispy apple.
+          </p>
+          <p>
+            Harvest Date: tomorrow.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="panel panel-default">
+      <div class="panel-heading">You slowpoke! You missed us this year. Better luck next.</div>
+      <div class="panel-body">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
+          <p>
+            <b>Peach</b>
+          </p>
+          <p>
+            This is a really crispy apple.
+          </p>
+          <p>
+            Harvest Date: <i>tomorrow</i>.
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
+          <p>
+            <b>Jalapeno</b>
+          </p>
+          <p>
+            This is a really crispy apple.
+          </p>
+          <p>
+            Harvest Date: <i>tomorrow</i>.
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="http://www.almanac.com/sites/default/files/images/tomatoplant.jpg">
+          <p>
+            name
+          </p>
+          <p>
+            This is a really crispy apple.
+          </p>
+          <p>
+            Harvest Date: tomorrow.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="products">
+    <p>
+      <strong>Name:</strong>
+      <%# @crop.name %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%# @crop.description %>
+    </p>
+
+    <p>
+      <strong>Image:</strong>
+      <%# image_tag @crop.image.thumb.url %>
+    </p>
+  </div>
+</div>
 </div>
 
 </div>
