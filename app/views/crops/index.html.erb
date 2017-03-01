@@ -22,9 +22,14 @@
             <div class="page-header">
               <h1>Add or create a crop for your field!</h1>
             </div>
-            <div class="col-lg-7 col-md-6">
-              <%= form_for @new_crop do |f| %>
+
+            <%= form_for @new_crop do |f| %>
+            <%= f.hidden_field :default_image, :value => 'hello' %>
+            <%= f.hidden_field :farm_id, :value => params[:farm_id] %>
+
+            <div class="col-md-6">
               <% if f.object.errors.any? %>
+
               <div class="alert alert-danger">
                 <strong>The following errors prevented saving:</strong>
                 <ul>
@@ -33,6 +38,7 @@
                   <% end %>
                 </ul>
               </div>
+
               <% end %>
 
               <div class='form-group'>
@@ -51,30 +57,30 @@
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-3">
-              <div class='form-group' id="crop_img_insert">
-                <img id='crop_img'>
-                <%= f.file_field :image %>
+            <div class="col-md-6">
+              <div class="row">
+              <div class='col-xs-7 col-sm-5 col-md-6 col-lg-6 col-lg-offset-2' id="crop_img_insert">
+                  <img id='crop_img'>
+                  <%= f.file_field :image %>
+                </div>
+                <div class="col-xs-5 col-sm-7 col-md-6 col-lg-3">
+                  <%= f.submit 'Create Crop', class: 'btn btn-primary btn-lg' %>
+                </div>
               </div>
             </div>
 
-            <div class="col-lg-1 col-md-1">
-              <%= f.hidden_field :default_image, :value => 'hello' %>
-              <%= f.hidden_field :farm_id, :value => params[:farm_id] %>
-
-              <%= f.submit 'Create Crop', class: 'btn btn-primary btn-lg' %>
-              <% end %>
-            </div>
-
+            <% end %>
           </div>
+
         </div>
       </div>
     </div>
+  </div>
 
 
 
 
-    <div class="row">
+  <div class="row">
     <div class="croplist">
       <div class="col-sm-12 col-md-10 col-md-offset-1">
         <div class="panel panel-success">
@@ -366,8 +372,8 @@
         <%# image_tag @crop.image.thumb.url %>
       </p>
     </div>
-    </div>
   </div>
+</div>
 
 </div>
 </div>
