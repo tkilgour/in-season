@@ -8,10 +8,6 @@
   display: none;
 }
 
-body {
-  padding-top: 50px;
-}
-
 .col-xs-5 .btn {
   margin-top: 70px;
 }
@@ -38,38 +34,35 @@ body {
   border-radius: 5px;
 }
 
-.card.hoverhovercard {
-    padding-top: 0;
-    margin-top: 0;
-}
-
 .card.hoverhovercard .avatar {
-    top: -12px;
+  top: -12px;
 }
 
 .card.hoverhovercard .avatar img {
-    top: 25px;
-    border-radius: 50%;
-    border: 5px solid rgba(255,255,255,0.5);
-    position: relative;
+  top: 25px;
+  border-radius: 50%;
+  border: 5px solid rgba(255,255,255,0.5);
+  position: relative;
 }
 
 
 .card.hoverhovercard .info {
-    height: 130px;
-    background-color: #575204;
+  height: 130px;
+  background-color: #575204;
+  margin-bottom: 17px;
 }
 
 .card.hoverhovercard .info .label {
-    font-size: 51px;
-    color: whitesmoke;
-    line-height: 32px;
-    margin-top: 20px;
+  font-size: 51px;
+  color: whitesmoke;
+  margin-top: 20px;
+  margin-left: 15gpx;
 }
 
 .card.hoverhovercard .info .farmer-names {
-    font-size: 20px;
-    color: whitesmoke;
-    opacity: 0.7;
-    margin-left: -125px;
+  font-size: 20px;
+  color: whitesmoke;
+  opacity: 0.7;
+  margin-left: -336px;
+  margin-top: 86px;
 }
