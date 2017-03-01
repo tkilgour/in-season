@@ -28,14 +28,14 @@ body {
   height: 200px;
 }
 
-.col-sm-8 .panel img {
+.croplist .col-sm-6 img {
   height: 100px;
   width: 100px;
-  margin: 15px 25px;
+  margin: 15px 34%;
   border-radius: 3px;
 }
 
-.col-sm-8 .col-sm-3 {
+.croplist .col-sm-12 .col-sm-6 {
   border: solid 0.5px lightgrey;
   border-radius: 5px;
 }
@@ -115,4 +115,11 @@ body {
 .card.hoverhovercard .bottom {
     padding: 0 20px;
     margin-bottom: 17px;
+}
+
+
+@media (max-width: 1200px) {
+  .col-sm-12 .col-sm-6 {
+
+  }
 }

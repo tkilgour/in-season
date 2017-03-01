@@ -16,13 +16,13 @@
     </div>
 
     <div class='row'>
-      <div class="col-sm-12">
+      <div class="col-lg-12">
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="page-header">
               <h1>Add or create a crop for your field!</h1>
             </div>
-            <div class="col-sm-7">
+            <div class="col-lg-7 col-md-6">
               <%= form_for @new_crop do |f| %>
               <% if f.object.errors.any? %>
               <div class="alert alert-danger">
@@ -51,14 +51,14 @@
               </div>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-lg-3 col-md-3">
               <div class='form-group' id="crop_img_insert">
                 <img id='crop_img'>
                 <%= f.file_field :image %>
               </div>
             </div>
 
-            <div class="col-sm-1">
+            <div class="col-lg-1 col-md-1">
               <%= f.hidden_field :default_image, :value => 'hello' %>
               <%= f.hidden_field :farm_id, :value => params[:farm_id] %>
 
@@ -75,11 +75,12 @@
 
 
     <div class="row">
-      <div class="col-sm-8 col-sm-offset-2">
+    <div class="croplist">
+      <div class="col-sm-12 col-md-10 col-md-offset-1">
         <div class="panel panel-success">
           <div class="panel-heading">Available Right This Instant</div>
           <div class="panel-body">
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
               <img src="https://www.starkbros.com/images/dynamic/2848-960x960.jpg" class="img-responsive center-block">
               <p>
                 <b>Apple</b>
@@ -91,7 +92,7 @@
                 Harvest Date: <i>tomorrow</i>.
               </p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
               <img src="http://www.well-beingsecrets.com/wp-content/uploads/Cavendish-Bananas.jpg" class="img-responsive center-block">
               <p>
                 <b>Banana</b>
@@ -103,7 +104,7 @@
                 Harvest Date: <i>tomorrow</i>.
               </p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
               <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
               <p>
                 <b>Peach</b>
@@ -115,7 +116,7 @@
                 Harvest Date: <i>tomorrow</i>.
               </p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
               <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
               <p>
                 <b>Jalapeno</b>
@@ -127,7 +128,7 @@
                 Harvest Date: <i>tomorrow</i>.
               </p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
               <img src="http://www.almanac.com/sites/default/files/images/tomatoplant.jpg">
               <p>
                 name
@@ -139,7 +140,7 @@
                 Harvest Date: tomorrow.
               </p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
               <img src="https://s-media-cache-ak0.pinimg.com/originals/dc/a5/ab/dca5ab2c10391ff2d5b0b49fa93c0eb0.jpg">
               <p>
                 name
@@ -151,7 +152,7 @@
                 Harvest Date: tomorrow.
               </p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
               <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Corn/Truckers_Favorite_Yellow_Corn.jpg">
               <p>
                 name
@@ -163,7 +164,7 @@
                 Harvest Date: tomorrow.
               </p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
               <img src="http://www.well-beingsecrets.com/wp-content/uploads/Cavendish-Bananas.jpg">
               <p>
                 name
@@ -175,7 +176,7 @@
                 Harvest Date: tomorrow.
               </p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
               <img src="https://www.starkbros.com/images/dynamic/2848-960x960.jpg">
               <p>
                 name
@@ -192,11 +193,11 @@
       </div>
     </div>
 
-    <div class="col-sm-8 col-sm-offset-2">
+    <div class="col-sm-12 col-md-10 col-md-offset-1">
       <div class="panel panel-warning">
         <div class="panel-heading">Meet you guys next week?</div>
         <div class="panel-body">
-          <div class="col-sm-3">
+          <div class="col-sm-6 col-md-4 col-lg-3">
             <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
             <p>
               <b>Peach</b>
@@ -208,7 +209,7 @@
               Harvest Date: <i>tomorrow</i>.
             </p>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-6 col-md-4 col-lg-3">
             <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
             <p>
               <b>Jalapeno</b>
@@ -220,7 +221,7 @@
               Harvest Date: <i>tomorrow</i>.
             </p>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-6 col-md-4 col-lg-3">
             <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Corn/Truckers_Favorite_Yellow_Corn.jpg">
             <p>
               name
@@ -237,11 +238,11 @@
       </div>
     </div>
 
-    <div class="col-sm-8 col-sm-offset-2">
+    <div class="col-sm-12 col-md-10 col-md-offset-1">
       <div class="panel panel-warning">
         <div class="panel-heading">Keep an eye out, we're coming soon. Eventually.</div>
         <div class="panel-body">
-          <div class="col-sm-3">
+          <div class="col-sm-6 col-md-4 col-lg-3">
             <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
             <p>
               <b>Peach</b>
@@ -253,7 +254,7 @@
               Harvest Date: <i>tomorrow</i>.
             </p>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-6 col-md-4 col-lg-3">
             <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
             <p>
               <b>Jalapeno</b>
@@ -265,7 +266,7 @@
               Harvest Date: <i>tomorrow</i>.
             </p>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-6 col-md-4 col-lg-3">
             <img src="http://www.almanac.com/sites/default/files/images/tomatoplant.jpg">
             <p>
               name
@@ -277,7 +278,7 @@
               Harvest Date: tomorrow.
             </p>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-6 col-md-4 col-lg-3">
             <img src="https://s-media-cache-ak0.pinimg.com/originals/dc/a5/ab/dca5ab2c10391ff2d5b0b49fa93c0eb0.jpg">
             <p>
               name
@@ -289,7 +290,7 @@
               Harvest Date: tomorrow.
             </p>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-6 col-md-4 col-lg-3">
             <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Corn/Truckers_Favorite_Yellow_Corn.jpg">
             <p>
               name
@@ -306,11 +307,11 @@
       </div>
     </div>
 
-    <div class="col-sm-8 col-sm-offset-2">
+    <div class="col-sm-12 col-md-10 col-md-offset-1">
       <div class="panel panel-default">
         <div class="panel-heading">You slowpoke! You missed us this year. Better luck next.</div>
         <div class="panel-body">
-          <div class="col-sm-3">
+          <div class="col-sm-6 col-md-4 col-lg-3">
             <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
             <p>
               <b>Peach</b>
@@ -322,7 +323,7 @@
               Harvest Date: <i>tomorrow</i>.
             </p>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-6 col-md-4 col-lg-3">
             <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
             <p>
               <b>Jalapeno</b>
@@ -334,7 +335,7 @@
               Harvest Date: <i>tomorrow</i>.
             </p>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-6 col-md-4 col-lg-3">
             <img src="http://www.almanac.com/sites/default/files/images/tomatoplant.jpg">
             <p>
               name
@@ -364,6 +365,7 @@
         <strong>Image:</strong>
         <%# image_tag @crop.image.thumb.url %>
       </p>
+    </div>
     </div>
   </div>
 
