@@ -69,6 +69,34 @@
           <div class="panel-heading">WHERE ARE WE?</div>
           <div class="panel-body">
             <div id="map"></div>
+
+            <%= form_for @new_market do |f| %>
+
+              <% if f.object.errors.any? %>
+              <div class="alert alert-danger">
+                <strong>The following errors prevented saving:</strong>
+                <ul>
+                  <% f.object.errors.full_messages.each do |error| %>
+                  <li><%= error %></li>
+                  <% end %>
+                </ul>
+              </div>
+              <% end %>
+
+              <div class="form-group">
+                <%= f.label :name %>
+                <%= f.autocomplete_field :name, autocomplete_market_name_markets_path, 'data-auto-focus' => true, class: 'form-control' %>
+              </div>
+
+              <div class="form-group">
+                <%= f.label :address %>
+                <%= f.text_field :address, class: 'form-control' %>
+              </div>
+
+              <%= f.hidden_field :farm_id, :value => @farm.id %>
+
+              <%= f.submit 'Create Market', class: 'btn btn-primary btn-xs', id: 'create-market' %>
+            <% end %>
           </div>
         </div>
       </div>

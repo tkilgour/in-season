@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170228211559) do
     t.string   "address"
     t.float    "lat"
     t.float    "lng"
+    t.integer  "user_id"
   end
 
   create_table "farms_markets", id: false, force: :cascade do |t|

@@ -1,6 +1,14 @@
 // Place all the styles related to the Farms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.ui-autocomplete {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.ui-helper-hidden-accessible {
+  display: none;
+}
 
 body {
   font-family: Tahoma;

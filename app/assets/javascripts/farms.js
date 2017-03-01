@@ -12,7 +12,7 @@ function initMap() {
     zIndex: 2
   });
 
-  var latLngList = [];
+  var latLngList = [marker];
   var prevInfoWindow = false;
 
   markets.forEach(function(market) {
@@ -44,3 +44,9 @@ function initMap() {
 
   map.fitBounds(bounds);
 }
+
+$(document).on('turbolinks:load', function() {
+  $('#market_name').bind('railsAutocomplete.select', (event, data) => {
+    $('#market_address').attr('value', data.item.address);
+  });
+});

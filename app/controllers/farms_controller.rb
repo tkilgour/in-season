@@ -8,6 +8,7 @@ class FarmsController < ApplicationController
     @crops = @farm.crops
     @markets = @farm.markets
     @market_data = market_data(@markets)
+    @new_market = @markets.new
   end
 
   def market_data(markets_array)

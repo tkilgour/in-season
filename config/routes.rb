@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     get :autocomplete_stock_crop_name, :on => :collection
   end
 
+  resources :markets, except: [:destroy, :edit, :new] do
+    get :autocomplete_market_name, :on => :collection
+  end
+
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
