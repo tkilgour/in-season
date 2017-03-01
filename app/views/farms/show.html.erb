@@ -65,7 +65,35 @@
         <div class="panel panel-success">
           <div class="panel-heading">WHERE ARE WE?</div>
           <div class="panel-body">
-            <img src="https://s-media-cache-ak0.pinimg.com/736x/f9/20/95/f9209506ce348e2d19cb9939d673880e.jpg">
+            <div id="map"></div>
+
+            <%= form_for @new_market do |f| %>
+
+              <% if f.object.errors.any? %>
+              <div class="alert alert-danger">
+                <strong>The following errors prevented saving:</strong>
+                <ul>
+                  <% f.object.errors.full_messages.each do |error| %>
+                  <li><%= error %></li>
+                  <% end %>
+                </ul>
+              </div>
+              <% end %>
+
+              <div class="form-group">
+                <%= f.label :name %>
+                <%= f.autocomplete_field :name, autocomplete_market_name_markets_path, 'data-auto-focus' => true, class: 'form-control' %>
+              </div>
+
+              <div class="form-group">
+                <%= f.label :address %>
+                <%= f.text_field :address, class: 'form-control' %>
+              </div>
+
+              <%= f.hidden_field :farm_id, :value => @farm.id %>
+
+              <%= f.submit 'Create Market', class: 'btn btn-primary btn-xs', id: 'create-market' %>
+            <% end %>
           </div>
         </div>
       </div>
@@ -73,3 +101,14 @@
     <button type="button" class="btn btn-warning btn-block">Edit My Profile</button>
   </div>
 </div>
+
+<%= javascript_tag do %>
+  window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>}
+  window.markets = <%= @market_data %>
+<% end %>
+
+<script async defer src="//maps.google.com/maps/api/js?key=AIzaSyC7a1ObkesRP36iQHZSe5q1TFxtiyXaJJI&callback=initMap"></script>
+
+
+
+

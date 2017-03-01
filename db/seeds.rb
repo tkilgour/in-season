@@ -10,7 +10,8 @@ Farm.destroy_all
 
 Farm.create!({
   name: 'Zocalo Organics',
-  farmer: 'Beth & Seb'
+  farmer: 'Beth & Seb',
+  address: '5881 3 Line, Hillsburgh, ON N0B 1Z0, Canada'
 })
 
 StockCrop.destroy_all
