@@ -13,10 +13,11 @@
       </div>
       <div class="info">
         <div class="title">
-          <%= @farm.name %>
+        <%= best_in_place @farm, :name, type: :textarea, placeholder: "Your Farm's Name",  activator: "#editprofile", ok_button: 'Save', cancel_button: 'Cancel' %>
+
           <br>
           <span>
-            <%= @farm.farmer %>
+          <%= best_in_place @farm, :farmer, type: :textarea, placeholder: "Your Farm's Name",  activator: "#editprofile", ok_button: 'Save', cancel_button: 'Cancel' %>
           </span>
         </div>
         <div class="names">
@@ -59,7 +60,7 @@
         <div class="panel panel-success">
           <div class="panel-body">
             <h3>About Us</h3>
-            <%# @farm.about_farm%>
+            <%= best_in_place @farm, :about_farm, :placeholder => 'about your farm', :type => :textarea, :activator => "#editprofile", :ok_button => 'Save', :cancel_button => 'Cancel' %>
           </div>
         </div>
       </div>
@@ -72,6 +73,6 @@
         </div>
       </div>
     </div>
-    <button type="button" class="btn btn-warning btn-block">Edit My Profile</button>
+    <button type="button" id="editprofile" class="btn btn-warning btn-block">Edit My Profile</button>
   </div>
 </div>
