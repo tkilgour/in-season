@@ -6,4 +6,7 @@ class Market < ApplicationRecord
 
   geocoded_by :address, :latitude => :lat, :longitude => :lng
   after_validation :geocode
+
+  reverse_geocoded_by :lat, :lng, :address => :parsed_address
+  after_validation :reverse_geocode
 end

@@ -4,9 +4,10 @@ class MarketsController < ApplicationController
     @farm = Farm.find(params[:market][:farm_id])
     @market.farms << @farm
     @market.save
+    redirect_to :back
   end
 
-  autocomplete :market, :name, :full => true, :extra_data => [:address]
+  autocomplete :market, :name, :full => true, :extra_data => [:parsed_address]
 
   private 
 

@@ -16,7 +16,7 @@ class FarmsController < ApplicationController
     markets_array.each do |m|
       market_data << {
         name: m.name,
-        address: m.address,
+        address: m.parsed_address,
         lat: m.lat,
         lng: m.lng
       }

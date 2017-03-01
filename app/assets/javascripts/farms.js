@@ -47,6 +47,6 @@ function initMap() {
 
 $(document).on('turbolinks:load', function() {
   $('#market_name').bind('railsAutocomplete.select', (event, data) => {
-    $('#market_address').attr('value', data.item.address);
+    $('#market_address').attr('value', data.item.parsed_address);
   });
 });
