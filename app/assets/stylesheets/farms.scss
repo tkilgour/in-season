@@ -509,3 +509,9 @@ body {
   border: solid 2px #C66;
   &:first-letter { text-transform: uppercase; }
 }
+
+.farm-editing:hover {
+  cursor: pointer;
+  background-color: #FF0000;
+  opacity: 80%;
+}
