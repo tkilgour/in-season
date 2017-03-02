@@ -1,12 +1,15 @@
 class MarketsController < ApplicationController
   def create
     @farm = Farm.find(params[:market][:farm_id])
-    @farm_market_num = @farm.markets.where(name: params[:market][:name], parsed_address: params[:market][:address]).length
+    @farm_market_exists = @farm.markets.where(name: params[:market][:name], parsed_address: params[:market][:address]).exists?
+    @market_exists = Market.where(name: params[:market][:name], parsed_address: params[:market][:address]).exists?
 
-    if @farm_market_num = 0 
+    if !@farm_market_exists && !@market_exists
       @market = Market.new(market_params)
-    elsif @farm_market_num > 0 && 
+    elsif !@farm_market_exists && @market_exists
       @market = Market.where(name: params[:market][:name], parsed_address: params[:market][:address]).first
+    else
+      redirect_to :back
     end
 
     @market.farms << @farm

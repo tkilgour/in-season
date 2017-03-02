@@ -1,12 +1,17 @@
 function initMap() {
   var farm = window.farm;
+  var farm_position = {lat: farm.lat, lng: farm.lng}
   var markets = window.markets;
   var map = new google.maps.Map(document.getElementById('map'), {
-    disableDefaultUI: true
+    // disableDefaultUI: true,
+    mapTypeControl: false,
+    streetViewControl: false,
+    zoom: 9,
+    center: farm_position
   });
 
   var marker = new google.maps.Marker({
-    position: {lat: farm.lat, lng: farm.lng},
+    position: farm_position,
     icon: '/assets/farm-2.png',
     map: map,
     zIndex: 2
@@ -48,7 +53,9 @@ function initMap() {
     bounds.extend(latLngList[i].getPosition());
   }
 
-  map.fitBounds(bounds);
+  if (latLngList.length > 1) {
+    map.fitBounds(bounds);
+  }
 }
 
 $(document).on('turbolinks:load', function() {
