@@ -1,5 +1,9 @@
 class FarmsController < ApplicationController
 
+  def index
+    @farms = Farm.all
+  end
+
   def new
     @farm = Farm.new
   end
@@ -7,14 +11,10 @@ class FarmsController < ApplicationController
   def create
     @farm = Farm.new(farm_params)
     if @farm.save
-      redirect_to "/farms/#{@farm.id}"
-    else
       redirect_to farm_path(@farm)
+    else
+      redirect_to new_farm_path
     end
-  end
-
-  def index
-    @farms = Farm.all
   end
 
   def show

@@ -4,7 +4,7 @@
     <br>
     <br>
     <br>
-    <%= form_for :farm, url: 'farms#create' do |f| %>
+    <%= form_for :farm, url: farms_path do |f| %>
     <div class="form-group">
       <h5>Farm Name: </h5>
       <%= f.text_field :name, class: 'form-control' %>
