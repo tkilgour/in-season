@@ -27,8 +27,9 @@
           </div>
 
           <%= form_for @new_crop do |f| %>
-          <%= f.hidden_field :default_image, :value => 'hello' %>
+          <%= f.hidden_field :default_image, :value => '' %>
           <%= f.hidden_field :farm_id, :value => params[:farm_id] %>
+          <%= f.hidden_field :availability, :value => true %>
 
           <div class="col-md-6">
             <% if f.object.errors.any? %>

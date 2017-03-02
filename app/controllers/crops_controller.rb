@@ -5,16 +5,16 @@ class CropsController < ApplicationController
     @crops = Crop.where(farm_id: params[:farm_id])
     @new_crop = Crop.new
 
-    @available_crops = @crops.where(availability: true)
-    @upcoming_crops = @crops.where(harvest_date: Date.today..2.weeks.from_now).where(availability: false)
-    @distant_crops = @crops.where("harvest_date > 2.weeks.from_now").where(availability: false)
-    @past_crops = @crops.where("harvest_date < Date.today").where(availability: false)
-
+    @available_crops = @crops.where("harvest_date < ?", Date.today).where(availability: true)
+    @upcoming_crops = @crops.where(harvest_date: Date.today..2.weeks.from_now)
+    @distant_crops = @crops.where("harvest_date > ?", 2.weeks.from_now)
+    @past_crops = @crops.where("harvest_date < ?", Date.today).where(availability: false)
   end
 
   def create
     @crop = Crop.new(crop_params)
     @crop.save
+    redirect_to :back
   end
 
   def show

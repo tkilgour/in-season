@@ -23,6 +23,7 @@ class FarmsController < ApplicationController
     @markets = @farm.markets
     @market_data = market_data(@markets)
     @new_market = @markets.new
+    @available_crops = @crops.where("harvest_date < ?", Date.today).where(availability: true)
   end
 
   def market_data(markets_array)
