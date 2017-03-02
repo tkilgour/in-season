@@ -64,7 +64,6 @@ class FarmsController < ApplicationController
   def update_avatar
     @farm = Farm.find(params[:farm_id])
     @farm.profile_image = params[:farm][:profile_image]
-    byebug
     if @farm.save
       redirect_to "/farms/#{@farm.id}"
     else
