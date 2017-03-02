@@ -1,6 +1,4 @@
-// Place all the styles related to the Products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 .ui-autocomplete {
   list-style-type: none;
   padding: 0px;
@@ -10,18 +8,14 @@
   display: none;
 }
 
-body {
-  padding-top: 50px;
+.col-xs-5 .btn {
+  margin-top: 70px;
 }
 
 .page-header {
   padding-left: 18px;
 }
 
-#crop_img_insert {
-
-  margin-left: 50px;
-}
 
 #crop_img {
   width: 200px;
@@ -40,86 +34,35 @@ body {
   border-radius: 5px;
 }
 
-.card.hoverhovercard {
-    position: relative;
-    padding-top: 0;
-    overflow: hidden;
-    text-align: center;
-    background-color: rgba(214, 224, 226, 0.2);
-    margin-top: 0;
-}
-
 .card.hoverhovercard .avatar {
-    display: inline-block;
-    float: left;
-    margin-bottom: -180px;
-    position: relative;
-    top: -12px;
+  top: -12px;
 }
 
 .card.hoverhovercard .avatar img {
-    top: 25px;
-    width: 100px;
-    height: 100px;
-    max-width: 180px;
-    max-height: 180px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    border: 5px solid rgba(255,255,255,0.5);
-    z-index:6;
-    position: relative;
+  top: 25px;
+  border-radius: 50%;
+  border: 5px solid rgba(255,255,255,0.5);
+  position: relative;
 }
+
 
 .card.hoverhovercard .info {
-    position: relative;
-    padding: 4px 8px 10px;
-    height: 130px;
-    background-color: #575204;
-    padding-bottom: 62px;
-    display: flex;
-    padding-left: 20px;
+  height: 130px;
+  background-color: #575204;
+  margin-bottom: 17px;
 }
 
-.card.hoverhovercard .info .title {
-    margin-bottom: 4px;
-    font-size: 51px;
-    color: whitesmoke;
-    vertical-align: 50%;
-    padding-left: 23px;
-    line-height: 32px;
-    margin-top: 28px;
-    display: block;
-    float: left;
+.card.hoverhovercard .info .label {
+  font-size: 51px;
+  color: whitesmoke;
+  margin-top: 20px;
+  margin-left: 15gpx;
 }
 
-.card.hoverhovercard .info .title span {
-    font-size: 20px;
-    color: whitesmoke;
-    opacity: 0.7;
-    margin-left: -171px;
-}
-
-.card.hoverhovercard .info .names {
-    flex: 1 1 auto;
-}
-
-.card.hoverhovercard .info .desc {
-    overflow: hidden;
-    font-size: 12px;
-    line-height: 20px;
-    color: #737373;
-    text-overflow: ellipsis;
-}
-
-.card.hoverhovercard .bottom {
-    padding: 0 20px;
-    margin-bottom: 17px;
-}
-
-
-@media (max-width: 1200px) {
-  .col-sm-12 .col-sm-6 {
-
-  }
+.card.hoverhovercard .info .farmer-names {
+  font-size: 20px;
+  color: whitesmoke;
+  opacity: 0.7;
+  margin-left: -336px;
+  margin-top: 86px;
 }
