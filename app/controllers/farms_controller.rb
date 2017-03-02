@@ -32,6 +32,7 @@ class FarmsController < ApplicationController
         id: m.id,
         name: m.name,
         address: m.parsed_address,
+        market_day: m.market_day,
         lat: m.lat,
         lng: m.lng
       }

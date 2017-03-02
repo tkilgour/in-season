@@ -28,7 +28,7 @@ function initMap() {
     });
 
     var infoWindow = new google.maps.InfoWindow({
-      content: `<strong>${market.name}</strong><br>
+      content: `<strong>${market.name}</strong> – ${market.market_day}s<br>
                 ${market.address}<br>
                 <form action="/markets/${market.id}/delete" method="post">
                   <input type="hidden" name="authenticity_token" value="XAVFVYh/fl/XQdMQ+CiG6d7Y35y7FvdN+FKROsNuvfuhY6DNBMn/cl4TDfk3oz7gRH3w3brDi0q9j3QrYEHdWA==">
@@ -61,5 +61,6 @@ function initMap() {
 $(document).on('turbolinks:load', function() {
   $('#market_name').bind('railsAutocomplete.select', (event, data) => {
     $('#market_address').attr('value', data.item.parsed_address);
+    $('#market_market_day').val(data.item.market_day);
   });
 });

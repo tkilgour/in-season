@@ -1,13 +1,13 @@
 class MarketsController < ApplicationController
   def create
     @farm = Farm.find(params[:market][:farm_id])
-    @farm_market_exists = @farm.markets.where(name: params[:market][:name], parsed_address: params[:market][:address]).exists?
-    @market_exists = Market.where(name: params[:market][:name], parsed_address: params[:market][:address]).exists?
+    @farm_market_exists = @farm.markets.where(name: params[:market][:name], parsed_address: params[:market][:address], market_day: params[:market][:market_day]).exists?
+    @market_exists = Market.where(name: params[:market][:name], parsed_address: params[:market][:address], market_day: params[:market][:market_day]).exists?
 
     if !@farm_market_exists && !@market_exists
       @market = Market.new(market_params)
     elsif !@farm_market_exists && @market_exists
-      @market = Market.where(name: params[:market][:name], parsed_address: params[:market][:address]).first
+      @market = Market.where(name: params[:market][:name], parsed_address: params[:market][:address], market_day: params[:market][:market_day]).first
     else
       redirect_to :back
     end
@@ -24,7 +24,7 @@ class MarketsController < ApplicationController
     redirect_to :back
   end
 
-  autocomplete :market, :name, :full => true, :extra_data => [:parsed_address]
+  autocomplete :market, :name, :full => true, :extra_data => [:parsed_address, :market_day]
 
   private 
 
@@ -33,6 +33,7 @@ class MarketsController < ApplicationController
       :id,
       :name,
       :address,
+      :market_day,
       :lat,
       :lng
     )
