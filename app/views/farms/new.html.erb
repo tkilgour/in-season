@@ -1,32 +1,36 @@
 <br /><br />
 <div class="row">
-  <div class="col-sm-6 col-sm-offset-1">
-    <br>
-    <br>
-    <br>
-    <%= form_for :farm, url: farms_path do |f| %>
-    <div class="form-group">
-      <h5>Farm Name: </h5>
-      <%= f.text_field :name, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <h5>Farmer Name(s): </h5>
-      <%= f.text_field :farmer, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <h5>Farm Address: </h5>
-      <%= f.text_field :address, class: 'form-control' %>
-    </div>
-    <div class='form-group'>
-      <h5>Banner Image: </h5>
-      <%= f.file_field :banner_image, class: 'form-control' %>
-    </div>
-    <div class='form-group'>
-      <h5>Profile Image: </h5>
-      <%= f.file_field :profile_image, class: 'form-control' %>
-    </div>
-    <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.submit "Submit to register your farm!", class: 'btn btn-warning btn-lg' %>
-    <% end %>
-  </div>
+ <div class="col-sm-6 col-sm-offset-1">
+   <br>
+   <br>
+   <br>
+   <%= form_for :farm, url: farms_path do |f| %>
+   <div class="form-group">
+     <h5>Farm Name: </h5>
+     <%= f.text_field :name, class: 'form-control' %>
+   </div>
+   <div class="form-group">
+     <h5>Farmer Name(s): </h5>
+     <%= f.text_field :farmer, class: 'form-control' %>
+   </div>
+   <div class="form-group">
+     <h5>About The Farm: </h5>
+     <%= f.text_area :about_farm, class: 'form-control' %>
+   </div>
+   <div class="form-group">
+     <h5>Farm Address: </h5>
+     <%= f.text_field :address, class: 'form-control' %>
+   </div>
+   <div class='form-group'>
+     <h5>Banner Image: </h5>
+     <%= f.file_field :banner_image, class: 'form-control' %>
+   </div>
+   <div class='form-group'>
+     <h5>Profile Image: </h5>
+     <%= f.file_field :profile_image, class: 'form-control' %>
+   </div>
+   <%= f.hidden_field :user_id, value: current_user.id %>
+   <%= f.submit "Submit to register your farm!", class: 'btn btn-warning btn-lg' %>
+   <% end %>
+ </div>
 </div>
