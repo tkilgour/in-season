@@ -37,9 +37,6 @@ class FarmsController < ApplicationController
     end
     market_data.to_json.html_safe
   end
-
-  def update
-  end
   # respond_to? :html, :json
   def update
   @farm = Farm.find(params[:id])

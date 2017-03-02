@@ -1,7 +1,14 @@
 class MarketsController < ApplicationController
   def create
-    @market = Market.new(market_params)
     @farm = Farm.find(params[:market][:farm_id])
+    @farm_market_num = @farm.markets.where(name: params[:market][:name], parsed_address: params[:market][:address]).length
+
+    if @farm_market_num = 0 
+      @market = Market.new(market_params)
+    elsif @farm_market_num > 0 && 
+      @market = Market.where(name: params[:market][:name], parsed_address: params[:market][:address]).first
+    end
+
     @market.farms << @farm
     @market.save
     redirect_to :back
