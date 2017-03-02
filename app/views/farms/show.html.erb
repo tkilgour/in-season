@@ -103,7 +103,7 @@
 </div>
 
 <%= javascript_tag do %>
-  window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>}
+  window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>, id: <%= @farm.id %>}
   window.markets = <%= @market_data %>
 <% end %>
 

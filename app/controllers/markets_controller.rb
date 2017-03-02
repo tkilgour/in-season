@@ -14,6 +14,13 @@ class MarketsController < ApplicationController
     redirect_to :back
   end
 
+  def destroy
+    @farm = Farm.find(params[:farm_id])
+    @market = Market.find(params[:id])
+    @farm.markets.delete(@market)
+    redirect_to :back
+  end
+
   autocomplete :market, :name, :full => true, :extra_data => [:parsed_address]
 
   private 

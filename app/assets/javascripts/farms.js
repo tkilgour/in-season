@@ -6,7 +6,7 @@ function initMap() {
   });
 
   var marker = new google.maps.Marker({
-    position: farm,
+    position: {lat: farm.lat, lng: farm.lng},
     icon: '/assets/farm-2.png',
     map: map,
     zIndex: 2
@@ -23,7 +23,13 @@ function initMap() {
     });
 
     var infoWindow = new google.maps.InfoWindow({
-      content: `<strong>${market.name}</strong><br>${market.address}`
+      content: `<strong>${market.name}</strong><br>
+                ${market.address}<br>
+                <form action="/markets/${market.id}/delete" method="post">
+                  <input type="hidden" name="authenticity_token" value="XAVFVYh/fl/XQdMQ+CiG6d7Y35y7FvdN+FKROsNuvfuhY6DNBMn/cl4TDfk3oz7gRH3w3brDi0q9j3QrYEHdWA==">
+                  <input type="hidden" value=${farm.id} name="farm_id">
+                  <input type="submit" value="Remove">
+                </form>`
     });
 
     m.addListener('click', function() {
