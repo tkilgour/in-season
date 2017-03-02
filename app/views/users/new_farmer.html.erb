@@ -5,7 +5,7 @@
         <h2>Get down and dirty with us!</h2>
         <h3>Farmer Registration</h3>
         <br>
-        <%= form_for :user, url: 'users#create_member' do |f| %>
+        <%= form_for :user, url: users_path do |f| %>
         <div class="form-group">
           <h5>First Name: </h5>
           <%= f.text_field :first_name, class: 'form-control' %>

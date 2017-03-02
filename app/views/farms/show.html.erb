@@ -110,5 +110,42 @@
 <script async defer src="//maps.google.com/maps/api/js?key=AIzaSyC7a1ObkesRP36iQHZSe5q1TFxtiyXaJJI&callback=initMap"></script>
 
 
+<br />
+<h1>EDITING PROFILE:</h1>
+<br />
+<h1>Farm Profile</h1>
 
+<p>
+  <b>Farm Name:</b>
+  <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :name, :as => :input, type: :textarea, placeholder: "What is the name of your farm?",  ok_button: 'Save', cancel_button: 'Cancel' %>
+</p>
 
+<p>
+  <b>Farmer Name(s):</b>
+  <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :farmer, :as => :input, placeholder: "Who are your farmers?",  ok_button: 'Save', cancel_button: 'Cancel' %>
+
+  <p>
+    <b>About The Farm:</b>
+    <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :about_farm, :as => :input, type: :textarea, :placeholder => 'Tell us about your farm!', ok_button: 'Save', cancel_button: 'Cancel' %>
+  </p>
+
+  <p>
+    <b>Farm Address:</b>
+  </p>
+
+  <p>
+    <b>Banner Image:</b>
+    <% if current_user && current_user.id == @farm.user_id %>
+        <%= render 'update_banner', farm: @farm %>
+        <% end %>
+  </p>
+
+  <br />
+  <br />
+
+  <p>
+    <b>Profile Image:</b>
+    <% if current_user && current_user.id == @farm.user_id %>
+      <%= render 'update_avatar', farm: @farm %>
+      <% end %>
+  </p>
