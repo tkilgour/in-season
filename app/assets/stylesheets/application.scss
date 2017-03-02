@@ -36,14 +36,33 @@ body {
   margin-right: 20px
 }
 
+.popup {
+  display: inline-block;
+}
+
+.popup a{
+  color: #777;
+}
+
+.logs {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.logs a {
+  color: #777;
+}
+
+.navbar-right .dropdown {
+  display: inline-block;
+  padding-left: 10px;
+}
+
 img {
   width: 100px;
   height: 100px;
 }
 
-.logs {
-  margin-top: 15px;
-}
 
 .row {
   margin-left: 0;
@@ -75,13 +94,6 @@ img {
   .navbar-nav {
     float: none!important;
     margin-top: 7.5px;
-  }
-  .navbar-nav>li {
-    float: none;
-  }
-  .navbar-nav>li>a {
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
   .collapse.in{
       display:block !important;
