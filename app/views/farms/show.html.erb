@@ -76,10 +76,16 @@
       </div>
       <div class="col-sm-5 ">
         <div class="panel panel-success">
-          <div class="panel-heading">WHERE ARE WE?</div>
+          <div class="panel-heading">WHERE ARE WE?
+            <br />
+            Our Address:
+            <div class="farm-editing">
+              <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :address, :as => :input, type: :textarea, :placeholder => "What is your farm's address?", ok_button: 'Save', cancel_button: 'Cancel' %>
+            </div>
+            <br />
+          </div>
           <div class="panel-body">
             <div id="map"></div>
-
             <%= form_for @new_market do |f| %>
 
               <% if f.object.errors.any? %>
