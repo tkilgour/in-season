@@ -1,0 +1,17 @@
+<article class="box">
+  <header>
+    <img alt="" src=<%="/farmers/#{box.size}.jpg"%>>
+      <h4><%= box.size.capitalize %></h4>
+  </header>
+
+  <p class="description">
+    <%= box.description %>
+  </p>
+  <p class="pickup-price">
+    <%= box.pickup_price_cents %>
+  </p>
+  <p class="delivery-price">
+    <%= box.delivery_price_cents %>
+  </p>
+
+</article>
