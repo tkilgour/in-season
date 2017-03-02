@@ -102,101 +102,23 @@
             </p>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="http://www.well-beingsecrets.com/wp-content/uploads/Cavendish-Bananas.jpg" class="img-responsive center-block">
-            <p>
-              <b>Banana</b>
-            </p>
-            <p>
-              This is a really crispy apple.
-            </p>
-            <p>
-              Harvest Date: <i>tomorrow</i>.
-            </p>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
             <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
-            <p>
-              <b>Peach</b>
-            </p>
-            <p>
-              This is a really crispy apple.
-            </p>
-            <p>
-              Harvest Date: <i>tomorrow</i>.
-            </p>
+               <p>
+      <strong>Image:</strong>
+      <%# image_tag @crop.image.thumb.url %>
+    </p>
+    <p>
+      <strong>Name:</strong>
+      <%# @crop.name %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%# @crop.description %>
+    </p>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
-            <p>
-              <b>Jalapeno</b>
-            </p>
-            <p>
-              This is a really crispy apple.
-            </p>
-            <p>
-              Harvest Date: <i>tomorrow</i>.
-            </p>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="http://www.almanac.com/sites/default/files/images/tomatoplant.jpg">
-            <p>
-              name
-            </p>
-            <p>
-              This is a really crispy apple.
-            </p>
-            <p>
-              Harvest Date: tomorrow.
-            </p>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="https://s-media-cache-ak0.pinimg.com/originals/dc/a5/ab/dca5ab2c10391ff2d5b0b49fa93c0eb0.jpg">
-            <p>
-              name
-            </p>
-            <p>
-              This is a really crispy apple.
-            </p>
-            <p>
-              Harvest Date: tomorrow.
-            </p>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Corn/Truckers_Favorite_Yellow_Corn.jpg">
-            <p>
-              name
-            </p>
-            <p>
-              This is a really crispy apple.
-            </p>
-            <p>
-              Harvest Date: tomorrow.
-            </p>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="http://www.well-beingsecrets.com/wp-content/uploads/Cavendish-Bananas.jpg">
-            <p>
-              name
-            </p>
-            <p>
-              This is a really crispy apple.
-            </p>
-            <p>
-              Harvest Date: tomorrow.
-            </p>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="https://www.starkbros.com/images/dynamic/2848-960x960.jpg">
-            <p>
-              name
-            </p>
-            <p>
-              This is a really crispy apple.
-            </p>
-            <p>
-              Harvest Date: tomorrow.
-            </p>
-          </div>
+
+
         </div>
       </div>
     </div>
@@ -219,28 +141,23 @@
           </p>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
-          <p>
-            <b>Jalapeno</b>
-          </p>
-          <p>
-            This is a really crispy apple.
-          </p>
-          <p>
-            Harvest Date: <i>tomorrow</i>.
-          </p>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Corn/Truckers_Favorite_Yellow_Corn.jpg">
-          <p>
-            name
-          </p>
-          <p>
-            This is a really crispy apple.
-          </p>
-          <p>
-            Harvest Date: tomorrow.
-          </p>
+    <p>
+      <strong>Image:</strong>
+      <%# image_tag @crop.image.thumb.url %>
+    </p>
+    <p>
+      <strong>Name:</strong>
+      <%# @crop.name %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%# @crop.description %>
+    </p>
+
+
+
+
         </div>
 
       </div>
@@ -264,52 +181,22 @@
           </p>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
           <p>
-            <b>Jalapeno</b>
+            <strong>Image:</strong>
+            <%# image_tag @crop[0].image %>
           </p>
           <p>
-            This is a really crispy apple.
+            <strong>Name:</strong>
+            <%# @crop.name %>
           </p>
+
           <p>
-            Harvest Date: <i>tomorrow</i>.
+            <strong>Description:</strong>
+            <%# @crop.description %>
           </p>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <img src="http://www.almanac.com/sites/default/files/images/tomatoplant.jpg">
-          <p>
-            name
-          </p>
-          <p>
-            This is a really crispy apple.
-          </p>
-          <p>
-            Harvest Date: tomorrow.
-          </p>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <img src="https://s-media-cache-ak0.pinimg.com/originals/dc/a5/ab/dca5ab2c10391ff2d5b0b49fa93c0eb0.jpg">
-          <p>
-            name
-          </p>
-          <p>
-            This is a really crispy apple.
-          </p>
-          <p>
-            Harvest Date: tomorrow.
-          </p>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Corn/Truckers_Favorite_Yellow_Corn.jpg">
-          <p>
-            name
-          </p>
-          <p>
-            This is a really crispy apple.
-          </p>
-          <p>
-            Harvest Date: tomorrow.
-          </p>
+
+
+
         </div>
 
       </div>
@@ -333,48 +220,25 @@
           </p>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <img src="http://imavex.vo.llnwd.net/o18/clients/urbanfarm/images/Peppers/Early-Jalapeno-Pepper-Seeds.jpg">
           <p>
-            <b>Jalapeno</b>
+            <strong>Image:</strong>
+            <%# image_tag @crop[0].image%>
           </p>
           <p>
-            This is a really crispy apple.
+            <strong>Name:</strong>
+            <%# @crop.name %>
           </p>
+
           <p>
-            Harvest Date: <i>tomorrow</i>.
-          </p>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <img src="http://www.almanac.com/sites/default/files/images/tomatoplant.jpg">
-          <p>
-            name
-          </p>
-          <p>
-            This is a really crispy apple.
-          </p>
-          <p>
-            Harvest Date: tomorrow.
+            <strong>Description:</strong>
+            <%# @crop.description %>
           </p>
         </div>
+
       </div>
     </div>
   </div>
-  <div class="products">
-    <p>
-      <strong>Name:</strong>
-      <%# @crop.name %>
-    </p>
 
-    <p>
-      <strong>Description:</strong>
-      <%# @crop.description %>
-    </p>
-
-    <p>
-      <strong>Image:</strong>
-      <%# image_tag @crop.image.thumb.url %>
-    </p>
-  </div>
 </div>
 </div>
 
