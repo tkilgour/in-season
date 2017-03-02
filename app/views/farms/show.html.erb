@@ -4,6 +4,7 @@
 
     <div class="card hovercard">
       <div class="cardheader">
+
         <img class="cardheader" src=<%=@farm.banner_image%>>
       </div>
       <div class="avatar">
@@ -33,11 +34,11 @@
     </div>
 
     <% if current_user && current_user.id == @farm.user_id %>
-      <%= render 'update_banner', farm: @farm %>
+    <%= render 'update_banner', farm: @farm %>
     <% end %>
     <br /><br /><br />
     <% if current_user && current_user.id == @farm.user_id %>
-      <%= render 'update_avatar', farm: @farm %>
+    <%= render 'update_avatar', farm: @farm %>
     <% end %>
 
     <div class="crops">
@@ -109,6 +110,11 @@
                 <%= f.text_field :address, class: 'form-control' %>
               </div>
 
+              <div class="form-group market-day-dropdown">
+                <%= f.label :market_day %>
+                <%= select(:market, :market_day, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], :include_blank => true)%>
+              </div>
+
               <%= f.hidden_field :farm_id, :value => @farm.id %>
 
               <%= f.submit 'Create Market', class: 'btn btn-primary btn-xs', id: 'create-market' %>
@@ -122,7 +128,7 @@
 </div>
 
 <%= javascript_tag do %>
-  window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>}
+  window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>, id: <%= @farm.id %>}
   window.markets = <%= @market_data %>
 <% end %>
 
