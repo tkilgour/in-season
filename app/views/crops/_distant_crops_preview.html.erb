@@ -1,9 +1,12 @@
 <div class="distant-crops">
-<img src=<%= if crop['image']
-  crop.image
-else
-  crop.default_image
-end %>>
-<p><%= crop.name %></p>
-<P><%= crop.description %></p>
+  <img src=<%= if crop['image']
+    crop.image
+  else
+    crop.default_image
+    end %>>
+    <p><b><%= crop.name %></b></p>
+    <button type="button" class="btn btn-default glyphicon glyphicon-chevron-down" data-toggle="collapse" data-target="#thumb_<%= crop.id %>"></button>
+    <div id="thumb_<%= crop.id %>" class="collapse">
+      <P><%= crop.description %></p>
+    </div>
 </div>
