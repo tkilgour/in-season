@@ -1,7 +1,8 @@
-
-</article>
-
-<h1><%= link_to @box.farm.name, @box.farm %> &raquo; <%= @box.size.capitalize %> Box</h1>
+<header>
+  <h2>
+  <%= link_to @box.farm.name, @box.farm %> &raquo;
+  <%= link_to "CSA Box Subscription Options", farm_boxes_path(@farm.id) %> &raquo; <%= @box.size.capitalize %> Box
+</h2>
 </header>
 <article class="box-detail">
 <div class="row">
@@ -21,3 +22,4 @@
     </dl>
   </div>
 </div>
+</article>

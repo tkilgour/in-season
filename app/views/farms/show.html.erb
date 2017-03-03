@@ -75,10 +75,14 @@
           </div>
         </div>
 
-        <a href="boxes#index"><button class="btn btn-primary">SIGN UP FOR CSA ANNUAL SUBSCRIPTION</button></a>
-        <p>
-          What are CSA boxes? How long does the subscription last? How many boxes will I get? Etc.
-        </p>
+        <% if @farm.csa_availability %>
+          <%= link_to farm_boxes_path(@farm.id) do %>
+          <button class="btn btn-primary">SIGN UP FOR CSA ANNUAL SUBSCRIPTION</button></a>
+          <% end %>
+          <p>
+            What are CSA boxes? How long does the subscription last? How many boxes will I get? Etc.
+          </p>
+        <% end %>
 
       </div>
       <div class="col-sm-5 ">
