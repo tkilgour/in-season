@@ -26,6 +26,11 @@ class FarmsController < ApplicationController
     @available_crops = @crops.where("harvest_date < ?", Date.today).where(availability: true)
   end
 
+  def search
+    @search = params[:q]
+    @location = Geocoder.coordinates(@search)
+  end
+
   def market_data(markets_array)
     market_data = []
     markets_array.each do |m|

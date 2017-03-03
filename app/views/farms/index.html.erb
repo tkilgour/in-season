@@ -17,6 +17,7 @@
 <% end %>
 
 
+
 <div class="container">
   <div class="row">
     <div>
@@ -49,5 +50,21 @@
 
       </div>
     </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-3">
+    <%= form_tag("/search", method: "get") do %>
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button id="locate-user" class="btn btn-default"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i></button>
+        </span>
+        <%= text_field_tag(:q, "", placeholder: "Enter your location...", class: "form-control") %>
+        <span class="input-group-btn">
+          <%= submit_tag("Search", class: "btn btn-default") %>
+        </span>
+      </div>
+    <% end %>
   </div>
 </div>
