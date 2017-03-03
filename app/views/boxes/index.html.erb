@@ -6,7 +6,7 @@
 
   <div class="boxes">
     <% @boxes.map do |box| %>
-    <%= render 'box', box: box %>
+    <%= render 'box', box: box, id: box.id %>
     <% end %>
   </div>
 

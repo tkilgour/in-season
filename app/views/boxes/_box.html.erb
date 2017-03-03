@@ -1,17 +1,20 @@
-<article class="box">
+<div class="box" style="display:inline-block;">
+
   <header>
-    <img alt="" src=<%="/farmers/#{box.size}.jpg"%>>
-      <h4><%= box.size.capitalize %></h4>
+    <%=link_to farm_box_path(box.farm_id, box.id) do %>
+    <img alt="" style="width:400px;height:auto;" src=<%="/farmers/#{box.size}.jpg"%>>
+    <h4><%= box.size.capitalize %></h4>
+    <%end%>
   </header>
 
   <p class="description">
     <%= box.description %>
   </p>
   <p class="pickup-price">
-    <%= box.pickup_price_cents %>
+    <%= into_dollars(box.pickup_price_cents) %>
   </p>
   <p class="delivery-price">
-    <%= box.delivery_price_cents %>
+    <%= into_dollars(box.delivery_price_cents) %>
   </p>
 
-</article>
+</div>
