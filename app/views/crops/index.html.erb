@@ -91,35 +91,10 @@
         <div class="panel-heading">Available Right This Instant</div>
         <div class="panel-body">
           <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="https://www.starkbros.com/images/dynamic/2848-960x960.jpg" class="img-responsive center-block">
-            <p>
-              <b>Apple</b>
-            </p>
-            <p>
-              This is a really crispy apple.
-            </p>
-            <p>
-              Harvest Date: <i>tomorrow</i>.
-            </p>
+            <% @available_crops.each do |c| %>
+              <%= render 'available_crops_preview', crop: c %>
+            <% end %>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
-            <p>
-              <strong>Image:</strong>
-              <%# image_tag @crop.image.thumb.url %>
-            </p>
-            <p>
-              <strong>Name:</strong>
-              <%# @crop.name %>
-            </p>
-
-            <p>
-              <strong>Description:</strong>
-              <%# @crop.description %>
-            </p>
-          </div>
-
-
         </div>
       </div>
     </div>
@@ -130,37 +105,10 @@
       <div class="panel-heading">Meet you guys next week?</div>
       <div class="panel-body">
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
-          <p>
-            <b>Peach</b>
-          </p>
-          <p>
-            This is a really crispy apple.
-          </p>
-          <p>
-            Harvest Date: <i>tomorrow</i>.
-          </p>
+          <% @available_crops.each do |c| %>
+            <%= render 'upcoming_crops_preview', crop: c %>
+          <% end %>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <p>
-            <strong>Image:</strong>
-            <%# image_tag @crop.image.thumb.url %>
-          </p>
-          <p>
-            <strong>Name:</strong>
-            <%# @crop.name %>
-          </p>
-
-          <p>
-            <strong>Description:</strong>
-            <%# @crop.description %>
-          </p>
-
-
-
-
-        </div>
-
       </div>
     </div>
   </div>
@@ -170,36 +118,10 @@
       <div class="panel-heading">Keep an eye out, we're coming soon. Eventually.</div>
       <div class="panel-body">
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
-          <p>
-            <b>Peach</b>
-          </p>
-          <p>
-            This is a really crispy apple.
-          </p>
-          <p>
-            Harvest Date: <i>tomorrow</i>.
-          </p>
+          <% @available_crops.each do |c| %>
+            <%= render 'distant_crops_preview', crop: c %>
+          <% end %>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <p>
-            <strong>Image:</strong>
-            <%# image_tag @crop[0].image %>
-          </p>
-          <p>
-            <strong>Name:</strong>
-            <%# @crop.name %>
-          </p>
-
-          <p>
-            <strong>Description:</strong>
-            <%# @crop.description %>
-          </p>
-
-
-
-        </div>
-
       </div>
     </div>
   </div>
@@ -209,33 +131,9 @@
       <div class="panel-heading">You slowpoke! You missed us this year. Better luck next.</div>
       <div class="panel-body">
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <img src="http://centraliowayfc.org/wp-content/uploads/2011/01/peaches1.jpg">
-          <p>
-            <b>Peach</b>
-          </p>
-          <p>
-            This is a really crispy apple.
-          </p>
-          <p>
-            Harvest Date: <i>tomorrow</i>.
-          </p>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <p>
-            <strong>Image:</strong>
-            <%# image_tag @crop[0].image%>
-          </p>
-          <p>
-            <strong>Name:</strong>
-            <%# @crop.name %>
-          </p>
-
-          <p>
-            <strong>Description:</strong>
-            <%# @crop.description %>
-          </p>
-        </div>
-
+          <% @past_crops.each do |c| %>
+            <%= render 'available_crops_preview', crop: c %>
+          <% end %>
       </div>
     </div>
   </div>

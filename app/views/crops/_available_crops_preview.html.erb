@@ -1,0 +1,9 @@
+<div class="available-crops">
+<img src=<%= if crop['image']
+  crop.image
+else
+  crop.default_image
+end %>>
+<p><%= crop.name %></p>
+<P><%= crop.description %></p>
+</div>

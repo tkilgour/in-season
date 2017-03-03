@@ -3,7 +3,7 @@
 
     <div class="card hoverhovercard">
       <div class="label col-xs-4 col-xs-offset-1">
-        Yo Yo Yo Check Out All of Our Markets!!!
+        Yo Yo Yo Check Out All of Our Farmers!!!
       </div>
     </div>
   </div>
@@ -11,25 +11,27 @@
   <div class='row'>
     <div class="col-lg-12">
       <div class="panel panel-default">
-        <div class="panel-heading">All the markets our farmers will be at!</div>
+        <div class="panel-heading">All our FARMZ!</div>
 
         <table class="table">
           <thead>
             <tr>
-              <th>#</th>
-              <th> Name </th>
-              <th> Address </th>
+              <th>Farm</th>
+              <th> Farmers </th>
+              <th> Bio </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <% @markets.map do |market| %>
-              <td> <%= market.id %> </td>
+              <% @farms.map do |farm| %>
               <td>
-                <a href="/"> <%= market.name %> </a>
+                <a href="/farms/<%= farm.id %>"><%= farm.name %></a>
               </td>
               <td>
-                <%= market.address %>
+                <%= farm.farmer %>
+              </td>
+              <td>
+                <%= farm.about_farm %>
               </td>
               <% end %>
             </tr>

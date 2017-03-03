@@ -28,6 +28,7 @@ class MarketsController < ApplicationController
 
   def index
     @markets = Market.all
+    @farms = Farm.all
   end
 
   def show
