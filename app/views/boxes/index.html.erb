@@ -1,12 +1,12 @@
 <section class="boxes-index">
 
   <header class="page-header">
-    <h1><%= link_to @boxes[0].farm.name, @boxes[0].farm %> &raquo; CSA Box Subscription Options</h1>
+    <h1><%= link_to @farm.name, farm_path(@farm.id) %> &raquo; CSA Box Subscription Options</h1>
   </header>
 
   <div class="boxes">
     <% @boxes.map do |box| %>
-    <%= render 'box', box: box, id: box.id %>
+    <%= render 'box', box: box, id: box.id, farm: @farm, description: box.description, pickup_price: into_dollars(box.pickup_price_cents), delivery_price: into_dollars(box.delivery_price_cents) %>
     <% end %>
   </div>
 

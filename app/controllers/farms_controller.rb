@@ -8,13 +8,49 @@ class FarmsController < ApplicationController
     @farm = Farm.new
   end
 
+
   def create
     @farm = Farm.new(farm_params)
+    @farm.save
+    create_csa_boxes(@farm)
+    link_farm_to_user_in_users(@farm.id)
     if @farm.save
       redirect_to farm_path(@farm)
     else
       redirect_to new_farm_path
     end
+  end
+
+  def link_farm_to_user_in_users(farm_id)
+    user = User.find(params[:user_id])
+    user.update(farm_id: farm_id)
+  end
+
+  def create_csa_boxes(farm)
+    # this is hard-coding ... TO DO :  when check_box marked, toggle forms for prices and descriptions
+    small = Box.new ({
+      farm_id: farm.id,
+      size: 'small',
+      pickup_price_cents: 35000,
+      delivery_price_cents: 45000,
+      description: 'Our small box feeds 2 people each week!'})
+    small.save
+    medium = Box.new ({
+      farm_id: farm.id,
+      size: 'medium',
+      pickup_price_cents: 52500,
+      delivery_price_cents: 62500,
+      description: 'Our medium box feeds 4 people each week!'
+    })
+    medium.save
+    large = Box.new ({
+      farm_id: farm.id,
+      size: 'large',
+      pickup_price_cents: 70000,
+      delivery_price_cents: 80000,
+      description: 'Our large box feeds 6 people each week!'
+    })
+    large.save
   end
 
   def show
@@ -77,7 +113,7 @@ class FarmsController < ApplicationController
   private
 
   def farm_params
-    params.require(:farm).permit(:name, :about_farm, :farmer, :profile_image, :banner_image, :user_id, :address)
+    params.require(:farm).permit(:name, :about_farm, :farmer, :profile_image, :banner_image, :user_id, :address, :csa_availability)
   end
 
 end
