@@ -25,13 +25,19 @@
 .croplist .col-sm-6 img {
   height: 100px;
   width: 100px;
-  margin: 15px 34%;
+  margin: 15px 23%;
   border-radius: 3px;
 }
 
-.croplist .col-sm-12 .col-sm-6 {
-  border: solid 0.5px lightgrey;
-  border-radius: 5px;
+.croplist .col-sm-6 .available-crops, .upcoming-crops, .distant-crops, .past-crops {
+    display: inline-block;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-image: initial;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
 }
 
 .card.hoverhovercard .avatar {
