@@ -1,8 +1,6 @@
 class CartsController < ApplicationController
 
   def show
-    @box = Box.find(params[:box_id])
-
   end
 
   def add_item

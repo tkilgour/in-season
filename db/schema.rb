@@ -41,14 +41,8 @@ ActiveRecord::Schema.define(version: 20170303145359) do
     t.string   "farmer"
     t.string   "profile_image"
     t.string   "banner_image"
-<<<<<<< HEAD
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-=======
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.integer  "user_id"
->>>>>>> feature/mario-kart
     t.string   "address"
     t.float    "lat"
     t.float    "lng"

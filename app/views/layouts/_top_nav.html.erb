@@ -90,7 +90,7 @@
 
         <% if current_user && current_user.farm_id %>
         <li>
-          <%= link_to farm_cart_path do %>
+          <%= link_to farm_cart_path(current_user.farm_id) do %>
             <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
           <% end %>
         </li>

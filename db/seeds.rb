@@ -12,9 +12,6 @@ Farm.create!({
   name: 'Zocalo Organics',
   farmer: 'Beth & Seb',
   address: '5881 3 Line, Hillsburgh, ON N0B 1Z0, Canada',
-<<<<<<< HEAD
-  about_farm: 'We grow organic produce for household consumers, chefs and restaurateurs, and wholesalers. Our main offerings are Seasonal Salad Blends, tomatoes, cucumbers, herbs, and other organic vegetables. We sell our vegetables to households through a Community Shared Agriculture Program (CSA). Our vegetable boxes include carrots, garlic, onions, spinach, tomatoes, broccoli, asparagus, our signature salad greens, squash, and more! We invite you to join our CSA and sign up for a season of delicious and healthy eating!'
-=======
   about_farm: 'Zócalo Organics is an 83-acre property between Guelph and Hillsburgh. The farm is a combination of greenhouses, gardens, hayfields, cedar forests, conservation wetland, a small orchard, and more!
                 The property has been farmed organically since the early ’90s by John Sutherland of Deerfields Nursery.  John made an incredible contribution to the tree cover of the property by planting hundreds of trees.
                 Twenty-three acres of wetland run like a ribbon through the centre of the farm and are an important part of the Grand River watershed. The Grand River Watershed has lost over 65% of its wetlands in the last 200 years to farming and development.  Wetlands moderate water flow, reduce flooding, and hold water during drought. They also improve water quality because of their ability to trap sediment and soil-bound contaminants.  Our wetland is part of a conversation program and will remain untouched.
@@ -22,7 +19,6 @@ Farm.create!({
   csa_availability: true,
   banner_image: 'farmers/zocalo-organics-banner.jpg',
   profile_image: 'farmers/zocalo-organics-avatar.jpg'
->>>>>>> feature/mario-kart
 })
 
 Box.destroy_all

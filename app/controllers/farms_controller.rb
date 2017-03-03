@@ -12,17 +12,12 @@ class FarmsController < ApplicationController
     @farm = Farm.new(farm_params)
     @farm.save
     create_csa_boxes(@farm)
-    link_farm_to_user_in_users(@farm.id)
+    current_user.update(farm_id: @farm.id)
     if @farm.save
       redirect_to farm_path(@farm)
     else
       redirect_to new_farm_path
     end
-  end
-
-  def link_farm_to_user_in_users(farm_id)
-    user = User.find(params[:user_id])
-    user.update(farm_id: farm_id)
   end
 
   def create_csa_boxes(farm)

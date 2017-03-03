@@ -1,0 +1,47 @@
+<section class="orders-show">
+  <header class="page-header">
+    <h1>Order #<%= @order.id %></h1>
+  </header>
+  <div class="order-summary jumbotron">
+    <h3>
+      Thank you for your order
+      <i><%= User.find(@order.user_id).first_name %></i>!
+    </h3>
+    <div class="panel panel-default items">
+      <table class="table table-bordered">
+        <thead>
+          <tr style="font-size:110%; background-color: lightblue;">
+            <th colspan="2">Product</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @order_total = 0 %>
+          <% @order.order_items.each do |i| %>
+            <%= render 'item', box: i.box, quantity: i.quantity %>
+          <% end %>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="4" style='font-size:150%'>
+              TOTAL:
+            </th>
+            <th style='font-size:150%'>
+              <%= @order_total %>
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+</section>
