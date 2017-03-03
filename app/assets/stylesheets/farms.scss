@@ -149,21 +149,34 @@ body {
   width: 520px;
   overflow: hidden;
   overflow-x: scroll;
-  height: 130px;
+  height: 140px;
   white-space: nowrap;
   margin: 0 auto;
 }
 
-#carousel-example-generic img {
-  height: 100px;
-  width: 100px;
-  border: solid;
-  border-width: 1px;
-  border-radius: 3px;
-  padding: 2px;
-  border-color: #c99a68;
+#carousel-example-generic .available-crops {
+  img {
+    height: 100px;
+    width: 100px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 2px;
+    border-color: #c99a68;
+  }
+
+  p {
+    font-size: 12px;
+    width: 95px;
+    margin: 0 auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
   background-size: cover;
   flex: 0 0 auto;
+  display: inline-block;
 }
 
 .col-sm-5 .panel img {

@@ -9462,3 +9462,9 @@ farm_crops.each do |crop|
     default_image: crop[:default_image]
   })
 end
+
+Farm.find(Farm.first.id).markets.create(
+    name: 'Nü Farmz Marché',
+    address: '46 Spadina Ave, Toronto',
+    market_day: 'Saturday'
+)

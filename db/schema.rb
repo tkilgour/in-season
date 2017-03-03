@@ -43,10 +43,10 @@ ActiveRecord::Schema.define(version: 20170302201944) do
     t.string   "banner_image"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.integer  "user_id"
     t.string   "address"
     t.float    "lat"
     t.float    "lng"
+    t.integer  "user_id"
     t.text     "about_farm"
   end
 
