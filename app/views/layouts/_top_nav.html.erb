@@ -87,6 +87,15 @@
             <li><a href="#">Maybe.</a></li>
           </ul>
         </div>
+
+        <% if current_user && current_user.farm_id %>
+        <li>
+          <%= link_to farm_cart_path do %>
+            <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
+          <% end %>
+        </li>
+<% end %>
+
       </div>
 
     </div>

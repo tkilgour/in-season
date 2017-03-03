@@ -1,0 +1,32 @@
+<% quantity = details['quantity'].to_i %>
+
+<% if box = Box.find_by(id: box_id) %>
+<% item_total = (box.pickup_price_cents * quantity).to_i %>
+<% @cart_total += item_total %>
+
+<tr>
+  <td>
+    Image
+  </td>
+  <td>
+    <h4><%= box.size %></h4>
+    <br>
+    <p><%= box.description %></p>
+  </td>
+  <td>
+    <%= box.pickup_price_cents %>
+  </td>
+  <td>
+    <%= link_to remove_item_farm_cart_path(box_id: box_id), class: 'btn btn-xs btn-danger', method: :delete do %>
+    -
+    <% end %>
+    <%= quantity %>
+    <%= link_to add_item_farm_cart_path(box_id: box_id), class: 'btn btn-xs btn-success', method: :put do %>
+    +
+    <% end %>
+  </td>
+  <td>
+    <%= item_total %>
+  </td>
+</tr>
+<% end %>
