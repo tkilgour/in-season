@@ -1,7 +1,7 @@
 class CartsController < ApplicationController
 
   def show
-    @box = Box.find(params[:box_id))
+    @box = Box.find(params[:box_id])
 
   end
 

@@ -8,7 +8,6 @@ class FarmsController < ApplicationController
     @farm = Farm.new
   end
 
-
   def create
     @farm = Farm.new(farm_params)
     @farm.save
