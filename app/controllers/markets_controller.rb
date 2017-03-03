@@ -9,7 +9,15 @@ class MarketsController < ApplicationController
 
   autocomplete :market, :name, :full => true, :extra_data => [:parsed_address]
 
-  private 
+  def index
+    @markets = Market.all
+  end
+
+  def show
+    @market = Market.find(params[:id])
+  end
+
+  private
 
   def market_params
     params.require(:market).permit(
