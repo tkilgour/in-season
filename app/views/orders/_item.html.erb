@@ -1,0 +1,21 @@
+<%item_total = box.pickup_price_cents * quantity%>
+<%@order_total += item_total%>
+<tr>
+  <td>
+    Image
+  </td>
+  <td>
+    <h4><%=box.size%></h4>
+    <br>
+    <p style='font-size:100%'><%=box.description%></p>
+  </td>
+  <td style='font-size:125%'>
+    <%=box.pickup_price_cents%>
+  </td>
+  <td style='font-size:125%'>
+    <%=quantity%>
+  </td>
+  <td style='font-size:125%'>
+    <%=item_total%>
+  </td>
+</tr>

@@ -10,9 +10,9 @@ class OrdersController < ApplicationController
 
     if order.valid?
       empty_cart!
-      redirect_to order, notice: 'Your Order has been placed.'
+      redirect_to farm_order_path(order.farm_id, order.id), notice: 'Your Order has been placed.'
     else
-      redirect_to cart_path, error: order.errors.full_messages.first
+      redirect_to farm_cart_path, error: order.errors.full_messages.first
     end
 
   rescue Stripe::CardError => e
@@ -37,18 +37,20 @@ class OrdersController < ApplicationController
 
   def create_order(stripe_charge)
     order = Order.new(
-      email: params[:stripeEmail],
-      total_cents: cart_total,
-      stripe_charge_id: stripe_charge.id, # returned by stripe
+      farm_id: params[:farm_id],
+      user_id: current_user.id,
+      # email: params[:stripeEmail],
+      total_price_cents: cart_total,
+      stripe_charge_id: stripe_charge.id # returned by stripe
     )
     cart.each do |box_id, details|
       if box = Box.find_by(id: box_id)
         quantity = details['quantity'].to_i
-        order.line_items.new(
+        order.order_items.new(
           box: box,
           quantity: quantity,
-          item_price: box.price,
-          total_price: box.price * quantity
+          item_price_cents: box.pickup_price_cents,
+          total_price_cents: box.pickup_price_cents * quantity
         )
       end
     end
@@ -63,8 +65,8 @@ class OrdersController < ApplicationController
   def cart_total
     total = 0
     cart.each do |box_id, details|
-      if p = Product.find_by(id: box_id)
-        total += p.price_cents * details['quantity'].to_i
+      if p = Box.find_by(id: box_id)
+        total += p.pickup_price_cents * details['quantity'].to_i
       end
     end
     total
