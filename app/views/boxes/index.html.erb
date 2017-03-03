@@ -1,0 +1,13 @@
+<section class="boxes-index">
+
+  <header class="page-header">
+    <h1><%= link_to @boxes[0].farm.name, @boxes[0].farm %> &raquo; CSA Box Subscription Options</h1>
+  </header>
+
+  <div class="boxes">
+    <% @boxes.map do |box| %>
+    <%= render 'box', box: box, id: box.id %>
+    <% end %>
+  </div>
+
+</section>

@@ -6,6 +6,12 @@ Rails.application.routes.draw do
     post :update_avatar
     post :update_banner
     resources :crops, only: [:index]
+    resources :boxes, only: [:index, :show]
+    resources :orders, only: [:create, :show]
+    resource :cart, only: [:show] do
+      put    :add_item
+      delete :remove_item
+    end
   end
 
   resources :crops, except: [:index, :edit, :new] do
