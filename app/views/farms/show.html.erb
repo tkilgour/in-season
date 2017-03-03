@@ -33,13 +33,16 @@
       </div>
     </div>
 
-    <% if current_user && current_user.id == @farm.user_id %>
-    <%= render 'update_banner', farm: @farm %>
-    <% end %>
-    <br /><br /><br />
-    <% if current_user && current_user.id == @farm.user_id %>
-    <%= render 'update_avatar', farm: @farm %>
-    <% end %>
+    <div class="banner-update">
+      <% if current_user && current_user.id == @farm.user_id %>
+      <%= render 'update_banner', farm: @farm %>
+      <% end %>
+      </div>
+    <div class="avatar-update">
+      <% if current_user && current_user.id == @farm.user_id %>
+      <%= render 'update_avatar', farm: @farm %>
+      <% end %>
+    </div>
 
     <div class="crops">
       <h2>What's available now?</h2>
@@ -77,17 +80,20 @@
       </div>
       <div class="col-sm-5 ">
         <div class="panel panel-success">
-          <div class="panel-heading">WHERE ARE WE?
-            <br />
+          <div class="panel-heading">
+            WHERE ARE WE?
+          </div>
+          <div class="panel-body">
             Our Address:
             <div class="farm-editing">
               <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :address, :as => :input, type: :textarea, :placeholder => "What is your farm's address?", ok_button: 'Save', cancel_button: 'Cancel' %>
             </div>
-            <br />
           </div>
-          <div class="panel-body">
-            <div id="map"></div>
-            <%= form_for @new_market do |f| %>
+
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div id="map"></div>
+              <%= form_for @new_market do |f| %>
 
               <% if f.object.errors.any? %>
               <div class="alert alert-danger">
@@ -99,12 +105,12 @@
                 </ul>
               </div>
               <% end %>
-
+            </li>
+            <li class="list-group-item">
               <div class="form-group">
                 <%= f.label :name %>
                 <%= f.autocomplete_field :name, autocomplete_market_name_markets_path, 'data-auto-focus' => true, class: 'form-control' %>
               </div>
-
               <div class="form-group">
                 <%= f.label :address %>
                 <%= f.text_field :address, class: 'form-control' %>
@@ -117,8 +123,10 @@
 
               <%= f.hidden_field :farm_id, :value => @farm.id %>
 
-              <%= f.submit 'Create Market', class: 'btn btn-primary btn-xs', id: 'create-market' %>
-            <% end %>
+              <%= f.submit "Add a market you're going to be at", class: 'col-lg-offset-6 btn btn-success btn-md col-md-offset-4 col-sm-offset-3 col-xs-offset-5', id: 'create-market' %>
+              <% end %>
+            </li>
+
           </div>
         </div>
       </div>
