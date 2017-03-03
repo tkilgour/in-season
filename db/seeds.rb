@@ -11,7 +11,8 @@ Farm.destroy_all
 Farm.create!({
   name: 'Zocalo Organics',
   farmer: 'Beth & Seb',
-  address: '5881 3 Line, Hillsburgh, ON N0B 1Z0, Canada'
+  address: '5881 3 Line, Hillsburgh, ON N0B 1Z0, Canada',
+  about_farm: 'We grow organic produce for household consumers, chefs and restaurateurs, and wholesalers. Our main offerings are Seasonal Salad Blends, tomatoes, cucumbers, herbs, and other organic vegetables. We sell our vegetables to households through a Community Shared Agriculture Program (CSA). Our vegetable boxes include carrots, garlic, onions, spinach, tomatoes, broccoli, asparagus, our signature salad greens, squash, and more! We invite you to join our CSA and sign up for a season of delicious and healthy eating!'
 })
 
 Box.destroy_all
@@ -9462,6 +9463,8 @@ farm_crops.each do |crop|
     default_image: crop[:default_image]
   })
 end
+
+Market.destroy_all
 
 Farm.find(Farm.first.id).markets.create(
     name: 'Nü Farmz Marché',
