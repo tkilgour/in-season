@@ -22,16 +22,25 @@
   height: 200px;
 }
 
-.croplist .col-sm-6 img {
-  height: 100px;
-  width: 100px;
-  margin: 15px 34%;
-  border-radius: 3px;
+.croplist .available-crops, .upcoming-crops, .distant-crops, .past-crops {
+    display: inline-block;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-image: initial;
+    border-radius: 5px;
+    width: 180px;
+    height: auto;
+    margin-right: 5.5px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    vertical-align: top;
 }
 
-.croplist .col-sm-12 .col-sm-6 {
-  border: solid 0.5px lightgrey;
-  border-radius: 5px;
+.collapse p {
+  margin: 10px 5px;
 }
 
 .card.hoverhovercard .avatar {
@@ -44,7 +53,6 @@
   border: 5px solid rgba(255,255,255,0.5);
   position: relative;
 }
-
 
 .card.hoverhovercard .info {
   height: 130px;

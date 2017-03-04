@@ -74,7 +74,7 @@
 
         <% if @farm.csa_availability %>
           <%= link_to farm_boxes_path(@farm.id) do %>
-          <button class="btn btn-primary">SIGN UP FOR CSA ANNUAL SUBSCRIPTION</button></a>
+          <button class="btn btn-primary col-sm-offset-">SIGN UP FOR CSA ANNUAL SUBSCRIPTION</button></a>
           <% end %>
           <p>
             What are CSA boxes? How long does the subscription last? How many boxes will I get? Etc.
@@ -85,12 +85,12 @@
       <div class="col-sm-5 ">
         <div class="panel panel-success">
           <div class="panel-heading">
-            WHERE ARE WE?
+            <h3>Where Are We?</h3>
           </div>
           <div class="panel-body">
-            Our Address:
+            <h4>Our Address:</h4>
             <div class="farm-editing">
-              <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :address, :as => :input, type: :textarea, :placeholder => "What is your farm's address?", ok_button: 'Save', cancel_button: 'Cancel' %>
+              <h5><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :address, :as => :input, type: :textarea, :placeholder => "What is your farm's address?", ok_button: 'Save', cancel_button: 'Cancel' %></h5>
             </div>
           </div>
 
@@ -127,7 +127,7 @@
 
               <%= f.hidden_field :farm_id, :value => @farm.id %>
 
-              <%= f.submit "Add a market you're going to be at", class: 'col-lg-offset-6 btn btn-success btn-md col-md-offset-4 col-sm-offset-3 col-xs-offset-5', id: 'create-market' %>
+              <%= f.submit "Add a market", class: 'col-lg-offset-5 btn btn-success btn-md col-md-offset-4 col-sm-offset-3 col-xs-offset-5', id: 'create-market' %>
               <% end %>
             </li>
 
