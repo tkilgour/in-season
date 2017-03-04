@@ -1,0 +1,27 @@
+<div class="row">
+  <% farm = Farm.find(params[:farm_id]) %>
+
+  <div class="card hoverhovercard">
+    <div class="info">
+      <div class="avatar col-xs-1">
+        <img alt="" src=<%=farm.profile_image%>>
+      </div>
+      <div class="label col-xs-4 col-xs-offset-1">
+        <%= farm.name %>
+        <br>
+      </div>
+      <div class="farmer-names col-xs-4 col-xs-offset-1">
+        <%= farm.farmer %>
+      </div>
+      <div>
+        <% if current_user && current_user.farm_id %>
+        <li>
+          <%= link_to farm_cart_path(current_user.farm_id) do %>
+            <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
+          <% end %>
+        </li>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
