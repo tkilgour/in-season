@@ -2,6 +2,7 @@ class FarmsController < ApplicationController
 
   def index
     @farms = Farm.all
+    @results = []
   end
 
   def new
@@ -27,8 +28,10 @@ class FarmsController < ApplicationController
   end
 
   def search
-    @search = params[:q]
-    @location = Geocoder.coordinates(@search)
+    @query = params[:q]
+    @location = Geokit::Geocoders::GoogleGeocoder.geocode(@query)
+    @results = Farm.within(params['farm_radius'], :origin => @location)
+    render :action => :index
   end
 
   def market_data(markets_array)
