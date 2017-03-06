@@ -1,21 +1,21 @@
 <%item_total = box.price * quantity%>
 <%@order_total += item_total%>
 <tr>
-  <td>
-    Image
+  <td style="width:150px;height:auto;">
+    <img alt="" style="width:100%;height:auto;" src=<%="/farmers/#{box.size}.jpg"%>>
   </td>
-  <td>
+  <td style="width:50px;height:auto;">
     <h4><%=box.size%></h4>
     <br>
-    <p style='font-size:100%'><%=box.description%></p>
+    <p style='font-size:100%;'><%=box.description%></p>
   </td>
-  <td style='font-size:125%'>
+  <td style='font-size:125%;width:50px;height:auto;'>
     <%= number_to_currency(box.price)%>
   </td>
-  <td style='font-size:125%'>
+  <td style='font-size:125%;width:50px;height:auto;'>
     <%=quantity%>
   </td>
-  <td style='font-size:125%'>
+  <td style='font-size:125%;width:50px;height:auto;'>
     <%=number_to_currency(item_total)%>
   </td>
 </tr>
