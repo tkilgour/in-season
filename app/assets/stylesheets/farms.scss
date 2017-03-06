@@ -11,7 +11,8 @@
 }
 
 body {
-  font-family: Tahoma;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: lighter;
 }
 
 .container {
@@ -173,7 +174,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
   }
-  
+
   background-size: cover;
   flex: 0 0 auto;
   display: inline-block;

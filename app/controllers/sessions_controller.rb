@@ -9,8 +9,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to '/'
     else
-      puts "authentication failed"
-      # If user's login doesn't work, send them back to the login form.
+      flash[:error] = "You must enter a valid email address and password"      # If user's login doesn't work, send them back to the login form.
       redirect_to '/login'
     end
   end

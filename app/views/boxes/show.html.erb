@@ -1,8 +1,10 @@
+<%= render 'farm_nav' %>
+
 <header>
-  <h2>
+  <h3>
   <%= link_to @box.farm.name, @box.farm %> &raquo;
   <%= link_to "CSA Box Subscription Options", farm_boxes_path(@farm.id) %> &raquo; <%= @box.size.capitalize %> Box
-</h2>
+</h3>
 </header>
 <article class="box-detail">
 <div class="row">

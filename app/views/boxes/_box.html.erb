@@ -1,8 +1,8 @@
-<div class="box" style="display:inline-block;">
+<div class="box" style="display:inline-block;border:solid rgba(87,82,4,0.18) 1px;border-radius:10px">
 
   <header>
     <%=link_to farm_box_path(box.farm_id, box.id) do %>
-    <img alt="" style="width:400px;height:auto;" src=<%="/farmers/#{box.size}.jpg"%>>
+    <img alt="" style="width:400px;height:auto;border-radius:10px;border:solid rgba(87,82,4,0.18) 1px;" src=<%="/farmers/#{box.size}.jpg"%>>
     <h4><%= box.size.capitalize %></h4>
     <%end%>
   </header>

@@ -6,6 +6,11 @@
           <h2>Trying to get back to your farm?</h2>
           <h4>Next tractor leaves in: <%= rand(25..59) %> seconds</h4>
           <br>
+          <% if flash[:error] %>
+            <span style="color:red; background-color:pink; font-size:105%; padding: 5px 7px 5px 7px; border-radius:5px; ">
+              * <%= flash[:error] %> *
+            </span>
+          <% end %>
           <%= form_tag '/login' do %>
             <div class="form-group">
               <h5>Email: </h5>
@@ -17,6 +22,8 @@
               <br>
               <%= submit_tag "Submit", class: 'btn btn-warning btn-lg' %>
             </div>
+
+
           <% end %>
       </div>
     </div>
