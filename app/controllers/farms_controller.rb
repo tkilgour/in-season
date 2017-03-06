@@ -59,6 +59,7 @@ class FarmsController < ApplicationController
     @query = params[:q]
     @location = Geokit::Geocoders::GoogleGeocoder.geocode(@query)
     @results = Farm.within(params['farm_radius'], :origin => @location)
+    @results << Market.within(params['farm_radius'], :origin => @location)
     render :action => :index
   end
 

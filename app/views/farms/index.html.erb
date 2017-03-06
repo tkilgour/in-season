@@ -1,4 +1,8 @@
-<h3 class="center-align">Find a Farm Near You</h3>
+<div class="parallax-container main-parallax">
+  <div class="parallax"><img src="https://c1.staticflickr.com/3/2898/14082822607_a30dd33db7_b.jpg"></div>
+</div>
+
+<h3 class="center-align">Find a Nearby Farm</h3>
 <div class="row">
   <%= form_tag("/search", method: "get") do %>
   <div class="col input-field s2 right-align">
@@ -22,11 +26,10 @@
   <% end %>
 </div>
 
-<% if @results.length > 1 %>
+<% if @results.length > 0 %>
   <div class='row'>
-    <div class="col s12">
+    <div class="col s10 offset-s1">
       <div class="panel panel-default">
-        <div class="panel-heading">All the markets our farmers will be at!</div>
 
         <table class="table">
           <thead>
