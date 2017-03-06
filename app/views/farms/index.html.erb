@@ -6,7 +6,7 @@
 
 <div class="row">
     <%= form_tag("/search", method: "get") do %>
-    <div class="col-xs-9 col-sm-6 col-md-4">
+    <div class="col s6 m4">
       <label for="q">Find</label>
       <div class="input-group">
         <span class="input-group-btn">
@@ -18,16 +18,22 @@
         </span>
       </div>
     </div>
-    <div class="col-xs-3">
-      <label for="farm-radius">within</label>
-      <%= select_tag(:farm_radius, options_for_select([['10km', 10], ['50km', 50], ['100km', 100], ['500km', 500]], 100), class: "form-control") %>
-    </div>
+    <!-- <div class="col s3"> -->
+      <div class="input-field col s3">
+        <select>
+          <option value="50">50km</option>
+          <option value="100">100km</option>
+        </select>
+        <label>within</label>
+      </div>
+      <%# select_tag(:farm_radius, options_for_select([['10km', 10], ['50km', 50], ['100km', 100], ['500km', 500]], 100), class: "form-control") %>
+    <!-- </div> -->
     <% end %>
 </div>
 
 <% if @results.length > 1 %>
   <div class='row'>
-    <div class="col-lg-12">
+    <div class="col s12">
       <div class="panel panel-default">
         <div class="panel-heading">All the markets our farmers will be at!</div>
 

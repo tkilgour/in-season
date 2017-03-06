@@ -26,21 +26,21 @@ Box.destroy_all
 Box.create!({
   farm_id: Farm.first.id,
   size: 'small',
-  price_cents: 35000,
+  price: 35000,
   description: 'Our small box feeds 2 people each week!'
 })
 
 Box.create!({
   farm_id: Farm.first.id,
   size: 'medium',
-  price_cents: 52500,
+  price: 52500,
   description: 'Our medium box feeds 4 people each week!'
 })
 
 Box.create!({
   farm_id: Farm.first.id,
   size: 'large',
-  price_cents: 70000,
+  price: 70000,
   description: 'Our large box feeds 6 people each week!'
 })
 
