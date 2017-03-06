@@ -4,7 +4,8 @@ class FarmsController < ApplicationController
 
   def index
     @farms = Farm.all
-    @results = []
+    @farm_results = []
+    @market_results = []
   end
   def new
     @farm = Farm.new
@@ -58,8 +59,8 @@ class FarmsController < ApplicationController
   def search
     @query = params[:q]
     @location = Geokit::Geocoders::GoogleGeocoder.geocode(@query)
-    @results = Farm.within(params['farm_radius'], :origin => @location)
-    @results << Market.within(params['farm_radius'], :origin => @location)
+    @farm_results = Farm.within(params['farm_radius'], :origin => @location)
+    @market_results = Market.within(params['farm_radius'], :origin => @location)
     render :action => :index
   end
 

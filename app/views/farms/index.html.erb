@@ -2,14 +2,18 @@
   <div class="parallax"><img src="https://c1.staticflickr.com/3/2898/14082822607_a30dd33db7_b.jpg"></div>
 </div>
 
-<h3 class="center-align">Find a Nearby Farm</h3>
+<h4 class="center-align">Find Nearby Farms and Markets</h4>
 <div class="row">
+
   <%= form_tag("/search", method: "get") do %>
   <div class="col input-field s2 right-align">
     <a id="locate-user" class="btn green"><i class="material-icons left">my_location</i></a>
   </div>
   <div class="input-field col s8 m4">
     <%= text_field_tag(:q, "", placeholder: "Enter your location...", class: "form-control") %>
+    <div class="progress" id="location-progress">
+         <div class="indeterminate green"></div>
+     </div>
   </div>
   <div class="input-field col s8 offset-s2 m3">
     <select name="farm_radius">
@@ -26,32 +30,42 @@
   <% end %>
 </div>
 
-<% if @results.length > 0 %>
-  <div class='row'>
-    <div class="col s10 offset-s1">
-      <div class="panel panel-default">
+<% if @farm_results.length > 0 || @market_results.length > 0 %>
+<div class='row'>
+  <div class="col s10 offset-s1">
+    <div class="panel panel-default">
 
-        <table class="table">
-          <thead>
-            <tr>
-              <th> Name </th>
-              <th> Address </th>
-            </tr>
-          </thead>
-          <tbody>
-              <% @results.each do |r| %>
-            <tr>
-              <td>
-                <a href="/farms/<%= r.id %>"> <%= r.name %> </a>
-              </td>
-              <td>
-                <%= r.address %>
-              </td>
-            </tr>
-              <% end %>
-          </tbody>
-        </table>
-      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th> Name </th>
+            <th> Address </th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @farm_results.each do |r| %>
+          <tr>
+            <td>
+              <a href="/farms/<%= r.id %>"> <%= r.name %> </a>
+            </td>
+            <td>
+              <%= r.address %>
+            </td>
+          </tr>
+          <% end %>
+          <% @market_results.each do |r| %>
+          <tr>
+            <td>
+              <a href="/markets/<%= r.id %>"> <%= r.name %> </a>
+            </td>
+            <td>
+              <%= r.parsed_address %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
   </div>
+</div>
 <% end %>

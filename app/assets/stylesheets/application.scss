@@ -125,6 +125,10 @@ $secondary-color: color("yellow", "base") !default;
 //   }
 // }
 
+.select-wrapper .dropdown-content li > a, .dropdown-content li > span {
+  color: black;
+}
+
 .material-icons {
   padding-left: 30px;
 }
