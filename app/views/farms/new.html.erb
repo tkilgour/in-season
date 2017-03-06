@@ -29,8 +29,14 @@
      <h5>Profile Image: </h5>
      <%= f.file_field :profile_image, class: 'form-control' %>
    </div>
-   <div class='form-group'>
-     <h5>CSA Subscription Available: <%= f.check_box :csa_availability %></h5>
+   <div class='form-group' id="csa_availability_checkbox">
+     <h5>CSA Subscription Available: <%= f.check_box :csa_availability, data: { toggle: 'toggle', on: 'Yes', off: 'No'} %></h5>
+   </div>
+   <div id="csa_availability_checked_true" class="hidden" class='form-group'>
+     <h5>Set your seasonal CSA subscription price: </h5>
+     <%= f.text_field :name, class: 'form-control' %>
+     <br />
+     <br />
    </div>
    <%= f.hidden_field :user_id, value: current_user.id %>
    <%= f.submit "Submit to register your farm!", class: 'btn btn-warning btn-lg' %>
