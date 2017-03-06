@@ -71,8 +71,10 @@ $(document).on('turbolinks:load', function() {
 
   $('#locate-user').on('click', function(event) {
     event.preventDefault();
+    $('#location-progress').show();
     navigator.geolocation.getCurrentPosition(function(pos) {
       $('#q').val(pos.coords.latitude + ", " + pos.coords.longitude);
+      $('#location-progress').hide();
     });
   })
 });

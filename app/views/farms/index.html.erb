@@ -1,63 +1,71 @@
-<h1>ARE YOU HERE TO GET PLOWED?</h1>
-
-<h1> WE ARE THE CROP COPS </h1>
-<h2>PUT YOUR HANDS ABOVE YOUR HEAD AND GET DOWN ON THE GROUND</h2>
-
-
-<div class="row">
-    <%= form_tag("/search", method: "get") do %>
-    <div class="col s6 m4">
-      <label for="q">Find</label>
-      <div class="input-group">
-        <span class="input-group-btn">
-          <button id="locate-user" class="btn btn-default"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i></button>
-        </span>
-        <%= text_field_tag(:q, "", placeholder: "Enter your location...", class: "form-control") %>
-        <span class="input-group-btn">
-          <%= submit_tag("Search", class: "btn btn-default") %>
-        </span>
-      </div>
-    </div>
-    <!-- <div class="col s3"> -->
-      <div class="input-field col s3">
-        <select>
-          <option value="50">50km</option>
-          <option value="100">100km</option>
-        </select>
-        <label>within</label>
-      </div>
-      <%# select_tag(:farm_radius, options_for_select([['10km', 10], ['50km', 50], ['100km', 100], ['500km', 500]], 100), class: "form-control") %>
-    <!-- </div> -->
-    <% end %>
+<div class="parallax-container main-parallax">
+  <div class="parallax"><img src="https://c1.staticflickr.com/3/2898/14082822607_a30dd33db7_b.jpg"></div>
 </div>
 
-<% if @results.length > 1 %>
-  <div class='row'>
-    <div class="col s12">
-      <div class="panel panel-default">
-        <div class="panel-heading">All the markets our farmers will be at!</div>
+<h4 class="center-align">Find Nearby Farms and Markets</h4>
+<div class="row">
 
-        <table class="table">
-          <thead>
-            <tr>
-              <th> Name </th>
-              <th> Address </th>
-            </tr>
-          </thead>
-          <tbody>
-              <% @results.each do |r| %>
-            <tr>
-              <td>
-                <a href="/farms/<%= r.id %>"> <%= r.name %> </a>
-              </td>
-              <td>
-                <%= r.address %>
-              </td>
-            </tr>
-              <% end %>
-          </tbody>
-        </table>
-      </div>
+  <%= form_tag("/search", method: "get") do %>
+  <div class="col input-field s2 right-align">
+    <a id="locate-user" class="btn green"><i class="material-icons left">my_location</i></a>
+  </div>
+  <div class="input-field col s8 m4">
+    <%= text_field_tag(:q, "", placeholder: "Enter your location...", class: "form-control") %>
+    <div class="progress" id="location-progress">
+         <div class="indeterminate green"></div>
+     </div>
+  </div>
+  <div class="input-field col s8 offset-s2 m3">
+    <select name="farm_radius">
+      <option value="10">10km</option>
+      <option value="50">50km</option>
+      <option value="100" selected="selected">100km</option>
+      <option value="500">500km</option>
+    </select>
+    <label>within</label>
+  </div>
+  <div class="input-group-btn col s10 offset-s2 m2">
+    <%= submit_tag("Search", class: "btn input-field green") %>
+  </div>
+  <% end %>
+</div>
+
+<% if @farm_results.length > 0 || @market_results.length > 0 %>
+<div class='row'>
+  <div class="col s10 offset-s1">
+    <div class="panel panel-default">
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th> Name </th>
+            <th> Address </th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @farm_results.each do |r| %>
+          <tr>
+            <td>
+              <a href="/farms/<%= r.id %>"> <%= r.name %> </a>
+            </td>
+            <td>
+              <%= r.address %>
+            </td>
+          </tr>
+          <% end %>
+          <% @market_results.each do |r| %>
+          <tr>
+            <td>
+              <a href="/markets/<%= r.id %>"> <%= r.name %> </a>
+            </td>
+            <td>
+              <%= r.parsed_address %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
   </div>
+</div>
 <% end %>
