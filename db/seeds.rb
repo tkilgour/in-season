@@ -26,24 +26,21 @@ Box.destroy_all
 Box.create!({
   farm_id: Farm.first.id,
   size: 'small',
-  pickup_price_cents: 35000,
-  delivery_price_cents: 45000,
+  price_cents: 35000,
   description: 'Our small box feeds 2 people each week!'
 })
 
 Box.create!({
   farm_id: Farm.first.id,
   size: 'medium',
-  pickup_price_cents: 52500,
-  delivery_price_cents: 62500,
+  price_cents: 52500,
   description: 'Our medium box feeds 4 people each week!'
 })
 
 Box.create!({
   farm_id: Farm.first.id,
   size: 'large',
-  pickup_price_cents: 70000,
-  delivery_price_cents: 80000,
+  price_cents: 70000,
   description: 'Our large box feeds 6 people each week!'
 })
 

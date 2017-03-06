@@ -6,7 +6,7 @@
 
   <div class="boxes">
     <% @boxes.map do |box| %>
-    <%= render 'box', box: box, id: box.id, farm: @farm, description: box.description, pickup_price: into_dollars(box.pickup_price_cents), delivery_price: into_dollars(box.delivery_price_cents) %>
+    <%= render 'box', box: box, id: box.id, farm: @farm, description: box.description, price: box.price %>
     <% end %>
   </div>
 

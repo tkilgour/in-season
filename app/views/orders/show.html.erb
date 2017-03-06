@@ -11,7 +11,7 @@
       <table class="table table-bordered">
         <thead>
           <tr style="font-size:110%; background-color: lightblue;">
-            <th colspan="2">Product</th>
+            <th colspan="2">Subscription</th>
             <th>Unit Price</th>
             <th>Quantity</th>
             <th>Price</th>
@@ -29,7 +29,7 @@
               TOTAL:
             </th>
             <th style='font-size:150%'>
-              <%= @order_total %>
+              <%= number_to_currency(@order_total) %>
             </th>
           </tr>
         </tfoot>

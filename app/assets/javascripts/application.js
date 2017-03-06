@@ -16,6 +16,7 @@
 //= require best_in_place
 //= require best_in_place.purr
 //= require autocomplete-rails
+//= require autonumeric
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require bootstrap-datepicker

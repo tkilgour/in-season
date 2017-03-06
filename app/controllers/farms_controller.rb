@@ -1,9 +1,10 @@
 class FarmsController < ApplicationController
 
+  attr_accessor :small_box, :medium_box, :large_box, :price, :description
+
   def index
     @farms = Farm.all
   end
-
   def new
     @farm = Farm.new
   end
@@ -21,29 +22,26 @@ class FarmsController < ApplicationController
   end
 
   def create_csa_boxes(farm)
-    # this is hard-coding ... TO DO :  when check_box marked, toggle forms for prices and descriptions
     small = Box.new ({
       farm_id: farm.id,
       size: 'small',
-      pickup_price_cents: 35000,
-      delivery_price_cents: 45000,
-      description: 'Our small box feeds 2 people each week!'})
+      price: params[:box][:small_price],
+      description: params[:box][:small_description]
+    })
     small.save
     medium = Box.new ({
       farm_id: farm.id,
       size: 'medium',
-      pickup_price_cents: 52500,
-      delivery_price_cents: 62500,
-      description: 'Our medium box feeds 4 people each week!'
+      price: params[:box][:medium_price],
+      description: params[:box][:medium_description]
     })
     medium.save
     large = Box.new ({
       farm_id: farm.id,
       size: 'large',
-      pickup_price_cents: 70000,
-      delivery_price_cents: 80000,
-      description: 'Our large box feeds 6 people each week!'
-    })
+      price: params[:box][:large_price],
+      description: params[:box][:large_description]
+      })
     large.save
   end
 
@@ -107,7 +105,7 @@ class FarmsController < ApplicationController
   private
 
   def farm_params
-    params.require(:farm).permit(:name, :about_farm, :farmer, :profile_image, :banner_image, :user_id, :address, :csa_availability)
+    params.require(:farm).permit(:name, :about_farm, :farmer, :profile_image, :banner_image, :user_id, :address, :csa_availability, :small_price, :small_description, :medium_price, :medium_description, :large_price, :large_description, :currency)
   end
 
 end

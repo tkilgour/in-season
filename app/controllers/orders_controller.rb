@@ -22,7 +22,6 @@ class OrdersController < ApplicationController
   private
 
   def empty_cart!
-    # empty hash means no boxes in cart :)
     update_cart({})
   end
 
@@ -40,7 +39,7 @@ class OrdersController < ApplicationController
       farm_id: params[:farm_id],
       user_id: current_user.id,
       # email: params[:stripeEmail],
-      total_price_cents: cart_total,
+      total_price: cart_total,
       stripe_charge_id: stripe_charge.id # returned by stripe
     )
     cart.each do |box_id, details|
@@ -49,15 +48,12 @@ class OrdersController < ApplicationController
         order.order_items.new(
           box: box,
           quantity: quantity,
-          item_price_cents: box.pickup_price_cents,
-          total_price_cents: box.pickup_price_cents * quantity
+          item_price: box.price,
+          total_price: box.price * quantity
         )
       end
     end
     order.save!
-      # OrderMailer.receipt_email(order).deliver_later if order.save
-      # the mailer works on the local host, but stopped by program when using on the heroku deployment,
-      # so I commented it out here
     order
   end
 
@@ -66,7 +62,7 @@ class OrdersController < ApplicationController
     total = 0
     cart.each do |box_id, details|
       if p = Box.find_by(id: box_id)
-        total += p.pickup_price_cents * details['quantity'].to_i
+        total += p.price * details['quantity'].to_i
       end
     end
     total

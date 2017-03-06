@@ -1,4 +1,4 @@
-<%item_total = box.pickup_price_cents * quantity%>
+<%item_total = box.price * quantity%>
 <%@order_total += item_total%>
 <tr>
   <td>
@@ -10,12 +10,12 @@
     <p style='font-size:100%'><%=box.description%></p>
   </td>
   <td style='font-size:125%'>
-    <%=box.pickup_price_cents%>
+    <%= number_to_currency(box.price)%>
   </td>
   <td style='font-size:125%'>
     <%=quantity%>
   </td>
   <td style='font-size:125%'>
-    <%=item_total%>
+    <%=number_to_currency(item_total)%>
   </td>
 </tr>
