@@ -67,6 +67,8 @@ $(document).on('turbolinks:load', function() {
   $('.carousel').carousel();
   $('.parallax').parallax();
 
+  $('select').material_select();
+
   $('#locate-user').on('click', function(event) {
     event.preventDefault();
     navigator.geolocation.getCurrentPosition(function(pos) {
