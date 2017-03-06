@@ -64,3 +64,14 @@ $(document).on('turbolinks:load', function() {
     $('#market_market_day').val(data.item.market_day);
   });
 });
+
+
+
+    $(document).ready(function(){
+      $('.carousel').carousel();
+    });
+
+        $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+

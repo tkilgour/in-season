@@ -1,97 +1,47 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
 
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span><i class="glyphicon glyphicon-leaf"></i></span>
-      <a class="navbar-brand" href="/">In Season</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Go somewhere</a></li>
-        <li><a href="#">Or somewhere else</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Maybe go see the farmers?</a></li>
-            <li><a href="#">All the crops that we have?</a></li>
-            <li><a href="#">Are we going to have a markets page?</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-right">
-        <div class="form-group">
-          <div class="input-group">
-            <span class="input-group-addon">
-              <i class="glyphicon glyphicon-search"></i>
-            </span>
-            <input type="text" class="form-control" placeholder="Poke around for a crop">
-          </div>
-        </form>
-      </div>
-
-      <div class="nav navbar-nav navbar-right">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-        <div class="logs">
-          <% if current_user %>
-          Hey, <%= current_user.first_name %>
-          <a href="/logout">Logout</a>
-        </div>
-        <% else %>
-        <div class="popup">
-          <a data-toggle="modal" data-target="#myModal"> Register </a> |
-        </div>
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!" class="black-text">one</a></li>
+  <li><a href="#!" class="black-text">two</a></li>
+  <li class="divider"></li>
+  <li><%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)</li>
+</ul>
 
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
 
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h3 class="modal-title">Who are you registering as?</h3>
-              </div>
+<nav>
+  <div class="nav-wrapper grey lighten-4">
+    <a href="#!" class="brand-logo black-text"><i class="material-icons">star</i>In Season</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-              <div class="modal-body">
-                <div class="customer">
-                  <a href="/member_registration">
-                    <button type="button" class="btn btn-success btn-lg"> <h2><span><i class="glyphicon glyphicon-leaf"></i></span> MEMBER</h2> </button>
-                  </a>
-                </div>
-                <div class="admin">
-                  <a href="/farmer_registration">
-                    <button type="button" class="btn btn-success btn-lg"> <h2><span><i class="glyphicon glyphicon-grain"></i></span> FARMER</h2> </button>
-                  </a>
 
-                </div>
-              </div>
+      <li><a href="/" class="black-text">Sass</a></li>
+      <li><a href="/" class="black-text">Components</a></li>
+      <li><a href="/" class="black-text">JavaScript</a></li>
+      <% if current_user %>
+      <li><a class="dropdown-button black-text" href="#!" data-activates="dropdown1">Hey, <%= current_user.first_name %><i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a href="/logout" class="black-text">Logout</a></li>
+      <% else %>
+      <a class="waves-effect waves-light btn blue" href="#modal1">Register</a>
 
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal black-text">
+        <div class="modal-content">
+          <h4>Who are you registering as?</h4>
+          <div class="row">
+          <div class="col s5 offset-s2">
+            <a href="/member_registration" class="waves-effect waves-light btn-large light-green darken-2"><i class="material-icons left">cloud</i>MEMBER</a>
             </div>
+          <div class="col s5">
+            <a href="/farmer_registration" class="waves-effect waves-light btn-large light-green darken-2"><i class="material-icons left">cloud</i>FARMER</a>
+          </div>
           </div>
         </div>
-        <a href="/login">Login</a>
-        <% end %>
-
-        <div class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Huh? <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Don't be so confused.</a></li>
-            <li><a href="#">This is going to be replaced</a></li>
-            <li><a href="#">with something.</a></li>
-            <li><a href="#">Maybe.</a></li>
-          </ul>
-        </div>
-
-
-
       </div>
 
-    </div>
+      <li><a href="/login" class="black-text">Login</a></li>
+      <% end %>
+    </ul>
   </div>
 </nav>

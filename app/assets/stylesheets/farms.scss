@@ -1,25 +1,28 @@
 // Place all the styles related to the Farms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.ui-autocomplete {
-  list-style-type: none;
-  padding: 0px;
-}
+// .ui-autocomplete {
+//   list-style-type: none;
+//   padding: 0px;
+// }
 
-.ui-helper-hidden-accessible {
-  display: none;
-}
+// .ui-helper-hidden-accessible {
+//   display: none;
+// }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: lighter;
 }
+// body {
+//   font-family: Tahoma;
+// }
 
-.container {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
+// .container {
+//   width: 100%;
+//   margin: 0;
+//   padding: 0;
+// }
 
 // .card {
 //   padding-top: 20px;
@@ -35,306 +38,351 @@ body {
 //   box-sizing: border-box;
 // }
 
-.card.hovercard {
-  text-align: center;
-}
+// .card.hovercard {
+//   text-align: center;
+// }
 
-.card.hovercard .cardheader {
-  height: 300px;
-  width: 100%;
-}
+// .card.hovercard .cardheader {
+//   height: 300px;
+//   width: 100%;
+// }
 
-.card .hovercard .cardheader img {
-  width: 100%;
-}
+// .card .hovercard .cardheader img {
+//   width: 100%;
+// }
 
-.card.hovercard .avatar {
-  position: relative;
-  top: -110px;
-  margin-bottom: -180px;
-}
+// .card.hovercard .avatar {
+//   position: relative;
+//   top: -110px;
+//   margin-bottom: -180px;
+// }
 
-.card.hovercard .avatar img {
-  top: 25px;
-  width: 180px;
-  height: 180px;
-  max-width: 180px;
-  max-height: 180px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  border: 5px solid rgba(255,255,255,0.5);
-  z-index:6;
-  position: relative;
-}
+// .card.hovercard .avatar img {
+//   top: 25px;
+//   width: 180px;
+//   height: 180px;
+//   max-width: 180px;
+//   max-height: 180px;
+//   -webkit-border-radius: 50%;
+//   -moz-border-radius: 50%;
+//   border-radius: 50%;
+//   border: 5px solid rgba(255,255,255,0.5);
+//   z-index:6;
+//   position: relative;
+// }
 
-.card.hovercard .info {
-  position: relative;
-  padding: 4px 8px 10px;
-  height: 120px;
-  background-color: #575204;
-  padding-bottom: 62px;
-  display: flex;
-}
+// .card.hovercard .info {
+//   position: relative;
+//   padding: 4px 8px 10px;
+//   height: 120px;
+//   background-color: #575204;
+//   padding-bottom: 62px;
+//   display: flex;
+// }
 
-.card.hovercard .info .title {
+// .card.hovercard .info .title {
   // margin-bottom: 4px;
   // font-size: 45px;
   // color: whitesmoke;
   // vertical-align: 50%;
   // flex: 0 0 auto;
-  padding-left: 140px;
-  line-height: 13px;
-  margin-top: 26px;
-}
+//   padding-left: 140px;
+//   line-height: 13px;
+//   margin-top: 26px;
+// }
 
-.card.hovercard .info .title span {
-  font-size: 20px;
-  color: whitesmoke;
-  opacity: 0.7;
-  margin-left: -130px;
-}
+// .card.hovercard .info .title span {
+//   font-size: 20px;
+//   color: whitesmoke;
+//   opacity: 0.7;
+//   margin-left: -130px;
+// }
 
-.card.hovercard .info .names {
-  flex: 1 1 auto;
-}
-.card.hovercard .info .safety {
-  margin-bottom: 4px;
-  line-height: 1.5;
-  vertical-align: 50%;
-  flex: 0 0 auto;
-  height: 105px;
-  width: 105px;
-  margin-top: 3px;
-  border-radius: 5px;
-  margin-right: 20px;
-  background-color: #777777;
-}
+// .card.hovercard .info .names {
+//   flex: 1 1 auto;
+// }
+// .card.hovercard .info .safety {
+//   margin-bottom: 4px;
+//   line-height: 1.5;
+//   vertical-align: 50%;
+//   flex: 0 0 auto;
+//   height: 105px;
+//   width: 105px;
+//   margin-top: 3px;
+//   border-radius: 5px;
+//   margin-right: 20px;
+//   background-color: #777777;
+// }
 
-.card.hovercard .info .safety img {
-  height: 100px;
-  width: 100px;
-  padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 3px;
-  margin-top: 3px;
-  margin-left: 6.6px;
-}
-.card.hovercard .info .badge {
-  margin-bottom: 4px;
-  line-height: 1.5;
-  vertical-align: 50%;
-  flex: 0 0 auto;
-  height: 105px;
-  width: 105px;
-  margin-top: 3px;
-  border-radius: 5px;
-  margin-right: 20px;
-}
+// .card.hovercard .info .safety img {
+//   height: 100px;
+//   width: 100px;
+//   padding-right: 8px;
+//   padding-top: 2px;
+//   padding-bottom: 3px;
+//   margin-top: 3px;
+//   margin-left: 6.6px;
+// }
+// .card.hovercard .info .badge {
+//   margin-bottom: 4px;
+//   line-height: 1.5;
+//   vertical-align: 50%;
+//   flex: 0 0 auto;
+//   height: 105px;
+//   width: 105px;
+//   margin-top: 3px;
+//   border-radius: 5px;
+//   margin-right: 20px;
+// }
 
-.card.hovercard .info .badge img {
-  height: 100px;
-  width: 100px;
-  padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 3px;
-}
+// .card.hovercard .info .badge img {
+//   height: 100px;
+//   width: 100px;
+//   padding-right: 8px;
+//   padding-top: 2px;
+//   padding-bottom: 3px;
+// }
 
-.crops {
-  font-color: #7c5f3f;
-  position: relative;
-  text-align: center;
-}
+// .crops {
+//   font-color: #7c5f3f;
+//   position: relative;
+//   text-align: center;
+// }
 
-#carousel-example-generic.carousel_slide {
-  width: 520px;
-  overflow: hidden;
-  overflow-x: scroll;
-  height: 140px;
-  white-space: nowrap;
-  margin: 0 auto;
-}
+// #carousel-example-generic.carousel_slide {
+//   width: 520px;
+//   overflow: hidden;
+//   overflow-x: scroll;
+//   height: 140px;
+//   white-space: nowrap;
+//   margin: 0 auto;
+// }
 
-#carousel-example-generic .available-crops {
-  img {
-    height: 100px;
-    width: 100px;
-    border: solid;
-    border-width: 1px;
-    border-radius: 3px;
-    padding: 2px;
-    border-color: #c99a68;
-  }
+// #carousel-example-generic .available-crops {
+//   img {
+//     height: 100px;
+//     width: 100px;
+//     border: solid;
+//     border-width: 1px;
+//     border-radius: 3px;
+//     padding: 2px;
+//     border-color: #c99a68;
+//   }
 
-  p {
-    font-size: 12px;
-    width: 95px;
-    margin: 0 auto;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
+//   p {
+//     font-size: 12px;
+//     width: 95px;
+//     margin: 0 auto;
+//     text-overflow: ellipsis;
+//     white-space: nowrap;
+//     overflow: hidden;
+//   }
 
-  background-size: cover;
-  flex: 0 0 auto;
-  display: inline-block;
-}
+//   background-size: cover;
+//   flex: 0 0 auto;
+//   display: inline-block;
+// }
 
-.col-sm-5 .panel img {
-  height: 100%;
-}
+// .col-sm-5 .panel img {
+//   height: 100%;
+// }
 
-#map {
-  width: 100%;
+// #map {
+//   width: 100%;
+//   height: 300px;
+// }
+
+// .remove-market {
+//   color: red;
+// }
+
+// .modal-body {
+//   height: 250px;
+// }
+
+// .modal-body .customer button {
+//   height: 150px;
+//   width: 250px;
+//   top: 23px;
+//   position: relative;
+//   margin-left: 20px;
+// }
+
+// .modal-body .admin button {
+//   height: 150px;
+//   width: 250px;
+//   margin-left: 52%;
+//   position: relative;
+//   top: -127px;
+// }
+
+
+// @media (max-width: 1000px) {
+//   .card.hovercard .cardheader {
+//     height: 220px;
+//   }
+//   .card.hovercard .info .title {
+//     font-size: 35px;
+//     line-height: 23px;
+//     margin-left: 0px;
+//     padding-top: 31px;
+//   }
+//   .card.hovercard .info .title span {
+//     font-size: 15px;
+//     margin-left: -106px;
+//   }
+//   .card.hovercard .info {
+//     position: initial;
+//   }
+//   .card.hovercard .avatar {
+//     top: -97px;
+//   }
+//   .card.hovercard .avatar img {
+//     top: 25px;
+//     width: 140px;
+//     height: 140px;
+//     max-width: 140px;
+//     max-height: 140px;
+//     -webkit-border-radius: 50%;
+//     -moz-border-radius: 50%;
+//     border-radius: 50%;
+//     border: 5px solid rgba(255,255,255,0.5);
+//     z-index:6;
+//     position: relative;
+//   }
+//   .card.hovercard .info .safety {
+//     height: 70px;
+//     width: 70px;
+//     margin-top: 41px;
+//     margin-right: 5px;
+//   }
+
+//   .card.hovercard .info .safety img {
+//     height: 72px;
+//     width: 72px;
+//     padding-right: 10px;
+//     padding-top: 0;
+//     padding-bottom: 10px;
+//     margin-top: 4px;
+//     margin-left: 4px;
+//   }
+//   .card.hovercard .info .badge {
+//     height: 70px;
+//     width: 70px;
+//     margin-top: 41px;
+//     margin-right: 5px;
+//   }
+
+//   .card.hovercard .info .badge img {
+//     height: 72px;
+//     width: 72px;
+//     padding-right: 10px;
+//     padding-top: 0;
+//     padding-bottom: 10px;
+//     margin-top: 1px;
+//     margin-left: -3px;
+//   }
+//   #carousel-example-generic.carousel_slide {
+//     width: 500px;
+//   }
+// }
+
+
+// @media (max-width: 680px) {
+//     .card.hovercard .avatar {
+//     top: -75px;
+//   }
+//   .card.hovercard .avatar img {
+//     width: 100px;
+//     height: 100px;
+//     max-width: 100px;
+//     max-height: 100px;
+
+//   }
+//   .card.hovercard .info {
+//     height: 155px;
+//   }
+//   .card.hovercard .info .title {
+//     font-size: 27px;
+//     margin-left: -14px;
+//     line-height: 22px;
+//     margin-top: 60px;
+//   }
+//   .card.hovercard .info .title span {
+//     font-size: 14px;
+//     margin-left: -57px;
+//   }
+//   .card.hovercard .info .safety {
+//     margin-top: 78px;
+//     margin-right: -4px;
+//   }
+//   .card.hovercard .info .badge {
+//     margin-top: 78px;
+//     margin-right: -4px;
+//   }
+//   #carousel-example-generic.carousel_slide {
+//     width: 400px;
+//   }
+// }
+
+// .purr {
+//   position: fixed;
+//   top: 30px;
+//   right: 100px;
+//   width: 250px;
+//   padding: 20px;
+//   background-color: #FCC;
+//   border: solid 2px #C66;
+//   &:first-letter { text-transform: uppercase; }
+// }
+
+// .farm-editing:hover {
+//   cursor: pointer;
+//   background-color: #FF0000;
+//   opacity: 80%;
+// }
+.cardheader img {
   height: 300px;
+  width: 100%;
+  margin-top: -7px;
 }
 
-.remove-market {
-  color: red;
+// .avatar {
+//   border-radius: 50%;
+// }
+
+.section img {
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  border: solid 5px;
+  border-color: lightgrey;
 }
 
-.modal-body {
-  height: 250px;
+.avatar img {
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  border: solid 5px;
+  border-color: lightgrey;
 }
 
-.modal-body .customer button {
-  height: 150px;
-  width: 250px;
-  top: 23px;
-  position: relative;
-  margin-left: 20px;
+#names img {
+  height: 70px;
+  width: 70px;
 }
 
-.modal-body .admin button {
-  height: 150px;
-  width: 250px;
-  margin-left: 52%;
-  position: relative;
-  top: -127px;
+.safety img {
+  height: 100px;
+  width: 100px;
 }
 
-
-@media (max-width: 1000px) {
-  .card.hovercard .cardheader {
-    height: 220px;
-  }
-  .card.hovercard .info .title {
-    font-size: 35px;
-    line-height: 23px;
-    margin-left: 0px;
-    padding-top: 31px;
-  }
-  .card.hovercard .info .title span {
-    font-size: 15px;
-    margin-left: -106px;
-  }
-  .card.hovercard .info {
-    position: initial;
-  }
-  .card.hovercard .avatar {
-    top: -97px;
-  }
-  .card.hovercard .avatar img {
-    top: 25px;
-    width: 140px;
-    height: 140px;
-    max-width: 140px;
-    max-height: 140px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    border: 5px solid rgba(255,255,255,0.5);
-    z-index:6;
-    position: relative;
-  }
-  .card.hovercard .info .safety {
-    height: 70px;
-    width: 70px;
-    margin-top: 41px;
-    margin-right: 5px;
-  }
-
-  .card.hovercard .info .safety img {
-    height: 72px;
-    width: 72px;
-    padding-right: 10px;
-    padding-top: 0;
-    padding-bottom: 10px;
-    margin-top: 4px;
-    margin-left: 4px;
-  }
-  .card.hovercard .info .badge {
-    height: 70px;
-    width: 70px;
-    margin-top: 41px;
-    margin-right: 5px;
-  }
-
-  .card.hovercard .info .badge img {
-    height: 72px;
-    width: 72px;
-    padding-right: 10px;
-    padding-top: 0;
-    padding-bottom: 10px;
-    margin-top: 1px;
-    margin-left: -3px;
-  }
-  #carousel-example-generic.carousel_slide {
-    width: 500px;
-  }
+.badge img {
+  height: 100px;
+  width: 100px;
+  padding: 3px;
 }
 
-
-@media (max-width: 680px) {
-    .card.hovercard .avatar {
-    top: -75px;
-  }
-  .card.hovercard .avatar img {
-    width: 100px;
-    height: 100px;
-    max-width: 100px;
-    max-height: 100px;
-
-  }
-  .card.hovercard .info {
-    height: 155px;
-  }
-  .card.hovercard .info .title {
-    font-size: 27px;
-    margin-left: -14px;
-    line-height: 22px;
-    margin-top: 60px;
-  }
-  .card.hovercard .info .title span {
-    font-size: 14px;
-    margin-left: -57px;
-  }
-  .card.hovercard .info .safety {
-    margin-top: 78px;
-    margin-right: -4px;
-  }
-  .card.hovercard .info .badge {
-    margin-top: 78px;
-    margin-right: -4px;
-  }
-  #carousel-example-generic.carousel_slide {
-    width: 400px;
-  }
-}
-
-.purr {
-  position: fixed;
-  top: 30px;
-  right: 100px;
-  width: 250px;
-  padding: 20px;
-  background-color: #FCC;
-  border: solid 2px #C66;
-  &:first-letter { text-transform: uppercase; }
-}
-
-.farm-editing:hover {
-  cursor: pointer;
-  background-color: #FF0000;
-  opacity: 80%;
+.parallax-container {
+  height: 400px;;
 }

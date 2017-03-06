@@ -10,3 +10,23 @@
       <P><%= crop.description %></p>
     </div>
 </div>
+
+
+
+  <ul class="collection">
+    <li class="collection-item avatar">
+      <img src=<%= if crop['image']
+    crop.image
+  else
+    crop.default_image
+    end %>>
+       alt="" class="circle">
+      <span class="title">Title</span>
+      <p>
+                  <% @available_crops.each do |c| %>
+              <%= render 'available_crops_preview', crop: c %>
+            <% end %>
+      </p>
+
+    </li>
+  </ul>
