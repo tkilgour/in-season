@@ -39,6 +39,8 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    autonumeric-rails (2.0.0.1)
+      jquery-rails (>= 2.0.2)
     autoprefixer-rails (6.7.5)
       execjs
     bcrypt (3.1.11)
@@ -50,6 +52,7 @@ GEM
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    bootstrap-toggle-rails (2.2.1.0)
     builder (3.2.3)
     byebug (9.0.6)
     carrierwave (0.10.0)
@@ -106,6 +109,14 @@ GEM
     mini_magick (4.6.1)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
+    monetize (0.1.4)
+    money (5.0.0)
+      i18n (~> 0.4)
+      json
+    money-rails (0.0.1)
+      activesupport (>= 3.0)
+      money (>= 4.0.2)
+      railties (>= 3.0)
     multi_json (1.12.1)
     netrc (0.11.0)
     nio4r (1.2.1)
@@ -202,11 +213,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autonumeric-rails
   autoprefixer-rails
   bcrypt (~> 3.1.7)
   best_in_place
   bootstrap-datepicker-rails
   bootstrap-sass (~> 3.3.6)
+  bootstrap-toggle-rails
   byebug
   carrierwave (~> 0.10.0)
   coffee-rails (~> 4.2)
@@ -218,6 +231,8 @@ DEPENDENCIES
   jquery-ui-rails
   listen (~> 3.0.5)
   mini_magick (~> 4.3)
+  monetize
+  money-rails
   pg
   pry
   puma (~> 3.0)

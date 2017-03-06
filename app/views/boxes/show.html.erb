@@ -17,10 +17,8 @@
       <dd style="font-weight:200;"><%= @box.size.capitalize %></dd>
       <dt>Description</dt>
       <dd style="font-weight:200;"><%= @box.description %></dd>
-      <dt>Pickup Price</dt>
-      <dd style="font-weight:200;"><%= into_dollars(@box.pickup_price_cents) %></dd>
-      <dt>Delivery Price</dt>
-      <dd style="font-weight:200;"><%= into_dollars(@box.delivery_price_cents) %></dd>
+      <dt>Subscription Price</dt>
+      <dd style="font-weight:200;"><%= number_to_currency(@box.price) %></dd>
     </dl>
   </div>
 </div>

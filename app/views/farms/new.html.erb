@@ -29,11 +29,44 @@
      <h5>Profile Image: </h5>
      <%= f.file_field :profile_image, class: 'form-control' %>
    </div>
-   <div class='form-group'>
-     <h5>CSA Subscription Available: <%= f.check_box :csa_availability %></h5>
+   <div class='form-group' id="csa_availability_checkbox">
+     <h5>CSA Subscription Available: <%= f.check_box :csa_availability, data: { toggle: 'toggle', on: 'Yes', off: 'No'} %></h5>
    </div>
-   <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+   <div>
+     <%= form_for :box, url: farms_path do |f| %>
+   </div>
+   <div id="csa_availability_checked_true" class="hidden" class='form-group'>
+     <h5>Set your seasonal CSA subscription details: </h5>
+
+     <div class='form-group'>
+       <h5>Small Box: </h5>
+       <h6>Price:</h6>
+       <%= f.text_field :small_price, class: 'form-control', data: {autonumeric: {aSign: '$ ', mDec: 2}} %>
+       <h6>Description:</h6>
+       <%= f.text_field :small_description, class: 'form-control' %>
+     </div>
+
+     <div class='form-group'>
+       <h5>Medium Box: </h5>
+       <h6>Price:</h6>
+       <%= f.text_field :medium_price, class: 'form-control', data: {autonumeric: {aSign: '$ ', mDec: 2}} %>
+       <h6>Description:</h6>
+       <%= f.text_field :medium_description, class: 'form-control' %>
+     </div>
+
+     <div class='form-group'>
+       <h5>Large Box: </h5>
+       <h6>Price:</h6>
+       <%= f.text_field :large_price, class: 'form-control', data: {autonumeric: {aSign: '$ ', mDec: 2}} %>
+       <h6>Description:</h6>
+       <%= f.text_field :large_description, class: 'form-control' %>
+     </div>
+
+
+   </div>
    <%= f.submit "Submit to register your farm!", class: 'btn btn-warning btn-lg' %>
+   <% end %>
    <% end %>
  </div>
 </div>

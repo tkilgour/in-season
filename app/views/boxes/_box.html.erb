@@ -10,14 +10,9 @@
   <p class="description">
     Description: <%= box.description %>
   </p>
-  <p class="pickup-price">
-    Pickup Price: <%= into_dollars(box.pickup_price_cents) %>
+  <p class="csa-subscription-price">
+    Subscription Price: <%= number_to_currency('%.2f' % box.price)  %>
   </p>
-  <p class="delivery-price">
-    Delivery Price: <%= into_dollars(box.delivery_price_cents) %>
-  </p>
-
-
 
 <footer class="actions">
   <%= link_to add_item_farm_cart_path(box_id: box.id), class: 'btn btn-primary', method: :put do %>

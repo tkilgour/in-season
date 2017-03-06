@@ -31,6 +31,11 @@ gem 'jquery-ui-rails'
 gem 'rails-jquery-autocomplete'
 
 gem 'bootstrap-datepicker-rails'
+gem 'bootstrap-toggle-rails'
+
+gem 'money-rails'
+gem 'monetize'
+gem 'autonumeric-rails'
 
 gem 'carrierwave', '~> 0.10.0'
 
