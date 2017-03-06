@@ -63,15 +63,14 @@ $(document).on('turbolinks:load', function() {
     $('#market_address').attr('value', data.item.parsed_address);
     $('#market_market_day').val(data.item.market_day);
   });
+
+  $('.carousel').carousel();
+  $('.parallax').parallax();
+
+  $('#locate-user').on('click', function(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(function(pos) {
+      $('#q').val(pos.coords.latitude + ", " + pos.coords.longitude);
+    });
+  })
 });
-
-
-
-    $(document).ready(function(){
-      $('.carousel').carousel();
-    });
-
-        $(document).ready(function(){
-      $('.parallax').parallax();
-    });
-

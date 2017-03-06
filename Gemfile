@@ -45,6 +45,8 @@ gem 'mini_magick', '~> 4.3'
 
 gem 'geocoder'
 
+gem 'geokit-rails'
+
 gem 'underscore-rails'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

@@ -22,6 +22,8 @@ Rails.application.routes.draw do
     get :autocomplete_market_name, :on => :collection
   end
 
+  get '/search' => 'farms#search'
+
   post '/markets/:id/delete' => 'markets#destroy'
 
   get '/login' => 'sessions#new'
