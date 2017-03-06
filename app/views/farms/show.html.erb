@@ -1,97 +1,179 @@
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="container">
-  <div class="row">
 
-    <div class="card hovercard">
-      <div class="cardheader">
 
-        <img class="cardheader" src=<%=@farm.banner_image%>>
+
+
+  <div class="parallax-container">
+    <div class="parallax"><img src=<%=@farm.banner_image%>></div>
+  </div>
+  <div class="section white">
+    <div class="row valign-wrapper">
+      <div class="profile-image col l2 offset-l1 valign">
+        <img alt="" src=<%=@farm.profile_image%> class="circle">
       </div>
-      <div class="avatar">
-        <img alt="" src=<%=@farm.profile_image%>>
-      </div>
-      <div class="info">
-        <div class="title">
-          <div class="farm-editing">
-            <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :name, :as => :input, type: :textarea, placeholder: "What is the name of your farm?",  ok_button: 'Save', cancel_button: 'Cancel' %>
+
+      <div class="names col l6">
+        <ul>
+          <li>
+            <h2><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :name, :as => :input, type: :textarea, placeholder: "What is the name of your farm?",  ok_button: 'Save', cancel_button: 'Cancel' %></h2>
+          </li>
+          <div class="card-content grey-text text-darken-1">
+            <li>
+              <h5><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :farmer, :as => :input, placeholder: "Who are your farmers?",  ok_button: 'Save', cancel_button: 'Cancel' %>
+              </h5>
+            </li>
           </div>
-          <br>
-          <span>
-            <div class="farm-editing">
-              <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :farmer, :as => :input, placeholder: "Who are your farmers?",  ok_button: 'Save', cancel_button: 'Cancel' %>
-            </div>
-          </span>
-        </div>
-        <div class="names">
-        </div>
-        <div class="safety">
-          <img src="http://www.jamacfoods.com/wp-content/uploads/2015/05/food-safety-badge.jpg">
-        </div>
-        <div class="badge">
-          <img src="http://www.kidneycoach.com/wp-content/uploads/2012/12/Optimized-HiRes.jpg">
-        </div>
+        </ul>
       </div>
-    </div>
-
-    <div class="banner-update">
-      <% if current_user && current_user.id == @farm.user_id %>
-      <%= render 'update_banner', farm: @farm %>
-      <% end %>
+      <div class="safety col l1 valign">
+        <img src="http://www.jamacfoods.com/wp-content/uploads/2015/05/food-safety-badge.jpg">
       </div>
-    <div class="avatar-update">
-      <% if current_user && current_user.id == @farm.user_id %>
-      <%= render 'update_avatar', farm: @farm %>
-      <% end %>
-    </div>
+      <div class="badge col l2 valign">
+        <img src="http://www.kidneycoach.com/wp-content/uploads/2012/12/Optimized-HiRes.jpg">
+      </div>
 
-    <div class="crops">
-      <h2>What's available now?</h2>
-      <div id="carousel-example-generic" class="carousel_slide" data-ride="carousel">
-        <br>
-        <% @available_crops.each do |c| %>
-          <%= render 'available_crop_preview', crop: c %>
+    </div>
+    <div class="row">
+  <div class="divider col l10 offset-l1">
+  </div>
+  </div>
+    <br>
+    <div class="row">
+      <div class="banner-update col l3 offset-l3">
+        <% if current_user && current_user.id == @farm.user_id %>
+        <%= render 'update_banner', farm: @farm %>
         <% end %>
       </div>
-      <%= link_to 'See All Crops', "/farms/#{@farm.id}/crops" %>
+      <div class="avatar-update col l4">
+        <% if current_user && current_user.id == @farm.user_id %>
+        <%= render 'update_avatar', farm: @farm %>
+        <% end %>
+      </div>
     </div>
-    <br>
-    <!-- <div class="all crops">
-      <h4> Want to know all the different crops we harvest throughout the year? </h4>
-      <h4> Head over to my <%= link_to 'Field', "/farms/#{@farm.id}/crops" %>! </h4>
-    </div> -->
-    <br>
+  </div>
 
-    <div class="row">
-      <div class="col-sm-5 col-sm-offset-1">
-        <div class="panel panel-success">
-          <div class="panel-body">
-            <h3>About Us</h3>
-            <div class="farm-editing">
-              <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :about_farm, :as => :input, type: :textarea, :placeholder => 'Tell us about your farm!', ok_button: 'Save', cancel_button: 'Cancel' %>
-            </div>
-          </div>
+<!--   <div class="parallax-container">
+    <div class="parallax"><img src=<%=@farm.banner_image%>></div>
+  </div> -->
+
+
+
+
+
+
+
+
+<!-- <div class="cardheader">
+  <img class="cardheader" src=<%=@farm.banner_image%>>
+</div>
+
+<div class="row">
+  <div class="farm-editing col l2 offset-l1">
+    <ul>
+      <li><h3><%# best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :name, :as => :input, type: :textarea, placeholder: "What is the name of your farm?",  ok_button: 'Save', cancel_button: 'Cancel' %></h3>
+      </li>
+      <div class="card-content grey-text text-darken-1">
+        <li>
+          <h5><%# best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :farmer, :as => :input, placeholder: "Who are your farmers?",  ok_button: 'Save', cancel_button: 'Cancel' %>
+          </h5>
+        </li>
+      </ul>
+    </div>
+    <div class="avatar col s2 offset-s2 circle">
+      <img alt="" src=<%=@farm.profile_image%> class="circle">
+    </div>
+
+    <ul id="names" class="right">
+      <li><img src="http://www.jamacfoods.com/wp-content/uploads/2015/05/food-safety-badge.jpg"></li>
+      <li><img src="http://www.kidneycoach.com/wp-content/uploads/2012/12/Optimized-HiRes.jpg"></li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <div class="banner-update col l4 offset-l2">
+      <%# if current_user && current_user.id == @farm.user_id %>
+      <%# render 'update_banner', farm: @farm %>
+      <%# end %>
+    </div>
+    <div class="avatar-update col l4">
+      <%# if current_user && current_user.id == @farm.user_id %>
+      <%# render 'update_avatar', farm: @farm %>
+      <%# end %>
+    </div>
+  </div>
+</div>
+ -->
+
+<div class="container">
+  <div class="row">
+    <div class="crops">
+    <div class="col l8 offset-l1">
+        <h3>What's available now?</h3>
+    </div>
+        <div class="carousel">
+          <a class="carousel-item" href="#one!">
+            <% @available_crops.each do |c| %>
+              <%= render 'available_crop_preview', crop: c %>
+            <% end %>
+          </a>
+          <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/250/250/nature/2"></a>
+          <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/250/250/nature/3"></a>
+          <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/250/250/nature/4"></a>
+          <a class="carousel-item" href="#five!"><img src="http://lorempixel.com/250/250/nature/5"></a>
+          <a class="carousel-item" href="#six!"><img src="http://lorempixel.com/250/250/nature/2"></a>
+          <a class="carousel-item" href="#seven!"><img src="http://lorempixel.com/250/250/nature/3"></a>
+          <% @available_crops.each do |c| %>
+          <%= render 'available_crop_preview', crop: c %>
+          <% end %>
         </div>
+      <div class="center">
+        <%= link_to 'See All Our Crops', "/farms/#{@farm.id}/crops" %>
+      </div>
+    </div>
+  </div>
 
-        <% if @farm.csa_availability %>
+
+
+
+  <div class="row">
+    <div class="col m6">
+      <div class="card blue-grey lighten-5">
+        <div class="card-content black-text">
+          <span class="card-title">About Us</span>
+          <div class="divider">
+          </div>
+          <br>
+          <p>
+            <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :about_farm, :as => :input, type: :textarea, :placeholder => 'Tell us about your farm!', ok_button: 'Save', cancel_button: 'Cancel' %>
+          </p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is where you'll see the CSA if it's available</a>
+          <% if @farm.csa_availability %>
           <%= link_to farm_boxes_path(@farm.id) do %>
-          <button class="btn btn-primary col-sm-offset-">SIGN UP FOR CSA ANNUAL SUBSCRIPTION</button></a>
+          <button class="btn btn-primary col-sm-offset-">SIGN UP FOR CSA ANNUAL SUBSCRIPTION</button>
           <% end %>
           <p>
             What are CSA boxes? How long does the subscription last? How many boxes will I get? Etc.
           </p>
-        <% end %>
-
+          <% end %>
+        </div>
       </div>
-      <div class="col-sm-5 ">
-        <div class="panel panel-success">
-          <div class="panel-heading">
-            <h3>Where Are We?</h3>
+    </div>
+
+
+    <div class="col m6">
+      <div class="card blue-grey lighten-5">
+        <div class="card-content black-text">
+          <span class="card-title">Where are we located?</span>
+          <div class="divider">
           </div>
-          <div class="panel-body">
-            <h4>Our Address:</h4>
-            <div class="farm-editing">
-              <h5><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :address, :as => :input, type: :textarea, :placeholder => "What is your farm's address?", ok_button: 'Save', cancel_button: 'Cancel' %></h5>
-            </div>
+          <br>
+          <p>
+            Our Address:
+            <h5><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :address, :as => :input, type: :textarea, :placeholder => "What is your farm's address?", ok_button: 'Save', cancel_button: 'Cancel' %></h5>
+          </p>
+
+          <div class="divider">
           </div>
 
           <ul class="list-group">
@@ -126,22 +208,15 @@
               </div>
 
               <%= f.hidden_field :farm_id, :value => @farm.id %>
-
-              <%= f.submit "Add a market", class: 'col-lg-offset-5 btn btn-success btn-md col-md-offset-4 col-sm-offset-3 col-xs-offset-5', id: 'create-market' %>
+              <br>
+              <%= f.submit "Add a market", class: 'col lg5 btn light-green darken-3 btn-lg', id: 'create-market' %>
               <% end %>
+              <br>
             </li>
-
-          </div>
+          </ul>
         </div>
       </div>
     </div>
-    <button type="button" class="btn btn-warning btn-block">Edit My Profile</button>
   </div>
-</div>
+  </div>
 
-<%= javascript_tag do %>
-  window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>, id: <%= @farm.id %>}
-  window.markets = <%= @market_data %>
-<% end %>
-
-<script async defer src="//maps.google.com/maps/api/js?key=AIzaSyC7a1ObkesRP36iQHZSe5q1TFxtiyXaJJI&callback=initMap"></script>

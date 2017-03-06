@@ -1,11 +1,18 @@
-$(document).on('turbolinks:load', function() {
-  $('#crop_harvest_date').datepicker({
-    autoclose: true,
-    format: 'dd/mm/yyyy'
-    });
 
-  $('#crop_name').bind('railsAutocomplete.select', (event, data) => {
-    $('#crop_img').attr('src', data.item.image_url);
-    $('#crop_default_image').attr('value', data.item.image_url);
+
+$(document).ready(function() {
+
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
   });
 });
+
+  $('input.autocomplete').autocomplete({
+    data: {
+      "Apple": null,
+      "Microsoft": null,
+      "Google": 'http://placehold.it/250x250'
+    },
+    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+  });

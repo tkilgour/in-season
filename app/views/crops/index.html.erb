@@ -1,32 +1,29 @@
-<div class="container">
+
   <div class="row">
 
-    <div class="card hoverhovercard">
       <div class="info">
-        <div class="avatar col-xs-1">
-          <img alt="" src="http://cdn.modernfarmer.com/wp-content/uploads/2015/07/Farmer-Lee-Jones_Infront-of-tractor_08222014.jpg">
+        <div class="avatar col l2 offset-l1">
+          <img alt="" src=<%= @farm.profile_image %> class="circle">
         </div>
-        <div class="label col-xs-4 col-xs-offset-1">
-          Saunder's Farm
-          <br>
+        <div class="col l5">
+          <h2><%= @farm.name %></h2>
         </div>
-        <div class="farmer-names col-xs-4 col-xs-offset-1">
-          Bob and Susan Smith
+        <div class="col l5 grey-text text-darken-1">
+          <h5><%= @farm.farmer %></h5>
         </div>
       </div>
 
-    </div>
   </div>
 
-<% if current_user && current_user.id == @farm.user_id %>
-  <div class='row'>
-    <div class="col-lg-12">
-      <div class="panel panel-default">
-        <div class="panel-body">
-        <div class="farmer-crop-edit">
-          <div class="page-header">
-            <h1>Add or create a crop for your field!</h1>
-          </div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col l12">
+      <div class="card  grey lighten-4">
+
+        <div class="card-content black-text">
+          <span class="card-title">Add or create a crop for your field!</span>
 
           <%= form_for @new_crop do |f| %>
           <%= f.hidden_field :default_image, :value => '' %>
@@ -35,7 +32,6 @@
 
           <div class="col-md-6">
             <% if f.object.errors.any? %>
-
             <div class="alert alert-danger">
               <strong>The following errors prevented saving:</strong>
               <ul>
@@ -44,101 +40,113 @@
                 <% end %>
               </ul>
             </div>
-
             <% end %>
 
             <div class='form-group'>
               <%= f.label :name %>
-              <%= f.autocomplete_field :name, autocomplete_stock_crop_name_crops_path, 'data-auto-focus' => true, class: 'form-control' %>
+              <%= f.autocomplete_field :name, autocomplete_stock_crop_name_crops_path, 'data-auto-focus' => true, id: 'autocomplete-input', class: 'autocomplete', placeholder: "What's the name of the crop?" %>
             </div>
 
             <div class='form-group'>
               <%= f.label :harvest_date %>
-              <%= f.text_field :harvest_date, class: 'datepicker' %>
+              <%= f.text_field :harvest_date, class: 'datepicker', type: 'date' %>
             </div>
 
             <div class='form-group'>
               <%= f.label :description %>
-              <%= f.text_area :description, class: 'form-control' %>
+              <%= f.text_field :description, class: 'form-control', placeholder: 'Details about the crop.' %>
             </div>
           </div>
+
           <div class="col-md-6">
             <div class="row">
               <div class='col-xs-7 col-sm-5 col-md-6 col-lg-6 col-lg-offset-2' id="crop_img_insert">
                 <img id='crop_img'>
                 <%= f.file_field :image %>
               </div>
-              <div class="col-xs-5 col-sm-7 col-md-6 col-lg-3">
-                <%= f.submit 'Create Crop', class: 'btn btn-primary btn-lg' %>
-              </div>
+
             </div>
           </div>
 
-          <% end %>
         </div>
 
+        <div class="card-action center">
+          <%= f.submit 'Create Crop', class: 'btn btn green' %>
+        </div>
+        <% end %>
       </div>
+
     </div>
   </div>
-</div>
-<% end %>
-</div>
+  </div>
+
+
+
 
 
 
 
 <div class="row">
   <div class="croplist">
-    <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="col lg12">
       <div class="panel panel-success">
         <div class="panel-heading">Available Right This Instant</div>
         <div class="panel-body">
-          <!-- <div class="col-sm-6 col-md-4 col-lg-3"> -->
             <% @available_crops.each do |c| %>
               <%= render 'available_crops_preview', crop: c %>
             <% end %>
-          <!-- </div> -->
         </div>
       </div>
     </div>
 
-    <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="col lg12">
       <div class="panel panel-warning">
         <div class="panel-heading">Meet you guys next week?</div>
-        <div class="panel-body">
-          <!-- <div class="col-sm-6 col-md-4 col-lg-3"> -->
+        <div class="panel-body circle">
             <% @upcoming_crops.each do |c| %>
               <%= render 'upcoming_crops_preview', crop: c %>
             <% end %>
-          <!-- </div> -->
         </div>
       </div>
     </div>
 
-    <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="col lg12">
       <div class="panel panel-warning">
         <div class="panel-heading">Keep an eye out, we're coming soon. Eventually.</div>
         <div class="panel-body">
-          <!-- <div class="col-sm-6 col-md-4 col-lg-3"> -->
             <% @distant_crops.each do |c| %>
               <%= render 'distant_crops_preview', crop: c %>
             <% end %>
-          <!-- </div> -->
         </div>
       </div>
     </div>
 
-    <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="col lg12">
       <div class="panel panel-default">
         <div class="panel-heading">You slowpoke! You missed us this year. Better luck next.</div>
         <div class="panel-body">
-          <!-- <div class="col-sm-6 col-md-4 col-lg-3"> -->
             <% @past_crops.each do |c| %>
               <%= render 'available_crops_preview', crop: c %>
             <% end %>
-        <!-- </div> -->
       </div>
     </div>
 
   </div>
 </div>
+</div>
+
+
+
+
+  <ul class="collection">
+    <li class="collection-item avatar">
+      <img src="images/yuna.jpg" alt="" class="circle">
+      <span class="title">Title</span>
+      <p>
+                  <% @available_crops.each do |c| %>
+              <%= render 'available_crops_preview', crop: c %>
+            <% end %>
+      </p>
+
+    </li>
+  </ul>

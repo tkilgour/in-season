@@ -1,3 +1,4 @@
+
 <div class="row">
   <div class="tractor">
       <div class="col-sm-8 col-sm-offset-2">
@@ -7,7 +8,7 @@
           <h4>Next tractor leaves in: <%= rand(25..59) %> seconds</h4>
           <br>
           <%= form_tag '/login' do %>
-            <div class="form-group">
+            <div class="form-group placeholder:">
               <h5>Email: </h5>
               <%= text_field_tag :email, nil, class: 'form-control' %>
             </div>
@@ -20,5 +21,36 @@
           <% end %>
       </div>
     </div>
+  </div>
+</div>
+
+
+<div class="registration">
+  <div class="row">
+    <form class="col m10 offset-m1 white">
+    <div class="col m5">
+      <h3>Trying to get back to your farm?</h3>
+      <h4>Next tractor leaves in: <%= rand(25..59) %> seconds</h4>
+    </div>
+      <div class="row">
+        <div class="input-field col m12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col m6">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col m3 offset-m9">
+          <button class="btn waves-effect waves-light grey lighten-1" type="submit" name="action">Submit
+            <i class="material-icons left">send</i>
+          </button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
