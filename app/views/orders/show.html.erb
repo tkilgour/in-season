@@ -1,5 +1,5 @@
 <header class="page-header">
-  <h3><%= link_to user_orders_path(params[:user_id]) do%> Back to order history <%end%></h3>
+  <h3><%= link_to user_orders_path(@order.user_id) do%> Back to order history <%end%></h3>
 </header>
 
 <section class="orders-show">

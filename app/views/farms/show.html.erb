@@ -92,13 +92,12 @@
           </p>
         </div>
         <div class="card-action">
-          <a href="#">This is where you'll see the CSA if it's available</a>
           <% if @farm.csa_availability %>
           <%= link_to farm_boxes_path(@farm.id) do %>
           <button class="btn black-text">Sign Up for Seasonal CSA</button>
           <% end %>
           <p>
-            What are CSA boxes? How long does the subscription last? How many boxes will I get? Etc.
+            <!-- What are CSA boxes? How long does the subscription last? How many boxes will I get? Etc. -->
           </p>
           <% end %>
         </div>
