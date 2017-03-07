@@ -1,12 +1,20 @@
-<div class="distant-crops">
-  <img src=<%= if crop['image']
-    crop.image
-  else
-    crop.default_image
-    end %>>
-    <p><b><%= crop.name %></b></p>
-    <button type="button" class="btn btn-default glyphicon glyphicon-chevron-down" data-toggle="collapse" data-target="#thumb_<%= crop.id %>"></button>
-    <div id="thumb_<%= crop.id %>" class="collapse">
-      <P><%= crop.description %></p>
+<div class="col l3 m3 s3">
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src=<%= if crop['image']
+                crop.image
+              else
+                crop.default_image
+              end %>
+              alt="" class="circle">
     </div>
+    <div class="card-content">
+      <p><h5><%= crop.name %></h5></p>
+      <span class="opener card-title activator grey-text text-darken-4"><i class="material-icons right">view_headline</i></span>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+      <p><%= crop.description %></p>
+    </div>
+  </div>
 </div>

@@ -1,15 +1,20 @@
-<div class="available-crops">
-  <ul class="collection">
-    <li class="collection-item avatar">
-      <img src=<%= if crop['image']
-        crop.image
-      else
-        crop.default_image
-      end %>
-      alt="" class="circle">
-      <span class="title"><b><%= crop.name %></b></span>
-      <p><%= crop.description %><br>
-      </p>
-    </li>
-  </ul>
+<div class="col l3 m3 s3">
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src=<%= if crop['image']
+                crop.image
+              else
+                crop.default_image
+              end %>
+              alt="" class="circle">
+    </div>
+    <div class="card-content">
+      <p><h5><%= crop.name %></h5></p>
+      <span class="opener card-title activator grey-text text-darken-4"><i class="material-icons right">call_missed</i></span>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+      <p><%= crop.description %></p>
+    </div>
+  </div>
 </div>
