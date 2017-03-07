@@ -1,32 +1,15 @@
 <div class="available-crops">
-  <img src=<%= if crop['image']
-    crop.image
-  else
-    crop.default_image
-    end %>>
-    <p><b><%= crop.name %></b></p>
-    <button type="button" class="btn btn-default glyphicon glyphicon-chevron-down" data-toggle="collapse" data-target="#thumb_<%= crop.id %>"></button>
-    <div id="thumb_<%= crop.id %>" class="collapse">
-      <P><%= crop.description %></p>
-    </div>
-</div>
-
-
-
   <ul class="collection">
     <li class="collection-item avatar">
       <img src=<%= if crop['image']
-    crop.image
-  else
-    crop.default_image
-    end %>>
-       alt="" class="circle">
-      <span class="title">Title</span>
-      <p>
-                  <% @available_crops.each do |c| %>
-              <%= render 'available_crops_preview', crop: c %>
-            <% end %>
+        crop.image
+      else
+        crop.default_image
+      end %>
+      alt="" class="circle">
+      <span class="title"><b><%= crop.name %></b></span>
+      <p><%= crop.description %><br>
       </p>
-
     </li>
   </ul>
+</div>
