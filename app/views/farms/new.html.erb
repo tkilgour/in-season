@@ -74,6 +74,8 @@
       </div>
 
       <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :csa_availability, value: true %>
+
       <div>
        <%= form_for :box, url: farms_path do |f| %>
       </div>
