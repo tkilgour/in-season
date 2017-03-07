@@ -1,21 +1,26 @@
+<div class="container">
+
 <header class="page-header">
-  <h3><%= link_to user_orders_path(params[:user_id]) do%> Back to order history <%end%></h3>
+  <h5><%= link_to user_orders_path(@order.user_id) do%> Back to order history <%end%></h5>
 </header>
 
 <section class="orders-show">
-  <header class="page-header">
-    <h1>Order #<%= @order.id %></h1>
+  <header class="page-header"></header>
+    <h4>Order #<%= @order.id %></h4>
   </header>
   <div class="order-summary jumbotron">
-    <h3>
-      Thank you for your order
+    <h5>
+      <p>
+      Thank you for your order,
       <i><%= User.find(@order.user_id).first_name %></i>!
-    </h3>
+      </p>
+    </h5>
     <div class="panel panel-default items">
-      <table class="table table-bordered">
+      <table class="table bordered">
         <thead>
-          <tr style="font-size:110%; background-color: lightblue;">
-            <th colspan="2">Subscription</th>
+          <tr>
+            <th></th>
+            <th>Subscription</th>
             <th>Unit Price</th>
             <th>Quantity</th>
             <th>Price</th>
@@ -29,10 +34,10 @@
         </tbody>
         <tfoot>
           <tr>
-            <th colspan="4" style='font-size:150%'>
+            <th colspan="4">
               TOTAL:
             </th>
-            <th style='font-size:150%'>
+            <th>
               <%= number_to_currency(@order_total) %>
             </th>
           </tr>
@@ -40,12 +45,8 @@
       </table>
     </div>
   </div>
-  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
+  <p>
+  <%= link_to "Continue Shopping", root_path, class: 'btn btn green' %>
+  </p>
 
 </section>

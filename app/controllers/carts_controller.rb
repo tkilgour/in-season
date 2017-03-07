@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
 
   def show
+    @farm = Farm.find(params[:farm_id])
   end
 
   def add_item

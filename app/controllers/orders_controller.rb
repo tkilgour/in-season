@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
   def index
     @orders = Order.all.where(user_id: params[:user_id])
     @farmers_farm = Farm.where(user_id: params[:user_id])[0]
-    # @farmer_orders = Order.all.where(farm_id: @farmers_farm[:id])
+    #@farmer_orders = Order.all.where(farm_id: @farmers_farm[:id])
   end
 
   def create
