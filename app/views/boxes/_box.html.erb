@@ -3,19 +3,19 @@
   <div class="card">
     <div class="card-image">
       <img src=<%="/farmers/#{box.size}.jpg"%>>
-      <span class="card-title"><%= box.size.capitalize %></span>
+      <span class="card-title"><h3><%= box.size.capitalize %></h3></span>
     </div>
     <div class="card-content">
       <p class="description">
-        Description: <%= box.description %>
+        <%= box.description %>
       </p>
       <p class="csa-subscription-price">
-        Subscription Price: <%= number_to_currency(box.price)  %>
+        <b>Subscription Price:</b> <%= number_to_currency(box.price)  %>
       </p>
     </div>
     <div class="card-action">
       <%= link_to add_item_farm_cart_path(box_id: box.id), method: :put do %>
-      <button class="btn green">Add<i class="material-icons" style="font-size:17px">shopping_cart</i></button>
+      <button class="btn green">Add<i class="material-icons right">shopping_cart</i></button>
       <% end %>
       <%= link_to farm_box_path(box.farm_id, box.id), class: 'btn green pull-right' do %>
         Details &raquo;

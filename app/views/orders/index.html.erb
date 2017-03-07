@@ -1,34 +1,59 @@
-<% if current_user %>
 
-  <% if current_user.is_farmer %>
-    <h3>Hi, <%= current_user.first_name %>, here are your pending orders:</h3>
-    <% @farmer_orders.each do |order| %>
-      <div>
-        <br />
-        <%= link_to user_order_path(params[:user_id], order.id) do %>
-          <button>
-          <h4>Order #<%= order.id %></h4>
-          <h5>Order Total:<%= number_to_currency(order.total_price) %></h5>
-          </button>
-        <% end %>
-        <br />
-      </div>
+<div class="container">
+  <% if current_user %>
+
+    <% if current_user.is_farmer %>
+      <h3>Hi, <%= current_user.first_name %>, here are your pending orders:</h3>
+        <table class="divided highlight">
+
+          <thead>
+            <tr>
+                <th data-field="id">Order Number</th>
+                <th data-field="name">Order Total</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @farmer_orders.each do |order| %>
+
+            <tr>
+              <td><a href="/users/<%=current_user.id%>/orders/<%=order.id%>">#<%= order.id %></a></td>
+              <td><%= number_to_currency(order.total_price) %></td>
+            </tr>
+
+            <% end %>
+          </tbody>
+
+        </table>
+
+
+    <% else %>
+      <h3>Hi, <%= current_user.first_name %>, here is your order history:</h3>
+        <table class="divided highlight">
+
+          <thead>
+            <tr>
+              <th data-field="id">Order Number</th>
+              <th>Farm Name</th>
+              <th data-field="name">Order Total</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <% @orders.each do |order| %>
+              <% farm = Farm.find(order.farm_id) %>
+              <tr>
+                <td>#<%= order.id %> - <a href="/users/<%=current_user.id%>/orders/<%=order.id%>">View Order</a></td>
+                <td><a href="/farms/<%= farm.id %>"><%= farm.name %></a></td>
+                <td><%= number_to_currency(order.total_price) %></td>
+              </tr>
+
+            <% end %>
+          </tbody>
+        </table>
+
     <% end %>
 
-  <% else %>
-    <h3>Hi, <%= current_user.first_name %>, here is your order history:</h3>
-
-    <% @orders.each do |order| %>
-      <div>
-        <br />
-        <%= link_to user_order_path(params[:user_id], order.id) do %>
-          <button>
-          <h4>Order #<%= order.id %></h4>
-          <h5>Order Total:<%= number_to_currency(order.total_price) %></h5>
-          </button>
-        <% end %>
-        <br />
-      </div>
-    <% end %>
   <% end %>
-<% end %>
+</div>
