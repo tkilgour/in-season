@@ -1,0 +1,31 @@
+<% if current_user.is_farmer %>
+  <h3>Hi, <%= current_user.first_name %>, here are your pending orders:</h3>
+  <% @farmer_orders.each do |order| %>
+    <div>
+      <br />
+      <%= link_to user_order_path(params[:user_id], order.id) do %>
+        <button>
+        <h4>Order #<%= order.id %></h4>
+        <h5>Order Total:<%= number_to_currency(order.total_price) %></h5>
+        </button>
+      <% end %>
+      <br />
+    </div>
+  <% end %>
+
+<% else %>
+  <h3>Hi, <%= current_user.first_name %>, here is your order history:</h3>
+
+  <% @orders.each do |order| %>
+    <div>
+      <br />
+      <%= link_to user_order_path(params[:user_id], order.id) do %>
+        <button>
+        <h4>Order #<%= order.id %></h4>
+        <h5>Order Total:<%= number_to_currency(order.total_price) %></h5>
+        </button>
+      <% end %>
+      <br />
+    </div>
+  <% end %>
+<% end %>

@@ -1,12 +1,12 @@
 <% quantity = details['quantity'].to_i %>
 
 <% if box = Box.find_by(id: box_id) %>
-<% item_total = (box.price * quantity).to_i %>
+<% item_total = (box.price * quantity).to_f %>
 <% @cart_total += item_total %>
 
 <tr>
   <td>
-    Image
+    <img alt="" style="width:150px;height:auto;border-radius:10px;border:solid rgba(87,82,4,0.18) 1px;" src=<%="/farmers/#{box.size}.jpg"%>>
   </td>
   <td>
     <h4><%= box.size %></h4>
