@@ -4,6 +4,12 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
+  def index
+    @orders = Order.all.where(user_id: params[:user_id])
+    @farmers_farm = Farm.where(user_id: params[:user_id])[0]
+    @farmer_orders = Order.all.where(farm_id: @farmers_farm[:id])
+  end
+
   def create
     charge = perform_stripe_charge
     order  = create_order(charge)

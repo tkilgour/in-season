@@ -22,6 +22,10 @@ Rails.application.routes.draw do
     get :autocomplete_market_name, :on => :collection
   end
 
+  resources :users, only: [:show] do
+      resources :orders, only: [:show, :index]
+  end
+
   get '/search' => 'farms#search'
 
   post '/markets/:id/delete' => 'markets#destroy'
