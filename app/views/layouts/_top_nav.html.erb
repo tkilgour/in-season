@@ -5,13 +5,12 @@
 <ul id="dropdown1" class="dropdown-content">
   <% if current_user %>
       <li><%= link_to user_orders_path(current_user.id), class: 'black-text' do %>Order History <%end%></li>
-  <li><a href="#!" class="black-text">two</a></li>
+      <li><a href="/logout" class="black-text">Logout</a></li>
   <li class="divider"></li>
-  <li><%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)</li>
   <% end %>
 </ul>
 
-<li><%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)</li>
+<!-- <li><%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)</li> -->
 
 <nav>
   <div class="nav-wrapper grey lighten-4">
@@ -24,7 +23,6 @@
       <li><a href="/" class="black-text">JavaScript</a></li>
       <% if current_user %>
       <li><a class="dropdown-button black-text" href="#!" data-activates="dropdown1">Hey, <%= current_user.first_name %><i class="material-icons right">arrow_drop_down</i></a></li>
-      <li><a href="/logout" class="black-text">Logout</a></li>
       <% else %>
       <a class="waves-effect waves-light btn blue" href="#modal1">Register</a>
 
