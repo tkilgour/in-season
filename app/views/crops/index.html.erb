@@ -1,15 +1,4 @@
 
-<nav>
-    <div class="nav-wrapper light-green darken-1">
-      <div class="col s12">
-        <a href="/farms/:id" class="breadcrumb"><%= @farm.name %></a>
-        <a href="#!" class="breadcrumb">Crops</a>
-      </div>
-    </div>
-</nav>
-
-
-
   <div class="row">
 
       <div class="info">
@@ -17,7 +6,7 @@
           <img alt="" src=<%= @farm.profile_image %> class="circle">
         </div>
         <div class="col l5">
-          <h2><%= @farm.name %></h2>
+          <h2><%= link_to @farm.name, farm_path(@farm.id) %></h2>
         </div>
         <div class="col l5 grey-text text-darken-1">
           <h5><%= @farm.farmer %></h5>
