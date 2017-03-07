@@ -7,7 +7,8 @@
 </h3>
 </header>
 <article class="box-detail">
-<div class="row">
+  <div class="container">
+    <div class="row">
   <div class="col-sm-4">
     <img alt="" class: 'main-img' style="width:500px;height:auto;" src=<%="/farmers/#{@box.size}.jpg"%>>
   </div>
@@ -20,6 +21,12 @@
       <dt>Subscription Price</dt>
       <dd style="font-weight:200;"><%= number_to_currency(@box.price) %></dd>
     </dl>
+    <footer class="actions">
+      <%= link_to add_item_farm_cart_path(@box.id), class: 'btn btn-primary', method: :put do %>
+        <%= fa_icon "shopping-cart", text: 'Add' %>
+      <% end %>
+    </footer>
   </div>
+</div>
 </div>
 </article>
