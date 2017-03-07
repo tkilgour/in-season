@@ -6,6 +6,9 @@
   <% if current_user %>
       <li><%= link_to user_orders_path(current_user.id), class: 'black-text' do %>Order History <%end%></li>
       <li><a href="/logout" class="black-text">Logout</a></li>
+      <% if current_user.is_farmer && current_user.farm_id%>
+      <li><%= link_to farm_path(current_user.farm_id), class: 'black-text' do %>My Farm<% end %></li>
+      <% end %>
   <li class="divider"></li>
   <% end %>
 </ul>
