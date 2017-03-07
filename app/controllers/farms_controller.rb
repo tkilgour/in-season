@@ -1,7 +1,5 @@
 class FarmsController < ApplicationController
 
-  attr_accessor :small_box, :medium_box, :large_box, :price, :description
-
   def index
     @farms = Farm.all
     @farm_results = []
@@ -60,7 +58,7 @@ class FarmsController < ApplicationController
     @query = params[:q]
     @location = Geokit::Geocoders::GoogleGeocoder.geocode(@query)
     @farm_results = Farm.within(params['farm_radius'], :origin => @location)
-    @market_results =au Market.within(params['farm_radius'], :origin => @location)
+    @market_results = Market.within(params['farm_radius'], :origin => @location)
     render :action => :index
   end
 
