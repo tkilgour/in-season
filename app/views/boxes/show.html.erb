@@ -1,4 +1,13 @@
-<%= render 'farm_nav' %>
+<nav class="green">
+   <div class="nav-wrapper">
+     <div class="col s12">
+       <a href="/farms/<%= @farm.id %>" class="breadcrumb"><%= @farm.name %></a>
+       <a href="/farms/<%= @farm.id %>/boxes" class="breadcrumb">CSA Subscription Options</a>
+       <a class="breadcrumb"><%= @box.size.capitalize %> Box</a>
+       <a href="/farms/<%= @farm.id %>/cart"class="waves-effect waves-light btn right valign grey">My Cart (<%= cart.size %>)</a>
+     </div>
+   </div>
+ </nav>
 
 <header>
   <h3>
@@ -7,25 +16,27 @@
 </h3>
 </header>
 
-<div class="container">
-      <div class="row">
-        <div class="col l8 offset-l2">
-          <div class="card">
-            <div class="card-image">
-              <img src=<%="/farmers/#{@box.size}.jpg"%>>
-              <span class="card-title"><h1><%= @box.size.capitalize %></h1></span>
-            </div>
-            <div class="card-content">
-              <dt><%= @box.description %></dt>
-              <dt><h5>Subscription Price</h5></dt>
-              <dd><%= number_to_currency(@box.price) %></dd>
-            </div>
-            <div class="card-action">
-              <%= link_to add_item_farm_cart_path(@box.id), class: 'btn btn green', method: :put do %>
-                <%= fa_icon "shopping-cart", text: 'Add' %>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<article class="box-detail">
+  <div class="container">
+    <div class="row">
+  <div class="col-sm-4">
+    <img alt="" class: 'main-img' style="width:500px;height:auto;" src=<%="/farmers/#{@box.size}.jpg"%>>
+  </div>
+  <div class="col-sm-8">
+    <dl class="dl-horizontal" style="font-size:170%;">
+      <dt>Box Size</dt>
+      <dd style="font-weight:200;"><%= @box.size.capitalize %></dd>
+      <dt>Description</dt>
+      <dd style="font-weight:200;"><%= @box.description %></dd>
+      <dt>Subscription Price</dt>
+      <dd style="font-weight:200;"><%= number_to_currency(@box.price) %></dd>
+    </dl>
+    <footer class="actions">
+      <%= link_to add_item_farm_cart_path(box_id: @box.id), method: :put do %>
+      <button class="btn green">Add<i class="material-icons" style="font-size:17px">shopping_cart</i></button>
+      <% end %>
+    </footer>
+  </div>
+</div>
+</div>
+</article>

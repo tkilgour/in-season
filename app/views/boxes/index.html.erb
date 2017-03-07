@@ -1,15 +1,15 @@
-<%= render 'farm_nav' %>
-
-  <section class="boxes-index">
-
-    <header class="page-header">
-      <h3><%= link_to @farm.name, farm_path(@farm.id) %> &raquo; CSA Box Subscription Options</h3>
-    </header>
+<nav class="green">
+   <div class="nav-wrapper">
+     <div class="col s12">
+       <a href="/farms/<%= @farm.id %>" class="breadcrumb"><%= @farm.name %></a>
+       <a class="breadcrumb">CSA Subscription Options</a>
+       <a href="/farms/<%= @farm.id %>/cart"class="waves-effect waves-light btn right valign grey">My Cart (<%= cart.size %>)</a>
+     </div>
+   </div>
+ </nav>
 
     <div class="row">
       <% @boxes.map do |box| %>
       <%= render 'box', box: box, id: box.id, farm: @farm, description: box.description, price: box.price %>
       <% end %>
     </div>
-
-  </section>
