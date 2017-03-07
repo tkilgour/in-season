@@ -1,4 +1,13 @@
-<%= render 'farm_nav' %>
+<nav class="green">
+   <div class="nav-wrapper">
+     <div class="col s12">
+       <a href="/farms/<%= @farm.id %>" class="breadcrumb"><%= @farm.name %></a>
+       <a href="/farms/<%= @farm.id %>/boxes" class="breadcrumb">CSA Subscription Options</a>
+       <a class="breadcrumb"><%= @box.size.capitalize %> Box</a>
+       <a href="/farms/<%= @farm.id %>/cart"class="waves-effect waves-light btn right valign grey">My Cart (<%= cart.size %>)</a>
+     </div>
+   </div>
+ </nav>
 
 <header>
   <h3>

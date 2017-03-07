@@ -12,7 +12,7 @@ class FarmsController < ApplicationController
   def create
     @farm = Farm.new(farm_params)
     @farm.save
-    create_csa_boxes(@farm)
+    boxes = create_csa_boxes(@farm)
     current_user.update(farm_id: @farm.id)
     if @farm.save
       redirect_to farm_path(@farm)
@@ -21,25 +21,29 @@ class FarmsController < ApplicationController
     end
   end
 
+  def currency_string_to_integer(currency_string)
+    currency_string.gsub(',','').slice(2...-3)
+  end
+
   def create_csa_boxes(farm)
     small = Box.new ({
       farm_id: farm.id,
       size: 'small',
-      price: params[:box][:small_price],
+      price: currency_string_to_integer(params[:box][:small_price]),
       description: params[:box][:small_description]
     })
     small.save
     medium = Box.new ({
       farm_id: farm.id,
       size: 'medium',
-      price: params[:box][:medium_price],
+      price: currency_string_to_integer(params[:box][:medium_price]),
       description: params[:box][:medium_description]
     })
     medium.save
     large = Box.new ({
       farm_id: farm.id,
       size: 'large',
-      price: params[:box][:large_price],
+      price: currency_string_to_integer(params[:box][:large_price]),
       description: params[:box][:large_description]
       })
     large.save
