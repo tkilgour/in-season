@@ -176,6 +176,7 @@
           <ul class="list-group">
             <li class="list-group-item">
               <div id="map"></div>
+              <div id="autocomplete_market_name_markets_path"></div>
               <%= form_for @new_market do |f| %>
 
               <% if f.object.errors.any? %>
@@ -217,3 +218,11 @@
   </div>
   </div>
 
+
+
+  <%= javascript_tag do %>
+    window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>, id: <%= @farm.id %>}
+    window.markets = <%= @market_data %>
+  <% end %>
+
+  <script async defer src="//maps.google.com/maps/api/js?key=AIzaSyC7a1ObkesRP36iQHZSe5q1TFxtiyXaJJI&callback=initMap"></script>
