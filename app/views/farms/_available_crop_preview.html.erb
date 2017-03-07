@@ -1,8 +1,12 @@
+
 <div class="available-crops">
-<img src=<%= if crop['image']
-  crop.image
-else
-  crop.default_image
-end %>>
-<p><%= crop.name %></p>
+  <a class="carousel-item" href="#<%= carousel_link %>!">
+    <img src=<%= if crop['image']
+      crop.image
+    else
+      crop.default_image
+    end %>>
+    <p><%= crop.name %></p>
+  </a>
 </div>
+

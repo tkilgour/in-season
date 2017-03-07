@@ -4,29 +4,29 @@
 <% item_total = (box.price * quantity).to_f %>
 <% @cart_total += item_total %>
 
-<tr>
-  <td>
-    <img alt="" style="width:150px;height:auto;border-radius:10px;border:solid rgba(87,82,4,0.18) 1px;" src=<%="/farmers/#{box.size}.jpg"%>>
-  </td>
-  <td>
-    <h4><%= box.size.capitalize %></h4>
-    <br>
-    <p><%= box.description %></p>
-  </td>
-  <td>
-    <%= number_to_currency(box.price) %>
-  </td>
-  <td>
-    <%= link_to remove_item_farm_cart_path(box_id: box_id), class: 'btn btn-xs btn-danger', method: :delete do %>
-    -
-    <% end %>
-    <%= quantity %>
-    <%= link_to add_item_farm_cart_path(box_id: box_id), class: 'btn btn-xs btn-success', method: :put do %>
-    +
-    <% end %>
-  </td>
-  <td>
-    <%= number_to_currency(item_total) %>
-  </td>
-</tr>
+
+<tbody>
+          <tr>
+            <td>
+              <%= box.size.capitalize %>
+              <p><%= box.description %></p>
+            </td>
+            <td>
+              <%= number_to_currency(box.price) %>
+            </td>
+            <td>
+              <%= link_to remove_item_farm_cart_path(box_id: box_id), class: 'btn btn-xs btn-danger', method: :delete do %>
+              -
+              <% end %>
+              <%= quantity %>
+              <%= link_to add_item_farm_cart_path(box_id: box_id), class: 'btn btn-xs btn-success', method: :put do %>
+              +
+              <% end %>
+            </td>
+              <td>
+                <%= number_to_currency(item_total) %>
+              </td>
+          </tr>
 <% end %>
+
+        </tbody>
