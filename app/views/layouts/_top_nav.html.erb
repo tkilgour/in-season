@@ -3,12 +3,15 @@
 
 
 <ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!" class="black-text">one</a></li>
+  <% if current_user %>
+      <li><%= link_to user_orders_path(current_user.id), class: 'black-text' do %>Order History <%end%></li>
   <li><a href="#!" class="black-text">two</a></li>
   <li class="divider"></li>
   <li><%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)</li>
+  <% end %>
 </ul>
 
+<li><%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)</li>
 
 <nav>
   <div class="nav-wrapper grey lighten-4">
