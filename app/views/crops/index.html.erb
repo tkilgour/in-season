@@ -1,4 +1,15 @@
 
+<nav>
+    <div class="nav-wrapper light-green darken-1">
+      <div class="col s12">
+        <a href="/farms/:id" class="breadcrumb"><%= @farm.name %></a>
+        <a href="#!" class="breadcrumb">Crops</a>
+      </div>
+    </div>
+</nav>
+
+
+
   <div class="row">
 
       <div class="info">
@@ -20,7 +31,7 @@
 <div class="container">
   <div class="row">
     <div class="col l12">
-      <div class="card  grey lighten-4">
+      <div class="card grey lighten-4">
 
         <div class="card-content black-text">
           <span class="card-title">Add or create a crop for your field!</span>
@@ -49,7 +60,7 @@
 
             <div class='form-group'>
               <%= f.label :harvest_date %>
-              <%= f.text_field :harvest_date, class: 'datepicker', type: 'date' %>
+              <%= f.text_field :harvest_date, class: 'datepicker', type: 'text' %>
             </div>
 
             <div class='form-group'>
@@ -64,7 +75,6 @@
                 <img id='crop_img'>
                 <%= f.file_field :image %>
               </div>
-
             </div>
           </div>
 
@@ -74,18 +84,11 @@
           <%= f.submit 'Create Crop', class: 'btn btn green' %>
         </div>
         <% end %>
-      </div>
 
+      </div>
     </div>
   </div>
-  </div>
-
-
-
-
-<header class="page-header">
-  <h3><%= link_to @farm.name, farm_path(@farm.id) %> &raquo;</h3>
-</header>
+</div>
 
 
 

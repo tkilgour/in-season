@@ -1,26 +1,24 @@
-<div class="box" style="display:inline-block;border:solid rgba(87,82,4,0.18) 1px;border-radius:10px">
-
-  <header>
-    <%=link_to farm_box_path(box.farm_id, box.id) do %>
-    <img alt="" style="width:400px;height:auto;border-radius:10px;border:solid rgba(87,82,4,0.18) 1px;" src=<%="/farmers/#{box.size}.jpg"%>>
-    <h4><%= box.size.capitalize %></h4>
-    <%end%>
-  </header>
-
-  <p class="description">
-    Description: <%= box.description %>
-  </p>
-  <p class="csa-subscription-price">
-    Subscription Price: <%= number_to_currency('%.2f' % box.price)  %>
-  </p>
-
-<footer class="actions">
-  <%= link_to add_item_farm_cart_path(box_id: box.id), class: 'btn btn-primary', method: :put do %>
-    <%= fa_icon "shopping-cart", text: 'Add' %>
-  <% end %>
-  <%= link_to farm_box_path(box.farm_id, box.id), class: 'btn btn-default pull-right' do %>
-    Details &raquo;
-  <% end %>
-</footer>
-
+<div class="col l4 s4">
+  <div class="card">
+    <div class="card-image">
+      <img src=<%="/farmers/#{box.size}.jpg"%>>
+      <span class="card-title"><%= box.size.capitalize %></span>
+    </div>
+    <div class="card-content">
+      <p class="description">
+        Description: <%= box.description %>
+      </p>
+      <p class="csa-subscription-price">
+        Subscription Price: <%= number_to_currency(box.price)  %>
+      </p>
+    </div>
+    <div class="card-action">
+      <%= link_to add_item_farm_cart_path(box_id: box.id), class: 'btn btn-primary', method: :put do %>
+        <%= fa_icon "shopping-cart", text: 'Add' %>
+      <% end %>
+      <%= link_to farm_box_path(box.farm_id, box.id), class: 'btn btn-default pull-right' do %>
+        Details &raquo;
+      <% end %>
+    </div>
+  </div>
 </div>
