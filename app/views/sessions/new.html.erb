@@ -1,63 +1,51 @@
-
-<div class="row">
-  <div class="tractor">
-      <div class="col-sm-8 col-sm-offset-2">
-        <div class="jumbotron">
-
-          <h2>Trying to get back to your farm?</h2>
-          <h4>Next tractor leaves in: <%= rand(25..59) %> seconds</h4>
-          <br>
-          <% if flash[:error] %>
-            <span style="color:red; background-color:pink; font-size:105%; padding: 5px 7px 5px 7px; border-radius:5px; ">
-              * <%= flash[:error] %> *
-            </span>
-          <% end %>
-          <%= form_tag '/login' do %>
-            <div class="form-group placeholder:">
-              <h5>Email: </h5>
-              <%= text_field_tag :email, nil, class: 'form-control' %>
-            </div>
-            <div class="form-group">
-              <h5>Password: </h5>
-              <%= password_field_tag :password, nil, class: 'form-control' %>
-              <br>
-              <%= submit_tag "Submit", class: 'btn btn-warning btn-lg' %>
-            </div>
-
-
-          <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 <div class="registration">
   <div class="row">
-    <form class="col m10 offset-m1 white">
-    <div class="col m5">
-      <h3>Trying to get back to your farm?</h3>
-      <h4>Next tractor leaves in: <%= rand(25..59) %> seconds</h4>
+    <div class="tractor">
+      <div class="col m10 offset-m1 white">
+
+      <div class="col l10 offset-l1">
+        <h3>Trying to get back to your farm?</h3>
+        <h5>Next tractor leaves in: <%= rand(25..45) %> seconds</h5>
+      </div>
+
+        <% if flash[:error] %>
+        <span style="color:red; background-color:pink; font-size:105%; padding: 5px 7px 5px 7px; border-radius:5px; ">
+          * <%= flash[:error] %> *
+        </span>
+        <% end %>
+
+        <%= form_tag '/login' do %>
+
+        <div class="row">
+          <div class="input-field col l10 offset-l1">
+            <div class="form-group placeholder:">
+              <label for="email">Email</label>
+
+              <%= text_field_tag :email, nil, class: 'form-control' %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col l10 offset-l1">
+            <div class="form-group">
+              <label for="password">Password</label>
+
+              <%= password_field_tag :password, nil, class: 'form-control' %>
+              <br>
+
+              <div class="col l3 offset-l9">
+                <button class="btn waves-effect waves-light green" type="submit" name="action">
+                  Submit
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <% end %>
+      </div>
     </div>
-      <div class="row">
-        <div class="input-field col m12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col m6">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col m3 offset-m9">
-          <button class="btn waves-effect waves-light grey lighten-1" type="submit" name="action">Submit
-            <i class="material-icons left">send</i>
-          </button>
-        </div>
-      </div>
-    </form>
   </div>
 </div>

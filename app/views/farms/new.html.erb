@@ -1,72 +1,148 @@
-<br /><br />
-<div class="row">
- <div class="col-sm-6 col-sm-offset-1">
-   <br>
-   <br>
-   <br>
-   <%= form_for :farm, url: farms_path do |f| %>
-   <div class="form-group">
-     <h5>Farm Name: </h5>
-     <%= f.text_field :name, class: 'form-control' %>
-   </div>
-   <div class="form-group">
-     <h5>Farmer Name(s): </h5>
-     <%= f.text_field :farmer, class: 'form-control' %>
-   </div>
-   <div class="form-group">
-     <h5>About The Farm: </h5>
-     <%= f.text_area :about_farm, class: 'form-control' %>
-   </div>
-   <div class="form-group">
-     <h5>Farm Address: </h5>
-     <%= f.text_field :address, class: 'form-control' %>
-   </div>
-   <div class='form-group'>
-     <h5>Banner Image: </h5>
-     <%= f.file_field :banner_image, class: 'form-control' %>
-   </div>
-   <div class='form-group'>
+<div class="container">
+  <div class="row">
+
+    <div class="card grey lighten-4">
+      <div class="card-content black-text">
+        <%= form_for :farm, url: farms_path do |f| %>
+
+        <div class="row">
+          <div class="input-fields col l6">
+            <label for="farm_name"><h6>Farm Name</h6></label>
+            <%= f.text_field :name, class: 'form-control, validate', placeholder: "ex: MooMoo Farm" %>
+          </div>
+
+          <div class="input-fields col l6">
+            <label for="farmer_name"><h6>Farmer Name</h6></label>
+            <%= f.text_field :farmer, class: 'form-control, validate', placeholder: "ex: Bob and Susan Smith" %>
+          </div>
+          <div class="input-fields col l12">
+            <label for="about_farm"><h6>About Farm</h6></label>
+            <%= f.text_field :about_farm, class: 'form-control, validate', placeholder: "ex: We grow some dope corns." %>
+          </div>
+          <div class="input-fields col l12">
+            <label for="farm_address"><h6>Farm Address</h6></label>
+            <%= f.text_field :address, class: 'form-control, validate', placeholder: "ex: 46 Spadina, Toronto" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='form-group col l6'>
+    <h5>Banner Image: </h5>
+      <div class="file-field input-field">
+          <div class="btn green">
+            <span>File</span>
+            <%= f.file_field :banner_image, class: 'form-control' %>
+            <input class="form-control" type="file" name="farm[banner_image]" id="farm_banner_image">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </div>
+    </div>
+
+    <div class='form-group col l6'>
      <h5>Profile Image: </h5>
-     <%= f.file_field :profile_image, class: 'form-control' %>
-   </div>
-   <div class='form-group' id="csa_availability_checkbox">
-     <h5>CSA Subscription Available: <%= f.check_box :csa_availability, data: { toggle: 'toggle', on: 'Yes', off: 'No'} %></h5>
-   </div>
+
+
+        <div class="file-field input-field">
+          <div class="btn green">
+            <span>File</span>
+            <%= f.file_field :profile_image, class: 'form-control' %>
+            <input class="form-control" type="file" name="farm[profile_image]" id="farm_profile_image">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </div>
+
+
+
+    </div>
+
+    <div class='form-group col l12' id="csa_availability_checkbox">
+     <br>
+     <h5>CSA Subscription Available:</h5>
+
+      <div class="switch">
+        <label>
+          Off
+          <input type="checkbox">
+          <span class="lever" name="subscription_available"></span>
+          On
+        </label>
+      </div>
+
       <%= f.hidden_field :user_id, value: current_user.id %>
-   <div>
-     <%= form_for :box, url: farms_path do |f| %>
-   </div>
-   <div id="csa_availability_checked_true" class="hidden" class='form-group'>
-     <h5>Set your seasonal CSA subscription details: </h5>
+      <div>
+       <%= form_for :box, url: farms_path do |f| %>
+      </div>
 
-     <div class='form-group'>
-       <h5>Small Box: </h5>
-       <h6>Price:</h6>
-       <%= f.text_field :small_price, class: 'form-control', data: {autonumeric: {aSign: '$ ', mDec: 2}} %>
-       <h6>Description:</h6>
-       <%= f.text_field :small_description, class: 'form-control' %>
-     </div>
+      <div id="csa_availability_checked_true" class="hidden col l12" class='form-group'>
+        <br>
+        <h5>Set your seasonal CSA subscription details: </h5>
 
-     <div class='form-group'>
-       <h5>Medium Box: </h5>
-       <h6>Price:</h6>
-       <%= f.text_field :medium_price, class: 'form-control', data: {autonumeric: {aSign: '$ ', mDec: 2}} %>
-       <h6>Description:</h6>
-       <%= f.text_field :medium_description, class: 'form-control' %>
-     </div>
+        <div class="row">
+          <div class="card grey lighten-4">
+            <div class="card-content black-text">
+              <span class="card-title">Small Box</span>
+              <div class="divider">
+              </div>
+              <div class="row">
+                <div class="col l4">
+                  <h6>Price:</h6>
+                  <%= f.text_field :small_price, class: 'form-control', data: {autonumeric: {aSign: '$ ', mDec: 2}}, placeholder: 'ex: $350' %>
+                </div>
+                <div class="col l8">
+                  <h6>Description:</h6>
+                  <%= f.text_field :small_description, class: 'form-control', placeholder: 'ex: Feeds 2 people - approximately 5 lbs' %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="card grey lighten-4">
+            <div class="card-content black-text">
+              <span class="card-title">Medium Box</span>
+              <div class="divider">
+              </div>
+              <div class="row">
+                <div class="col l4">
+                  <h6>Price:</h6>
+                  <%= f.text_field :small_price, class: 'form-control', data: {autonumeric: {aSign: '$ ', mDec: 2}}, placeholder: 'ex: $500' %>
+                </div>
+                <div class="col l8">
+                  <h6>Description:</h6>
+                  <%= f.text_field :small_description, class: 'form-control', placeholder: 'ex: Feeds 4 people - approximately 10 lbs' %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="card grey lighten-4">
+            <div class="card-content black-text">
+              <span class="card-title">Large Box</span>
+              <div class="divider">
+              </div>
+              <div class="row">
+                <div class="col l4">
+                  <h6>Price:</h6>
+                  <%= f.text_field :small_price, class: 'form-control', data: {autonumeric: {aSign: '$ ', mDec: 2}}, placeholder: 'ex: $650' %>
+                </div>
+                <div class="col l8">
+                  <h6>Description:</h6>
+                  <%= f.text_field :small_description, class: 'form-control', placeholder: 'ex: Feeds 6 people - approximately 15 lbs' %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-     <div class='form-group'>
-       <h5>Large Box: </h5>
-       <h6>Price:</h6>
-       <%= f.text_field :large_price, class: 'form-control', data: {autonumeric: {aSign: '$ ', mDec: 2}} %>
-       <h6>Description:</h6>
-       <%= f.text_field :large_description, class: 'form-control' %>
-     </div>
-
-
-   </div>
-   <%= f.submit "Submit to register your farm!", class: 'btn btn-warning btn-lg' %>
-   <% end %>
-   <% end %>
- </div>
+      <%= f.submit "Register your farm!", class: 'btn green' %>
+      <% end %>
+    <% end %>
+  </div>
 </div>
