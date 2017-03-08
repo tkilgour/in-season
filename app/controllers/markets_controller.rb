@@ -4,6 +4,8 @@ class MarketsController < ApplicationController
     @farm_market_exists = @farm.markets.where(name: params[:market][:name], parsed_address: params[:market][:address], market_day: params[:market][:market_day]).exists?
     @market_exists = Market.where(name: params[:market][:name], parsed_address: params[:market][:address], market_day: params[:market][:market_day]).exists?
 
+    binding.pry
+
     if !@farm_market_exists && !@market_exists
       @market = Market.new(market_params)
     elsif !@farm_market_exists && @market_exists

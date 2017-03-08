@@ -31,6 +31,20 @@ class CropsController < ApplicationController
     @crop.destroy
   end
 
+  def search
+    @crops = StockCrop.where("name ilike ?", "%#{params[:query]}%").take(10).to_json
+    respond_to do |format|
+      format.json { render :json => @crops}
+    end
+  end
+
+  def crop_by_name
+    @crop = StockCrop.where(name: params[:query]).first.to_json
+    respond_to do |format|
+      format.json { render :json => @crop }
+    end
+  end
+
   autocomplete :stock_crop, :name, :full => true, :extra_data => [:image_url]
 
   private
