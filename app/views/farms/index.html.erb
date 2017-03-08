@@ -37,12 +37,13 @@
     <div class="panel panel-default">
 
       <table class="table">
-        <thead>
-          <tr>
-            <th> Name </th>
-            <th> Address </th>
-          </tr>
-        </thead>
+        <% if @farm_results.length > 0 %>
+          <thead>
+            <tr>
+              <th> Farms Nearby </th>
+            </tr>
+          </thead>
+        <% end %>
         <tbody>
           <% @farm_results.each do |r| %>
           <tr>
@@ -53,6 +54,13 @@
               <%= r.address %>
             </td>
           </tr>
+          <% end %>
+          <% if @market_results.length > 0 %>
+            <thead>
+              <tr>
+                <th> Markets Nearby </th>
+              </tr>
+            </thead>
           <% end %>
           <% @market_results.each do |r| %>
           <tr>

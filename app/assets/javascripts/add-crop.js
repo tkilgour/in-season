@@ -1,4 +1,3 @@
-
 $(document).on('turbolinks:load', function() {
 
   $('.datepicker').pickadate({
