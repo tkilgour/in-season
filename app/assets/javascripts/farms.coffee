@@ -8,4 +8,4 @@ jQuery ->
   $("#csa_availability_checkbox").change ->
       $("#csa_availability_checked_true").toggleClass('hidden') # toggleClass and not just toggle
 
-    $('select').material_select();
+    $('.modal-trigger').leanModal();

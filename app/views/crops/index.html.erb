@@ -14,7 +14,7 @@
   </div>
 </div>
 
-
+<% if current_user && current_user.farm_id == @farm.id %>
 
 <div class="container">
   <div class="row">
@@ -78,7 +78,7 @@
     </div>
   </div>
 </div>
-
+<% end %>
 
 
 
@@ -173,4 +173,3 @@
   </div>
 </div>
 </div>
-

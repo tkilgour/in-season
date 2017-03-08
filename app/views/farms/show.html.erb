@@ -45,29 +45,16 @@
       </div>
     </div>
 
-
-
 <div class="container">
-  <div class="row">
     <div class="crops">
-        <h3>What's available now?</h3>
         <div class="carousel">
-
+          <h3 align="center">What's available now?</h3>
             <% @available_crops.each do |c| %>
               <%= render 'available_crop_preview', crop: c, carousel_link: @available_crops.index(c)+2 %>
-
             <% end %>
-          </a>
-
         </div>
-      <div class="center">
-        <%= link_to 'See All Our Crops', "/farms/#{@farm.id}/crops", data: { turbolinks: false } %>
-      </div>
+        <h5 style="margin-top:-20px;margin-bottom:60px" class="center"><%= link_to 'See All Our Crops', "/farms/#{@farm.id}/crops", data: { turbolinks: false } %></h5>
     </div>
-  </div>
-
-
-
 
   <div class="row">
     <div class="col m6">
