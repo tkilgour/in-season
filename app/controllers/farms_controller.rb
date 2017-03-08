@@ -15,7 +15,7 @@ class FarmsController < ApplicationController
     boxes = create_csa_boxes(@farm)
     current_user.update(farm_id: @farm.id)
     if @farm.save
-      redirect_to farm_path(@farm)
+      redirect_to farm_crops_path(@farm)
     else
       redirect_to new_farm_path
     end
