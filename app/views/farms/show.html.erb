@@ -116,8 +116,8 @@
             </li>
             <li class="list-group-item">
               <div class="form-group">
-                <%= f.label :name %>
-                <%= f.autocomplete_field :name, autocomplete_market_name_markets_path, 'data-auto-focus' => true, class: 'form-control' %>
+                <label for="autocomplete-input">Name</label>
+                <input name="market[name]" type="text" id="autocomplete-market-name" class="autocomplete" placeholder="What's the name of the market?">
               </div>
               <div class="form-group">
                 <%= f.label :address %>
@@ -125,8 +125,16 @@
               </div>
 
               <div class="form-group market-day-dropdown">
-                <%= f.label :market_day %>
-                <%= select(:market, :market_day, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], :include_blank => true)%>
+                <label>Market day</label>
+                <select name="market[market_day]" id="market_market_day">
+                  <option value="1">Monday</option>
+                  <option value="2">Tuesday</option>
+                  <option value="3">Wednesday</option>
+                  <option value="4">Thursday</option>
+                  <option value="5">Friday</option>
+                  <option value="6" selected="selected">Saturday</option>
+                  <option value="7">Sunday</option>
+                </select>
               </div>
 
               <%= f.hidden_field :farm_id, :value => @farm.id %>
