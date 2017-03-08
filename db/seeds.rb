@@ -6,43 +6,149 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
 Farm.destroy_all
+Box.destroy_all
 
-Farm.create!({
+user_one = User.create!({
+  first_name: 'Ron',
+  last_name: 'Thiessen',
+  email: 'thiessen_farms@gmail.com',
+  password: 'farm',
+  password_confirmation: 'farm',
+  is_farmer: true
+})
+
+farm_one = Farm.create!({
+  name: 'Thiessen Farms',
+  farmer: 'Ron & Lorie & Amy Thiessen',
+  address: '4132 15th Street, Jordan Station, Ontario, L0R 1S0',
+  about_farm: "Thiessen Farms (est. 1947) is a small family farm growing vegetables, herbs, raspberries & blackberries.
+                Our goal is to grow healthy produce that tastes great & looks great too!/n
+                Healthy produce comes from healthy soils. The use of compost & manure, cover crops, green manure, mulching, crop rotations & companion planting are some ways we maintain & improve our soils.
+                We love colour & we love variety! /n
+                On our farm we grow more than 80 kinds of tomatoes – from old heirlooms to modern hybrids – in all sizes, shapes & colours, along with 35 varieties of eggplant, 35 hot peppers, 15 sweet peppers, more than 30 kinds of squash …
+                In total, almost 400 varieties of at least 40 vegetables are grown, plus 50 different herbs.
+                We market our produce seasonally through our CSA (community supported agriculture) program and at 2 farmers’ markets – North York Farmers’ Market in Toronto and Downtown Georgetown Farmers’ Market in Georgetown",
+  csa_availability: true,
+  banner_image:  File.open(File.join(Rails.root, "public/farmers/thiessen-farm-banner.jpg")),
+  profile_image: File.open(File.join(Rails.root, "public/farmers/thiessen-farm-avatar.jpg")),
+  user_id: user_one.id
+})
+
+user_one.update!(farm_id: farm_one.id)
+
+Box.create!({
+  farm_id: farm_one.id,
+  size: 'small',
+  price: 350,
+  description: 'Our small box feeds approximately 2 people each week. Boxes are delivered every Wednesday during regular business hours.'
+})
+
+Box.create!({
+  farm_id: farm_one.id,
+  size: 'medium',
+  price: 525,
+  description: 'Our medium box feeds approximately 4 people each week. Boxes are delivered every Wednesday during regular business hours.'
+})
+
+Box.create!({
+  farm_id: farm_one.id,
+  size: 'large',
+  price: 700,
+  description: 'Our large box feeds approximately 6 people each week. Boxes are delivered every Wednesday during regular business hours.'
+})
+
+user_two = User.create!({
+  first_name: 'Bethany',
+  last_name: 'Klapwyk',
+  email: 'zocalo_organics@gmail.com',
+  password: 'farm',
+  password_confirmation: 'farm',
+  is_farmer: true
+})
+
+farm_two = Farm.create!({
   name: 'Zocalo Organics',
-  farmer: 'Beth & Seb',
+  farmer: 'Sebastian Ramirez & Bethany Klapwyk',
   address: '5881 3 Line, Hillsburgh, ON N0B 1Z0, Canada',
   about_farm: 'Zócalo Organics is an 83-acre property between Guelph and Hillsburgh. The farm is a combination of greenhouses, gardens, hayfields, cedar forests, conservation wetland, a small orchard, and more!
                 The property has been farmed organically since the early ’90s by John Sutherland of Deerfields Nursery.  John made an incredible contribution to the tree cover of the property by planting hundreds of trees.
                 Twenty-three acres of wetland run like a ribbon through the centre of the farm and are an important part of the Grand River watershed. The Grand River Watershed has lost over 65% of its wetlands in the last 200 years to farming and development.  Wetlands moderate water flow, reduce flooding, and hold water during drought. They also improve water quality because of their ability to trap sediment and soil-bound contaminants.  Our wetland is part of a conversation program and will remain untouched.
                 We limit our use of heavy equipment on the farm and mainly accomplish our gardening tasks with a small Italian-built walk-behind tractor designed for market gardening.  We use permaculture techniques, soil testing, mulches, and hand tools to grow great food.',
   csa_availability: true,
-  banner_image: 'farmers/zocalo-organics-banner.jpg',
-  profile_image: 'farmers/zocalo-organics-avatar.jpg'
+  banner_image: File.open(File.join(Rails.root, "public/farmers/zocalo-organics-banner.jpg")),
+  profile_image: File.open(File.join(Rails.root, "public/farmers/zocalo-organics-avatar.jpg")),
+  user_id: user_two.id
 })
 
-Box.destroy_all
+user_two.update!(farm_id: farm_two.id)
 
 Box.create!({
-  farm_id: Farm.first.id,
+  farm_id: 2,
   size: 'small',
-  price: 35000,
-  description: 'Our small box feeds 2 people each week!'
+  price: 400,
+  description: 'Our small box feeds approximately 2 people each week. We deliver boxes every Monday during regular business hours.'
 })
 
 Box.create!({
-  farm_id: Farm.first.id,
+  farm_id: 2,
   size: 'medium',
-  price: 52500,
-  description: 'Our medium box feeds 4 people each week!'
+  price: 600,
+  description: 'Our medium box feeds approximately 4 people each week. We deliver boxes every Monday during regular business hours.'
 })
 
 Box.create!({
-  farm_id: Farm.first.id,
+  farm_id: 2,
   size: 'large',
-  price: 70000,
-  description: 'Our large box feeds 6 people each week!'
+  price: 800,
+  description: 'Our large box feeds approximately 6 people each week. We deliver boxes every Monday during regular business hours.'
 })
+
+
+user_three = User.create!({
+  first_name: 'Brian',
+  last_name: 'Feddema',
+  email: 'round_the_bend_farm@gmail.com',
+  password: 'farm',
+  password_confirmation: 'farm',
+  is_farmer: true
+})
+
+farm_three = Farm.create!({
+  name: 'Round the Bend Farm',
+  farmer: 'Brian and Sue Feddema',
+  address: '16225 Jane Street Kettleby, Ontario, Canada L7B 0G3',
+  about_farm: "Round the Bend Farm is a working family farm. We sell fresh, naturally grown turkeys, as well as seasonal fruits, vegetables  and flowers. We have been in continuous operation since 1986. We cordially invite you to come visit us, in season, and bring the family. For 30 years we have been growing vegetables and fruits on our farm. We are stewards of the land and believe healthy farming practices makes for healthy soil which in turn makes for healthy vegetables and fruits. Come experience what fresh really means, join our CSA today!",
+  csa_availability: true,
+  banner_image: File.open(File.join(Rails.root, "public/farmers/round-the-bend-farm-banner.jpg")),
+  profile_image: File.open(File.join(Rails.root, "public/farmers/round-the-bend-farm-avatar.jpg")),
+  user_id: user_three.id
+})
+
+user_three.update!(farm_id: farm_three.id)
+
+Box.create!({
+  farm_id: farm_three.id,
+  size: 'small',
+  price: 350,
+  description: 'Our small box feeds approximately 2 people each week. Boxes are delivered every Wednesday during regular business hours.'
+})
+
+Box.create!({
+  farm_id: farm_three.id,
+  size: 'medium',
+  price: 525,
+  description: 'Our medium box feeds approximately 4 people each week. Boxes are delivered every Wednesday during regular business hours.'
+})
+
+Box.create!({
+  farm_id: farm_three.id,
+  size: 'large',
+  price: 700,
+  description: 'Our large box feeds approximately 6 people each week. Boxes are delivered every Wednesday during regular business hours.'
+})
+
 
 StockCrop.destroy_all
 
