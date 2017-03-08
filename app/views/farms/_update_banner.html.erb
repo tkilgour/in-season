@@ -1,55 +1,15 @@
-<div class="container">
-    <div class="row">
-      <div>
-        <button type="button" class="btn green" data-toggle="modal" data-target="#bannerModal">
-          Change Banner Photo
-        </button>
-      </div>
-    </div>
-    <br />
-    <%= form_for :farm, url: farm_update_banner_path(farm) do |f| %>
-    <div class="modal fade" id="bannerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">
-              Edit banner pic
-            </h4>
-          </div>
-
-          <div class="modal-body">
-            <div class="field">
-
-              <div class='form-group'>
-                <h5>Banner Image: </h5>
-                <%= f.file_field :banner_image, class: 'form-control' %>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal" id="mynewreviewclose">Close</button>
-             <%= f.submit "Upload new picture" %>
-           </div>
-        </div>
-      </div>
-    </div>
-    <% end %>
-  </div>
 
 
 
 <button data-target="#bannerModal" class="btn">Change Banner Photo</button>
-  <div id="modal1" class="modal">
+  <div id="#bannerModal" class="modal">
     <div class="modal-content">
-
+    <%= form_for :farm, url: farm_update_banner_path(farm) do |f| %>
       <h4>Banner Image:</h4>
       <%= f.file_field :banner_image, class: 'form-control' %>
     </div>
     <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
+    <% end %>
   </div>
