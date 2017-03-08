@@ -31,6 +31,7 @@ gem 'best_in_place'
 gem 'jquery-ui-rails'
 
 gem 'rails-jquery-autocomplete'
+gem 'jquery-turbolinks'
 
 gem 'bootstrap-datepicker-rails'
 gem 'bootstrap-toggle-rails'

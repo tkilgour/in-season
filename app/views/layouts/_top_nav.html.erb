@@ -1,14 +1,14 @@
-
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
 <ul id="dropdown1" class="dropdown-content">
   <% if current_user %>
-      <li><%= link_to user_orders_path(current_user.id), class: 'black-text' do %>Order History <%end%></li>
       <% if current_user.is_farmer && current_user.farm_id%>
       <li><%= link_to farm_path(current_user.farm_id), class: 'black-text' do %>My Farm<% end %></li>
-      <li><a href="/logout" class="black-text">Logout</a></li>
       <% end %>
+      <li><%= link_to user_orders_path(current_user.id), class: 'black-text' do %>Order History <%end%></li>
+      <li><a href="/logout" class="black-text">Logout</a></li>
+
   <li class="divider"></li>
   <% end %>
 </ul>
@@ -26,7 +26,7 @@
       <% if current_user %>
       <li><a class="dropdown-button black-text" href="#!" data-activates="dropdown1">Hey, <%= current_user.first_name %><i class="material-icons right">arrow_drop_down</i></a></li>
       <% else %>
-      <a class="waves-effect waves-light btn green" href="#modal1">Register</a>
+      <a class="waves-effect waves-light btn green right" href="#modal1">Register</a>
 
       <!-- Modal Structure -->
       <div id="modal1" class="modal black-text">

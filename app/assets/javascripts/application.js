@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery-ui
 //= require best_in_place
@@ -30,11 +31,11 @@
 //= require_tree .
 
 
-  $(document).ready(function(){
+  $(document).on('turbolinks:load', function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal').modal();
   });
 
-  $(document).ready(function() {
+  $(document).on('turbolinks:load', function() {
   $('select').material_select();
 });
