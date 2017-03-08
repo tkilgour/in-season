@@ -81,6 +81,13 @@ class FarmsController < ApplicationController
     market_data.to_json.html_safe
   end
 
+  def current_location
+    address = Geokit::Geocoders::GoogleGeocoder.reverse_geocode(params[:latlng])
+    respond_to do |format|
+      format.json { render :json => address }
+    end
+  end
+
   def edit
     @farm = Farm.find(params[:id])
   end

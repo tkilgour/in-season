@@ -85,7 +85,18 @@ $(document).on('turbolinks:load', function() {
     event.preventDefault();
     $('#location-progress').show();
     navigator.geolocation.getCurrentPosition(function(pos) {
-      $('#q').val(pos.coords.latitude + ", " + pos.coords.longitude);
+
+      $.ajax({
+        type: 'POST',
+        url: '/current_location',
+        dataType: 'json',
+        data: {
+          latlng: [pos.coords.latitude, pos.coords.longitude]
+        },
+        success: function(address) {
+          $('#q').val(address.full_address); 
+        }
+      })
       $('#location-progress').hide();
     });
   })
