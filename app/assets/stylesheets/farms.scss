@@ -92,3 +92,12 @@ body {
   height: 200px;
   width: 200px;
 }
+
+.edit-inline {
+  cursor: url("/edit-pencil.png"), auto;
+}
+
+.edit-inline:hover {
+    opacity: .4;
+    color: red;
+}
