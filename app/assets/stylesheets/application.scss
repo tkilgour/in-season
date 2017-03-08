@@ -38,6 +38,10 @@ $secondary-color: color("yellow", "base") !default;
 .nav-wrapper img {
   height: 62px;
   width: 62px;
-  margin-left: 30px;
-  margin-right: 20px;
+  margin-left: 23px;
+  margin-right: 18px;
+}
+
+.nav-wrapper .btn {
+  margin-top: 14px;
 }
