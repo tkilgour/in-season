@@ -101,6 +101,8 @@
             <li class="list-group-item">
               <div id="map"></div>
               <div id="autocomplete_market_name_markets_path"></div>
+
+              <% if current_user && current_user.id == @farm.user_id %>
               <%= form_for @new_market do |f| %>
 
               <% if f.object.errors.any? %>
@@ -114,6 +116,7 @@
               </div>
               <% end %>
             </li>
+
             <li class="list-group-item">
               <div class="form-group">
                 <label for="autocomplete-input">Name</label>
@@ -141,6 +144,7 @@
               <br>
               <%= f.submit "Add a market", class: 'btn green', id: 'create-market' %>
               <% end %>
+              <% end %>
               <br>
             </li>
           </ul>
@@ -151,10 +155,10 @@
   </div>
 
 
-
   <%= javascript_tag do %>
     window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>, id: <%= @farm.id %>}
     window.markets = <%= @market_data %>
+    window.admin_check = <%= current_user && current_user.id == @farm.user_id %>
   <% end %>
 
   <script async defer src="//maps.google.com/maps/api/js?key=AIzaSyC7a1ObkesRP36iQHZSe5q1TFxtiyXaJJI&callback=initMap"></script>

@@ -27,15 +27,21 @@ function initMap() {
       zIndex: 1
     });
 
+    var infoWindowContent = `<strong><a href="/markets/${market.id}">${market.name}</a></strong><br>${market.address}<br>`
+
+    if (window.admin_check) {
+      infoWindowContent += `<form action="/markets/${market.id}/delete" method="post">
+                              <input type="hidden" name="authenticity_token" value="XAVFVYh/fl/XQdMQ+CiG6d7Y35y7FvdN+FKROsNuvfuhY6DNBMn/cl4TDfk3oz7gRH3w3brDi0q9j3QrYEHdWA==">
+                              <input type="hidden" value=${farm.id} name="farm_id">
+                              <input type="submit" value="Remove">
+                            </form>`
+    }
+
     var infoWindow = new google.maps.InfoWindow({
-      content: `<strong><a href="/markets/${market.id}">${market.name}</a></strong> – ${market.market_day}s<br>
-                ${market.address}<br>
-                <form action="/markets/${market.id}/delete" method="post">
-                  <input type="hidden" name="authenticity_token" value="XAVFVYh/fl/XQdMQ+CiG6d7Y35y7FvdN+FKROsNuvfuhY6DNBMn/cl4TDfk3oz7gRH3w3brDi0q9j3QrYEHdWA==">
-                  <input type="hidden" value=${farm.id} name="farm_id">
-                  <input type="submit" value="Remove">
-                </form>`
+      content: infoWindowContent
     });
+
+
 
     m.addListener('click', function() {
       if (prevInfoWindow) {
