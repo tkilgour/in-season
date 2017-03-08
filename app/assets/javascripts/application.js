@@ -32,10 +32,13 @@
 
 
   $(document).on('turbolinks:load', function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal').modal();
   });
 
   $(document).on('turbolinks:load', function() {
-  $('select').material_select();
-});
+    $('select').material_select();
+    $('.parallax').parallax();
+    $('.update-image-banner').on('click', function(event) {
+      $('#modal1').modal('open')
+    })
+  });

@@ -8,4 +8,6 @@ jQuery ->
   $("#csa_availability_checkbox").change ->
       $("#csa_availability_checked_true").toggleClass('hidden') # toggleClass and not just toggle
 
-    $('.modal-trigger').leanModal();
+  $('.modal').modal();
+
+  $('.parallax').parallax();

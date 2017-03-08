@@ -94,5 +94,10 @@ body {
 }
 
 .edit-inline {
-  cursor: url("/public/edit-pencil.png"), auto;
+  cursor: url("/edit-pencil.png"), auto;
+}
+
+.edit-inline:hover {
+    opacity: .4;
+    color: red;
 }

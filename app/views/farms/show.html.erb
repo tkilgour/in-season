@@ -1,60 +1,86 @@
-  <div class="parallax-container">
-    <div class="parallax"><img src=<%=@farm.banner_image%>></div>
+<div class="parallax-container update-image-banner <%= current_user && current_user.id == @farm.user_id ? 'edit-inline' : nil %>">
+  <div class="parallax banner-image">
+    <% if current_user && current_user.id == @farm.user_id %>
+    <img alt="" class="edit-inline" src=<%=@farm.banner_image%>>
+    <% else %>
+    <img src=<%=@farm.banner_image%>>
+    <% end %>
   </div>
-
-  <div class="section white">
-    <div class="row valign-wrapper">
-      <div class="profile-image col l2 offset-l1 valign">
-        <img alt="" src=<%=@farm.profile_image%> class="circle">
+</div>
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Edit Banner Image</h4>
+    <p>
+      <%= form_for :farm, url: farm_update_banner_path(@farm) do |f| %>
+      <div class=>
+        <%= f.file_field :banner_image, class: 'form-control' %>
       </div>
-
-      <div class="names col l6">
-        <ul>
-          <li>
-            <h2><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :name, :as => :input, type: :textarea, placeholder: "What is the name of your farm?",  ok_button: 'Save', cancel_button: 'Cancel' %></h2>
-          </li>
-          <div class="card-content grey-text text-darken-1">
-            <li>
-              <h5><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :farmer, :as => :input, placeholder: "Who are your farmers?",  ok_button: 'Save', cancel_button: 'Cancel', class: 'edit-inline' %>
-              </h5>
-            </li>
-          </div>
-        </ul>
+    </p>
+  </div>
+  <div class="modal-footer">
+    <a class=" modal-action modal-close waves-effect waves-green btn-flat">
+      <div>
+        <%= f.submit "Upload new picture" %>
+        <% end %>
       </div>
-      <div class="safety col l1 valign">
-        <img src="http://www.jamacfoods.com/wp-content/uploads/2015/05/food-safety-badge.jpg">
-      </div>
-      <div class="badge col l2 valign">
-        <img src="http://www.kidneycoach.com/wp-content/uploads/2012/12/Optimized-HiRes.jpg">
-      </div>
-
-    </div>
-    <div class="divider col l10 offset-l1">
-    </div>
-      <div class="row">
-        <div class="banner-update col l3 offset-l3">
-          <% if current_user && current_user.id == @farm.user_id %>
-          <%= render 'update_banner', farm: @farm %>
-          <% end %>
-        </div>
-        <div class="avatar-update col l4">
-          <% if current_user && current_user.id == @farm.user_id %>
-          <%= render 'update_avatar', farm: @farm %>
-          <% end %>
-        </div>
-      </div>
+    </a>
+  </div>
+</div>
+<div class="section white">
+  <div class="row valign-wrapper">
+    <div class="profile-image col l2 offset-l1 valign">
+      <% if current_user && current_user.id == @farm.user_id %>
+      <%= render 'update_avatar', farm: @farm %>
+      <% else %>
+      <img alt="" src=<%=@farm.profile_image%> class="circle">
+      <% end %>
     </div>
 
-<div class="container">
-    <div class="crops">
-        <div class="carousel">
-          <h3 align="center">What's available now?</h3>
-            <% @available_crops.each do |c| %>
-              <%= render 'available_crop_preview', crop: c, carousel_link: @available_crops.index(c)+2 %>
+    <div class="names col l6">
+      <ul>
+        <li>
+          <div>
+            <% if current_user && current_user.id == @farm.user_id %>
+            <h2 class="edit-inline"><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :name, :as => :input, type: :textarea, placeholder: "What is the name of your farm?",  ok_button: 'Save', cancel_button: 'Cancel' %></h2>
+            <% else %>
+            <h2> <%= @farm.name %> </h2>
             <% end %>
+          </div>
+        </li>
+        <div class="card-content grey-text text-darken-1">
+          <li>
+            <div>
+              <% if current_user && current_user.id == @farm.user_id %>
+              <h5 class="edit-inline"><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :farmer, :as => :input, placeholder: "Who are your farmers?",  ok_button: 'Save', cancel_button: 'Cancel' %></h5>
+              <% else %>
+              <h5> <%= @farm.farmer %> </h5>
+              <% end %>
+            </div>
+          </li>
         </div>
-        <h5 style="margin-top:-20px;margin-bottom:60px" class="center"><%= link_to 'See All Our Crops', "/farms/#{@farm.id}/crops", data: { turbolinks: false } %></h5>
+      </ul>
     </div>
+    <div class="safety col l1 valign">
+      <img src="http://www.jamacfoods.com/wp-content/uploads/2015/05/food-safety-badge.jpg">
+    </div>
+    <div class="badge col l2 valign">
+      <img src="http://www.kidneycoach.com/wp-content/uploads/2012/12/Optimized-HiRes.jpg">
+    </div>
+
+  </div>
+  <div class="divider col l10 offset-l1">
+  </div>
+</div>
+<div class="container">
+  <div class="crops">
+    <div class="carousel">
+      <h3 align="center">What's available now?</h3>
+      <% @available_crops.each do |c| %>
+      <%= render 'available_crop_preview', crop: c, carousel_link: @available_crops.index(c)+2 %>
+      <% end %>
+    </div>
+    <h5 style="margin-top:-20px;margin-bottom:60px" class="center"><%= link_to 'See All Our Crops', "/farms/#{@farm.id}/crops", data: { turbolinks: false } %></h5>
+  </div>
 
   <div class="row">
     <div class="col m6">
@@ -65,7 +91,15 @@
           </div>
           <br>
           <p>
-            <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :about_farm, :as => :input, type: :textarea, :placeholder => 'Tell us about your farm!', ok_button: 'Save', cancel_button: 'Cancel', class: 'edit-inline' %>
+            <% if current_user && current_user.id == @farm.user_id %>
+            <div class="edit-inline">
+              <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :about_farm, :as => :input, type: :textarea, :placeholder => 'Tell us about your farm!', ok_button: 'Save', cancel_button: 'Cancel' %>
+            </div>
+            <% else %>
+            <div>
+              <%= @farm.about_farm %>
+            </div>
+            <% end %>
           </p>
         </div>
         <div class="card-action">
@@ -91,29 +125,42 @@
           <br>
           <p>
             Our Address:
-            <h5><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :address, :as => :input, type: :textarea, :placeholder => "What is your farm's address?", ok_button: 'Save', cancel_button: 'Cancel', class: 'edit-inline' %></h5>
+            <% if current_user && current_user.id == @farm.user_id %>
+            <div class="edit-inline">
+              <h5><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :address, :as => :input, type: :textarea, :placeholder => "What is your farm's address?", ok_button: 'Save', cancel_button: 'Cancel'%></h5>
+            </div>
+            <% else %>
+            <h5> <%= @farm.address %> </h5>
+            <% end %>
           </p>
 
           <div class="divider">
           </div>
 
           <ul class="list-group">
+
+
+
             <li class="list-group-item">
               <div id="map"></div>
               <div id="autocomplete_market_name_markets_path"></div>
-              <%= form_for @new_market do |f| %>
-
-              <% if f.object.errors.any? %>
-              <div class="alert alert-danger">
-                <strong>The following errors prevented saving:</strong>
-                <ul>
-                  <% f.object.errors.full_messages.each do |error| %>
-                  <li><%= error %></li>
-                  <% end %>
-                </ul>
-              </div>
-              <% end %>
             </li>
+
+            <% if current_user && current_user.id == @farm.user_id %>
+
+            <%= form_for @new_market do |f| %>
+
+            <% if f.object.errors.any? %>
+            <div class="alert alert-danger">
+              <strong>The following errors prevented saving:</strong>
+              <ul>
+                <% f.object.errors.full_messages.each do |error| %>
+                <li><%= error %></li>
+                <% end %>
+              </ul>
+            </div>
+            <% end %>
+
             <li class="list-group-item">
               <div class="form-group">
                 <%= f.label :name %>
@@ -135,18 +182,20 @@
               <% end %>
               <br>
             </li>
+            <% end %>
+
           </ul>
         </div>
       </div>
     </div>
   </div>
-  </div>
+</div>
 
 
 
-  <%= javascript_tag do %>
-    window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>, id: <%= @farm.id %>}
-    window.markets = <%= @market_data %>
-  <% end %>
+<%= javascript_tag do %>
+window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>, id: <%= @farm.id %>}
+window.markets = <%= @market_data %>
+<% end %>
 
-  <script async defer src="//maps.google.com/maps/api/js?key=AIzaSyC7a1ObkesRP36iQHZSe5q1TFxtiyXaJJI&callback=initMap"></script>
+<script async defer src="//maps.google.com/maps/api/js?key=AIzaSyC7a1ObkesRP36iQHZSe5q1TFxtiyXaJJI&callback=initMap"></script>
