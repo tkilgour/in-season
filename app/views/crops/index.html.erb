@@ -42,22 +42,6 @@
               </div>
               <% end %>
 
-            <%= f.hidden_field :default_image, :value => '' %>
-            <%= f.hidden_field :farm_id, :value => params[:farm_id] %>
-            <%= f.hidden_field :availability, :value => true %>
-
-            <div class="col-md-6">
-              <% if f.object.errors.any? %>
-              <div class="alert alert-danger">
-                <strong>The following errors prevented saving:</strong>
-                <ul>
-                  <% f.object.errors.full_messages.each do |error| %>
-                  <li><%= error %></li>
-                  <% end %>
-                </ul>
-              </div>
-              <% end %>
-
               <div class='form-group'>
                 <label for="autocomplete-input">Name</label>
                 <input name="crop[name]" type="text" id="autocomplete-crop-name" class="autocomplete" placeholder="What's the name of the crop?">

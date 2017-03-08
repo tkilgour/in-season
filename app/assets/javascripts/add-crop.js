@@ -32,7 +32,7 @@ $(document).on('turbolinks:load', function() {
               query: e.target.innerText
             },
             success: function(selectedCrop) {
-              $('#crop_default_image').val(selectedCrop.image_url);
+              $('#crop_default_image').attr('value', selectedCrop.image_url);
               $('#default_crop_image').attr('src', selectedCrop.image_url).show();
             }
           });
