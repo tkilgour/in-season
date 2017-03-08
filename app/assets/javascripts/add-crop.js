@@ -1,12 +1,6 @@
 
 
-$(document).ready(function() {
-
-  $('.datepicker').pickadate({
-    selectMonths: true,
-    selectYears: 15
-  });
-});
+$(document).on('turbolinks:load', function() {
 
   $('input.autocomplete').autocomplete({
     data: {
@@ -16,3 +10,9 @@ $(document).ready(function() {
     },
     limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
   });
+
+    $('.datepicker').pickadate({
+    selectMonths: true,
+    selectYears: 15
+  });
+});

@@ -69,6 +69,8 @@ $(document).on('turbolinks:load', function() {
 
   $('select').material_select();
 
+  $('.modal').modal();
+
   $(".lever").on('click', function() {
     $("#csa_availability_checked_true").slideToggle('300');
   })
