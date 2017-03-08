@@ -1,13 +1,13 @@
 <nav class="green">
-   <div class="nav-wrapper">
-     <div class="col s12">
-       <a href="/farms/<%= @farm.id %>" class="breadcrumb"><%= @farm.name %></a>
-       <a href="/farms/<%= @farm.id %>/boxes" class="breadcrumb">CSA Subscription Options</a>
-       <a class="breadcrumb"><%= @box.size.capitalize %> Box</a>
-       <a href="/farms/<%= @farm.id %>/cart" class="waves-effect waves-light btn right valign white black-text">My Cart (<%= cart.size %>)</a>
-     </div>
-   </div>
- </nav>
+  <div class="nav-wrapper">
+    <div class="col s12">
+      <a href="/farms/<%= @farm.id %>" class="breadcrumb"><%= @farm.name %></a>
+      <a href="/farms/<%= @farm.id %>/boxes" class="breadcrumb">CSA Subscription Options</a>
+      <a class="breadcrumb"><%= @box.size.capitalize %> Box</a>
+      <a href="/farms/<%= @farm.id %>/cart" class="waves-effect waves-light btn right valign white black-text">My Cart (<%= cart.size %>)</a>
+    </div>
+  </div>
+</nav>
 
       <div class="row">
         <div class="col l6 offset-l3">
