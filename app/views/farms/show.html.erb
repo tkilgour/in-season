@@ -15,7 +15,7 @@
           </li>
           <div class="card-content grey-text text-darken-1">
             <li>
-              <h5><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :farmer, :as => :input, placeholder: "Who are your farmers?",  ok_button: 'Save', cancel_button: 'Cancel' %>
+              <h5><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :farmer, :as => :input, placeholder: "Who are your farmers?",  ok_button: 'Save', cancel_button: 'Cancel', class: 'edit-inline' %>
               </h5>
             </li>
           </div>
@@ -65,7 +65,7 @@
           </div>
           <br>
           <p>
-            <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :about_farm, :as => :input, type: :textarea, :placeholder => 'Tell us about your farm!', ok_button: 'Save', cancel_button: 'Cancel' %>
+            <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :about_farm, :as => :input, type: :textarea, :placeholder => 'Tell us about your farm!', ok_button: 'Save', cancel_button: 'Cancel', class: 'edit-inline' %>
           </p>
         </div>
         <div class="card-action">
@@ -91,7 +91,7 @@
           <br>
           <p>
             Our Address:
-            <h5><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :address, :as => :input, type: :textarea, :placeholder => "What is your farm's address?", ok_button: 'Save', cancel_button: 'Cancel' %></h5>
+            <h5><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :address, :as => :input, type: :textarea, :placeholder => "What is your farm's address?", ok_button: 'Save', cancel_button: 'Cancel', class: 'edit-inline' %></h5>
           </p>
 
           <div class="divider">
