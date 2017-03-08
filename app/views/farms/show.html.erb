@@ -2,8 +2,8 @@
     <div class="parallax"><img src=<%=@farm.banner_image%>></div>
   </div>
 
-  <div class="section white">
-    <div class="row valign-wrapper">
+  <div class="profile section white row">
+    <!-- <div class="row valign-wrapper"> -->
       <div class="profile-image col l2 offset-l1 valign">
         <img alt="" src=<%=@farm.profile_image%> class="circle">
       </div>
@@ -28,9 +28,7 @@
         <img src="http://www.kidneycoach.com/wp-content/uploads/2012/12/Optimized-HiRes.jpg">
       </div>
 
-    </div>
-    <div class="divider col l10 offset-l1">
-    </div>
+    <!-- </div> -->
       <div class="row">
         <div class="banner-update col l3 offset-l3">
           <% if current_user && current_user.id == @farm.user_id %>
@@ -43,19 +41,22 @@
           <% end %>
         </div>
       </div>
+<nav class="green">
+      <a class="breadcrumb">What's available now?</a>
+      <a href="/farms/<%= @farm.id %>/crops" class="btn right valign grey lighten-4 black-text">See All Our Crops</a>
+</nav>
     </div>
 
-<div class="container">
-    <div class="crops">
+
         <div class="carousel">
-          <h3 align="center">What's available now?</h3>
             <% @available_crops.each do |c| %>
               <%= render 'available_crop_preview', crop: c, carousel_link: @available_crops.index(c)+2 %>
             <% end %>
         </div>
-        <h5 style="margin-top:-20px;margin-bottom:60px" class="center"><%= link_to 'See All Our Crops', "/farms/#{@farm.id}/crops", data: { turbolinks: false } %></h5>
-    </div>
 
+
+
+<div class="container">
   <div class="row">
     <div class="col m6">
       <div class="card blue-grey lighten-5">
@@ -140,7 +141,7 @@
       </div>
     </div>
   </div>
-  </div>
+</div>
 
 
 

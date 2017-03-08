@@ -1,15 +1,19 @@
+<nav class="green">
+  <a href="/farms/<%= @farm.id %>" class="breadcrumb"><%= @farm.name %></a>
+  <a class="breadcrumb">Order History</a>
+</nav>
 
 <div class="container">
   <% if current_user %>
 
     <% if current_user.is_farmer %>
-      <h3>Hi, <%= current_user.first_name %>, here are your pending orders:</h3>
+      <h3>Here are your pending orders:</h3>
         <table class="divided highlight">
 
           <thead>
             <tr>
-                <th data-field="id">Order Number</th>
-                <th data-field="name">Order Total</th>
+              <th data-field="id">Order Number</th>
+              <th data-field="name">Order Total</th>
             </tr>
           </thead>
 

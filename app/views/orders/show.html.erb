@@ -1,52 +1,56 @@
+<nav class="green">
+  <a href="/users/<%= @order.user_id %>/orders" class="breadcrumb">See Your Order History</a>
+</nav>
+
 <div class="container">
 
-<header class="page-header">
-  <h5><%= link_to user_orders_path(@order.user_id) do%> See Your Order History <%end%></h5>
-</header>
+  <section class="orders-show">
 
-<section class="orders-show">
-  <header class="page-header"></header>
-    <h4>Order #<%= @order.id %></h4>
-  </header>
-  <div class="order-summary jumbotron">
-    <h5>
-      <p>
-      Thank you for your order,
-      <i><%= User.find(@order.user_id).first_name %></i>!
-      </p>
-    </h5>
-    <div class="panel panel-default items">
-      <table class="table bordered">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Subscription</th>
-            <th>Unit Price</th>
-            <th>Quantity</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @order_total = 0 %>
-          <% @order.order_items.each do |i| %>
-            <%= render 'item', box: i.box, quantity: i.quantity %>
-          <% end %>
-        </tbody>
-        <tfoot>
-          <tr>
-            <th colspan="4">
-              TOTAL:
-            </th>
-            <th>
-              <%= number_to_currency(@order_total) %>
-            </th>
-          </tr>
-        </tfoot>
-      </table>
+    <header class="page-header"></header>
+      <h4>Order #<%= @order.id %></h4>
+    </header>
+
+    <div class="order-summary jumbotron">
+      <h5>
+        <p>
+        Thank you for your order,
+        <i><%= User.find(@order.user_id).first_name %></i>!
+        </p>
+      </h5>
+      <div class="panel panel-default items">
+        <table class="table bordered">
+          <thead>
+            <tr>
+              <th></th>
+              <th style="width: 600px;">Subscription</th>
+              <th>Unit Price</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @order_total = 0 %>
+            <% @order.order_items.each do |i| %>
+              <%= render 'item', box: i.box, quantity: i.quantity %>
+            <% end %>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="4">
+                TOTAL:
+              </th>
+              <th>
+                <%= number_to_currency(@order_total) %>
+              </th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
-  </div>
-  <p>
-  <%= link_to "Continue Shopping", root_path, class: 'btn btn green' %>
-  </p>
 
-</section>
+    <p>
+    <%= link_to "Continue Shopping", root_path, class: 'btn btn green' %>
+    </p>
+
+  </section>
+</div>

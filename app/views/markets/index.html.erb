@@ -1,12 +1,15 @@
+<nav class="green">
+  <a class="breadcrumb">All Our Farms</a>
+</nav>
 
 <div class="container">
-  <h2>All Our Farms</h2>
+  <!-- <h2>All Our Farms</h2> -->
   <table class="bordered highlight">
     <thead>
       <tr>
         <th data-field="id"><h6>Farm</h6></th>
         <th data-field="name"><h6>Farmers</h6></th>
-        <th data-field="price"><h6>Bio</h6></th>
+        <th data-field="price"><h6>Address</h6></th>
       </tr>
     </thead>
 
@@ -17,7 +20,7 @@
           <h5><a href="/farms/<%= farm.id %>"><%= farm.name %></a></h5>
         </td>
         <td>
-          <h5><%= farm.farmer %></h5>
+          <h6><%= farm.farmer %></h6>
         </td>
         <td>
           <h6><%= farm.address %></h6>

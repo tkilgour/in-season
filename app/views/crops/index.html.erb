@@ -1,15 +1,20 @@
+<nav class="green">
+  <a href="/farms/<%= @farm.id %>" class="breadcrumb"><%= @farm.name %></a>
+  <a class="breadcrumb">Crops</a>
+</nav>
+
 <div class="container">
   <div class="row">
 
-      <div class="info">
-        <div class="avatar col l3">
-          <img alt="" src=<%= @farm.profile_image %> class="circle">
-        </div>
-        <div class="col l5">
-          <h2><%= link_to @farm.name, farm_path(@farm.id) %></h2>
-          <h5><%= @farm.farmer %></h5>
-        </div>
+    <div class="info">
+      <div class="avatar col l3">
+        <img alt="" src=<%= @farm.profile_image %> class="circle">
       </div>
+      <div class="col l5">
+        <h2><%= link_to @farm.name, farm_path(@farm.id) %></h2>
+        <h5><%= @farm.farmer %></h5>
+      </div>
+    </div>
 
   </div>
 </div>
@@ -35,7 +40,7 @@
                 <strong>The following errors prevented saving:</strong>
                 <ul>
                   <% f.object.errors.full_messages.each do |error| %>
-                  <li><%= error %></li>
+                    <li><%= error %></li>
                   <% end %>
                 </ul>
               </div>
@@ -59,15 +64,15 @@
 
 
             <div class="col-md-6">
-             <div class="row">
-               <div class='col-xs-7 col-sm-5 col-md-6 col-lg-6 col-lg-offset-2' id="crop_img_insert">
-                 <img id='crop_img'>
-                 <%= f.file_field :image %>
-               </div>
-             </div>
-           </div>
+              <div class="row">
+                <div class='col-xs-7 col-sm-5 col-md-6 col-lg-6 col-lg-offset-2' id="crop_img_insert">
+                  <img id='crop_img'>
+                  <%= f.file_field :image %>
+                </div>
+              </div>
+            </div>
 
-          </div>
+        </div>
 
           <div class="card-action center">
             <%= f.submit 'Create Crop', class: 'btn btn green' %>
@@ -92,7 +97,7 @@
 
           <div class="row">
             <% @available_crops.each do |c| %>
-            <%= render 'available_crops_preview', crop: c %>
+              <%= render 'available_crops_preview', crop: c %>
             <% end %>
 
           </div>
@@ -112,7 +117,7 @@
 
           <div class="row">
             <% @upcoming_crops.each do |c| %>
-            <%= render 'upcoming_crops_preview', crop: c %>
+              <%= render 'upcoming_crops_preview', crop: c %>
             <% end %>
 
           </div>
@@ -132,7 +137,7 @@
 
           <div class="row">
             <% @distant_crops.each do |c| %>
-            <%= render 'distant_crops_preview', crop: c %>
+              <%= render 'distant_crops_preview', crop: c %>
             <% end %>
 
           </div>
@@ -152,7 +157,7 @@
 
           <div class="row">
             <% @past_crops.each do |c| %>
-            <%= render 'past_crops_preview', crop: c %>
+              <%= render 'past_crops_preview', crop: c %>
             <% end %>
 
           </div>
@@ -160,16 +165,4 @@
       </div>
     </div>
   </div>
-</div>
-
-
-
-
-
-
-
-
-
-  </div>
-</div>
 </div>
