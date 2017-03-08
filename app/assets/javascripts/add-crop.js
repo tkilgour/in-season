@@ -22,6 +22,7 @@ $(document).on('turbolinks:load', function() {
         $('#autocomplete-crop-name').autocomplete({
           data: cropNames
         });
+        
         $('.autocomplete-content li').on('click', function(e) {
           $.ajax({
             type: 'POST',
@@ -38,7 +39,5 @@ $(document).on('turbolinks:load', function() {
         })
       }
     });
-
   });
-
 });

@@ -13,7 +13,7 @@ class CropsController < ApplicationController
 
   def create
     @crop = Crop.new(crop_params)
-    @crop.save
+    @crop.save!
     redirect_to :back
   end
 

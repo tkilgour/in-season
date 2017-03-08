@@ -81,4 +81,40 @@ $(document).on('turbolinks:load', function() {
       $('#location-progress').hide();
     });
   })
+
+  $('#autocomplete-market-name').keyup(function() {
+    $.ajax({
+      type: 'POST',
+      url: '/markets/search',
+      dataType: 'json',
+      data: {
+        query: $('#autocomplete-market-name').val()
+      },
+      success: function(data){
+        var marketNames = {};
+        for (market in data) {
+          marketNames[data[market].name] = null
+        }
+
+        $('#autocomplete-market-name').autocomplete({
+          data: marketNames
+        });
+
+        $('.autocomplete-content li').on('click', function(e) {
+          $.ajax({
+            type: 'POST',
+            url: '/markets/search_name',
+            dataType: 'json',
+            data: {
+              query: e.target.innerText
+            },
+            success: function(selectedMarket) {
+              $('#market_address').val(selectedMarket.parsed_address);
+              $('.market-day-dropdown input').val(selectedMarket.market_day)
+            }
+          });
+        })
+      }
+    });
+  });
 });

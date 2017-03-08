@@ -29,6 +29,8 @@ Rails.application.routes.draw do
   get '/search' => 'farms#search'
   post '/crops/search' => 'crops#search'
   post '/crops/search_name' => 'crops#crop_by_name'
+  post 'markets/search' => 'markets#search'
+  post 'markets/search_name' => 'markets#market_by_name'
 
   post '/markets/:id/delete' => 'markets#destroy'
 

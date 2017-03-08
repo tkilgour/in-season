@@ -1,15 +1,13 @@
 class MarketsController < ApplicationController
   def create
     @farm = Farm.find(params[:market][:farm_id])
-    @farm_market_exists = @farm.markets.where(name: params[:market][:name], parsed_address: params[:market][:address], market_day: params[:market][:market_day]).exists?
-    @market_exists = Market.where(name: params[:market][:name], parsed_address: params[:market][:address], market_day: params[:market][:market_day]).exists?
-
-    binding.pry
+    @farm_market_exists = @farm.markets.where(name: params[:market][:name], parsed_address: params[:market][:address]).exists?
+    @market_exists = Market.where(name: params[:market][:name], parsed_address: params[:market][:address]).exists?
 
     if !@farm_market_exists && !@market_exists
       @market = Market.new(market_params)
     elsif !@farm_market_exists && @market_exists
-      @market = Market.where(name: params[:market][:name], parsed_address: params[:market][:address], market_day: params[:market][:market_day]).first
+      @market = Market.where(name: params[:market][:name], parsed_address: params[:market][:address]).first
     else
       redirect_to :back
     end
@@ -35,6 +33,20 @@ class MarketsController < ApplicationController
 
   def show
     @market = Market.find(params[:id])
+  end
+
+  def search
+    @markets = Market.where("name ilike ?", "%#{params[:query]}%").take(10).to_json
+    respond_to do |format|
+      format.json { render :json => @markets}
+    end
+  end
+
+  def market_by_name
+    @market = Market.where(name: params[:query]).first.to_json
+    respond_to do |format|
+      format.json { render :json => @market }
+    end
   end
 
   private
