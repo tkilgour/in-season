@@ -27,7 +27,7 @@ function initMap() {
       zIndex: 1
     });
 
-    var infoWindowContent = `<strong><a href="/markets/${market.id}">${market.name}</a></strong><br>${market.address}<br>`
+    var infoWindowContent = `<strong>${market.name}</strong><br>${market.address}<br>`
 
     if (window.admin_check) {
       infoWindowContent += `<form action="/markets/${market.id}/delete" method="post">

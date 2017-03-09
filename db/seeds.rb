@@ -21,7 +21,7 @@ user_one = User.create!({
 
 farm_one = Farm.create!({
   name: 'Thiessen Farms',
-  farmer: 'Ron & Lorie & Amy Thiessen',
+  farmer: 'Ron, Lorie & Amy Thiessen',
   address: '4132 15th Street, Jordan Station, Ontario, L0R 1S0',
   about_farm: "Thiessen Farms (est. 1947) is a small family farm growing vegetables, herbs, raspberries & blackberries.
                 Our goal is to grow healthy produce that tastes great & looks great too!/n
@@ -117,7 +117,7 @@ user_three = User.create!({
 
 farm_three = Farm.create!({
   name: 'Round the Bend Farm',
-  farmer: 'Brian and Sue Feddema',
+  farmer: 'Brian & Sue Feddema',
   address: '16225 Jane Street Kettleby, Ontario, Canada L7B 0G3',
   about_farm: "Round the Bend Farm is a working family farm. We sell fresh, naturally grown turkeys, as well as seasonal fruits, vegetables  and flowers. We have been in continuous operation since 1986. We cordially invite you to come visit us, in season, and bring the family. For 30 years we have been growing vegetables and fruits on our farm. We are stewards of the land and believe healthy farming practices makes for healthy soil which in turn makes for healthy vegetables and fruits. Come experience what fresh really means, join our CSA today!",
   csa_availability: true,
@@ -9531,39 +9531,100 @@ def scrape_wikipedia_images(wikipedia_link)
   final_image_url
 end
 
-crops.each do |crop|
-  new_crop = StockCrop.new({
-    name: crop[:name].capitalize,
-    en_wikipedia_url: crop[:en_wikipedia_url],
-    growstuff_id: crop[:id],
-    image_url: scrape_wikipedia_images(crop[:en_wikipedia_url])
-  })
-  new_crop.save!
-end
+# crops.each do |crop|
+#   new_crop = StockCrop.new({
+#     name: crop[:name].capitalize,
+#     en_wikipedia_url: crop[:en_wikipedia_url],
+#     growstuff_id: crop[:id],
+#     image_url: scrape_wikipedia_images(crop[:en_wikipedia_url])
+#   })
+#   new_crop.save!
+# end
 
 Crop.destroy_all
 
 farm_crops = [
   {
-    farm_id: Farm.first.id,
     name: "Yam",
-    description: "Iure libero unde numquam ab voluptatem. Sed error aut pariatur dolorum. Corrupti labore et consequuntur explicabo recusandae officiis et.",
+    description: "Yam is the common name for some plant species in the genus Dioscorea (family Dioscoreaceae) that form edible tubers. Yams are perennial herbaceous vines cultivated for the consumption of their starchy tubers in Asia, Africa, Central and South America, and Oceania. The tubers themselves are also called \"yams\".",
     harvest_date: "2017-11-03",
-    availability: false,
-    default_image: "https://en.wikipedia.org/wiki/Yam_(vegetable)#/media/File:YamsatBrixtonMarket.jpg"
+    availability: true,
+    default_image: "http://www.clipartkid.com/images/805/yam-color-sorting-OzQsfp-clipart.jpg"
   },
   {
-    farm_id: Farm.first.id,
-    name: "Tomacco",
-    description: "Iure libero unde numquam ab voluptatem. Sed error aut pariatur dolorum. Corrupti labore et consequuntur explicabo recusandae officiis et.",
-    harvest_date: "2017-02-03",
+    name: "Asparagus",
+    description: "Asparagus, or garden asparagus, scientific name Asparagus officinalis, is a spring vegetable, a flowering perennial plant species in the genus Asparagus.",
+    harvest_date: "2017-06-15",
     availability: true,
-    default_image: "https://static.simpsonswiki.com/images/0/0f/E-I-E-I-%28Annoyed_Grunt%29.png"
+    default_image: "https://www.degroot-inc.com/images/asparagus_jerseygiant.jpg"
+  },
+  {
+    name: "Tomato",
+    description: "The tomato is the edible fruit of Solanum lycopersicum, commonly known as a tomato plant, which belongs to the nightshade family, Solanaceae.",
+    harvest_date: "2017-07-15",
+    availability: true,
+    default_image: "http://www.boldsky.com/img/2012/07/27-grow-tomato-270712.jpg"
+  },
+  {
+    name: "Pumpkin",
+    description: "A pumpkin is a cultivar of a squash plant, most commonly of Cucurbita pepo, that is round, with smooth, slightly ribbed skin, and deep yellow to orange coloration. The thick shell contains the seeds and pulp.",
+    harvest_date: "2016-10-31",
+    availability: false,
+    default_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Pumpkins.jpg/350px-Pumpkins.jpg"
+  },
+  {
+    name: "Zucchini",
+    description: "Zucchini or courgette is a summer squash which can reach nearly a meter in length, but is usually harvested immature at 15–25 cm. In the British Isles, a fully grown zucchini is referred to as a marrow.",
+    harvest_date: "2017-08-01",
+    availability: true,
+    default_image: "http://news.aces.edu/wp-content/uploads/sites/2/2016/02/Cucurbita_pepo_Zucchini_Green_Squash_9-2014_by_Mike_Mozart_of_TheToyChannel_and_JeepersMedia_on_YouTube_-Green_-Squash.jpg"
+  },
+  {
+    name: "Carrots",
+    description: "The carrot is a root vegetable, usually orange in colour, though purple, black, red, white, and yellow cultivars exist. Carrots are a domesticated form of the wild carrot, Daucus carota, native to Europe and southwestern Asia.",
+    harvest_date: "2017-02-01",
+    availability: true,
+    default_image: "http://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/images/carrots.jpg?itok=_nIMWR5y"
+  },
+  {
+    name: "Kale",
+    description: "Kale or leaf cabbage refers to certain vegetable cultivars of the plant species Brassica oleracea. A kale plant has green or purple leaves and the central leaves do not form a head.",
+    harvest_date: "2017-02-15",
+    availability: true,
+    default_image: "http://www.elitemillennial.com/wp-content/uploads/2014/02/Kale-2.jpg"
+  },
+  {
+    name: "Potatoes",
+    description: "The potato is a starchy, tuberous crop from the perennial nightshade Solanum tuberosum. The word \"potato\" may refer either to the plant itself or to the edible tuber.",
+    harvest_date: "2017-02-15",
+    availability: true,
+    default_image: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Patates.jpg"
+  },
+  {
+    name: "Spinach",
+    description: "Spinach is an edible flowering plant in the family Amaranthaceae native to central and western Asia. Its leaves are eaten as a vegetable. It is an annual plant growing to 30 cm tall. Spinach may survive over winter in temperate regions.",
+    harvest_date: "2017-03-15",
+    availability: true,
+    default_image: "https://maxpull-gdvuch3veo.netdna-ssl.com/wp-content/uploads/2009/03/spinach-plant1.jpg"
+  },
+  {
+    name: "Broccoli",
+    description: "Broccoli is an edible green plant in the cabbage family whose large flowering head is eaten as a vegetable.",
+    harvest_date: "2017-03-15",
+    availability: true,
+    default_image: "https://bonnieplants.com/wp-content/uploads/2011/10/broccoli-head-lo.jpg"
+  },
+  {
+    name: "Onions",
+    description: "The onion, also known as the bulb onion or common onion, is a vegetable and is the most widely cultivated species of the genus Allium.",
+    harvest_date: "2017-02-15",
+    availability: true,
+    default_image: "https://i0.wp.com/bonnieplants.com/wp-content/uploads/white-sweet-spanish-onion.jpg?resize=512%2C512&ssl=1"
   }
 ]
 
 farm_crops.each do |crop|
-  Crop.create({
+  farm_one.crops.create!({
     farm_id: crop[:farm_id],
     name: crop[:name],
     description: crop[:description],
@@ -9571,12 +9632,49 @@ farm_crops.each do |crop|
     availability: crop[:availability],
     default_image: crop[:default_image]
   })
+  farm_two.crops.create!({
+    farm_id: crop[:farm_id],
+    name: crop[:name],
+    description: crop[:description],
+    harvest_date: crop[:harvest_date],
+    availability: crop[:availability],
+    default_image: crop[:default_image]
+  })
+  farm_three.crops.create!({
+    farm_id: crop[:farm_id],
+    name: crop[:name],
+    description: crop[:description],
+    harvest_date: crop[:harvest_date],
+    availability: crop[:availability],
+    default_image: crop[:default_image]
+  })
+
 end
 
 Market.destroy_all
 
-Farm.find(Farm.first.id).markets.create(
-    name: 'Nü Farmz Marché',
-    address: '46 Spadina Ave, Toronto',
-    market_day: 'Saturday'
+farm_one.markets.create(
+  name: 'Nü Farmz Marché',
+  address: '46 Spadina Ave, Toronto',
+  market_day: 'Thursday'
 )
+
+farm_one.markets.create(
+  name: 'Hamilton Farmers Market',
+  address: '35 York Blvd, Hamilton, ON',
+  market_day: 'Tuesday'
+)
+
+farm_two.markets.create(
+  name: 'Guelph Farmers Market',
+  address: '4 Gordon St, Guelph',
+  market_day: 'Saturday'
+)
+
+farm_three.markets.create(
+  name: 'The Junction Farmers Market',
+  address: '2960 Dundas St W, Toronto',
+  market_day: 'Saturday'
+)
+
+farm_three.markets << Market.where(name: 'Nü Farmz Marché').first
