@@ -9531,15 +9531,15 @@ def scrape_wikipedia_images(wikipedia_link)
   final_image_url
 end
 
-# crops.each do |crop|
-#   new_crop = StockCrop.new({
-#     name: crop[:name].capitalize,
-#     en_wikipedia_url: crop[:en_wikipedia_url],
-#     growstuff_id: crop[:id],
-#     image_url: scrape_wikipedia_images(crop[:en_wikipedia_url])
-#   })
-#   new_crop.save!
-# end
+crops.each do |crop|
+  new_crop = StockCrop.new({
+    name: crop[:name].capitalize,
+    en_wikipedia_url: crop[:en_wikipedia_url],
+    growstuff_id: crop[:id],
+    image_url: scrape_wikipedia_images(crop[:en_wikipedia_url])
+  })
+  new_crop.save!
+end
 
 Crop.destroy_all
 
