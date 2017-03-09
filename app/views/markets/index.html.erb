@@ -3,30 +3,37 @@
 </nav>
 
 <div class="container">
-  <!-- <h2>All Our Farms</h2> -->
-  <table class="bordered highlight">
-    <thead>
-      <tr>
-        <th data-field="id"><h6>Farm</h6></th>
-        <th data-field="name"><h6>Farmers</h6></th>
-        <th data-field="price"><h6>Address</h6></th>
-      </tr>
-    </thead>
+  <div class="row">
+    <div class="card white">
+      <div class="card-content black-text">
 
-    <tbody>
-      <tr>
-        <% @farms.map do |farm| %>
-        <td>
-          <h5><a href="/farms/<%= farm.id %>"><%= farm.name %></a></h5>
-        </td>
-        <td>
-          <h6><%= farm.farmer %></h6>
-        </td>
-        <td>
-          <h6><%= farm.address %></h6>
-        </td>
-      </tr>
-    </tbody>
-    <% end %>
-  </table>
+        <table class="bordered highlight">
+          <thead>
+            <tr>
+              <th data-field="id"><h6>Farm</h6></th>
+              <th data-field="name"><h6>Farmers</h6></th>
+              <th data-field="price"><h6>Address</h6></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <% @farms.map do |farm| %>
+              <td>
+                <h5><a href="/farms/<%= farm.id %>"><%= farm.name %></a></h5>
+              </td>
+              <td>
+                <h6><%= farm.farmer %></h6>
+              </td>
+              <td>
+                <h6><%= farm.address %></h6>
+              </td>
+            </tr>
+          </tbody>
+          <% end %>
+        </table>
+
+      </div>
+    </div>
+  </div>
 </div>

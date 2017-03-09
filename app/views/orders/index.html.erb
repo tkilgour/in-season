@@ -1,34 +1,40 @@
 <nav class="green">
-  <a href="/farms/<%= @farm.id %>" class="breadcrumb"><%= @farm.name %></a>
   <a class="breadcrumb">Order History</a>
 </nav>
 
+
 <div class="container">
+<div class="row">
   <% if current_user %>
 
     <% if current_user.is_farmer %>
-      <h3>Here are your pending orders:</h3>
-        <table class="divided highlight">
+    <div class="card white">
+      <div class="card-content black-text">
+        <span class="card-title"><h5>Here are your pending orders:</h5></span>
+          <table class="divided highlight">
 
-          <thead>
-            <tr>
-              <th data-field="id">Order Number</th>
-              <th data-field="name">Order Total</th>
-            </tr>
-          </thead>
+            <thead>
+              <tr>
+                <th data-field="id">Order Number</th>
+                <th data-field="name">Order Total</th>
+              </tr>
+            </thead>
 
-          <tbody>
-            <% @farmer_orders.each do |order| %>
+            <tbody>
+              <% @farmer_orders.each do |order| %>
 
-            <tr>
-              <td><a href="/users/<%=current_user.id%>/orders/<%=order.id%>">#<%= order.id %></a></td>
-              <td><%= number_to_currency(order.total_price) %></td>
-            </tr>
+              <tr>
+                <td><a href="/users/<%=current_user.id%>/orders/<%=order.id%>">#<%= order.id %></a></td>
+                <td><%= number_to_currency(order.total_price) %></td>
+              </tr>
 
-            <% end %>
-          </tbody>
+              <% end %>
+            </tbody>
 
-        </table>
+          </table>
+        </div>
+      </div>
+    </div>
 
 
     <% else %>

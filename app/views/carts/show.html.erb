@@ -9,67 +9,64 @@
  </nav>
 
 <section class="cart-show">
-  <div class="container">
+  <div class="container row">
+    <div class="card white">
+      <div class="card-content black-text">
+        <span class="card-title"><h3>My Cart</h3></span>
 
-  <header class="page-header">
-    <h2>My Cart</h2>
-  </header>
+        <% if cart.size == 0 %>
 
-  <% if cart.size == 0 %>
+          <div class="order-summary">
+           Your cart is empty.
+          </div>
+          <br>
+          <%= link_to "Back to Subscription Options", farm_boxes_path(@farm.id), class: 'btn btn green' %>
 
-  <div class="order-summary">
-   Your cart is empty.
-  </div>
-  <br>
-  <%= link_to "Back to Subscription Options", farm_boxes_path(@farm.id), class: 'btn btn green' %>
+        <% else %>
 
-  <% else %>
+          <table class="bordered">
+            <thead>
+              <tr>
+                <th data-field="id" style="width: 600px;">Box</th>
+                <th data-field="unit_price">Unit Price</th>
+                <th data-field="quantity">Quantity</th>
+                <th data-field="price">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @cart_total = 0 %>
+              <% cart.each do |box_id, details| %>
+                <%= render 'item', box_id: box_id, details: details %>
+              <% end %>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="3">
+                  TOTAL:
+                </th>
+                <th>
+                  <%= number_to_currency(@cart_total) %>
+                </th>
+              </tr>
+            </tfoot>
+          </table>
 
-    <table class="bordered">
-      <thead>
-        <tr>
-          <th data-field="id" style="width: 600px;">Box</th>
-          <th data-field="unit_price">Unit Price</th>
-          <th data-field="quantity">Quantity</th>
-          <th data-field="price">Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @cart_total = 0 %>
-        <% cart.each do |box_id, details| %>
-          <%= render 'item', box_id: box_id, details: details %>
+          <%= form_tag farm_orders_path do %>
+            <script
+              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-amount="<%= @cart_total * 100 %>"
+              data-name="In Season"
+              data-description="Your CSA Order"
+              data-locale="auto"
+              data-email="<%= current_user.email %>"
+              data-currency="cad">
+            </script>
+          <% end %>
+
         <% end %>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th colspan="3">
-            TOTAL:
-          </th>
-          <th>
-            <%= number_to_currency(@cart_total) %>
-          </th>
-        </tr>
-      </tfoot>
-    </table>
 
-
-
-
-      <%= form_tag farm_orders_path do %>
-        <script
-          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-amount="<%= @cart_total * 100 %>"
-          data-name="In Season"
-          data-description="Your CSA Order"
-          data-locale="auto"
-          data-email="<%= current_user.email %>"
-          data-currency="cad">
-        </script>
-      <% end %>
-
-
-<% end %>
-
+      </div>
     </div>
+  </div>
 </section>
