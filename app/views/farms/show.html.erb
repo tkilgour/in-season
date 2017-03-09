@@ -10,19 +10,13 @@
 <div id="modal1" class="modal">
   <div class="modal-content">
     <h4>Edit Banner Image</h4>
-    <p>
       <%= form_for :farm, url: farm_update_banner_path(@farm) do |f| %>
-      <div class=>
         <%= f.file_field :banner_image, class: 'form-control' %>
-      </div>
-    </p>
+      <% end %>
   </div>
   <div class="modal-footer">
-    <a class=" modal-action modal-close waves-effect waves-green btn-flat">
-      <div>
-        <%= f.submit "Upload new picture" %>
-        <% end %>
-      </div>
+    <a id="upload-banner-button" class=" modal-action modal-close waves-effect waves-green btn-flat">
+      UPLOAD NEW PICTURE
     </a>
   </div>
 </div>
@@ -204,6 +198,13 @@
     window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>, id: <%= @farm.id %>}
     window.markets = <%= @market_data %>
     window.admin_check = <%= current_user && current_user.id == @farm.user_id %>
+
+    $(document).ready(function() {
+      $('#upload-banner-button').on('click', function(e) {
+        e.preventDefault();
+        $(this).parents('#modal1').find('form').submit();
+      })
+    })﻿
   <% end %>
 
 <script async defer src="//maps.google.com/maps/api/js?key=AIzaSyC7a1ObkesRP36iQHZSe5q1TFxtiyXaJJI&callback=initMap"></script>
