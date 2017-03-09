@@ -198,7 +198,7 @@
   <%= javascript_tag do %>
     window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>, id: <%= @farm.id %>}
     window.markets = <%= @market_data %>
-    window.admin_check = <%= current_user && current_user.id == @farm.user_id %>
+    window.admin_check = <%= (current_user && current_user.id == @farm.user_id) == true %>
 
     $(document).ready(function() {
       $('#upload-banner-button').on('click', function(e) {
