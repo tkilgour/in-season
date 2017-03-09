@@ -18,7 +18,9 @@
       <%= link_to remove_item_farm_cart_path(box_id: box_id), class: 'btn green', method: :delete do %>
       -
       <% end %>
-      <b><%= quantity %></b>
+      <div class="quantity_value">
+      <b> <%= quantity %> </b>
+      </div>
       <%= link_to add_item_farm_cart_path(box_id: box_id), class: 'btn green', method: :put do %>
       +
       <% end %>
