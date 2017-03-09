@@ -27,3 +27,21 @@
   height: auto;
   display: none;
 }
+
+.picker__date-display {
+  background-color:green;
+}
+.picker__weekday-display {
+  background-color:green;
+}
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+  background-color:green;
+}
+
+.btn-flat.picker__today, .btn-flat.picker__close {
+  color: green
+}
+
+.picker__day--today.picker__day--highlighted, .picker__day.picker__day--today {
+ color: #00cc00;
+}
