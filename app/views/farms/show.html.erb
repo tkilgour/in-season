@@ -35,7 +35,7 @@
         <li>
           <div>
             <% if current_user && current_user.id == @farm.user_id %>
-            <h2 class="edit-inline"><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :name, :as => :input, type: :textarea, placeholder: "What is the name of your farm?",  ok_button: 'Save', cancel_button: 'Cancel' %></h2>
+            <h2 class="edit-inline"><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :name, :as => :input, type: :textarea, placeholder: "What is the name of your farm?" %></h2>
             <% else %>
             <h2> <%= @farm.name %> </h2>
             <% end %>
@@ -46,7 +46,7 @@
           <li>
             <div>
               <% if current_user && current_user.id == @farm.user_id %>
-              <h5 class="edit-inline"><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :farmer, :as => :input, placeholder: "Who are your farmers?",  ok_button: 'Save', cancel_button: 'Cancel' %></h5>
+              <h5 class="edit-inline"><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :farmer, :as => :input, placeholder: "Who are your farmers?" %></h5>
               <% else %>
               <h5> <%= @farm.farmer %> </h5>
               <% end %>
@@ -90,7 +90,7 @@
           <p>
             <% if current_user && current_user.id == @farm.user_id %>
             <div class="edit-inline">
-              <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :about_farm, :as => :input, type: :textarea, :placeholder => 'Tell us about your farm!', ok_button: 'Save', cancel_button: 'Cancel' %>
+              <%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :about_farm, :as => :textarea, type: :textarea, :placeholder => 'Tell us about your farm!'%>
             </div>
             <% else %>
             <div>
@@ -121,7 +121,7 @@
             Our Address:
             <% if current_user && current_user.id == @farm.user_id %>
             <div class="edit-inline">
-              <h5><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :address, :as => :input, type: :textarea, :placeholder => "What is your farm's address?", ok_button: 'Save', cancel_button: 'Cancel'%></h5>
+              <h5><%= best_in_place_if (current_user && current_user.id == @farm.user_id), @farm, :address, :as => :textarea, type: :textarea, :placeholder => "What is your farm's address?"%></h5>
             </div>
             <% else %>
             <h5> <%= @farm.address %> </h5>
