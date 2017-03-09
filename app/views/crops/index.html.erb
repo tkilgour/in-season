@@ -1,15 +1,20 @@
+<nav class="green">
+  <a href="/farms/<%= @farm.id %>" class="breadcrumb"><%= @farm.name %></a>
+  <a class="breadcrumb">Crops</a>
+</nav>
+
 <div class="container">
   <div class="row">
 
-      <div class="info">
-        <div class="avatar col l3">
-          <img alt="" src=<%= @farm.profile_image %> class="circle">
-        </div>
-        <div class="col l5">
-          <h2><%= link_to @farm.name, farm_path(@farm.id) %></h2>
-          <h5><%= @farm.farmer %></h5>
-        </div>
+    <div class="info">
+      <div class="avatar col l3">
+        <img alt="" src=<%= @farm.profile_image %> class="circle">
       </div>
+      <div class="col l5">
+        <h2><%= @farm.name %></h2>
+        <h5><%= @farm.farmer %></h5>
+      </div>
+    </div>
 
   </div>
 </div>
@@ -36,7 +41,7 @@
                 <strong>The following errors prevented saving:</strong>
                 <ul>
                   <% f.object.errors.full_messages.each do |error| %>
-                  <li><%= error %></li>
+                    <li><%= error %></li>
                   <% end %>
                 </ul>
               </div>
@@ -68,7 +73,7 @@
              </div>
            </div>
 
-          </div>
+        </div>
 
           <div class="card-action center">
             <%= f.submit 'Create Crop', class: 'btn btn green' %>
@@ -88,12 +93,12 @@
     <div class="col m12">
       <div class="card grey lighten-5">
         <div class="card-content black-text">
-          <span class="card-title">Available Right This Instant</span>
-          <div class="divider"></div>
+          <span class="card-title">Available Right Now</span>
+          <div class="divider green"></div>
 
           <div class="row">
             <% @available_crops.each do |c| %>
-            <%= render 'available_crops_preview', crop: c %>
+              <%= render 'available_crops_preview', crop: c %>
             <% end %>
 
           </div>
@@ -109,11 +114,11 @@
       <div class="card grey lighten-5">
         <div class="card-content black-text">
           <span class="card-title">Meet you guys next week?</span>
-          <div class="divider"></div>
+          <div class="divider green"></div>
 
           <div class="row">
             <% @upcoming_crops.each do |c| %>
-            <%= render 'upcoming_crops_preview', crop: c %>
+              <%= render 'upcoming_crops_preview', crop: c %>
             <% end %>
 
           </div>
@@ -128,12 +133,12 @@
     <div class="col m12">
       <div class="card grey lighten-5">
         <div class="card-content black-text">
-          <span class="card-title">Keep an eye out, we're coming soon. Eventually.</span>
-          <div class="divider"></div>
+          <span class="card-title">Keep an eye out, we're coming. Eventually.</span>
+          <div class="divider green"></div>
 
           <div class="row">
             <% @distant_crops.each do |c| %>
-            <%= render 'distant_crops_preview', crop: c %>
+              <%= render 'distant_crops_preview', crop: c %>
             <% end %>
 
           </div>
@@ -148,12 +153,12 @@
     <div class="col m12">
       <div class="card grey lighten-5">
         <div class="card-content black-text">
-          <span class="card-title">You slowpoke! You missed us this year. Better luck next.</span>
-          <div class="divider"></div>
+          <span class="card-title">We've retired for the year.</span>
+          <div class="divider green"></div>
 
           <div class="row">
             <% @past_crops.each do |c| %>
-            <%= render 'past_crops_preview', crop: c %>
+              <%= render 'past_crops_preview', crop: c %>
             <% end %>
 
           </div>
@@ -161,16 +166,4 @@
       </div>
     </div>
   </div>
-</div>
-
-
-
-
-
-
-
-
-
-  </div>
-</div>
 </div>

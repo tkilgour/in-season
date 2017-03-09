@@ -1,6 +1,10 @@
+
+<nav class="green">
+  <a class="breadcrumb">Login</a>
+</nav>
+
 <div class="registration" id="registrationpatch">
   <div class="row" id="loginpatch">
-
 
     <div class="tractor">
       <div class="col m10 offset-m1 white">
@@ -8,12 +12,9 @@
       <div class="col l10 offset-l1">
         <h3>Trying to get back to your farm?</h3>
         <h5>Next tractor leaves in: <%= rand(25..45) %> seconds</h5>
-        <br>
-        <% if flash[:error] %>
-        <span>
-          <b>* <%= flash[:error] %> *</b>
-        </span>
-        <% end %>
+          <% flash.each do |message_type, message| %>
+              <%= javascript_tag "Materialize.toast('#{message}', 4000, 'red')" %>
+          <% end %>
       </div>
 
         <%= form_tag '/login' do %>
