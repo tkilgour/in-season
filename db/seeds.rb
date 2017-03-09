@@ -9677,4 +9677,4 @@ farm_three.markets.create(
   market_day: 'Saturday'
 )
 
-farm_three.markets << Market.where(name: 'Nü Farmz Marché').first
+'farm_three.markets << Market.where(name: 'Nü Farmz Marché').first

@@ -31,7 +31,7 @@ function initMap() {
 
     if (window.admin_check) {
       infoWindowContent += `<form action="/markets/${market.id}/delete" method="post">
-                              <input type="hidden" name="authenticity_token" value="XAVFVYh/fl/XQdMQ+CiG6d7Y35y7FvdN+FKROsNuvfuhY6DNBMn/cl4TDfk3oz7gRH3w3brDi0q9j3QrYEHdWA==">
+                              <input type="hidden" name="authenticity_token" value="fUpAryQUjWIksIVE1gs+jFjf9zMXZapGYzQyjoWgKRqqckvw5w/QvokuOs8odH8BDnJwr98QGj0a5CHRXqC7XQ==">
                               <input type="hidden" value=${farm.id} name="farm_id">
                               <input type="submit" value="Remove">
                             </form>`
