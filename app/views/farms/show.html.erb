@@ -56,6 +56,7 @@
         </div>
       </ul>
     </div>
+
     <div class="safety col l1 valign">
       <img src="http://www.jamacfoods.com/wp-content/uploads/2015/05/food-safety-badge.jpg">
     </div>
@@ -64,27 +65,29 @@
     </div>
 
   </div>
-  <div class="divider col l10 offset-l1">
-  </div>
 </div>
+
+<nav class="green">
+  <a class="breadcrumb">What's Available Now?</a>
+  <a href="/farms/<%= @farm.id %>/crops" class="waves-effect waves-light btn right valign white black-text">See All Our Crops</a>
+</nav>
+
+
 <div class="container">
   <div class="crops">
     <div class="carousel">
-      <h3 align="center">What's available now?</h3>
       <% @available_crops.each do |c| %>
       <%= render 'available_crop_preview', crop: c, carousel_link: @available_crops.index(c)+2 %>
       <% end %>
     </div>
   </div>
 
-
-<div class="container">
   <div class="row">
-    <div class="col m6">
+    <div class="col l6">
       <div class="card white">
         <div class="card-content black-text">
           <span class="card-title">About Us</span>
-          <div class="divider">
+          <div class="divider green">
           </div>
           <br>
           <p>
@@ -109,12 +112,11 @@
       </div>
     </div>
 
-
-    <div class="col m6">
+    <div class="col l6">
       <div class="card white">
         <div class="card-content black-text">
           <span class="card-title">Where are we located?</span>
-          <div class="divider">
+          <div class="divider green">
           </div>
           <br>
           <p>
@@ -127,9 +129,6 @@
             <h5> <%= @farm.address %> </h5>
             <% end %>
           </p>
-
-          <div class="divider">
-          </div>
 
           <ul class="list-group">
 
@@ -178,7 +177,6 @@
       </div>
     </div>
   </div>
-</div>
 
   <%= javascript_tag do %>
     window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>, id: <%= @farm.id %>}
