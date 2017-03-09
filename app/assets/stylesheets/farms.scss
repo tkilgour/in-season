@@ -71,7 +71,6 @@ body {
   height: 400px;;
 }
 
-
 #csa_availability_checked_true {
   display: none;
 }
@@ -96,6 +95,11 @@ body {
 }
 
 .profile.section {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.section .valign-wrapper {
   margin-top: 0px;
   margin-bottom: 0px;
 }
