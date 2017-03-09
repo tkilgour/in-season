@@ -23,8 +23,8 @@
             <tbody>
               <% @farmer_orders.each do |order| %>
 
-              <tr>
-                <td><a href="/users/<%=current_user.id%>/orders/<%=order.id%>">#<%= order.id %></a></td>
+              <tr>                
+                <td>#<%= order.id %> - <a href="/users/<%=current_user.id%>/orders/<%=order.id%>">View Order</a></td>
                 <td><%= number_to_currency(order.total_price) %></td>
               </tr>
 
