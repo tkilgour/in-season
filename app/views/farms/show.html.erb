@@ -133,8 +133,6 @@
 
           <ul class="list-group">
 
-
-
             <li class="list-group-item">
               <div id="map"></div>
               <div id="autocomplete_market_name_markets_path"></div>
@@ -142,18 +140,7 @@
               <% if current_user && current_user.id == @farm.user_id %>
               <%= form_for @new_market do |f| %>
 
-              <% if f.object.errors.any? %>
-              <div class="alert alert-danger">
-                <strong>The following errors prevented saving:</strong>
-                <ul>
-                  <% f.object.errors.full_messages.each do |error| %>
-                  <li><%= error %></li>
-                  <% end %>
-                </ul>
-              </div>
-              <% end %>
-            </li>
-
+              
 
             <li class="list-group-item">
               <div class="form-group">
@@ -192,8 +179,6 @@
     </div>
   </div>
 </div>
-
-
 
   <%= javascript_tag do %>
     window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>, id: <%= @farm.id %>}
