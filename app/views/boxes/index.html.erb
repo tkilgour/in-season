@@ -2,7 +2,7 @@
   <a href="/farms/<%= @farm.id %>" class="breadcrumb"><%= @farm.name %></a>
   <a class="breadcrumb">CSA Subscription Options</a>
   <a href="/farms/<%= @farm.id %>/cart" class="waves-effect waves-light btn right valign white black-text">My Cart (<%= cart.map {|i| i[1]["quantity"]}.reduce(:+) %>)</a>
- </nav>
+</nav>
 
     <div class="row">
       <% @boxes.map do |box| %>
