@@ -1,4 +1,7 @@
-# Lollicrops.farm
+
+In Season: An e-commerce rails app connecting farmers directly with customers.
+
+# inseason.farm
 
 ![](https://www.cardcow.com/images/set603/card01079_fr.jpg)
 
