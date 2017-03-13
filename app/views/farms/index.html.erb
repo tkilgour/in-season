@@ -65,7 +65,7 @@
           <% @market_results.each do |r| %>
           <tr>
             <td>
-              <a href="/markets/<%= r.id %>"> <%= r.name %> </a>
+              <%= r.name %>
             </td>
             <td>
               <%= r.parsed_address %>
