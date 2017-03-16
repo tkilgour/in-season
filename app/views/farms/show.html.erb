@@ -109,6 +109,139 @@
           <% end %>
           <% end %>
         </div>
+        <div class="card-action">
+        <div>
+        <span class="card-title">Our Market Schedule</span>
+          <ul>
+            <li>
+              <h5>Monday</h5>
+              <% @monday_markets = @markets.where(market_day: 'Monday') %>
+                <% if @monday_markets.length == 0 %>
+                  We have no markets scheduled on Mondays.<br /><br />
+                <% end %>
+              <% @monday_markets.map do |market| %>
+              <ul>
+                <li>
+                  <%= market.name %>
+                </li>
+                <li>
+                  <%= market.parsed_address %><br /><br />
+                </li>
+              </ul>
+              <% end %>
+            </li>
+
+            <li>
+              <h5>Tuesday</h5>
+              <% @tuesday_markets = @markets.where(market_day: 'Tuesday') %>
+              <% if @tuesday_markets.length == 0 %>
+                We have no markets scheduled on Tuesdays.<br /><br />
+              <% end %>
+              <% @tuesday_markets.map do |market| %>
+              <ul>
+                <li>
+                  <%= market.name %>
+                </li>
+                <li>
+                  <%= market.parsed_address %><br /><br />
+                </li>
+              </ul>
+              <% end %>
+            </li>
+
+            <li>
+              <h5>Wednesday</h5>
+              <% @wednesday_markets = @markets.where(market_day: 'Wednesday') %>
+              <% if @wednesday_markets.length == 0 %>
+                We have no markets scheduled on Wednesdays.<br /><br />
+              <% end %>
+              <% @wednesday_markets.map do |market| %>
+              <ul>
+                <li>
+                  <%= market.name %>
+                </li>
+                <li>
+                  <%= market.parsed_address %><br /><br />
+                </li>
+              </ul>
+              <% end %>
+            </li>
+
+            <li>
+              <h5>Thursday</h5>
+              <% @thursday_markets = @markets.where(market_day: 'Thursday') %>
+              <% if @thursday_markets.length == 0 %>
+                We have no markets scheduled on Thursdays.<br /><br />
+              <% end %>
+              <% @thursday_markets.map do |market| %>
+              <ul>
+                <li>
+                  <%= market.name %>
+                </li>
+                <li>
+                  <%= market.parsed_address %><br /><br />
+                </li>
+              </ul>
+              <% end %>
+            </li>
+
+            <li>
+              <h5>Friday</h5>
+              <% @friday_markets = @markets.where(market_day: 'Friday') %>
+              <% if @friday_markets.length == 0 %>
+                We have no markets scheduled on Fridays.<br /><br />
+              <% end %>
+              <% @friday_markets.map do |market| %>
+              <ul>
+                <li>
+                  <%= market.name %>
+                </li>
+                <li>
+                  <%= market.parsed_address %><br /><br />
+                </li>
+              </ul>
+              <% end %>
+            </li>
+
+            <li>
+              <h5>Saturday</h5>
+              <% @saturday_markets = @markets.where(market_day: 'Saturday') %>
+              <% if @saturday_markets.length == 0 %>
+                We have no markets scheduled on Saturdays.<br /><br />
+              <% end %>
+              <% @saturday_markets.map do |market| %>
+              <ul>
+                <li>
+                  <%= market.name %>
+                </li>
+                <li>
+                  <%= market.parsed_address %><br /><br />
+                </li>
+              </ul>
+              <% end %>
+            </li>
+
+            <li>
+              <h5>Sunday</h5>
+              <% @sunday_markets = @markets.where(market_day: 'Sunday') %>
+              <% if @sunday_markets.length == 0 %>
+                We have no markets scheduled on Sundays.<br /><br />
+              <% end %>
+              <% @sunday_markets.map do |market| %>
+              <ul>
+                <li>
+                  <%= market.name %>
+                </li>
+                <li>
+                  <%= market.parsed_address %><br /><br />
+                </li>
+              </ul>
+              <% end %>
+            </li>
+        </ul>
+        </div>
+    </div>
+
       </div>
     </div>
 
@@ -175,6 +308,16 @@
       </div>
     </div>
   </div>
+
+
+
+
+
+
+
+
+
+
 
   <%= javascript_tag do %>
     window.farm = {lat: <%= @farm.lat %>, lng: <%= @farm.lng %>, id: <%= @farm.id %>}

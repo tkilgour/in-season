@@ -114,7 +114,6 @@ class FarmsController < ApplicationController
 
   def update
     @farm = Farm.find(params[:id])
-    byebug
     if @farm.update(farm_params)
       redirect_to "/farms/#{@farm.id}"
     else
