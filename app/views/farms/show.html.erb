@@ -114,7 +114,7 @@
         <span class="card-title">Our Market Schedule</span>
           <ul>
             <li>
-              <h5>Monday</h5>
+              <h6 style="font-size:125%;">Monday</h6>
               <% @monday_markets = @markets.where(market_day: 'Monday') %>
                 <% if @monday_markets.length == 0 %>
                   We have no markets scheduled on Mondays.<br /><br />
@@ -132,7 +132,7 @@
             </li>
 
             <li>
-              <h5>Tuesday</h5>
+              <h6 style="font-size:125%;">Tuesday</h6>
               <% @tuesday_markets = @markets.where(market_day: 'Tuesday') %>
               <% if @tuesday_markets.length == 0 %>
                 We have no markets scheduled on Tuesdays.<br /><br />
@@ -150,7 +150,7 @@
             </li>
 
             <li>
-              <h5>Wednesday</h5>
+              <h6 style="font-size:125%;">Wednesday</h6>
               <% @wednesday_markets = @markets.where(market_day: 'Wednesday') %>
               <% if @wednesday_markets.length == 0 %>
                 We have no markets scheduled on Wednesdays.<br /><br />
@@ -168,7 +168,7 @@
             </li>
 
             <li>
-              <h5>Thursday</h5>
+              <h6 style="font-size:125%;">Thursday</h6>
               <% @thursday_markets = @markets.where(market_day: 'Thursday') %>
               <% if @thursday_markets.length == 0 %>
                 We have no markets scheduled on Thursdays.<br /><br />
@@ -186,7 +186,7 @@
             </li>
 
             <li>
-              <h5>Friday</h5>
+              <h6 style="font-size:125%;">Friday</h6>
               <% @friday_markets = @markets.where(market_day: 'Friday') %>
               <% if @friday_markets.length == 0 %>
                 We have no markets scheduled on Fridays.<br /><br />
@@ -204,7 +204,7 @@
             </li>
 
             <li>
-              <h5>Saturday</h5>
+              <h6 style="font-size:125%;">Saturday</h6>
               <% @saturday_markets = @markets.where(market_day: 'Saturday') %>
               <% if @saturday_markets.length == 0 %>
                 We have no markets scheduled on Saturdays.<br /><br />
@@ -222,7 +222,7 @@
             </li>
 
             <li>
-              <h5>Sunday</h5>
+              <h6 style="font-size:125%;">Sunday</h6>
               <% @sunday_markets = @markets.where(market_day: 'Sunday') %>
               <% if @sunday_markets.length == 0 %>
                 We have no markets scheduled on Sundays.<br /><br />
