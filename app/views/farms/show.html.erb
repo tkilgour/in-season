@@ -77,7 +77,7 @@
   <div class="crops">
     <div class="carousel">
       <% @available_crops.each do |c| %>
-      <%= render 'available_crop_preview', crop: c, carousel_link: @available_crops.index(c)+2 %>
+      <%= render 'available_crop_preview', crop: c, carousel_link: @available_crops.index(c) + 2 %>
       <% end %>
     </div>
   </div>
@@ -113,143 +113,30 @@
         <div class="card-action">
           <ul>
             <li>
-              <h6 style="font-size:125%;">Monday</h6>
-              <% @monday_markets = @markets.where(market_day: 'Monday') %>
-                <% if @monday_markets.length == 0 %>
-                  We have no markets scheduled on Mondays.<br /><br />
-                <% end %>
-              <% @monday_markets.map do |market| %>
-              <ul>
-                <li>
-                  <%= market.name %>
-                </li>
-                <li>
-                  <%= market.parsed_address %><br /><br />
-                </li>
-              </ul>
-              <% end %>
+              <%= render 'market_day', market_day: 'Monday' %>
             </li>
-
             <li>
-              <h6 style="font-size:125%;">Tuesday</h6>
-              <% @tuesday_markets = @markets.where(market_day: 'Tuesday') %>
-              <% if @tuesday_markets.length == 0 %>
-                We have no markets scheduled on Tuesdays.<br /><br />
-              <% end %>
-              <% @tuesday_markets.map do |market| %>
-              <ul>
-                <li>
-                  <%= market.name %>
-                </li>
-                <li>
-                  <%= market.parsed_address %><br /><br />
-                </li>
-              </ul>
-              <% end %>
+              <%= render 'market_day', market_day: 'Tuesday' %>
             </li>
-
             <li>
-              <h6 style="font-size:125%;">Wednesday</h6>
-              <% @wednesday_markets = @markets.where(market_day: 'Wednesday') %>
-              <% if @wednesday_markets.length == 0 %>
-                We have no markets scheduled on Wednesdays.<br /><br />
-              <% end %>
-              <% @wednesday_markets.map do |market| %>
-              <ul>
-                <li>
-                  <%= market.name %>
-                </li>
-                <li>
-                  <%= market.parsed_address %><br /><br />
-                </li>
-              </ul>
-              <% end %>
+              <%= render 'market_day', market_day: 'Wednesday' %>
             </li>
-
             <li>
-              <h6 style="font-size:125%;">Thursday</h6>
-              <% @thursday_markets = @markets.where(market_day: 'Thursday') %>
-              <% if @thursday_markets.length == 0 %>
-                We have no markets scheduled on Thursdays.<br /><br />
-              <% end %>
-              <% @thursday_markets.map do |market| %>
-              <ul>
-                <li>
-                  <%= market.name %>
-                </li>
-                <li>
-                  <%= market.parsed_address %><br /><br />
-                </li>
-              </ul>
-              <% end %>
+              <%= render 'market_day', market_day: 'Thursday' %>
             </li>
-
             <li>
-              <h6 style="font-size:125%;">Friday</h6>
-              <% @friday_markets = @markets.where(market_day: 'Friday') %>
-              <% if @friday_markets.length == 0 %>
-                We have no markets scheduled on Fridays.<br /><br />
-              <% end %>
-              <% @friday_markets.map do |market| %>
-              <ul>
-                <li>
-                  <%= market.name %>
-                </li>
-                <li>
-                  <%= market.parsed_address %><br /><br />
-                </li>
-              </ul>
-              <% end %>
+              <%= render 'market_day', market_day: 'Friday' %>
             </li>
-
             <li>
-              <h6 style="font-size:125%;">Saturday</h6>
-              <% @saturday_markets = @markets.where(market_day: 'Saturday') %>
-              <% if @saturday_markets.length == 0 %>
-                We have no markets scheduled on Saturdays.<br /><br />
-              <% end %>
-              <% @saturday_markets.map do |market| %>
-              <ul>
-                <li>
-                  <%= market.name %>
-                </li>
-                <li>
-                  <%= market.parsed_address %><br /><br />
-                </li>
-              </ul>
-              <% end %>
+              <%= render 'market_day', market_day: 'Saturday' %>
             </li>
-
             <li>
-              <h6 style="font-size:125%;">Sunday</h6>
-              <% @sunday_markets = @markets.where(market_day: 'Sunday') %>
-              <% if @sunday_markets.length == 0 %>
-                We have no markets scheduled on Sundays.<br /><br />
-              <% end %>
-              <% @sunday_markets.map do |market| %>
-              <ul>
-                <li>
-                  <%= market.name %>
-                </li>
-                <li>
-                  <%= market.parsed_address %><br /><br />
-                </li>
-              </ul>
-              <% end %>
+              <%= render 'market_day', market_day: 'Sunday' %>
             </li>
           </ul>
-
         </div>
-
       </div>
     </div>
-
-
-
-
-
-
-
 
     <div class="col l6">
       <div class="card white">

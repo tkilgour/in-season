@@ -1,0 +1,17 @@
+<li>
+  <h6 style="font-size:125%;"><%= market_day %></h6>
+  <% market_day_markets = @markets.where(market_day: market_day) %>
+    <% if market_day_markets.length == 0 %>
+      We have no markets scheduled on <%= market_day %>s.<br /><br />
+    <% end %>
+  <% market_day_markets.map do |market| %>
+  <ul>
+    <li>
+      <%= market.name %>
+    </li>
+    <li>
+      <%= market.parsed_address %><br /><br />
+    </li>
+  </ul>
+  <% end %>
+</li>
