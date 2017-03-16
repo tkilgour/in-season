@@ -59,22 +59,31 @@ class FarmsController < ApplicationController
   end
 
   def add_market
-    new_market_geo_info = Geokit::Geocoders::GoogleGeocoder.geocode(params[:market][:market_address])
-    @new_market = Market.new({
-                name: params[:market_name],
-                lat: new_market_geo_info.lat,
-                lng: new_market_geo_info.lng,
-                address: new_market_geo_info.formatted_address,
-                parsed_address: new_market_geo_info.full_address,
-                market_day: params[:market_day]
-              })
-    @new_market.save
-    if @new_market.save
-      @farm = Farm.find(params[:farm_id])
-      @farm.markets << @new_market
-      redirect_to "/farms/#{@farm.id}"
+    @farm = Farm.find(params[:farm_id])
+    new_market_geo_info = Geokit::Geocoders::GoogleGeocoder.geocode(params[:market][:address])
+    if Market.exists?(name: params[:market][:name],
+                       lat: new_market_geo_info.lat,
+                       lng: new_market_geo_info.lng)
+      @new_market = Market.where(name: params[:market][:name],
+                                  lat: new_market_geo_info.lat,
+                                  lng: new_market_geo_info.lng)
+      @farm.markets <<  @new_market
+      redirect_to farm_path(id: params[:farm_id])
     else
-      redirect_to farm_path(@farm)
+      @new_market = Market.new({name: params[:market][:name],
+                                lat: new_market_geo_info.lat,
+                                lng: new_market_geo_info.lng,
+                                address: new_market_geo_info.formatted_address,
+                                parsed_address: new_market_geo_info.full_address,
+                                market_day: params[:market_day]})
+      @new_market.save
+      if @new_market.save
+        @farm = Farm.find(params[:farm_id])
+        @farm.markets << @new_market
+        redirect_to "/farms/#{@farm.id}"
+      else
+        redirect_to farm_path(@farm)
+      end
     end
   end
 
