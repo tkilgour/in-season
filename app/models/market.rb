@@ -1,7 +1,7 @@
 class Market < ApplicationRecord
   acts_as_mappable :default_units => :kms
   before_validation :geocode, :on => :create
-  
+
   has_and_belongs_to_many :farms
 
   validates :name, presence: true

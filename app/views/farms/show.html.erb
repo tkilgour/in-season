@@ -137,30 +137,29 @@
               <div id="autocomplete_market_name_markets_path"></div>
 
               <% if current_user && current_user.id == @farm.user_id %>
-              <%= form_for @new_market do |f| %>
 
-
+              <%= form_for :market, url: farm_add_market_path(@farm) do |f| %>
 
             <li class="list-group-item">
               <div class="form-group">
                 <label for="autocomplete-input">Name</label>
-                <input name="market[name]" type="text" id="autocomplete-market-name" class="autocomplete" placeholder="What's the name of the market?">
+                <input name="market_name" type="text" id="autocomplete-market-name" class="autocomplete" placeholder="What's the name of the market?">
               </div>
               <div class="form-group">
-                <%= f.label :address %>
-                <%= f.text_field :address, class: 'form-control' %>
+                <%= f.label :market_address %>
+                <%= f.text_field :market_address, class: 'form-control' %>
               </div>
 
               <div class="form-group market-day-dropdown">
                 <label>Market day</label>
-                <select name="market[market_day]" id="market_market_day">
-                  <option value="1">Monday</option>
-                  <option value="2">Tuesday</option>
-                  <option value="3">Wednesday</option>
-                  <option value="4">Thursday</option>
-                  <option value="5">Friday</option>
-                  <option value="6" selected="selected">Saturday</option>
-                  <option value="7">Sunday</option>
+                <select name="market_day" id="market_day">
+                  <option value="Monday">Monday</option>
+                  <option value="Tuesday">Tuesday</option>
+                  <option value="Wednesday">Wednesday</option>
+                  <option value="Thursday">Thursday</option>
+                  <option value="Friday">Friday</option>
+                  <option value="Saturday" selected="selected">Saturday</option>
+                  <option value="Sunday">Sunday</option>
                 </select>
               </div>
 

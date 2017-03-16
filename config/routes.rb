@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :farms, only: [:show, :index, :update, :edit, :create, :new] do
     post :update_avatar
     post :update_banner
+    post :add_market
     resources :crops, only: [:index]
     resources :boxes, only: [:index, :show]
     resources :orders, only: [:create, :show]
