@@ -94,6 +94,16 @@ body {
     color: red;
 }
 
+.trash-bin {
+  color: black;
+}
+
+.trash-bin:hover {
+  opacity: .4;
+  color:red;
+
+}
+
 .profile.section {
   margin-top: 0px;
   margin-bottom: 0px;

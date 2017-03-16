@@ -87,6 +87,13 @@ class FarmsController < ApplicationController
     end
   end
 
+  def remove_market
+    @farm = Farm.find(params[:farm_id])
+    @market = Market.find(params[:market])
+    @farm.markets.delete(@market)
+    redirect_to "/farms/#{@farm.id}"
+  end
+
   def search
     @query = params[:q]
     @location = Geokit::Geocoders::GoogleGeocoder.geocode(@query)
@@ -153,7 +160,7 @@ class FarmsController < ApplicationController
   private
 
   def farm_params
-    params.require(:farm).permit(
+    params.require(:farm).permit( :market,
                                   :market_address,
                                   :market_day,
                                   :market_name,
