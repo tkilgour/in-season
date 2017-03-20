@@ -1,9 +1,5 @@
 
-In Season: An e-commerce rails app connecting farmers directly with customers.
-
-# inseason.farm
-
-![](https://www.cardcow.com/images/set603/card01079_fr.jpg)
+In Season is an online market that connects farmers directly with new customers. It was built as a final project for Lighthouse Labs using Ruby on Rails for the back end and Materialize CSS framework for the front end.
 
 ## Setup
 
