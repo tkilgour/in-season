@@ -10,6 +10,7 @@ class FarmsController < ApplicationController
   end
 
   def create
+    byebug
     @farm = Farm.new(farm_params)
     @farm.save
     boxes = create_csa_boxes(@farm)
@@ -160,25 +161,26 @@ class FarmsController < ApplicationController
   private
 
   def farm_params
-    params.require(:farm).permit( :market,
-                                  :market_address,
-                                  :market_day,
-                                  :market_name,
-                                  :name,
-                                  :about_farm,
-                                  :farmer,
-                                  :profile_image,
-                                  :banner_image,
-                                  :csa_availability,
-                                  :user_id,
-                                  :address,
-                                  :small_price,
-                                  :small_description,
-                                  :medium_price,
-                                  :medium_description,
-                                  :large_price,
-                                  :large_description,
-                                  :currency
+    params.require(:farm).permit(
+                                :market,
+                                :market_address,
+                                :market_day,
+                                :market_name,
+                                :name,
+                                :about_farm,
+                                :farmer,
+                                :profile_image,
+                                :banner_image,
+                                :csa_availability,
+                                :user_id,
+                                :address,
+                                :small_price,
+                                :small_description,
+                                :medium_price,
+                                :medium_description,
+                                :large_price,
+                                :large_description,
+                                :currency
                                 )
   end
 
