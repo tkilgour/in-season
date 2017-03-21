@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     post :update_avatar
     post :update_banner
     post :add_market
+    delete :remove_market
     resources :crops, only: [:index]
     resources :boxes, only: [:index, :show]
     resources :orders, only: [:create, :show]

@@ -10,6 +10,7 @@ class FarmsController < ApplicationController
   end
 
   def create
+    byebug
     @farm = Farm.new(farm_params)
     @farm.save
     boxes = create_csa_boxes(@farm)
@@ -87,6 +88,13 @@ class FarmsController < ApplicationController
     end
   end
 
+  def remove_market
+    @farm = Farm.find(params[:farm_id])
+    @market = Market.find(params[:market])
+    @farm.markets.delete(@market)
+    redirect_to "/farms/#{@farm.id}"
+  end
+
   def search
     @query = params[:q]
     @location = Geokit::Geocoders::GoogleGeocoder.geocode(@query)
@@ -154,24 +162,25 @@ class FarmsController < ApplicationController
 
   def farm_params
     params.require(:farm).permit(
-                                  :market_address,
-                                  :market_day,
-                                  :market_name,
-                                  :name,
-                                  :about_farm,
-                                  :farmer,
-                                  :profile_image,
-                                  :banner_image,
-                                  :csa_availability,
-                                  :user_id,
-                                  :address,
-                                  :small_price,
-                                  :small_description,
-                                  :medium_price,
-                                  :medium_description,
-                                  :large_price,
-                                  :large_description,
-                                  :currency
+                                :market,
+                                :market_address,
+                                :market_day,
+                                :market_name,
+                                :name,
+                                :about_farm,
+                                :farmer,
+                                :profile_image,
+                                :banner_image,
+                                :csa_availability,
+                                :user_id,
+                                :address,
+                                :small_price,
+                                :small_description,
+                                :medium_price,
+                                :medium_description,
+                                :large_price,
+                                :large_description,
+                                :currency
                                 )
   end
 
